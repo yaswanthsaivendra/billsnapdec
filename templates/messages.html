@@ -1,0 +1,127 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+
+<style>
+  .toast-success {
+
+    background: white;
+    border-left: 6px solid #3dcd58;
+
+    }
+    .toast-info {
+        background: wheat;
+        border-left: 6px solid #3498db;
+    }
+    .toast-error {
+      background-color: red;
+      border-left: 6px solid #3498db;
+
+
+    }
+    .toast-warning {
+      background-color: #f89406;
+      border-left: 6px solid #3498db;
+
+    }
+
+    #toast-container > .toast-success {
+
+
+    color: black;
+
+    }
+
+    .toast-progress {
+
+    background-color:#85ff9c;
+    opacity: 1 !important;
+
+    }
+    .toast {
+      opacity: 1 !important;
+    }
+
+    #toast-container > div {
+      opacity: 1 !important;
+      height: 50px;
+    }
+
+    .toast-success .toast-progress {
+      background-color: #85ff9c;
+      opacity: 1 !important;
+
+    }
+
+    .toast-close-button {
+      color: black;
+      opacity: 0.9;
+    }
+</style>
+</head>
+<body>
+    <script>
+        function myFunction(hh){
+      toastr.options = {
+        "positionClass" : "toast-top-center",
+                "closeButton" : true,
+                "debug" : false,
+                "newestOnTop" : false,
+                "preventDuplicates" : false,
+                "onclick" : null,
+                "showDuration" : "300000",
+                "hideDuration" : "1000000",
+                "timeOut" : "5000000",
+                "extendedTimeOut" : "100000",
+                "showEasing" : "swing",
+                "hideEasing" : "linear",
+                "showMethod" : "fadeIn",
+                "hideMethod" : "fadeOut"
+}
+Command: toastr["success"](hh)
+}
+</script>
+
+<script>
+function notifyMe(hh) {
+  // Let's check if the browser supports notifications
+  if (!("Notification" in window)) {
+    alert("This browser does not support desktop notification");
+  }
+
+  // Let's check whether notification permissions have already been granted
+  else if (Notification.permission === "granted") {
+    // If it's okay let's create a notification
+
+    let notification = new Notification(hh);
+  }
+
+  // Otherwise, we need to ask the user for permission
+  else if (Notification.permission !== "denied") {
+    Notification.requestPermission().then(function (permission) {
+      // If the user accepts, let's create a notification
+      if (permission === "granted") {
+        let notification = new Notification(hh);
+      }
+    });
+  }
+}
+</script>
+
+{% if messages %}
+    {% for message in messages %}
+        {% if message.tags == "success" %}
+            <script>
+            myFunction('{{message}}')
+            </script>
+        {% elif message.tags == "error" %}
+        <script>
+            myFunction('{{message}}')
+            </script>
+        {% elif message.tags == "warning" %}
+        <script>
+            myFunction('{{message}}')
+            </script>
+        {% endif %}
+    {% endfor %}
+{% endif %}

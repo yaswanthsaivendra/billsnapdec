@@ -1,0 +1,50 @@
+{% extends 'dashaside.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{% static 'w3.css' %}" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <title>{% block title %} Customer list {% endblock title %}</title>
+</head>
+<body>
+  {% block body %}
+      <div class="col-md-7 flex-md-fill">
+        <div class="col right" id="customer-list">
+          <h2 class="ps-1 pt-3" style="color: blue">Customer List</h2>
+          <div class="table-responsive">
+            <table class="table w3-table w3-striped">
+              <thead>
+                <tr>
+                  <th scope="col">Id</th>
+                  <th scope="col">Username</th>
+                  <th scope="col">View Profile</th>
+                  <th scope="col">Remove User</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {% for i in details %}
+                <tr>
+                    <td>{{ i.2 }}</td>
+                    <td>{{ i.0 }}</td>
+                    <td>
+                      <a class='w3-button w3-small w3-round w3-green' href="{% url 'show_profile' i.1 slug %}" >Show Profile</a>
+                    </td>
+                    <td>
+                      <a class='w3-button w3-small w3-round w3-red' href="{% url 'remove-customer' slug i.1 %}" >Remove User</a>
+                    </td>
+                </tr>
+                {%endfor%}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+{% endblock body %}
+</body>
+{% block script %}
+<script src="{% static 'dashboard/script.js' %}"></script>
+{% endblock script %}
+</html>
+

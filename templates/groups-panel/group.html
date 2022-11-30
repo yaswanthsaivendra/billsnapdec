@@ -1,0 +1,85 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <head>
+        <link rel="stylesheet" href="{% static 'w3.css' %}" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <nav class='w3-black w3-margin-bottom w3-container w3-padding'>
+        <h3 class='w3-left'>{{group}}</h3>
+        <a href={% url 'groups-panel' group.app.slug %}>
+            <button class='w3-button w3-margin w3-black w3-border w3-right'>Back to Panel</button>
+        </a>
+    </nav>
+
+    <div class='w3-container w3-padding w3-margin-left w3-small w3-margin-right w3-round w3-row w3-border'>
+        <button id="button" onclick="showForm();" class=' w3-round w3-button w3-blue'>
+            Add Customer to {{group.title}} using username
+        </button>
+        <form id="group_form" style="display:none;" enctype='multipart/form-data' method='POST' action="{% url 'group' group.slug %}">
+            <h5 class='w3-center'>Add to {{group.title}}</h5>
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button style='width:95%;' type='submit' class='w3-margin w3-round w3-green w3-button' >Add</button>
+        </form>
+    </div>
+
+    <div class='w3-padding'>
+    <div class='w3-containe w3-half'>
+        <h3>Customers in {{group.title}}</h3>
+        {% for user in users %}
+            <div class='w3-row w3-border-bottom w3-margin' >
+                <h5 class='w3-left w3-margin-right' >
+                    {{user.full_name}} aka @{{user.user.username}}
+                </h5>
+                <button onclick="showUpdateForm();" class=' w3-button w3-right w3-round w3-purple'>Update @{{user.user.username}}'s group</button>
+            </div>
+            <div id="form" style='display:none;' class="w3-modal">
+                <div class="w3-display-middle w3-padding" >
+                  <button class='w3-right w3-button w3-round-large w3-red w3-padding' onclick="document.getElementById('form').style.display='none'" >&times;</button>
+                  <div class="w3-margin w3-padding w3-round-large w3-border w3-white" id="content">
+                    <form class='w3-margin w3-padding' enctype='multipart/form-data' method='POST' action="{% url 'update-group' user.slug group.slug %}">
+                        <h4 class='w3-center w3-margin'>Update @{{user.user.username}}'s group</h4>
+                        {% csrf_token %}
+                        {{ update_form|crispy }}
+                        <button type='submit' class='w3-margin w3-round-large w3-green w3-button' >Update to</button>
+                    </form>
+                  </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <div class='w3-container w3-round w3-half w3-border'>
+        <h3>Customers in {{group.app.appname}} not in {{group.title}}</h3>
+        {% for user in existing_users %}
+        <div class='w3-container w3-small w3-row w3-padding ' >
+            <h3 class='w3-medium w3-left'>@{{user.user.username}}</h3>
+            <button class='w3-right w3-round w3-blue w3-button' onclick="addCustomerApp(this);" value="{{user.user.username}}" url="{% url 'add-member' group.slug %}" >
+                Transfer to this group
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+    </div>
+
+    <script>
+        function showForm(){
+            document.getElementById('group_form').style.display = "block";
+            document.getElementById('button').style.display = "none";
+        }
+        function showUpdateForm(){
+            document.getElementById('form').style.display = "block";
+        }
+        function addCustomerApp(obj){
+            var url = obj.getAttribute('url') + '?username=' + obj.value;
+            $.ajax({
+                type: 'GET',
+                url: url,
+                success: function(resp) {
+                    document.location.reload(true);
+                }
+            })
+        } 
+    </script>
+{% endblock %}

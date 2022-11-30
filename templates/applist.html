@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Applist page</h1>
+{% if user.is_authenticated %}
+    <p>Hi, {{user.username}}</p>
+    <button type="button"><a href="{%url 'logout' %}">LogOut</a></button>
+{% else %}
+    <button><a href="{%url 'register'%}">Register</a></button>
+    <p>OR</p>
+    <button><a href="{%url 'login'%}">LogIn</a></button>
+{% endif %}
+
+<br></br>
+<form method="POST" action="{% url 'addapp' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+    </br></br>
+        <label for="app name" class="form__label">App Name</label>
+        <input
+            type="input"
+            class="form__field"
+            placeholder="enter app name"
+            name="app_name"
+            id="app_name"
+            required
+        />
+    </br></br>
+        <label for="app_img" class="form__label">App image</label>
+        <input type="file" class="form__field" name="app_im" id="app_im" required/>
+    <br></br>
+
+    <label for="app name" class="form__label">last updated</label>
+
+    <button type="submit">Save</button>
+
+</form>
+</body>
+</html>
+

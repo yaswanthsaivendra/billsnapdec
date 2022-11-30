@@ -1,0 +1,23 @@
+[2022-07-29T11:01:25] WARNING [django.request.log_response:224] Not Found: /favicon.ico
+[2022-07-29T11:01:32] INFO [root.showapps:42] admin_seen the whole applist
+[2022-07-29T11:04:39] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/css/styles.css
+[2022-07-29T11:04:39] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/illustrations/rocket-white.png
+[2022-07-29T11:04:39] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-xd.svg
+[2022-07-29T11:04:39] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-1.jpg
+[2022-07-29T11:04:39] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-2.jpg
+[2022-07-29T11:04:40] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-3.jpg
+[2022-07-29T11:04:40] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-4.jpg
+[2022-07-29T11:04:40] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-atlassian.svg
+[2022-07-29T11:04:40] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-slack.svg
+[2022-07-29T11:04:40] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-spotify.svg
+[2022-07-29T11:04:40] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-jira.svg
+[2022-07-29T11:04:40] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-invision.svg
+[2022-07-29T11:04:40] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/js/plugins/chartjs.min.js
+[2022-07-29T11:04:40] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/js/plugins/perfect-scrollbar.min.js
+[2022-07-29T11:04:40] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/css/styles.css
+[2022-07-29T11:04:40] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/ivancik.jpg
+[2022-07-29T11:04:40] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-2.jpg
+[2022-07-29T11:04:40] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-4.jpg
+[2022-07-29T11:04:40] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-3.jpg
+[2022-07-29T11:04:40] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-1.jpg
+[2022-07-29T11:04:42] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/estimate.html

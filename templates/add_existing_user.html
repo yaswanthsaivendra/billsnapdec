@@ -1,0 +1,56 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'w3.css' %}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body class='w3-padding'>
+<div class='w3-green w3-round w3-margin-bottom w3-padding w3-large'>Add Existing Users to {{app.appname}}</div>
+
+<div class='w3-half w3-container'>
+    <h4>Existing Users</h4>
+    {% for profile in profiles %}
+    <div class='w3-container w3-row w3-small w3-padding ' >
+        <h3 class='w3-medium w3-left'>@{{profile.user.username}}</h3>
+        <button class='w3-right w3-blue w3-button' onclick="addCustomerApp(this);" value="{{profile.user.username}}" url="{% url 'add-customer-app' app.slug %}" >
+            Add
+        </button>
+    </div>
+    {% endfor %}
+</div>
+
+<div class='w3-half w3-padding w3-border' >
+    <input id="search" url="{% url 'add-customer-app' app.slug %}" placeholder="Enter username to add ....." class='w3-input w3-border w3-round w3-margin-right' />
+    <button class='w3-center w3-margin w3-green w3-button' onclick="addCustomerAppSearch(this);" >
+        Add
+    </button>
+</div>
+
+</body>
+<script>
+    function addCustomerApp(obj){
+        var url = obj.getAttribute('url') + '?username=' + obj.value;
+        $.ajax({
+            type: 'GET',
+            url: url,
+            success: function(resp) {
+                document.location.reload(true);
+            }
+        })
+    } 
+    function addCustomerAppSearch(obj){
+        var inp = document.getElementById('search');
+        var url = inp.getAttribute('url') + '?username=' + inp.value;
+        $.ajax({
+            type: 'GET',
+            url: url,
+            success: function(resp) {
+                document.location.reload(true);
+            }
+        })
+    } 
+
+</script>
+</html>

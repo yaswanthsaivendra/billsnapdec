@@ -1,0 +1,101 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{% static 'w3.css' %}" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body class='w3-padding w3-margin'>
+	<button onclick='showForm(this);' class='w3-button w3-blue' >Change Plan Details</button>
+	<button onclick='showForm(this);' class='w3-button w3-green' >Change Profile Details</button>
+	<button onclick='showNotificationForm(this);' class='w3-button w3-purple' >Send Notification</button>
+	<h3 class='w3-black w3-padding w3-round'>Basic Details</h3>
+	<div>
+		<p>Username : {{profile.user.username}}</p>
+		<p>Full Name : {{profile.full_name}}</p>
+		<p>Status : {{profile.status}}</p>
+		<p>Info Updated at : {{profile.info_updated_at}}</p>
+		<p>SE coins : {{profile.se_coins}}</p>
+		<p>Current Plan : {{plan}} 
+			{% if profile.plan_active %}
+			<e class='w3-green w3-padding w3-round'>Active</e>
+			{% else %}
+			<e class='w3-red w3-padding w3-round'>Expired</e>
+			{% endif %}
+
+			{% if profile.paid %}
+			<e class='w3-green w3-padding w3-round'>Paid</e>
+			{% else %}
+			<e class='w3-red w3-padding w3-round'>Not Paid</e>
+			{% endif %}
+		</p>
+		<div id="plan-change" style='display:none;' class="w3-modal">
+            <div class="w3-display-middle w3-padding" >
+				<button class='w3-right w3-button w3-round-large w3-red w3-padding' onclick="document.getElementById('plan-change').style.display='none'" >&times;</button>
+				<div class="w3-margin w3-padding w3-round-large w3-border w3-white" id="content">
+					<h5>Update user's Plan Details</h5>
+					<form  enctype='multipart/form-data' method='POST' action="{% url 'update-profile-plan' profile.slug %}">
+						{% csrf_token %}
+						{{ form|crispy }}
+						<button type='submit' class='w3-margin w3-round-large w3-green w3-button' >Save</button>
+					</form>
+				</div>
+				</div>
+			</div>
+		</div>
+		<div id="notification" style='display:none;' class="w3-modal">
+            <div class="w3-display-middle w3-padding" >
+				<button class='w3-right w3-button w3-round-large w3-red w3-padding' onclick="document.getElementById('notification').style.display='none'" >&times;</button>
+				<div class="w3-margin w3-padding w3-round-large w3-border w3-white" id="content">
+					<h5>Send Notification</h5>
+					<form  enctype='multipart/form-data' method='POST' action="{% url 'create-notification' appslug %}">
+						{% csrf_token %}
+						{{ notification_form|crispy }}
+						<button type='submit' class='w3-margin w3-round-large w3-green w3-button' >Send</button>
+					</form>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<h3 class='w3-black w3-padding w3-round'>Utility Details</h3>
+	<div>
+		<p>Utility State : {{ i.utility_state }}</p>
+		<p>Utility District : {{ i.utility_district }}</p>
+		<p>Utility Country : {{ i.utility_country }}</p>
+		<p>Utility Postal code : {{ i.utility_postalcode }}</p>
+		<p>Utility Address : {{ i.utility_address }}</p>
+	</div>
+	<h3 class='w3-black w3-padding w3-round'>Contact Details</h3>
+	<div>
+		<p>Contact Person : {{ i.contact_person }}</p>
+		<p>Contact Email :{{ i.contact_email }}</p>
+		<p>Contact Phone no. : {{ i.contact_phnum }}</p>
+		<p>Contact Mobile : {{ i.contact_mobile }} </p>
+		<p>Contact Designation : {{ i.contact_designation }}</p>
+		<p>Contact Landline : {{ i.contact_landline }} </p>
+	</div>
+	<h3 class='w3-black w3-padding w3-round'>Emergency Details</h3>
+	<div>
+		<p>Emergency Person : {{ i.emergency_person }} </p>
+		<p>Emergency Alt Person : {{ i.emergency_altperson }} </p>
+		<p>Emergency Mobile : {{ i.emergency_mobile }} </p>
+		<p>Emergency Alt Mobile : {{ i.emergency_altmobile }} </p>
+		<p>Emergency Office Address : {{ i.emergency_officeaddress }} </p>
+		<p>Emergency Alt Office Address : {{ i.emergency_altofficeaddress }} </p>
+	</div>
+
+	<script>
+		function showForm(obj){
+			document.getElementById('plan-change').style.display = 'block';
+		} 
+		function showNotificationForm(obj){
+			document.getElementById('notification').style.display = 'block';
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <div class="wholeBody">
+
+				<!-- Edit profile Header------- -->
+				<form class="editProfile" id="edit_profile" method="POST" action="{% url 'update' request.user.profile.slug %}" enctype="multipart/form-data">
+					{% csrf_token %}
+
+
+				<div id="tab1" class="editProfiletabcontent">
+					<div class="editProfileForm">
+									<input
+										type="input"
+										class="form__field"
+										placeholder="Full Name"
+										name="full_name"
+										value="{% if profile.full_name %}{{profile.full_name}}{% endif %}"
+										id="Phone Number"
+										required
+									/>
+									<label for="Full Name" class="form__label"
+										>Full Name</label
+									>
+									<input
+										type="input"
+										class="form__field"
+										placeholder="Email"
+										name="email"
+										value="{% if profile.email %}{{profile.email}}{% elif profile.user.email %}{{profile.user.email}}{% endif %}"
+										id="Email"
+										required
+										readonly
+									/>
+									<label for="Email " class="form__label">Email </label>
+									<input
+										type="input"
+										class="form__field"
+										placeholder="Phone Number"
+										name="ph_no"
+										value="{% if profile.ph_num %}{{profile.ph_num}}{% endif %}"
+										id="Phone Number"
+										required
+									/>
+									<label for="Phone Number" class="form__label"
+										>Mobile Number</label>
+							<div class="nav_buttons_container">
+								<div class="nav_buttons_box">
+									<button type="submit">Save</button>
+								</div>
+							</div>
+						<!--  -->
+				</div>
+			</form>
+
+</body>
+</html>

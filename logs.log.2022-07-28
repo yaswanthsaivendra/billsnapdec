@@ -1,0 +1,1315 @@
+[2022-07-28T13:30:06] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T13:33:54] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T13:34:01] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T13:34:19] WARNING [django.request.log_response:224] Not Found: /favicon.ico
+[2022-07-28T13:34:22] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T13:34:33] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T13:36:55] ERROR [django.request.log_response:224] Internal Server Error: /admin/auth/user/add/
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: UNIQUE constraint failed: auth_user.email
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\contrib\admin\options.py", line 616, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\decorators\cache.py", line 44, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\contrib\admin\sites.py", line 232, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\decorators\debug.py", line 89, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\contrib\auth\admin.py", line 99, in add_view
+    return self._add_view(request, form_url, extra_context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\contrib\auth\admin.py", line 126, in _add_view
+    return super().add_view(request, form_url, extra_context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\contrib\admin\options.py", line 1657, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\utils\decorators.py", line 43, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\utils\decorators.py", line 130, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\contrib\admin\options.py", line 1540, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\contrib\admin\options.py", line 1586, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\contrib\admin\options.py", line 1099, in save_model
+    obj.save()
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\contrib\auth\base_user.py", line 67, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\base.py", line 763, in save_base
+    updated = self._save_table(
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\base.py", line 868, in _save_table
+    results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\base.py", line 906, in _do_insert
+    return manager._insert(
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\query.py", line 1270, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\compiler.py", line 1416, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: UNIQUE constraint failed: auth_user.email
+[2022-07-28T13:38:32] DEBUG [PIL.Image.init:399] Importing BlpImagePlugin
+[2022-07-28T13:38:32] DEBUG [PIL.Image.init:399] Importing BmpImagePlugin
+[2022-07-28T13:38:32] DEBUG [PIL.Image.init:399] Importing BufrStubImagePlugin
+[2022-07-28T13:38:32] DEBUG [PIL.Image.init:399] Importing CurImagePlugin
+[2022-07-28T13:38:32] DEBUG [PIL.Image.init:399] Importing DcxImagePlugin
+[2022-07-28T13:38:32] DEBUG [PIL.Image.init:399] Importing DdsImagePlugin
+[2022-07-28T13:38:32] DEBUG [PIL.Image.init:399] Importing EpsImagePlugin
+[2022-07-28T13:38:32] DEBUG [PIL.Image.init:399] Importing FitsStubImagePlugin
+[2022-07-28T13:38:32] DEBUG [PIL.Image.init:399] Importing FliImagePlugin
+[2022-07-28T13:38:32] DEBUG [PIL.Image.init:399] Importing FpxImagePlugin
+[2022-07-28T13:38:32] DEBUG [PIL.Image.init:402] Image: failed to import FpxImagePlugin: No module named 'olefile'
+[2022-07-28T13:38:32] DEBUG [PIL.Image.init:399] Importing FtexImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing GbrImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing GifImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing GribStubImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing Hdf5StubImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing IcnsImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing IcoImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing ImImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing ImtImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing IptcImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing JpegImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing Jpeg2KImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing McIdasImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing MicImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:402] Image: failed to import MicImagePlugin: No module named 'olefile'
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing MpegImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing MpoImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing MspImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing PalmImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing PcdImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing PcxImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing PdfImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing PixarImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing PngImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing PpmImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing PsdImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing SgiImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing SpiderImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing SunImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing TgaImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing TiffImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing WebPImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing WmfImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing XbmImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing XpmImagePlugin
+[2022-07-28T13:38:33] DEBUG [PIL.Image.init:399] Importing XVThumbImagePlugin
+[2022-07-28T13:39:16] INFO [root.showapps:42] hp_seen the whole applist
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/css/styles.css
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/illustrations/rocket-white.png
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-xd.svg
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/css/styles.css
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-1.jpg
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-2.jpg
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-3.jpg
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-slack.svg
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-4.jpg
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-atlassian.svg
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-spotify.svg
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-jira.svg
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-invision.svg
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/js/plugins/chartjs.min.js
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/js/plugins/perfect-scrollbar.min.js
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-2.jpg
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-1.jpg
+[2022-07-28T13:39:19] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/ivancik.jpg
+[2022-07-28T13:41:19] ERROR [django.request.log_response:224] Internal Server Error: /apps/whatsapp/add-customer-form/
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py", line 206, in add_customer_form
+    return render(request, 'add_customer_app.html', {'profiles': profiles, 'app': app})
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'register' with arguments '('whatsapp',)' not found. 1 pattern(s) tried: ['register/$']
+[2022-07-28T13:42:42] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\models.py changed, reloading.
+[2022-07-28T13:42:42] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T13:47:05] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\models.py changed, reloading.
+[2022-07-28T13:47:05] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T13:47:28] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/js/plugins/chartjs.min.js
+[2022-07-28T13:50:35] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T13:50:35] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T13:50:59] ERROR [django.request.log_response:224] Internal Server Error: /apps/whatsapp/dashboard/
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\utils\functional.py", line 247, in inner
+    return func(self._wrapped, *args)
+TypeError: 'User' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\related_descriptors.py", line 402, in __get__
+    rel_obj = self.related.get_cached_value(instance)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\mixins.py", line 15, in get_cached_value
+    return instance._state.fields_cache[cache_name]
+KeyError: 'profile'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: accounts_profile.paid
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\contrib\auth\decorators.py", line 21, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py", line 201, in dashboard
+    return render(request, 'dashboard.html', {'slug' : slug})
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\shortcuts.py", line 19, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\loader_tags.py", line 53, in render
+    result = self.nodelist.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\defaulttags.py", line 432, in render
+    args = [arg.resolve(context) for arg in self.args]
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\defaulttags.py", line 432, in <listcomp>
+    args = [arg.resolve(context) for arg in self.args]
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 671, in resolve
+    obj = self.var.resolve(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 796, in resolve
+    value = self._resolve_lookup(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\utils\functional.py", line 247, in inner
+    return func(self._wrapped, *args)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\related_descriptors.py", line 410, in __get__
+    rel_obj = self.get_queryset(instance=instance).get(**filter_args)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\query.py", line 431, in get
+    num = len(clone)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\query.py", line 262, in __len__
+    self._fetch_all()
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\query.py", line 1324, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\query.py", line 51, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch, chunk_size=self.chunk_size)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\compiler.py", line 1175, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\backends\utils.py", line 98, in execute
+    return super().execute(sql, params)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\backends\utils.py", line 66, in execute
+    return self._execute_with_wrappers(sql, params, many=False, executor=self._execute)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\backends\utils.py", line 75, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\utils.py", line 90, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\backends\utils.py", line 84, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\backends\sqlite3\base.py", line 423, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: accounts_profile.paid
+[2022-07-28T13:51:14] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T13:51:23] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T13:51:30] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T13:51:37] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/css/styles.css
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/illustrations/rocket-white.png
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-xd.svg
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-1.jpg
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-2.jpg
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-3.jpg
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-4.jpg
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-atlassian.svg
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-slack.svg
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-spotify.svg
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-jira.svg
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-invision.svg
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/js/plugins/chartjs.min.js
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/js/plugins/perfect-scrollbar.min.js
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/css/styles.css
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/ivancik.jpg
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-2.jpg
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-4.jpg
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-3.jpg
+[2022-07-28T13:51:38] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-1.jpg
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/css/styles.css
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/illustrations/rocket-white.png
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-xd.svg
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-1.jpg
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-2.jpg
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-3.jpg
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-4.jpg
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-atlassian.svg
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-slack.svg
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-spotify.svg
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-jira.svg
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-invision.svg
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/js/plugins/chartjs.min.js
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/js/plugins/perfect-scrollbar.min.js
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/css/styles.css
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-2.jpg
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-3.jpg
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-4.jpg
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-1.jpg
+[2022-07-28T14:08:04] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/ivancik.jpg
+[2022-07-28T14:12:56] ERROR [django.request.log_response:224] Internal Server Error: /register/whatsapp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: post() got an unexpected keyword argument 'appslug'
+[2022-07-28T14:14:52] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\billapp\urls.py changed, reloading.
+[2022-07-28T14:14:52] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T14:15:18] ERROR [django.request.log_response:224] Internal Server Error: /register-app/whatsapp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: post() got an unexpected keyword argument 'appslug'
+[2022-07-28T14:15:59] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\billapp\urls.py changed, reloading.
+[2022-07-28T14:15:59] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T14:16:04] WARNING [django.request.http_method_not_allowed:101] Method Not Allowed (POST): /register-app/whatsapp
+[2022-07-28T14:16:04] WARNING [django.request.log_response:224] Method Not Allowed: /register-app/whatsapp
+[2022-07-28T14:18:28] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T14:18:28] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T14:19:14] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T14:19:14] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T14:19:26] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T14:19:26] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T14:19:39] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T14:19:39] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T14:19:42] ERROR [django.request.log_response:224] Internal Server Error: /apps/whatsapp/add-customer-form/
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py", line 205, in add_customer_form
+    return render(request, 'add_customer_app.html', {'profiles': profiles, 'app': app})
+NameError: name 'profiles' is not defined
+[2022-07-28T14:19:54] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T14:19:54] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T14:20:49] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\urls.py changed, reloading.
+[2022-07-28T14:20:49] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T14:23:54] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp
+[2022-07-28T14:24:00] INFO [root.showapps:42] hp_seen the whole applist
+[2022-07-28T14:24:01] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/css/styles.css
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/illustrations/rocket-white.png
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-xd.svg
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-1.jpg
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-2.jpg
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-3.jpg
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-4.jpg
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-atlassian.svg
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-slack.svg
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-spotify.svg
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-jira.svg
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-invision.svg
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/js/plugins/chartjs.min.js
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/js/plugins/perfect-scrollbar.min.js
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/css/styles.css
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/ivancik.jpg
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-2.jpg
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-4.jpg
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-3.jpg
+[2022-07-28T14:24:02] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-1.jpg
+[2022-07-28T15:16:25] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T15:16:25] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:17:14] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T15:17:14] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:19:51] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T15:19:51] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:20:27] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\forms.py changed, reloading.
+[2022-07-28T15:20:27] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:20:29] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:34:03] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:35:13] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:35:25] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:35:32] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:45:07] ERROR [django.request.log_response:224] Internal Server Error: /hp/whatsapp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py", line 304, in get_context_data
+    context['form'] = UpdateProfilePlanForm(appslug=self.kwargs['appslug'], profile=page_profile)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\forms.py", line 13, in __init__
+    super(UpdateUserPlanForm, self).__init__(*args, **kwargs)
+NameError: name 'UpdateUserPlanForm' is not defined
+[2022-07-28T15:45:53] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:46:02] ERROR [django.request.log_response:224] Internal Server Error: /hp/whatsapp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py", line 304, in get_context_data
+    context['form'] = UpdateProfilePlanForm(appslug=self.kwargs['appslug'], profile=page_profile)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\forms.py", line 13, in __init__
+    super(UpdateUserPlanForm, self).__init__(*args, **kwargs)
+NameError: name 'UpdateUserPlanForm' is not defined
+[2022-07-28T15:46:22] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\forms.py changed, reloading.
+[2022-07-28T15:46:22] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:46:26] ERROR [django.request.log_response:224] Internal Server Error: /hp/whatsapp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py", line 304, in get_context_data
+    context['form'] = UpdateProfilePlanForm(appslug=self.kwargs['appslug'], profile=page_profile)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\forms.py", line 14, in __init__
+    plans = Plan.objects.filter(app__slug=appslug)
+NameError: name 'Plan' is not defined
+[2022-07-28T15:46:27] ERROR [django.request.log_response:224] Internal Server Error: /hp/whatsapp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\detail.py", line 107, in get
+    context = self.get_context_data(object=self.object)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py", line 304, in get_context_data
+    context['form'] = UpdateProfilePlanForm(appslug=self.kwargs['appslug'], profile=page_profile)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\forms.py", line 14, in __init__
+    plans = Plan.objects.filter(app__slug=appslug)
+NameError: name 'Plan' is not defined
+[2022-07-28T15:47:00] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\forms.py changed, reloading.
+[2022-07-28T15:47:00] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:47:04] ERROR [django.request.log_response:224] Internal Server Error: /hp/whatsapp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'update-profile-plan' not found. 'update-profile-plan' is not a valid view function or pattern name.
+[2022-07-28T15:47:51] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\plans\urls.py changed, reloading.
+[2022-07-28T15:47:51] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:48:17] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\urls.py changed, reloading.
+[2022-07-28T15:48:17] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:48:36] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\urls.py changed, reloading.
+[2022-07-28T15:48:36] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:48:50] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\urls.py changed, reloading.
+[2022-07-28T15:48:50] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:49:47] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\forms.py changed, reloading.
+[2022-07-28T15:49:47] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:49:52] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\forms.py changed, reloading.
+[2022-07-28T15:49:52] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:50:00] ERROR [django.request.log_response:224] Internal Server Error: /dash/update-profile-plan/hp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py", line 227, in update_profile_plan
+    current_plan = profile.plan
+AttributeError: 'Profile' object has no attribute 'plan'
+[2022-07-28T15:50:43] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T15:50:43] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:50:49] ERROR [django.request.log_response:224] Internal Server Error: /dash/update-profile-plan/hp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py", line 228, in update_profile_plan
+    new_plan = Plan.objects.get(id=request.POST.get('update_to'))
+NameError: name 'Plan' is not defined
+[2022-07-28T15:51:00] ERROR [django.request.log_response:224] Internal Server Error: /dash/update-profile-plan/hp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py", line 228, in update_profile_plan
+    new_plan = Plan.objects.get(id=request.POST.get('update_to'))
+NameError: name 'Plan' is not defined
+[2022-07-28T15:51:36] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T15:51:36] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:51:41] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T15:51:41] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:51:45] ERROR [django.request.log_response:224] Internal Server Error: /dash/update-profile-plan/hp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py", line 241, in update_profile_plan
+    profile.save(update_fields=['plan', 'plan_active', 'paid'])
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\models.py", line 82, in save
+    super(Profile, self).save()
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\base.py", line 763, in save_base
+    updated = self._save_table(
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\base.py", line 845, in _save_table
+    updated = self._do_update(base_qs, using, pk_val, values, update_fields,
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\base.py", line 899, in _do_update
+    return filtered._update(values) > 0
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\query.py", line 802, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\compiler.py", line 1559, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\compiler.py", line 1162, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\compiler.py", line 1525, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\__init__.py", line 842, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\__init__.py", line 837, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\__init__.py", line 986, in get_prep_value
+    return self.to_python(value)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\__init__.py", line 976, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“on” value must be either True or False.']
+[2022-07-28T15:52:47] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T15:52:47] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:52:52] ERROR [django.request.log_response:224] Internal Server Error: /dash/update-profile-plan/hp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\__init__.py", line 1823, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'QuerySet'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py", line 236, in update_profile_plan
+    profile.plans.remove(pre_plan)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\related_descriptors.py", line 967, in remove
+    self._remove_items(self.source_field_name, self.target_field_name, *objs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\related_descriptors.py", line 1197, in _remove_items
+    self.through._default_manager.using(db).filter(filters).delete()
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\query.py", line 1265, in build_filter
+    return self._add_q(
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\query.py", line 1347, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\query.py", line 1193, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\lookups.py", line 25, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\related_lookups.py", line 59, in get_prep_lookup
+    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\related_lookups.py", line 59, in <listcomp>
+    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\__init__.py", line 1825, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <QuerySet [<Plan: [Basic] Plan at [Rs.0] for [30 days] in [whatsapp]>]>.
+[2022-07-28T15:53:48] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T15:53:48] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:53:53] ERROR [django.request.log_response:224] Internal Server Error: /dash/update-profile-plan/hp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py", line 241, in update_profile_plan
+    print(plan_active, new_plan, new_paid_status)
+NameError: name 'plan_active' is not defined
+[2022-07-28T15:54:11] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T15:54:11] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T15:54:17] ERROR [django.request.log_response:224] Internal Server Error: /dash/update-profile-plan/hp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py", line 242, in update_profile_plan
+    profile.save(update_fields=['plan', 'plan_active', 'paid'])
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\models.py", line 82, in save
+    super(Profile, self).save()
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\base.py", line 726, in save
+    self.save_base(using=using, force_insert=force_insert,
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\base.py", line 763, in save_base
+    updated = self._save_table(
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\base.py", line 845, in _save_table
+    updated = self._do_update(base_qs, using, pk_val, values, update_fields,
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\base.py", line 899, in _do_update
+    return filtered._update(values) > 0
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\query.py", line 802, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\compiler.py", line 1559, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\compiler.py", line 1162, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\compiler.py", line 1525, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\__init__.py", line 842, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\__init__.py", line 837, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\__init__.py", line 986, in get_prep_value
+    return self.to_python(value)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\fields\__init__.py", line 976, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“on” value must be either True or False.']
+[2022-07-28T15:59:55] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T15:59:55] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T16:00:03] ERROR [django.request.log_response:224] Internal Server Error: /dash/update-profile-plan/hp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py", line 243, in update_profile_plan
+    return redirect('plans-panel', pre_plan.app.slug)
+AttributeError: 'QuerySet' object has no attribute 'app'
+[2022-07-28T16:00:27] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T16:00:27] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T16:00:37] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T16:00:37] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T16:01:32] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T16:01:32] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T16:04:37] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T16:04:37] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T16:05:15] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T16:05:15] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T16:55:32] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\models.py changed, reloading.
+[2022-07-28T16:55:32] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T16:55:34] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T16:57:15] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T16:57:22] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T17:13:09] ERROR [django.request.log_response:224] Internal Server Error: /create-notification
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 188, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 309, in check_response
+    raise ValueError(
+ValueError: The view accounts.views.create_notification didn't return an HttpResponse object. It returned None instead.
+[2022-07-28T17:13:51] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T17:13:51] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T17:13:58] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T17:13:58] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing BlpImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing BmpImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing BufrStubImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing CurImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing DcxImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing DdsImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing EpsImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing FitsStubImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing FliImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing FpxImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:402] Image: failed to import FpxImagePlugin: No module named 'olefile'
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing FtexImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing GbrImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing GifImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing GribStubImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing Hdf5StubImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing IcnsImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing IcoImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing ImImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing ImtImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing IptcImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing JpegImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing Jpeg2KImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing McIdasImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing MicImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:402] Image: failed to import MicImagePlugin: No module named 'olefile'
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing MpegImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing MpoImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing MspImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing PalmImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing PcdImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing PcxImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing PdfImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing PixarImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing PngImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing PpmImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing PsdImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing SgiImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing SpiderImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing SunImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing TgaImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing TiffImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing WebPImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing WmfImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing XbmImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing XpmImagePlugin
+[2022-07-28T17:14:13] DEBUG [PIL.Image.init:399] Importing XVThumbImagePlugin
+[2022-07-28T17:14:13] ERROR [django.request.log_response:224] Internal Server Error: /create-notification
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py", line 322, in create_notification
+    notification.save(update_fields=['profile', 'url'])
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\models.py", line 102, in save
+    super(Notifications, self).save()
+NameError: name 'Notifications' is not defined
+[2022-07-28T17:14:40] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\models.py changed, reloading.
+[2022-07-28T17:14:40] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T17:15:04] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\admin.py changed, reloading.
+[2022-07-28T17:15:04] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing BlpImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing BmpImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing BufrStubImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing CurImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing DcxImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing DdsImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing EpsImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing FitsStubImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing FliImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing FpxImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:402] Image: failed to import FpxImagePlugin: No module named 'olefile'
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing FtexImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing GbrImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing GifImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing GribStubImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing Hdf5StubImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing IcnsImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing IcoImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing ImImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing ImtImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing IptcImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing JpegImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing Jpeg2KImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing McIdasImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing MicImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:402] Image: failed to import MicImagePlugin: No module named 'olefile'
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing MpegImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing MpoImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing MspImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing PalmImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing PcdImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing PcxImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing PdfImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing PixarImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing PngImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing PpmImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing PsdImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing SgiImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing SpiderImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing SunImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing TgaImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing TiffImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing WebPImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing WmfImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing XbmImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing XpmImagePlugin
+[2022-07-28T17:15:22] DEBUG [PIL.Image.init:399] Importing XVThumbImagePlugin
+[2022-07-28T17:15:22] ERROR [django.request.log_response:224] Internal Server Error: /create-notification
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py", line 323, in create_notification
+    return redirect('show_profile', slug=profile.slug)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\shortcuts.py", line 41, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\shortcuts.py", line 130, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'show_profile' with keyword arguments '{'slug': 'hp'}' not found. 1 pattern(s) tried: ['(?P<slug>[^/]+)/(?P<appslug>[^/]+)$']
+[2022-07-28T17:16:28] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T17:16:28] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T17:17:54] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\billapp\urls.py changed, reloading.
+[2022-07-28T17:17:54] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T17:18:29] WARNING [django.request.http_method_not_allowed:101] Method Not Allowed (POST): /create-notification/whatsapp
+[2022-07-28T17:18:29] WARNING [django.request.log_response:224] Method Not Allowed: /create-notification/whatsapp
+[2022-07-28T17:19:44] WARNING [django.request.http_method_not_allowed:101] Method Not Allowed (POST): /create-notification/whatsapp
+[2022-07-28T17:19:44] WARNING [django.request.log_response:224] Method Not Allowed: /create-notification/whatsapp
+[2022-07-28T17:21:28] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T17:21:28] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:15:04] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\billapp\urls.py changed, reloading.
+[2022-07-28T18:15:04] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:15:11] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T18:15:11] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:15:17] ERROR [django.request.log_response:224] Internal Server Error: /hp/whatsapp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notification' with arguments '('whatsapp',)' not found. 1 pattern(s) tried: ['create\\-notification$']
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing BlpImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing BmpImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing BufrStubImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing CurImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing DcxImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing DdsImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing EpsImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing FitsStubImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing FliImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing FpxImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:402] Image: failed to import FpxImagePlugin: No module named 'olefile'
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing FtexImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing GbrImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing GifImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing GribStubImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing Hdf5StubImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing IcnsImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing IcoImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing ImImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing ImtImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing IptcImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing JpegImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing Jpeg2KImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing McIdasImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing MicImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:402] Image: failed to import MicImagePlugin: No module named 'olefile'
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing MpegImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing MpoImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing MspImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing PalmImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing PcdImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing PcxImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing PdfImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing PixarImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing PngImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing PpmImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing PsdImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing SgiImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing SpiderImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing SunImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing TgaImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing TiffImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing WebPImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing WmfImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing XbmImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing XpmImagePlugin
+[2022-07-28T18:15:41] DEBUG [PIL.Image.init:399] Importing XVThumbImagePlugin
+[2022-07-28T18:15:41] ERROR [django.request.log_response:224] Internal Server Error: /create-notification
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py", line 323, in create_notification
+    return redirect('show_profile', slug=profile.slug)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\shortcuts.py", line 41, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\shortcuts.py", line 130, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'show_profile' with keyword arguments '{'slug': 'hp'}' not found. 1 pattern(s) tried: ['(?P<slug>[^/]+)/(?P<appslug>[^/]+)$']
+[2022-07-28T18:16:19] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T18:16:19] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:16:26] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T18:16:26] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:16:38] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\billapp\urls.py changed, reloading.
+[2022-07-28T18:16:38] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:16:45] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T18:16:45] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:17:55] WARNING [django.request.log_response:224] Not Found: /create-notification
+[2022-07-28T18:18:07] WARNING [django.request.http_method_not_allowed:101] Method Not Allowed (POST): /create-notification/whatsapp
+[2022-07-28T18:18:07] WARNING [django.request.log_response:224] Method Not Allowed: /create-notification/whatsapp
+[2022-07-28T18:19:36] WARNING [django.request.http_method_not_allowed:101] Method Not Allowed (POST): /create-notification/whatsapp
+[2022-07-28T18:19:36] WARNING [django.request.log_response:224] Method Not Allowed: /create-notification/whatsapp
+[2022-07-28T18:19:45] ERROR [django.request.log_response:224] Internal Server Error: /dash/update-profile-plan/hp
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py", line 244, in update_profile_plan
+    return redirect('show_profile', profile.slug)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\shortcuts.py", line 41, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\shortcuts.py", line 130, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'show_profile' with arguments '('hp',)' not found. 1 pattern(s) tried: ['(?P<slug>[^/]+)/(?P<appslug>[^/]+)$']
+[2022-07-28T18:20:49] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T18:20:49] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:21:31] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T18:21:31] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:21:47] ERROR [django.request.log_response:224] Internal Server Error: /hp/0xkdMLcNeC
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notification' with arguments '('',)' not found. 1 pattern(s) tried: ['create\\-notification/(?P<slug>[^/]+)$']
+[2022-07-28T18:23:32] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T18:23:32] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:25:29] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T18:25:29] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:25:32] ERROR [django.request.log_response:224] Internal Server Error: /hp/0xkdMLcNeC
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    response = response.render()
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\response.py", line 83, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 170, in render
+    return self._render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 162, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 938, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\base.py", line 905, in render_annotated
+    return self.render(context)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\template\defaulttags.py", line 446, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\urls\base.py", line 86, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\urls\resolvers.py", line 694, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notification' with arguments '('',)' not found. 1 pattern(s) tried: ['create\\-notification/(?P<slug>[^/]+)$']
+[2022-07-28T18:26:28] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T18:26:28] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:29:18] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T18:29:18] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:29:32] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\dashboard\views.py changed, reloading.
+[2022-07-28T18:29:32] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:30:16] WARNING [django.request.http_method_not_allowed:101] Method Not Allowed (POST): /create-notification/whatsapp
+[2022-07-28T18:30:16] WARNING [django.request.log_response:224] Method Not Allowed: /create-notification/whatsapp
+[2022-07-28T18:32:32] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T18:32:32] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:32:36] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T18:32:36] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:32:50] WARNING [django.request.http_method_not_allowed:101] Method Not Allowed (POST): /create-notification/whatsapp
+[2022-07-28T18:32:50] WARNING [django.request.log_response:224] Method Not Allowed: /create-notification/whatsapp
+[2022-07-28T18:38:29] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T18:38:29] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:38:40] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\billapp\urls.py changed, reloading.
+[2022-07-28T18:38:40] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:38:46] WARNING [django.request.http_method_not_allowed:101] Method Not Allowed (POST): /create-notification/whatsapp
+[2022-07-28T18:38:46] WARNING [django.request.log_response:224] Method Not Allowed: /create-notification/whatsapp
+[2022-07-28T18:39:14] WARNING [django.request.http_method_not_allowed:101] Method Not Allowed (POST): /create-notification/whatsapp
+[2022-07-28T18:39:14] WARNING [django.request.log_response:224] Method Not Allowed: /create-notification/whatsapp
+[2022-07-28T18:39:27] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\billapp\urls.py changed, reloading.
+[2022-07-28T18:39:27] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:40:13] WARNING [django.request.http_method_not_allowed:101] Method Not Allowed (POST): /notification/whatsapp
+[2022-07-28T18:40:13] WARNING [django.request.log_response:224] Method Not Allowed: /notification/whatsapp
+[2022-07-28T18:40:25] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\billapp\urls.py changed, reloading.
+[2022-07-28T18:40:25] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:40:37] ERROR [django.request.log_response:224] Internal Server Error: /notification/whatsapp/
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\views\generic\base.py", line 98, in dispatch
+    return handler(request, *args, **kwargs)
+TypeError: post() got multiple values for argument 'slug'
+[2022-07-28T18:40:53] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T18:40:53] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:41:02] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\billapp\urls.py changed, reloading.
+[2022-07-28T18:41:02] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:41:09] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T18:41:09] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:41:26] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\accounts\views.py changed, reloading.
+[2022-07-28T18:41:26] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing BlpImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing BmpImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing BufrStubImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing CurImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing DcxImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing DdsImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing EpsImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing FitsStubImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing FliImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing FpxImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:402] Image: failed to import FpxImagePlugin: No module named 'olefile'
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing FtexImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing GbrImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing GifImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing GribStubImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing Hdf5StubImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing IcnsImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing IcoImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing ImImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing ImtImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing IptcImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing JpegImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing Jpeg2KImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing McIdasImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing MicImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:402] Image: failed to import MicImagePlugin: No module named 'olefile'
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing MpegImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing MpoImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing MspImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing PalmImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing PcdImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing PcxImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing PdfImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing PixarImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing PngImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing PpmImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing PsdImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing SgiImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing SpiderImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing SunImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing TgaImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing TiffImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing WebPImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing WmfImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing XbmImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing XpmImagePlugin
+[2022-07-28T18:41:46] DEBUG [PIL.Image.init:399] Importing XVThumbImagePlugin
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/css/styles.css
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/illustrations/rocket-white.png
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-xd.svg
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-1.jpg
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-2.jpg
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-3.jpg
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/css/styles.css
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-4.jpg
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-atlassian.svg
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-slack.svg
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-spotify.svg
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-jira.svg
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/small-logos/logo-invision.svg
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/js/plugins/chartjs.min.js
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/js/plugins/perfect-scrollbar.min.js
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-2.jpg
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-4.jpg
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-3.jpg
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/team-1.jpg
+[2022-07-28T18:43:50] WARNING [django.request.log_response:224] Not Found: /apps/whatsapp/dashboard/assets/img/ivancik.jpg
+[2022-07-28T18:46:23] ERROR [django.request.log_response:224] Internal Server Error: /plans/plan/0xkdMLcNeC
+Traceback (most recent call last):
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\hp\Desktop\Internship Assignments\billapp\plans\views.py", line 71, in show_plan
+    users = Profile.objects.filter(plan=plan)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\query.py", line 941, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\query.py", line 961, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\query.py", line 968, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\query.py", line 1393, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\query.py", line 1412, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\query.py", line 1286, in build_filter
+    lookups, parts, reffed_expression = self.solve_lookup_type(arg)
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\query.py", line 1112, in solve_lookup_type
+    _, field, _, lookup_parts = self.names_to_path(lookup_splitted, self.get_meta())
+  File "C:\Users\hp\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.9_qbz5n2kfra8p0\LocalCache\local-packages\Python39\site-packages\django\db\models\sql\query.py", line 1539, in names_to_path
+    raise FieldError("Cannot resolve keyword '%s' into field. "
+django.core.exceptions.FieldError: Cannot resolve keyword 'plan' into field. Choices are: admin, apps, contact_designation, contact_email, contact_landline, contact_mobile, contact_person, contact_phnum, emergency_altmobile, emergency_altofficeaddress, emergency_altperson, emergency_mobile, emergency_officeaddress, emergency_person, full_name, group, id, info_created_at, info_updated_at, paid, plan_active, plans, se_coins, slug, status, user, user_id, user_notifications, utility_address, utility_country, utility_district, utility_name, utility_postalcode, utility_short_name, utility_state
+[2022-07-28T18:49:06] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\plans\views.py changed, reloading.
+[2022-07-28T18:49:06] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:51:43] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\plans\views.py changed, reloading.
+[2022-07-28T18:51:43] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:53:20] INFO [django.utils.autoreload.trigger_reload:251] C:\Users\hp\Desktop\Internship Assignments\billapp\plans\views.py changed, reloading.
+[2022-07-28T18:53:20] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T18:54:16] INFO [root.showapps:42] hp_seen the whole applist
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/css/styles.css
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/illustrations/rocket-white.png
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-xd.svg
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-1.jpg
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-2.jpg
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/css/styles.css
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-3.jpg
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-4.jpg
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-atlassian.svg
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-spotify.svg
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-slack.svg
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-invision.svg
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/js/plugins/chartjs.min.js
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-jira.svg
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/ivancik.jpg
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/js/plugins/perfect-scrollbar.min.js
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-2.jpg
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-3.jpg
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-4.jpg
+[2022-07-28T18:54:20] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-1.jpg
+[2022-07-28T18:54:53] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/js/plugins/perfect-scrollbar.min.js
+[2022-07-28T18:56:47] DEBUG [asyncio.__init__:624] Using proactor: IocpProactor
+[2022-07-28T19:30:42] DEBUG [PIL.PngImagePlugin.call:213] STREAM b'IHDR' 16 13
+[2022-07-28T19:30:42] DEBUG [PIL.PngImagePlugin.call:213] STREAM b'sRGB' 41 1
+[2022-07-28T19:30:42] DEBUG [PIL.PngImagePlugin.call:213] STREAM b'IDAT' 54 8192
+[2022-07-28T19:30:42] DEBUG [PIL.Image.init:401] Importing BlpImagePlugin
+[2022-07-28T19:30:42] DEBUG [PIL.Image.init:401] Importing BmpImagePlugin
+[2022-07-28T19:30:42] DEBUG [PIL.Image.init:401] Importing BufrStubImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing CurImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing DcxImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing DdsImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing EpsImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing FitsImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing FitsStubImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing FliImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing FpxImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:404] Image: failed to import FpxImagePlugin: No module named 'olefile'
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing FtexImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing GbrImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing GifImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing GribStubImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing Hdf5StubImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing IcnsImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing IcoImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing ImImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing ImtImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing IptcImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing JpegImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing Jpeg2KImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing McIdasImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing MicImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:404] Image: failed to import MicImagePlugin: No module named 'olefile'
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing MpegImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing MpoImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing MspImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing PalmImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing PcdImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing PcxImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing PdfImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing PixarImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing PngImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing PpmImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing PsdImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing SgiImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing SpiderImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing SunImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing TgaImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing TiffImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing WebPImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing WmfImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing XbmImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing XpmImagePlugin
+[2022-07-28T19:30:43] DEBUG [PIL.Image.init:401] Importing XVThumbImagePlugin
+[2022-07-28T19:32:06] INFO [root.logout:188] admin_ logged out
+[2022-07-28T19:32:09] INFO [root.logout:188] _ logged out
+[2022-07-28T19:32:21] INFO [root.showapps:42] admin_seen the whole applist
+[2022-07-28T19:32:25] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/css/styles.css
+[2022-07-28T19:32:25] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/illustrations/rocket-white.png
+[2022-07-28T19:32:25] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-xd.svg
+[2022-07-28T19:32:25] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-1.jpg
+[2022-07-28T19:32:25] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-2.jpg
+[2022-07-28T19:32:25] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/css/styles.css
+[2022-07-28T19:32:25] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-3.jpg
+[2022-07-28T19:32:25] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-4.jpg
+[2022-07-28T19:32:25] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-atlassian.svg
+[2022-07-28T19:32:25] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-spotify.svg
+[2022-07-28T19:32:25] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-slack.svg
+[2022-07-28T19:32:26] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/js/plugins/chartjs.min.js
+[2022-07-28T19:32:26] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-jira.svg
+[2022-07-28T19:32:26] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-invision.svg
+[2022-07-28T19:32:26] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/js/plugins/perfect-scrollbar.min.js
+[2022-07-28T19:32:26] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-2.jpg
+[2022-07-28T19:32:26] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/ivancik.jpg
+[2022-07-28T19:32:26] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-4.jpg
+[2022-07-28T19:32:26] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-3.jpg
+[2022-07-28T19:32:26] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-1.jpg
+[2022-07-28T19:34:04] WARNING [django.request.log_response:224] Not Found: /admin/instagram
+[2022-07-28T21:41:48] WARNING [django.request.log_response:224] Not Found: /favicon.ico
+[2022-07-28T21:41:48] WARNING [django.request.log_response:224] Not Found: /favicon.ico
+[2022-07-28T21:41:53] INFO [root.showapps:42] admin_seen the whole applist
+[2022-07-28T21:41:55] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/css/styles.css
+[2022-07-28T21:41:55] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/illustrations/rocket-white.png
+[2022-07-28T21:41:55] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-xd.svg
+[2022-07-28T21:41:55] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-1.jpg
+[2022-07-28T21:41:55] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/css/styles.css
+[2022-07-28T21:41:56] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-2.jpg
+[2022-07-28T21:41:56] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-3.jpg
+[2022-07-28T21:41:56] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-atlassian.svg
+[2022-07-28T21:41:56] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-slack.svg
+[2022-07-28T21:41:56] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-4.jpg
+[2022-07-28T21:41:56] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-spotify.svg
+[2022-07-28T21:41:56] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-jira.svg
+[2022-07-28T21:41:56] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/small-logos/logo-invision.svg
+[2022-07-28T21:41:56] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/js/plugins/chartjs.min.js
+[2022-07-28T21:41:56] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/js/plugins/perfect-scrollbar.min.js
+[2022-07-28T21:41:56] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/ivancik.jpg
+[2022-07-28T21:41:56] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-2.jpg
+[2022-07-28T21:41:56] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-3.jpg
+[2022-07-28T21:41:56] WARNING [django.request.log_response:224] Not Found: /apps/instagram/dashboard/assets/img/team-1.jpg
+[2022-07-28T21:42:02] WARNING [django.request.log_response:224] Not Found: /favicon.ico
