@@ -118,7 +118,7 @@ def addcustomer(request):
 @login_required
 def customerlist(request,slug):
     app=applists.objects.get(slug=slug)
-    details = Profile.objects.filter(apps=app).values_list('user__username', 'slug', 'id')
+    details = Profile.objects.filter(apps=app)
     return render(request, 'customerlist.html', {'details':details, 'slug':slug})
     
 @login_required

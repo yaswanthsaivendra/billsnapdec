@@ -39,6 +39,7 @@ class Profile(models.Model):
     status = models.CharField(choices=status_choices, max_length=20, default='c')
     full_name = models.CharField(max_length=100, blank=True, null=True)
 
+
     utility_name = models.CharField(max_length=200, null=True, blank=True)
     utility_short_name= models.CharField(max_length=50, null=True, blank=True)
     utility_state= models.CharField(max_length=50, null=True, blank=True)

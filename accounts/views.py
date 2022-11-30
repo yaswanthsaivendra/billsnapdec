@@ -7,7 +7,7 @@ from django.core.mail import EmailMessage
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.contrib.sites.shortcuts import get_current_site
 from django.urls import reverse
-from django.utils.encoding import force_bytes, force_text, DjangoUnicodeDecodeError
+from django.utils.encoding import force_bytes, DjangoUnicodeDecodeError
 from apps.models import *
 
 from logging.handlers import TimedRotatingFileHandler
@@ -101,10 +101,12 @@ class RegistrationView(View):
             messages.warning(request, "This username already exists!")
             return render(request, 'register.html', context)
 
+from django.utils.encoding import force_str
+
 class VerificationView(View):
     def get(self, request, uidb64, token, backend='django.contrib.auth.backends.ModelBackend'):
         try:
-            uid = force_text(urlsafe_base64_decode(uidb64))
+            uid = force_str(urlsafe_base64_decode(uidb64))
             user = User.objects.get(pk=uid)
         except (TypeError, ValueError, OverflowError, User.DoesNotExist):
             user = None
@@ -257,7 +259,7 @@ from django.views.generic import UpdateView, DetailView
 from django.contrib import messages
 from django.core.mail import EmailMessage
 from django.urls import reverse
-from django.utils.encoding import force_bytes, force_text, DjangoUnicodeDecodeError
+from django.utils.encoding import force_bytes, DjangoUnicodeDecodeError
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.contrib.sites.shortcuts import get_current_site
 from .utils import token_generator
