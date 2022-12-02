@@ -31,5 +31,5 @@ pymysql
 pymupdf
 pandas
 dj_database_url
-django_heroku
+# django_heroku
 gunicorn
