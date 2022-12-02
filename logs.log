@@ -347,3 +347,4 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'add-customer-form' not found
 [2022-11-30T18:50:02] WARNING [django.request.log_response:241] Not Found: /apps/instagram/dashboard/assets/img/ivancik.jpg
 [2022-11-30T18:50:04] WARNING [django.request.log_response:241] Not Found: /apps/instagram/dashboard/bulk.html
 [2022-11-30T18:50:11] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-02T17:12:40] WARNING [django.request.log_response:241] Not Found: /favicon.ico/

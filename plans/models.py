@@ -1,10 +1,7 @@
 from django.db import models
-from django.contrib.auth.models import User
-from ckeditor.fields import RichTextField
 import string
 import random
 from apps.models import *
-from django.utils.text import slugify
 
 
 def generate_code():
