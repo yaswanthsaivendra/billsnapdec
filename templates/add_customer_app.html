@@ -1,6 +1,6 @@
 {% load static %}
 {% load crispy_forms_tags %}
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <link rel="stylesheet" href="{% static 'w3.css' %}" />
@@ -32,7 +32,7 @@
               <button class='w3-right w3-button w3-round-large w3-red w3-padding' onclick="document.getElementById('register').style.display='none'" >&times;</button>
               <div class="w3-margin w3-padding w3-round-large w3-border w3-white" id="content">
                 <form
-                    action="{% url 'register-app' app.slug %}"
+                    action="{% url 'accounts:register-app' app.slug %}"
                     method="POST"
                     class="needs-validation"
                     novalidate
@@ -110,5 +110,5 @@
     } 
 </script>
 </html>
--->
+
 

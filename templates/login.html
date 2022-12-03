@@ -54,7 +54,7 @@ crossorigin="anonymous"
                         <p class="heading">
                             Welcome Back!
                         </p>
-                        <form action="{% url 'login' %}" method="POST" class="needs-validation"novalidate>
+                        <form action="{% url 'accounts:login' %}" method="POST" class="needs-validation"novalidate>
                         {% csrf_token %}
                             <label for="username" class="form-label">Username or Email Address</label>
                             {% if user_name %}
@@ -96,7 +96,7 @@ crossorigin="anonymous"
                             {% endif %}
                             <button id="myBtn" class="button" name="login_page" type="submit">login</button>
                             <br>
-                        <label><a id="forget_pass" href="{% url 'reset_password' %}">Forgot your password?</a></label>
+                        <label><a id="forget_pass" href="{% url 'accounts:reset-password' %}">Forgot your password?</a></label>
                         </form>
                     </div>
                 </div>
@@ -110,7 +110,7 @@ crossorigin="anonymous"
                         <div class="contact-us-footer">
                             <p>
                                 Or
-                                <a href="{% url 'register' %}">Click Here</a>
+                                <a href="{% url 'accounts:register' %}">Click Here</a>
                                 to create account
                             </p>
                         </div>

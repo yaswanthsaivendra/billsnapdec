@@ -5,11 +5,11 @@
 <h1>Applist page</h1>
 {% if user.is_authenticated %}
     <p>Hi, {{user.username}}</p>
-    <button type="button"><a href="{%url 'logout' %}">LogOut</a></button>
+    <button type="button"><a href="{%url 'accounts:logout' %}">LogOut</a></button>
 {% else %}
-    <button><a href="{%url 'register'%}">Register</a></button>
+    <button><a href="{%url 'accounts:register'%}">Register</a></button>
     <p>OR</p>
-    <button><a href="{%url 'login'%}">LogIn</a></button>
+    <button><a href="{%url 'accounts:login'%}">LogIn</a></button>
 {% endif %}
 
 <br></br>

@@ -69,7 +69,7 @@
                                         </h5>
                                     </div>-->
                                     <form
-                                        action="{% url 'register' %}"
+                                        action="{% url 'accounts:register' %}"
                                         method="POST"
                                         class="needs-validation"
                                         novalidate
@@ -157,7 +157,7 @@
                                     <div class="contact-us-footer">
                                         <p>
                                             Have Account ?
-                                            <a href="{% url 'login' %}">Login Here</a>
+                                            <a href="{% url 'accounts:login' %}">Login Here</a>
                                         </p>
                                     </div>
                                 </div>

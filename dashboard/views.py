@@ -188,12 +188,12 @@ def bulk_upload(request,slug):
             return redirect('uploadlist')
         else:
             status=0
-            return render(request, 'bulkupload.html',{'stat':status})
+            return render(request, 'bulkupload.html',{'stat':status, 'slug':slug})
     else:
-        stat=00
-        return render(request, 'bulkupload.html',{'stat':stat})
+        stat=0
+        return render(request, 'bulkupload.html',{'stat':stat, 'slug' : slug})
 @login_required
-def uploadlis(request):
+def uploadlis(request, slug):
     cols=[f.name for f in csvs._meta.get_fields()]
     dets=csvs.objects.all()
     return render(request,'uploadlist.html',{'details':dets,'columns':cols})
