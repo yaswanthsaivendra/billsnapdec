@@ -7,11 +7,11 @@
 
 {% if user.is_authenticated %}
     <button type="button"><a href="{%url 'dash' %}">View Dashboard</a></button>
-    <button type="button"><a href="{%url 'logout' %}">LogOut</a></button>
+    <button type="button"><a href="{%url 'accounts:logout' %}">LogOut</a></button>
 {% else %}
-    <button><a href="{%url 'register'%}">Register</a></button>
+    <button><a href="{%url 'accounts:register'%}">Register</a></button>
     <p>OR</p>
-    <button><a href="{%url 'login'%}">LogIn</a></button>
+    <button><a href="{%url 'accounts:login'%}">LogIn</a></button>
 {% endif %}
 
 </body>
@@ -84,11 +84,11 @@
 
             {% if not user.is_authenticated %}
                         <span>
-                            <a href="{% url 'login' %}?next={{request.path}}"><button class="login">Login</button></a>
-                            <a href="{% url 'register' %}?next={{request.path}}"><button class="register">Register</button></a>
+                            <a href="{% url 'accounts:login' %}?next={{request.path}}"><button class="login">Login</button></a>
+                            <a href="{% url 'accounts:register' %}?next={{request.path}}"><button class="register">Register</button></a>
                         </span>
                         {% else %}
-                                    <a href="{% url 'logout' %}" style="text-decoration: none;color:black;">
+                                    <a href="{% url 'accounts:logout' %}" style="text-decoration: none;color:black;">
                                     <span style="display: flex; padding-top: 10px; padding-left:15px; padding-right:15px; padding-bottom: 15px;" class="profile-hover">
                                         <img src="https://img.icons8.com/windows/32/000000/exit.png" height="30px" />
                                       Logout
@@ -184,7 +184,7 @@
         </div>
         <div class="col-lg-6 col-md-12 col-12">
           <div class="header-image">
-            <img src="assets/images/header/img-1.png" alt="#" />
+            <img src="{% static 'assets/images/header/img-1.png' %}" alt="#"/>
           </div>
         </div>
       </div>
@@ -200,7 +200,7 @@
         <div class="col-lg-6 col-12">
           <div class="about-image-five">
 
-            <img src="assets/images/about/about-img1.jpg" alt="about" />
+            <img src="{% static 'assets/images/about/about-img1.jpg' %}" alt="about" />
           </div>
         </div>
         <div class="col-lg-6 col-12">
@@ -516,7 +516,7 @@
             <div class="image">
 
               <div class="meta-details">
-                <img class="thumb" src="assets/images/blog/b6.jpg" alt="Author" />
+                <img class="thumb" src="{% static 'assets/images/blog/b6.jpg' %}" alt="Author" />
                 <span>BY TIM NORTON</span>
               </div>
             </div>
@@ -540,7 +540,7 @@
             <div class="image">
 
               <div class="meta-details">
-                <img class="thumb" src="assets/images/blog/b6.jpg" alt="Author" />
+                <img class="thumb" src="{% static 'assets/images/blog/b6.jpg' %}" alt="Author" />
                 <span>BY TIM NORTON</span>
               </div>
             </div>
@@ -564,7 +564,7 @@
             <div class="image">
 
               <div class="meta-details">
-                <img class="thumb" src="assets/images/blog/b6.jpg" alt="Author" />
+                <img class="thumb" src="{% static 'assets/images/blog/b6.jpg' %}" alt="Author" />
                 <span>BY TIM NORTON</span>
               </div>
             </div>
@@ -821,10 +821,10 @@
   </a>
 
   <!--====== js ======-->
-  <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/glightbox.min.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/tiny-slider.js"></script>
+  <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <script src="{% static 'assets/js/tiny-slider.js' %}"></script>
 
   <script>
 

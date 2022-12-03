@@ -51,23 +51,23 @@
         <div class="menu-frag d-flex flex-column p-3 ps-4 gap-3">
           <div>
             <i class="fa-solid fa-table-columns"></i>
-            <a href="">&nbsp;Dashboard</a>
+            <a href="{% url 'dashboard' slug %}">&nbsp;Dashboard</a>
           </div>
           <div>
             <i class="fa-solid fa-sack-dollar"></i>
-            <a href="">&nbsp;Estimates</a>
+            <a href="#">&nbsp;Estimates</a>
           </div>
           <div>
             <i class="fa-solid fa-gear"></i>
-            <a href="">&nbsp;Settings</a>
+            <a href="#">&nbsp;Settings</a>
           </div>
         </div>
         <div class="menu-frag mt-3 ps-3">
-          <h3>Customer</h3>
+          <h3>Customer neha</h3>
           <div class="customer-frag d-flex flex-column p-3 pt-1 gap-3">
             <div>
               <i class="fa-solid fa-user-plus"></i>
-              <a href="">&nbsp;Create</a>
+              <a href="{% url 'addcustomer' slug %}">&nbsp;Create</a>
             </div>
             <div>
               <i class="fa-solid fa-list"></i>
@@ -75,19 +75,19 @@
             </div>
             <div>
               <i class="fa-solid fa-upload"></i>
-              <a href="">&nbsp;Bulk Upload</a>
+              <a href="{% url 'bulkupload' slug %}">&nbsp;Bulk Upload</a>
             </div>
             <div>
               <i class="fa-solid fa-people-roof"></i>
-              <a href="">&nbsp;Manage Group</a>
+              <a href="#">&nbsp;Manage Group</a>
             </div>
             <div>
               <i class="fa-solid fa-person-circle-check"></i>
-              <a href="">&nbsp;Pending approvals</a>
+              <a href="#">&nbsp;Pending approvals</a>
             </div>
             <div>
               <i class="fa-solid fa-message"></i>
-              <a href="">&nbsp;Messaging</a>
+              <a href="#">&nbsp;Messaging</a>
             </div>
           </div>
         </div>
@@ -96,7 +96,7 @@
           <div class="pay-frag d-flex flex-column  p-3 pt-1  gap-3">
             <div>
               <i class="fa-solid fa-money-check"></i>
-              <a href="">&nbsp;Collect Payments</a>
+              <a href="#">&nbsp;Collect Payments</a>
             </div>
             <div class="btn-group gap-2">
               <i class="fa-brands fa-cc-mastercard pt-1"></i>
@@ -111,11 +111,11 @@
             </div>
             <div>
               <i class="fa-solid fa-map"></i>
-              <a href="">&nbsp;Plans</a>
+              <a href="#">&nbsp;Plans</a>
             </div>
             <div>
               <i class="fa-solid fa-code-pull-request"></i>
-              <a href="">&nbsp;Requests</a>
+              <a href="#">&nbsp;Requests</a>
             </div>
           </div>
         </div>

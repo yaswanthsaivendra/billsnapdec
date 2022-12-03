@@ -1,0 +1,18 @@
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top p-md-0">
+        <div class="container-fluid">
+            <div class="d-md-none menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="d-none d-md-none close">
+                <i class="fa-solid fa-xmark fa-xl"></i>
+            </div>
+            <a class="navbar-brand d-none d-md-block mt-1" href="{% url 'index' %}">
+                <h2 class="h2">BILL SNAP</h2>
+            </a>
+            <div class="d-flex ms-auto gap-4 pe-3">
+                <a href="{% url 'accounts:logout' %}">Logout</a>
+            </div>
+        </div>
+    </nav>
+</header>

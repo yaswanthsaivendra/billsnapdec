@@ -44,7 +44,7 @@ def app_registration(request, appslug):
             profile.apps.add(applists.objects.get(slug=appslug))
             messages.success(
                 request, 'Account successfully created! Check your Email for Account Activation')
-            return redirect('add-customer-form', appslug)
+            return redirect('addcustomer', appslug)
 
         messages.warning(request, "This Email already exists!")
         return render(request, 'register.html', context)
@@ -54,7 +54,7 @@ def app_registration(request, appslug):
 
 class RegistrationView(View):
     def get(self, request):
-        return render(request, 'register.html', {'slug': appslug})
+        return render(request, 'register.html')
 
     def post(self, request):
         username = request.POST['username']
@@ -63,7 +63,6 @@ class RegistrationView(View):
         context = {
             'username': username,
             'email': email,
-            'slug': appslug
         }
         if not User.objects.filter(username=username).exists():
             if not User.objects.filter(email=email).exists():
@@ -78,7 +77,7 @@ class RegistrationView(View):
 
                 uidb64 = urlsafe_base64_encode(force_bytes(user.pk))
                 domain = get_current_site(request).domain
-                link = reverse('activate', kwargs={
+                link = reverse('accounts:activate', kwargs={
                             'uidb64': uidb64, 'token': token_generator.make_token(user)})
                 email_subject="Activate your Account"
                 activate_url = 'http://'+domain+link
@@ -93,7 +92,7 @@ class RegistrationView(View):
                 email.send(fail_silently=False)
                 messages.success(
                     request, 'Account successfully created! Check your Email for Account Activation')
-                return redirect('add-customer-form', appslug)
+                return redirect('accounts:login')
 
             messages.warning(request, "This Email already exists!")
             return render(request, 'register.html', context)
@@ -148,7 +147,7 @@ class LoginView(View):
                                 return redirect("showapps")
                             else:
                                 messages.success(request,"loggedin succesfully")
-                                return redirect("custdash")
+                                return redirect("index")
 
                         messages.error(
                             request, "Account is not active,please check your email"

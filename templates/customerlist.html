@@ -30,103 +30,13 @@
     <link rel="stylesheet" href="{% static 'assets/styles.css'%}">      
 </head>
 <body>
-<header>
-    <nav class="navbar navbar-expand-lg fixed-top p-md-0">
-      <div class="container-fluid">
-        <div class="d-md-none menu">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-        <div class="d-none d-md-none close">
-     <i class="fa-solid fa-xmark fa-xl"></i>
-</div>
-        <a class="navbar-brand d-none d-md-block mt-1" href="#">
-      <h2 class="h2">BILL SNAP</h2>
-        </a>
 
-        <div class="d-flex ms-auto gap-4 pe-3">
-       
-      <a>Logout</a>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-
-
+  {% include "dashnav.html" %}
 
 <div class="main mx-auto">
   <div class="row">
-    <div class="left d-none d-md-block col-md-4">
-      <div class="menu-frag d-flex flex-column p-3 ps-4 gap-3">
-        <div>
-          <i class='bx bx-grid-alt' ></i>
-          
-          <a href="dashboard.html" id="active">Dashboard</a>
-        </div>
-        <div>
-          <i class='bx bx-analyse' ></i>
-         
-          <a href="estimate.html">Estimates</a>
-        </div>
-        <div>
-          <i class='bx bx-cog' ></i>
-         
-          <a href="settings.html">Settings</a>
-        </div>
-      </div>
-      <hr>
-      <div class="menu-frag mt-3 ps-3">
-        <h4>Customer</h4>
-        <div class="customer-frag d-flex flex-column p-3 pt-1 gap-3">
-          <div>
-            <i class='bx bx-box' ></i>
-            
-            <a href="create.html">Create</a>
-          </div>
-          <div>
-            <i class='bx bx-box' ></i>
-            <a href="customerlist.html">Customer List</a>
-          </div>
-          <div>
-            <i class='bx bx-log-out' ></i>
-            <a href="bulk.html">Bulk Upload</a>
-          </div>
-          <div>
-            <i class='bx bx-archive-in' ></i>
-            <a href="manage.html">Manage Group</a>
-          </div>
-          <div>
-            <i class='bx bx-bar-chart' ></i>
-            <a href="pending.html">Pending approvals</a>
-          </div>
-          <div>
-            <i class='bx bx-message' ></i>
-            <a href="message.html">Messaging</a>
-          </div>
-        </div>
-      </div>
-      <hr>
-      <div class="menu-frag mt-3 ps-3">
-        <h4>Payments</h4>
-        <div class="pay-frag d-flex flex-column  p-3 pt-1  gap-3">
-          <div>
-            <i class='bx bx-list-ul' ></i>
-            <a href="transcations.html">Transactions </a>
-          </div>
-          
-          <div>
-            <i class='bx bx-coin-stack' ></i>
-            <a href="plans.html">Plans</a>
-          </div>
-          <div>
-            <i class='bx bx-heart' ></i>
-            <a href="request.html">Requests</a>
-          </div>
-        </div>
-      </div>
-      
-    </div>
     
+    {% include "dashsidebar.html" %}
 
     <div class="col-md-7 flex-md-fill">
       <div class="col right" id="customer-list">
@@ -171,7 +81,7 @@
                   <td>{{ i.contact_email}}</td>
                   <td>{{ i.paid}}</td>
                   <td>
-                    <a class='w3-button w3-small w3-round w3-green' href="{% url 'show_profile' i.user slug %}" >Show Profile</a>
+                    <a class='w3-button w3-small w3-round w3-green' href="{% url 'accounts:show-profile' i.user slug %}" >Show Profile</a>
                   </td>
                   <td>
                     <a class='w3-button w3-small w3-round w3-red' href="{% url 'remove-customer' slug i.user %}" >Remove User</a>
