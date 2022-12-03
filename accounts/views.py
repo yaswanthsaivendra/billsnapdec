@@ -282,7 +282,7 @@ def update_profile(request, slug):
 
         profile.save()
         logger.info(request.user.username+"_ updated profile")
-        return HttpResponseRedirect(reverse('show_profile', kwargs={'slug':slug}))
+        return HttpResponseRedirect(reverse('accounts:show-profile', kwargs={'slug':slug}))
     else:
         if request.user == profile.user:
             return render(request, 'editprofile.html', {'profile': profile})

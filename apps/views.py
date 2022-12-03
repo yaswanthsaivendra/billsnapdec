@@ -8,6 +8,9 @@ from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMix
 from logging.handlers import TimedRotatingFileHandler
 from accounts.models import *
 import logging
+from plans.models import Plan
+from groups.models import Group
+
 logger=logging.getLogger()
 logging.basicConfig(
         handlers=[ TimedRotatingFileHandler('logs.log', when="midnight", interval=1)],
@@ -18,15 +21,40 @@ logging.basicConfig(
 @login_required
 def addapp(request):
     applis= applists()
+    plan = Plan()
+    group = Group()
+
     if request.method=='POST':
         app_name = request.POST.get('app_name')
         app_im= request.FILES.get('app_im')
+
+        plan_name = request.POST.get('plan_name')
+        price = request.POST.get('price')
+        description = request.POST.get('description')
+        duration = request.POST.get('duration')
+
+
         auth=request.user
 
         applis.appname=app_name
         applis.appimg= app_im
         applis.author= auth
         applis.save()
+
+        plan.title = plan_name
+        plan.price = price
+        plan.description = description
+        plan.duration = duration
+        plan.app = applis
+        plan.default_for_customer=True
+        plan.save()
+
+        group.title = plan_name
+        group.description = description
+        group.app = applis
+        group.save()
+
+
 
         logger.info(request.user.username+"_added an app")
         return redirect('showapps')

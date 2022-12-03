@@ -28,10 +28,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static 'assets/styles.css'%}">
-    <link rel="stylesheet" href="{% static 'w3.css' %}" />
 </head>
 
-<body class="w3-padding">
+<body>
 
     {% include "dashnav.html" %}
 
@@ -42,30 +41,38 @@
 
             <div class="col-md-7 flex-md-fill">
                 <div class="col right" id="customer-list">
-                    <div class='w3-green w3-round w3-margin-bottom w3-padding w3-large'>Add Existing Users to
-                        {{app.appname}}</div>
 
-                    <div class='w3-half w3-container'>
-                        <h4>Existing Users</h4>
-                        {% for profile in profiles %}
-                        <div class='w3-container w3-row w3-small w3-padding '>
-                            <h3 class='w3-medium w3-left'>@{{profile.user.username}}</h3>
-                            <button class='w3-right w3-blue w3-button' onclick="addCustomerApp(this);"
-                                value="{{profile.user.username}}" url="{% url 'add-customer-app' app.slug %}">
-                                Add
-                            </button>
-                        </div>
-                        {% endfor %}
+                    <h2 class="ps-1 pt-3" style="color:#0a182e"></h2><br>
+
+
+                    <h3>Contact Us</h3>
+
+                    <div class="container">
+                        <form action="">
+                            <label for="fname">First Name</label>
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                            <label for="lname">Last Name</label>
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+                            <label for="country">states</label>
+                            <select id="country" name="country">
+                                <option value="australia">Karnataka</option>
+                                <option value="canada">Tamil Nadu</option>
+                                <option value="usa">Andra Pradesh</option>
+                            </select>
+
+                            <label for="subject">Query</label>
+                            <textarea id="subject" name="subject" placeholder="Write something.."
+                                style="height:300px"></textarea>
+
+                            <input type="submit" value="Submit">
+                        </form>
                     </div>
 
-                    <div class='w3-half w3-padding w3-border'>
-                        <input id="search" url="{% url 'add-customer-app' app.slug %}"
-                            placeholder="Enter username to add ....."
-                            class='w3-input w3-border w3-round w3-margin-right' />
-                        <button class='w3-center w3-margin w3-green w3-button' onclick="addCustomerAppSearch(this);">
-                            Add
-                        </button>
-                    </div>
+
+
+
 
 
 
@@ -81,31 +88,12 @@
     </div>
     </section>
 
-    <script>
-        function addCustomerApp(obj) {
-            var url = obj.getAttribute('url') + '?username=' + obj.value;
-            $.ajax({
-                type: 'GET',
-                url: url,
-                success: function (resp) {
-                    document.location.reload(true);
-                }
-            })
-        }
-        function addCustomerAppSearch(obj) {
 
-            var inp = document.getElementById('search');
-            var url = inp.getAttribute('url') + '?username=' + inp.value;
-            $.ajax({
-                type: 'GET',
-                url: url,
-                success: function (resp) {
-                    document.location.reload(true);
-                }
-            })
-        }
 
-    </script>
+
+
+
+
 
 </body>
 

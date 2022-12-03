@@ -38,7 +38,7 @@
 				<button class='w3-right w3-button w3-round-large w3-red w3-padding' onclick="document.getElementById('plan-change').style.display='none'" >&times;</button>
 				<div class="w3-margin w3-padding w3-round-large w3-border w3-white" id="content">
 					<h5>Update user's Plan Details</h5>
-					<form  enctype='multipart/form-data' method='POST' action="{% url 'update-profile-plan' profile.slug %}">
+					<form  enctype='multipart/form-data' method='POST' action="{% url 'accounts:update-profile' profile.slug  %}">
 						{% csrf_token %}
 						{{ form|crispy }}
 						<button type='submit' class='w3-margin w3-round-large w3-green w3-button' >Save</button>
@@ -52,7 +52,7 @@
 				<button class='w3-right w3-button w3-round-large w3-red w3-padding' onclick="document.getElementById('notification').style.display='none'" >&times;</button>
 				<div class="w3-margin w3-padding w3-round-large w3-border w3-white" id="content">
 					<h5>Send Notification</h5>
-					<form  enctype='multipart/form-data' method='POST' action="{% url 'create-notification' appslug %}">
+					<form  enctype='multipart/form-data' method='POST' action="{% url 'accounts:create-notification' appslug %}">
 						{% csrf_token %}
 						{{ notification_form|crispy }}
 						<button type='submit' class='w3-margin w3-round-large w3-green w3-button' >Send</button>

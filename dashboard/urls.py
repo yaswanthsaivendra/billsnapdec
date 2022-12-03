@@ -13,4 +13,6 @@ urlpatterns = [
     path('add-customer-app/', views.add_customer_app, name='add-customer-app'),
     path('new-customer/', views.addcustomer, name='new-customer'),
     path('update-profile-plan/<str:slug>', views.update_profile_plan, name='update-profile-plan'),
+    path('messaging/', views.messaging, name='messaging'),
+    path('pendingapprovals/', views.pendingapproval, name='pending-approvals'),
 ]

@@ -202,14 +202,24 @@ def uploadlis(request, slug):
 def dashboard(request, slug):
     return render(request, 'dashboard.html', {'slug' : slug})
 
+
+@login_required
+def messaging(request, slug):
+    return render(request, 'dashmessaging.html', {'slug' : slug})
+
+@login_required
+def pendingapproval(request, slug):
+    return render(request, 'dashpendingapproval.html', {'slug' : slug})
+
+
 def add_customer_form(request, slug):
     app = applists.objects.get(slug=slug)
-    return render(request, 'add_customer_app.html', {'app': app})
+    return render(request, 'add_customer_app.html', {'app': app, 'slug':slug})
 
 def add_existing_user(request, slug):
     profiles = Profile.objects.filter(admin=False).exclude(apps__slug=slug)
     app = applists.objects.get(slug=slug)
-    return render(request, 'add_existing_user.html', {'profiles': profiles, 'app': app})
+    return render(request, 'add_existing_user.html', {'profiles': profiles, 'app': app, 'slug':slug})
 
 def add_customer_app(request, slug):
     username = request.GET.get('username')

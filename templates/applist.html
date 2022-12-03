@@ -1,3 +1,5 @@
+{% load crispy_forms_tags %}
+{% load static %}
 <!DOCTYPE html>
 <html>
 <body>
@@ -30,7 +32,44 @@
         <input type="file" class="form__field" name="app_im" id="app_im" required/>
     <br></br>
 
-    <label for="app name" class="form__label">last updated</label>
+    <label for="plan_name" class="form__label">Default Plan Name</label>
+        <input
+            type="input"
+            class="form__field"
+            placeholder="enter Defualt Plan name"
+            name="plan_name"
+            id="plan_name"
+            required
+        />
+    </br></br>
+
+    <label for="price" class="form__label">Default Plan Price</label>
+        <input
+            type="number"
+            class="form__field"
+            placeholder="Enter price"
+            name="price"
+            id="price"
+            required
+        />
+    </br></br>
+
+    <label for="description" class="form__label">Default Plan Description</label>
+    <textarea
+            class="form__field"
+            name="description"
+            id="description"
+            required></textarea>
+    </br></br>
+
+    <label for="duration" class="form__label">Default Plan duration</label>
+
+    <select name="duration" id="duration">
+        <option value="30">1 Month</option>
+        <option value="180">6 Months</option>
+        <option value="364">1 Year</option>
+    </select><br><br>
+
 
     <button type="submit">Save</button>
 
