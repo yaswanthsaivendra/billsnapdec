@@ -25,7 +25,7 @@ def groups_panel(request, slug):
             group = form.save(commit=False)
             group.app = applists.objects.get(slug=slug)
             group.save()
-            return redirect('groups-panel', slug)
+            return redirect('groups:groups-panel', slug)
         print(form.errors)
         return redirect('groups-panel', slug)
     return redirect('index')

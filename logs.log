@@ -2324,3 +2324,292 @@ TypeError: uploadlis() got an unexpected keyword argument 'slug'
 [2022-12-03T15:36:53] INFO [root.showapps:42] vendrayaswanth_seen the whole applist
 [2022-12-03T15:36:58] WARNING [django.request.log_response:241] Not Found: /apps/instagram/dashboard/assets/img/ivancik.jpg
 [2022-12-03T15:40:14] WARNING [django.request.log_response:241] Not Found: /apps/instagram/dashboard/assets/img/ivancik.jpg
+[2022-12-03T21:25:10] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\groups\urls.py changed, reloading.
+[2022-12-03T21:25:25] WARNING [django.request.log_response:241] Not Found: /favicon.ico/
+[2022-12-03T21:31:09] INFO [root.showapps:42] neha_seen the whole applist
+[2022-12-03T21:31:28] ERROR [django.request.log_response:241] Internal Server Error: /apps/instagram/dashboard/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 197, in render
+    template = context.template.engine.select_template(template_name)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\engine.py", line 212, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: dashsiebar.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 203, in dashboard
+    return render(request, 'dashboard.html', {'slug' : slug})
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 64, in render
+    reraise(exc, self.backend)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 85, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: dashsiebar.html
+[2022-12-03T21:32:05] WARNING [django.request.log_response:241] Not Found: /apps/instagram/dashboard/assets/img/ivancik.jpg
+[2022-12-03T21:37:15] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-03T21:37:19] WARNING [django.request.log_response:241] Not Found: /apps/instagram/dashboard/assets/img/ivancik.jpg
+[2022-12-03T21:39:17] ERROR [django.request.log_response:241] Internal Server Error: /apps/instagram/bulkupload/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'static'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 194, in bulk_upload
+    return render(request, 'bulkupload.html',{'stat':stat, 'slug' : slug})
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 27: 'static'. Did you forget to register or load this tag?
+[2022-12-03T21:43:51] INFO [root.logout:189] neha_ logged out
+[2022-12-03T21:44:44] WARNING [django.request.log_response:241] Not Found: /index.html
+[2022-12-03T21:45:18] INFO [root.showapps:42] neha_seen the whole applist
+[2022-12-03T21:45:23] WARNING [django.request.log_response:241] Not Found: /apps/instagram/dashboard/assets/img/ivancik.jpg
+[2022-12-03T21:51:15] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-12-03T21:51:18] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-12-03T22:04:06] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-12-03T22:18:27] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-03T22:24:49] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-12-03T22:27:09] INFO [root.logout:189] neha_ logged out
+[2022-12-03T22:28:48] INFO [root.logout:189] yaswanth_ logged out
+[2022-12-03T22:29:02] INFO [root.showapps:42] neha_seen the whole applist
+[2022-12-03T22:29:05] WARNING [django.request.log_response:241] Not Found: /apps/instagram/dashboard/assets/img/ivancik.jpg
+[2022-12-03T22:29:13] INFO [root.logout:189] neha_ logged out
+[2022-12-03T22:29:47] INFO [root.showapps:42] yaswanth_seen the whole applist
+[2022-12-03T22:29:50] WARNING [django.request.log_response:241] Not Found: /apps/instagram/dashboard/assets/img/ivancik.jpg
+[2022-12-03T22:29:52] ERROR [django.request.log_response:241] Internal Server Error: /groups/panel/instagram
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\groups\views.py", line 21, in groups_panel
+    return render(request, 'groups-panel/panel.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'groups-panel' not found. 'groups-panel' is not a valid view function or pattern name.
+[2022-12-03T22:30:56] ERROR [django.request.log_response:241] Internal Server Error: /groups/panel/instagram
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\groups\views.py", line 28, in groups_panel
+    return redirect('groups-panel', slug)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'groups-panel' not found. 'groups-panel' is not a valid view function or pattern name.
+[2022-12-03T22:31:42] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\groups\views.py changed, reloading.
+[2022-12-03T22:32:01] ERROR [django.request.log_response:241] Internal Server Error: /groups/panel/instagram
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\groups\views.py", line 21, in groups_panel
+    return render(request, 'groups-panel/panel.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'group' not found. 'group' is not a valid view function or pattern name.
+[2022-12-03T22:32:25] ERROR [django.request.log_response:241] Internal Server Error: /groups/panel/instagram
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\groups\views.py", line 21, in groups_panel
+    return render(request, 'groups-panel/panel.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 54, in render
+    result = self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete-group' not found. 'delete-group' is not a valid view function or pattern name.
+[2022-12-03T22:32:47] ERROR [django.request.log_response:241] Internal Server Error: /groups/delete-group/wbD5V8p44r/instagram
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\groups\views.py", line 36, in delete_group
+    return redirect('groups-panel', appslug)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'groups-panel' not found. 'groups-panel' is not a valid view function or pattern name.
+[2022-12-03T22:32:52] ERROR [django.request.log_response:241] Internal Server Error: /groups/group/wbD5V8p44r
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\groups\views.py", line 42, in show_group
+    users = group.members.all()
+AttributeError: 'NoneType' object has no attribute 'members'
