@@ -16,7 +16,7 @@ urlpatterns = [
     path('reset_password_sent/', a_views.PasswordResetDoneView.as_view(template_name='password_reset_sent.html'), name='password-reset-done'),
     path('reset/<uidb64>/<token>/', a_views.PasswordResetConfirmView.as_view(template_name='password_reset_form.html'), name='password-reset-confirm'),
     path('reset_password_complete/', a_views.PasswordResetCompleteView.as_view(template_name='password_reset_done.html'), name='password-reset-complete'),
-    path('<slug>/edit/', acc_views.update_profile, name='update-profile'),
+    path('<slug>/edit/<str:appslug>', acc_views.update_profile, name='update-profile'),
     path('<slug>/<str:appslug>', acc_views.ShowProfile.as_view(), name='show-profile'),
 
     path('create-notification/<str:slug>/', acc_views.create_notification, name='create-notification'),

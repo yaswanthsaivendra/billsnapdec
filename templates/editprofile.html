@@ -11,7 +11,7 @@
     <div class="wholeBody">
 
 				<!-- Edit profile Header------- -->
-				<form class="editProfile" id="edit_profile" method="POST" action="{% url 'update' request.user.profile.slug %}" enctype="multipart/form-data">
+				<form class="editProfile" id="edit_profile" method="POST" action="{% url 'accounts:update-profile' request.user.profile.slug appslug %}" >
 					{% csrf_token %}
 
 

@@ -28,40 +28,45 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static 'assets/styles.css'%}">
-    
+
 </head>
 <style>
     .container {
         max-width: 950px;
     }
-    .img-container{
-        width:150px;
-        height:150px;
+
+    .img-container {
+        width: 150px;
+        height: 150px;
     }
-    .app-img{
+
+    .app-img {
         width: 100%;
-        height:100%;
+        height: 100%;
         object-fit: cover;
         border-radius: 50%;
     }
-    .top{
-        display:flex;
+
+    .top {
+        display: flex;
         align-items: center;
     }
-    .b-primary{
-        all:unset;
+
+    .b-primary {
+        all: unset;
         background: #3dcd58;
-        color:white;
-        box-shadow:0px 0px 1px rgb(40 41 61 / 4%), 0px 2px 4px rgb(96 97 112 / 16%) ;
-        border:1px solid transparent;
+        color: white;
+        box-shadow: 0px 0px 1px rgb(40 41 61 / 4%), 0px 2px 4px rgb(96 97 112 / 16%);
+        border: 1px solid transparent;
         border-radius: 5px;
     }
-    .b-secondary {
-        background:white;
-        color:black;
-    }
 
+    .b-secondary {
+        background: white;
+        color: black;
+    }
 </style>
+
 <body class="w3-padding">
 
     {% include "dashnav.html" %}
@@ -81,8 +86,10 @@
                                 </div>
                                 <div class="app-heading m-4">
                                     <h4>{{app.appname}}</h4>
-                                    <button class="b-primary py-2 px-3" data-toggle="modal" data-target="#edit">Edit</button>
-                                    <a href="{% url 'deleteapp' app.slug %}"><button class="b-primary b-secondary py-2 px-3">Delete</button></a>
+                                    <button class="b-primary py-2 px-3" data-toggle="modal"
+                                        data-target="#edit">Edit</button>
+                                    <a href="{% url 'deleteapp' app.slug %}"><button
+                                            class="b-primary b-secondary py-2 px-3">Delete</button></a>
 
                                 </div>
                             </div>
@@ -121,58 +128,61 @@
                                     {{plan.duration}}
                                 </div>
 
-                               
+
 
                             </div>
                         </div>
-                        
-                    </div>
-                    
-                    
-                   
-                    
-                    
 
-                    
-                    
+                    </div>
+
+
+
+
+
+
+
+
                 </div>
             </div>
         </div>
 
 
         <!-- edit model -->
-        <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLongTitle">Edit App</h5>
-                </div>
-                <form action="{% url 'editapp' slug %}" method="post" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    <div class="modal-body">
-                        <!-- <div class="form-group">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Edit App</h5>
+                    </div>
+                    <form action="{% url 'editapp' slug %}" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="modal-body">
+                            <!-- <div class="form-group">
                             <label for="app_name">App name</label>
                             <input class="form-control my-1" type="text" name="app_name" value="" required>
                         </div> -->
-                        <div class="form-group my-3">
-                            <label for="app_im">App Image</label>
-                            <input class="form-control my-1" type="file" name="app_im" value="" required>
-                        </div>
-                       
-                        
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="b-primary b-secondary px-3 py-2 mx-2" data-dismiss="modal">Close</button>
-                        <button type="submit" class="b-primary px-3 py-2">Edit</button>
-                      </div>
+                            <div class="form-group my-3">
+                                <label for="app_im">App Image</label>
+                                <input class="form-control my-1" type="file" name="app_im" value="" required>
+                            </div>
 
-                  
-                </form>
-                
-                
-              </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="b-primary b-secondary px-3 py-2 mx-2"
+                                data-dismiss="modal">Close</button>
+                            <button type="submit" class="b-primary px-3 py-2">Edit</button>
+                        </div>
+
+
+                    </form>
+
+
+                </div>
             </div>
-          </div>
+        </div>
+        
     </div>
 
 

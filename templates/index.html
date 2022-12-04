@@ -44,7 +44,23 @@
 
 
   <link rel="stylesheet" href="{%static 'style.css'%}" />
+  
 </head>
+<style>
+  .bs-primary {
+  all: unset;
+  background: #3dcd58;
+  color: white;
+  box-shadow: 0px 0px 1px rgb(40 41 61 / 4%), 0px 2px 4px rgb(96 97 112 / 16%);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.bs-secondary {
+  background: white;
+  color: black;
+}
+</style>
 
 <body>
 
@@ -84,8 +100,8 @@
 
             {% if not user.is_authenticated %}
                         <span>
-                            <a href="{% url 'accounts:login' %}?next={{request.path}}"><button class="login">Login</button></a>
-                            <a href="{% url 'accounts:register' %}?next={{request.path}}"><button class="register">Register</button></a>
+                            <a href="{% url 'accounts:login' %}?next={{request.path}}"><button class="bs-primary bs-secondary py-2 px-3">Login</button></a>
+                            <a href="{% url 'accounts:register' %}?next={{request.path}}"><button class="bs-primary bs-secondary py-2 px-3">Register</button></a>
                         </span>
                         {% else %}
                                     <a href="{% url 'accounts:logout' %}" style="text-decoration: none;color:white;">

@@ -126,7 +126,7 @@
     transition: all 0.7s ease;
     cursor: pointer;
     color: #fffefe;
-    background-color: #fc00bd;
+    background-color: #3dcd58;
     font-weight: 500;
     letter-spacing: 1px;
   }
@@ -173,7 +173,7 @@
   .contact-us-footer a {
     font-weight: 500;
     text-decoration: none;
-    color: rgb(252, 0, 210);
+    color: #3dcd58;
   }
 
   @media (max-width: 900px) {

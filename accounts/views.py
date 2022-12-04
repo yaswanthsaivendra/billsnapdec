@@ -269,7 +269,7 @@ from dashboard.forms import *
 from .forms import *
 
 # Create your views here.
-def update_profile(request, slug):
+def update_profile(request, slug,appslug):
     profile = get_object_or_404(Profile, slug=slug)
     if request.method == "POST":
         full_name = request.POST.get('full_name')
@@ -282,10 +282,10 @@ def update_profile(request, slug):
 
         profile.save()
         logger.info(request.user.username+"_ updated profile")
-        return HttpResponseRedirect(reverse('accounts:show-profile', kwargs={'slug':slug}))
+        return HttpResponseRedirect(reverse('accounts:show-profile', kwargs={'slug':slug ,'appslug':appslug}))
     else:
         if request.user == profile.user:
-            return render(request, 'editprofile.html', {'profile': profile})
+            return render(request, 'editprofile.html', {'profile': profile,'appslug':appslug})
         else:
             return HttpResponse('siggu undali....')
 
@@ -322,6 +322,6 @@ def create_notification(request, slug):
         notification.profile = profile
         notification.url = url
         notification.save(update_fields=['profile', 'url'])
-        return redirect('show_profile', slug=profile.slug, appslug=slug)
+        return redirect('accounts:show-profile', slug=profile.slug, appslug=slug)
     print(form.errors)
     return redirect('show_profile', slug=profile.slug, appslug=slug)

@@ -28,16 +28,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="{% static 'assets/styles.css'%}">
-	<link rel="stylesheet" href="{% static 'w3.css' %}" />
+
 </head>
 
-<body class='w3-padding w3-margin'>
+<body class='w3-padding w3-margin p-3'>
 	{% include "dashnav.html" %}
 
-	<div class="mt-5">
-		<div class="control-buttons my-3">
+	<div class="my-5 mx-3">
+		<div class="control-buttons my-5">
 			<button onclick='showForm(this);' class='bs-primary py-2 px-3'>Edit Plan Details</button>
-			<button onclick='showForm(this);' class='bs-primary py-2 px-3 bs-secondary'>Edit Profile Details</button>
+			<a href="{% url 'accounts:update-profile' profile.slug appslug %}">
+				<button class='bs-primary py-2 px-3 bs-secondary'>Edit Profile Details</button>
+			</a>
 			<button onclick='showNotificationForm(this);' class='bs-primary py-2 px-3 bs-secondary'>Send
 				Notification</button>
 		</div>
@@ -71,7 +73,7 @@
 				<div class="w3-margin w3-padding w3-round-large w3-border w3-white" id="content">
 					<h5>Update user's Plan Details</h5>
 					<form enctype='multipart/form-data' method='POST'
-						action="{% url 'accounts:update-profile' profile.slug  %}">
+						action="{% url 'accounts:update-profile' profile.slug appslug  %}">
 						{% csrf_token %}
 						{{ form|crispy }}
 						<button type='submit' class='w3-margin w3-round-large w3-green w3-button'>Save</button>
@@ -79,58 +81,59 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div id="notification" style='display:none;' class="w3-modal">
-		<div class="w3-display-middle w3-padding">
-			<button class='w3-right w3-button w3-round-large w3-red w3-padding'
-				onclick="document.getElementById('notification').style.display='none'">&times;</button>
-			<div class="w3-margin w3-padding w3-round-large w3-border w3-white" id="content">
-				<h5>Send Notification</h5>
-				<form enctype='multipart/form-data' method='POST'
-					action="{% url 'accounts:create-notification' appslug %}">
-					{% csrf_token %}
-					{{ notification_form|crispy }}
-					<button type='submit' class='w3-margin w3-round-large w3-green w3-button'>Send</button>
-				</form>
+
+		<div id="notification" style='display:none;' class="w3-modal">
+			<div class="w3-display-middle w3-padding">
+				<button class='w3-right w3-button w3-round-large w3-red w3-padding'
+					onclick="document.getElementById('notification').style.display='none'">&times;</button>
+				<div class="w3-margin w3-padding w3-round-large w3-border w3-white" id="content">
+					<h5>Send Notification</h5>
+					<form enctype='multipart/form-data' method='POST'
+						action="{% url 'accounts:create-notification' appslug %}">
+						{% csrf_token %}
+						{{ notification_form|crispy }}
+						<button type='submit' class='w3-margin w3-round-large w3-green w3-button'>Send</button>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="my-5">
+			<h3>Utility Details</h3>
+			<hr>
+			<div>
+				<p>Utility State : {{ i.utility_state }}</p>
+				<p>Utility District : {{ i.utility_district }}</p>
+				<p>Utility Country : {{ i.utility_country }}</p>
+				<p>Utility Postal code : {{ i.utility_postalcode }}</p>
+				<p>Utility Address : {{ i.utility_address }}</p>
+			</div>
+		</div>
+		<div class="my-5">
+			<h3>Contact Details</h3>
+			<hr>
+			<div>
+				<p>Contact Person : {{ i.contact_person }}</p>
+				<p>Contact Email :{{ i.contact_email }}</p>
+				<p>Contact Phone no. : {{ i.contact_phnum }}</p>
+				<p>Contact Mobile : {{ i.contact_mobile }} </p>
+				<p>Contact Designation : {{ i.contact_designation }}</p>
+				<p>Contact Landline : {{ i.contact_landline }} </p>
+			</div>
+		</div>
+		<div class="my-5">
+			<h3>Emergency Details</h3>
+			<hr>
+			<div>
+				<p>Emergency Person : {{ i.emergency_person }} </p>
+				<p>Emergency Alt Person : {{ i.emergency_altperson }} </p>
+				<p>Emergency Mobile : {{ i.emergency_mobile }} </p>
+				<p>Emergency Alt Mobile : {{ i.emergency_altmobile }} </p>
+				<p>Emergency Office Address : {{ i.emergency_officeaddress }} </p>
+				<p>Emergency Alt Office Address : {{ i.emergency_altofficeaddress }} </p>
 			</div>
 		</div>
 	</div>
-	<div class="my-5">
-		<h3>Utility Details</h3>
-		<hr>
-		<div>
-			<p>Utility State : {{ i.utility_state }}</p>
-			<p>Utility District : {{ i.utility_district }}</p>
-			<p>Utility Country : {{ i.utility_country }}</p>
-			<p>Utility Postal code : {{ i.utility_postalcode }}</p>
-			<p>Utility Address : {{ i.utility_address }}</p>
-		</div>
-	</div>
-    <div class="my-5">
-		<h3>Contact Details</h3>
-		<hr>
-		<div>
-			<p>Contact Person : {{ i.contact_person }}</p>
-			<p>Contact Email :{{ i.contact_email }}</p>
-			<p>Contact Phone no. : {{ i.contact_phnum }}</p>
-			<p>Contact Mobile : {{ i.contact_mobile }} </p>
-			<p>Contact Designation : {{ i.contact_designation }}</p>
-			<p>Contact Landline : {{ i.contact_landline }} </p>
-		</div>
-	</div>
-	<div class="my-5">
-		<h3>Emergency Details</h3>
-		<hr>
-		<div>
-			<p>Emergency Person : {{ i.emergency_person }} </p>
-			<p>Emergency Alt Person : {{ i.emergency_altperson }} </p>
-			<p>Emergency Mobile : {{ i.emergency_mobile }} </p>
-			<p>Emergency Alt Mobile : {{ i.emergency_altmobile }} </p>
-			<p>Emergency Office Address : {{ i.emergency_officeaddress }} </p>
-			<p>Emergency Alt Office Address : {{ i.emergency_altofficeaddress }} </p>
-		</div>
-	</div>
-	
+
 
 	<script>
 		function showForm(obj) {
