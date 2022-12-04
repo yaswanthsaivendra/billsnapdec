@@ -44,9 +44,10 @@
                 <div class="col right" id="customer-list">
                     
                     <h1>{{app.appname}}</h1>
+                    <img src="{{app.appimg.url}}" alt="img" class="img-fluid rounded-circle w-60">
                     {{app.date_published}}
                     {{app.date_modified}}
-                    <img src="{{app.appimg.url}}" alt="img" class="img-fluid rounded-circle w-60">
+                    
 
                     <button><a href="{% url 'deleteapp' app.slug %}">delete</a></button>
 

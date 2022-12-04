@@ -114,7 +114,7 @@ button:focus {
 
 html,
 body {
-  overflow: hidden;
+  /* overflow-y: hidden; */
   height: 100%;
 }
 
@@ -140,8 +140,8 @@ body {
 .right {
   padding-left: 1rem;
   padding-right: 1rem;
-  max-height: calc(100vh - 60px);
-  overflow: scroll;
+  min-height: calc(100vh - 60px);
+  overflow-x: hidden;
 }
 .left {
   max-width: 250px;
@@ -398,7 +398,7 @@ div > a {
 
 html,
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 100%;
 }
 
@@ -424,8 +424,9 @@ body {
 .right {
   padding-left: 1rem;
   padding-right: 1rem;
-  max-height: calc(100vh - 60px);
-  overflow: scroll;
+  min-height: calc(100vh - 100px);
+  overflow-x:hidden;
+  
 }
 .left {
   max-width: 250px;
@@ -504,12 +505,15 @@ div > a {
 }
 
 .first {
-  width: 30%;
-  background-color: white;
-  border: 1px dotted black;
+  width: 35%;
+  background-color: #ebebeb;
+  border:none;
   float: right;
   margin-right: 20px;
   margin-top: -50px;
+}
+.b-primary{
+  margin-bottom:5px;
 }
 
 .button3 {
@@ -577,7 +581,7 @@ input[type="submit"]:hover {
 
 html,
 body {
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 100%;
 }
 
@@ -630,6 +634,9 @@ a {
   color: #3dcd58;
   text-align: center;
   margin-top: 30px;
+}
+.t-primary{
+  color: #3dcd58;
 }
 
 body {
@@ -1226,4 +1233,10 @@ select.form-control:not([size]):not([multiple]) {
   margin: 0.4em;
   padding: 0.375rem 0.75rem !important;
   width: auto !important;
+}
+body{
+  overflow-x: hidden;
+}
+.footer-top .container{
+  background-color:green !important;
 }

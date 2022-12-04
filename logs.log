@@ -4317,3 +4317,195 @@ AttributeError: 'ManyRelatedManager' object has no attribute 'appname'
 [2022-12-03T23:15:06] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/accounts/views.py changed, reloading.
 [2022-12-03T23:18:22] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/accounts/views.py changed, reloading.
 [2022-12-03T23:18:29] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/accounts/views.py changed, reloading.
+[2022-12-04T15:07:22] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-12-04T20:11:44] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\dashboard\views.py changed, reloading.
+[2022-12-04T20:11:58] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:12:03] WARNING [django.request.log_response:241] Not Found: /apps/darling/dashboard/assets/img/ivancik.jpg
+[2022-12-04T20:12:06] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T20:20:58] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:25:07] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:26:09] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:26:17] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:26:17] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:26:17] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:26:25] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:26:25] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:26:25] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:29:47] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:30:24] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:31:24] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:32:34] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:32:55] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:33:14] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:33:16] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:33:16] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:33:16] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:33:16] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:35:16] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:35:28] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:35:30] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:35:31] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:35:31] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:35:45] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:35:45] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:35:46] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:35:46] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:35:46] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:36:45] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:39:10] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:39:11] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:39:11] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:39:20] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:39:37] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:40:02] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:40:43] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:41:12] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:41:28] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:41:42] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:41:58] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:42:10] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:42:13] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:42:13] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:42:13] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:42:33] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:42:47] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:43:13] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:43:22] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:43:36] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:46:51] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:47:07] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:47:10] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:47:41] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:47:57] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:48:11] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:48:17] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:48:47] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:49:09] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:49:59] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:50:53] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:51:36] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:53:16] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:53:26] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:53:29] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-12-04T20:54:15] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:56:21] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:57:51] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:57:51] ERROR [django.request.log_response:241] Internal Server Error: /apps/all/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\yash\billsnap\billsnapdec\apps\views.py", line 71, in showapps
+    return render(request,'showapps.html',{'showapp':appli,'leni':leni,'msg':mssg})
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' with arguments '('',)' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/dashboard/\\Z']
+[2022-12-04T20:58:18] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T20:58:51] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:00:58] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:01:01] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:01:01] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:01:01] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:01:02] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:01:59] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:09:28] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:09:29] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:11:11] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:11:54] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:12:05] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:12:45] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:12:55] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:15:43] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:16:38] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:16:49] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:17:06] WARNING [django.request.log_response:241] Not Found: /apps/all/applist.html
+[2022-12-04T21:17:56] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:18:21] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:19:25] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:19:27] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:20:29] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:20:53] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:21:35] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:21:56] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:22:16] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:23:07] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:23:18] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:23:37] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:23:45] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:24:17] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:24:45] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:26:35] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-12-04T21:44:32] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-12-04T21:47:14] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-12-04T21:51:10] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:51:58] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:52:07] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T21:52:13] WARNING [django.request.log_response:241] Not Found: /apps/instagram/dashboard/assets/img/ivancik.jpg
+[2022-12-04T21:52:46] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:00:29] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T22:01:19] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T22:01:38] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T22:01:56] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T22:02:16] WARNING [django.request.log_response:241] Not Found: /apps/instagram/dashboard/assets/img/ivancik.jpg
+[2022-12-04T22:04:43] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:08:34] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:09:18] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:18:51] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-12-04T22:18:51] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-12-04T22:26:03] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:35:28] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:36:33] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:37:24] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:39:11] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:39:27] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:40:08] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:40:33] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:41:03] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:41:17] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:41:44] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:41:55] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:42:15] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:42:59] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:43:16] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:43:30] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:43:52] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:44:20] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:44:37] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:45:10] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:45:17] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:45:31] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:45:56] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:46:05] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:46:34] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:47:03] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:50:41] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:50:51] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T22:51:31] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T23:00:07] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T23:00:32] WARNING [django.request.log_response:241] Not Found: /apps/instagram/dashboard/assets/img/ivancik.jpg
+[2022-12-04T23:00:39] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-04T23:12:02] INFO [root.showapps:70] neha_seen the whole applist
+[2022-12-04T23:12:11] WARNING [django.request.log_response:241] Not Found: /apps/instagram/dashboard/assets/img/ivancik.jpg
