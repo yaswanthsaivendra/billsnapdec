@@ -489,7 +489,7 @@ div > a {
 
 .button1 {
   background-color: #3dde45;
-  border-radius: 16px;
+  border-radius: 7px;
   float: right;
   width: 80px;
   height: 40px;
@@ -1239,4 +1239,18 @@ body {
 }
 .footer-top .container {
   background-color: green !important;
+}
+
+.bs-primary {
+  all: unset;
+  background: #3dcd58;
+  color: white;
+  box-shadow: 0px 0px 1px rgb(40 41 61 / 4%), 0px 2px 4px rgb(96 97 112 / 16%);
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.bs-secondary {
+  background: white;
+  color: black;
 }
