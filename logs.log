@@ -446,3 +446,12 @@ django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' with arguments '(
 [2022-12-05T01:37:14] WARNING [django.request.log_response:241] Not Found: /favicon.ico
 [2022-12-05T01:37:43] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
 [2022-12-05T01:37:44] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-12-05T01:38:10] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-05T01:47:21] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\urls.py changed, reloading.
+[2022-12-05T01:47:39] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\urls.py changed, reloading.
+[2022-12-05T01:48:17] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.
+[2022-12-05T01:48:27] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.
+[2022-12-05T01:48:40] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.
+[2022-12-05T01:48:50] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.
+[2022-12-05T01:48:56] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.
+[2022-12-05T01:49:01] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.

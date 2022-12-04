@@ -105,9 +105,9 @@ def show_plan(request, slug):
         return redirect('plan', slug)
 
 
-def update_user_plan(request, slug):
+def update_user_plan(request, slug,planslug):
     profile = Profile.objects.get(slug__iexact=slug)
-    current_plan = profile.plan
+    current_plan = Plan.objects.get(slug__iexact=planslug)
 
     form = UpdateUserPlanForm(request.POST)
     new_plan = Plan.objects.get(id=request.POST.get('update_to'))
