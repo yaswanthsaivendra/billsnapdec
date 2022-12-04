@@ -28,9 +28,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static 'assets/styles.css'%}">
-    <link rel="stylesheet" href="{% static 'w3.css' %}" />
+    
 </head>
+<style>
+    .container {
+        max-width: 950px;
+    }
+    .img-container{
+        width:150px;
+        height:150px;
+    }
+    .app-img{
+        width: 100%;
+        height:100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+    .top{
+        display:flex;
+        align-items: center;
+    }
+    .b-primary{
+        all:unset;
+        background: #3dcd58;
+        color:white;
+        box-shadow:0px 0px 1px rgb(40 41 61 / 4%), 0px 2px 4px rgb(96 97 112 / 16%) ;
+        border:1px solid transparent;
+        border-radius: 5px;
+    }
+    .b-secondary {
+        background:white;
+        color:black;
+    }
 
+</style>
 <body class="w3-padding">
 
     {% include "dashnav.html" %}
@@ -42,34 +73,107 @@
 
             <div class="col-md-7 flex-md-fill">
                 <div class="col right" id="customer-list">
+                    <div class="container">
+                        <div class="row">
+                            <div class="top">
+                                <div class="img-container">
+                                    <img src="{{app.appimg.url}}" alt="img" class="img-fluid app-img">
+                                </div>
+                                <div class="app-heading m-4">
+                                    <h4>{{app.appname}}</h4>
+                                    <button class="b-primary py-2 px-3" data-toggle="modal" data-target="#edit">Edit</button>
+                                    <a href="{% url 'deleteapp' app.slug %}"><button class="b-primary b-secondary py-2 px-3">Delete</button></a>
+
+                                </div>
+                            </div>
+                            <div class="details my-5">
+                                <h4 class="py-2 ">App Details</h4>
+                                <hr>
+                                <div class="mb-2">
+                                    <b>Date Published : </b>
+                                    {{app.date_published}}
+                                </div>
+                                <div class="mb-2">
+                                    <b>Last Modified : </b>
+                                    {{app.date_modified}}
+                                </div>
+                                <div class="mb-2">
+                                    <b>Author: </b>
+                                    {{app.author}}
+                                </div>
+                                <br>
+                                <h4 class="my-3">Default Plan</h4>
+                                <hr>
+                                <div class="mb-2">
+                                    <b>Title: </b>
+                                    {{plan.title}}
+                                </div>
+                                <div class="mb-2">
+                                    <b>Price: </b>
+                                    {{plan.price}}
+                                </div>
+                                <div class="mb-2">
+                                    <b>Description: </b>
+                                    {{plan.description}}
+                                </div>
+                                <div class="mb-2">
+                                    <b>Duration: </b>
+                                    {{plan.duration}}
+                                </div>
+
+                               
+
+                            </div>
+                        </div>
+                        
+                    </div>
                     
-                    <h1>{{app.appname}}</h1>
-                    <img src="{{app.appimg.url}}" alt="img" class="img-fluid rounded-circle w-60">
-                    {{app.date_published}}
-                    {{app.date_modified}}
+                    
+                   
+                    
                     
 
-                    <button><a href="{% url 'deleteapp' app.slug %}">delete</a></button>
-
-                    <form action="{% url 'editapp' slug %}" method="post" enctype="multipart/form-data">
-                        {% csrf_token %}
-                        <label for="app_name">App name</label>
-                        <input type="text" name="app_name" value="" required>
-                        <label for="app_im">App Image</label>
-                        <input type="file" name="app_im" value="" required>
-
-                        <button type="submit">Update</button>
-                    </form>
+                    
+                    
                 </div>
             </div>
         </div>
 
 
+        <!-- edit model -->
+        <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Edit App</h5>
+                </div>
+                <form action="{% url 'editapp' slug %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="modal-body">
+                        <!-- <div class="form-group">
+                            <label for="app_name">App name</label>
+                            <input class="form-control my-1" type="text" name="app_name" value="" required>
+                        </div> -->
+                        <div class="form-group my-3">
+                            <label for="app_im">App Image</label>
+                            <input class="form-control my-1" type="file" name="app_im" value="" required>
+                        </div>
+                       
+                        
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="b-primary b-secondary px-3 py-2 mx-2" data-dismiss="modal">Close</button>
+                        <button type="submit" class="b-primary px-3 py-2">Edit</button>
+                      </div>
+
+                  
+                </form>
+                
+                
+              </div>
+            </div>
+          </div>
     </div>
-    </div>
-    </div>
-    </div>
-    </section>
 
 
 

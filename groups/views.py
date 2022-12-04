@@ -33,7 +33,7 @@ def groups_panel(request, slug):
 def delete_group(request, slug, appslug):
     group = Group.objects.get(slug__iexact=slug)
     group.delete()
-    return redirect('groups-panel', appslug)
+    return redirect('groups:groups-panel', appslug)
 
 def show_group(request, slug):
     if request.user.is_superuser:

@@ -206,7 +206,8 @@ def dashboard(request, slug):
 @login_required
 def appinfo(request, slug):
     app = applists.objects.get(slug=slug)
-    return render(request, 'dashappinfo.html', {'slug' : slug, 'app' : app})
+    plan = app.plan_set.all().filter(default_for_customer=True)[0]
+    return render(request, 'dashappinfo.html', {'slug' : slug, 'app' : app,'plan':plan})
 
 
 @login_required

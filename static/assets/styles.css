@@ -425,8 +425,7 @@ body {
   padding-left: 1rem;
   padding-right: 1rem;
   min-height: calc(100vh - 100px);
-  overflow-x:hidden;
-  
+  overflow-x: hidden;
 }
 .left {
   max-width: 250px;
@@ -436,6 +435,7 @@ body {
   height: calc(100vh - 50px);
   overflow-x: hidden;
   overflow-y: scroll;
+ 
 }
 div > a {
   text-decoration: none;
@@ -507,13 +507,13 @@ div > a {
 .first {
   width: 35%;
   background-color: #ebebeb;
-  border:none;
+  border: none;
   float: right;
   margin-right: 20px;
   margin-top: -50px;
 }
-.b-primary{
-  margin-bottom:5px;
+.b-primary {
+  margin-bottom: 5px;
 }
 
 .button3 {
@@ -635,7 +635,7 @@ a {
   text-align: center;
   margin-top: 30px;
 }
-.t-primary{
+.t-primary {
   color: #3dcd58;
 }
 
@@ -1234,9 +1234,9 @@ select.form-control:not([size]):not([multiple]) {
   padding: 0.375rem 0.75rem !important;
   width: auto !important;
 }
-body{
+body {
   overflow-x: hidden;
 }
-.footer-top .container{
-  background-color:green !important;
+.footer-top .container {
+  background-color: green !important;
 }

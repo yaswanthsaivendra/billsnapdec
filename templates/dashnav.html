@@ -1,3 +1,18 @@
+<!-- <style>
+    .navbar .b-primary {
+        all: unset;
+        background: #3dcd58;
+        color: white;
+        box-shadow: 0px 0px 1px rgb(40 41 61 / 4%), 0px 2px 4px rgb(96 97 112 / 16%);
+        border: 1px solid transparent;
+        border-radius: 5px;
+    }
+
+    .navbar .b-secondary {
+        background: white;
+        color: black;
+    }
+</style> -->
 <header>
     <nav class="navbar navbar-expand-lg fixed-top p-md-0">
         <div class="container-fluid">
@@ -11,7 +26,11 @@
                 <h2 class="h2">BILL SNAP</h2>
             </a>
             <div class="d-flex ms-auto gap-4 pe-3">
-                <a href="{% url 'accounts:logout' %}">Logout</a>
+                <a href="{% url 'accounts:logout' %}">
+                    <button class="b-primary b-secondary px-3 py-2">
+                        Logout
+                    </button>
+                </a>
             </div>
         </div>
     </nav>
