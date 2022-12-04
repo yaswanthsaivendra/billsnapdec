@@ -1,47 +1,4 @@
 {% load static %}
-<!--<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    {% block css %}
-    <link rel="stylesheet" href="{% static 'dashboard/dashboard.css' %}">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    {% endblock css %}
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>{% block title %}Dashboard{% endblock title %}</title>
-   </head>
-<body>
-{% block body %}
-  <section class="home-section">
-
-
-    <div class="home-content">
-        <h2> Welcome {{user.username}}</p></h2>
-        <a href="{% url 'accounts:update-profile' user.profile.slug %}">Edit</a>
-        </br>
-        <a href="{% url 'showapps'%}">view apps</a>
-        <p>Your Mail is {{user.email}}</p>
-        <h4>session details</h4>
-        <p>last login {{user.last_login}}</p>
-        <p>joined on{{user.date_joined}}</p><br>
-    </div>
-
-  </section>
-  <script>
-    let sidebar = document.querySelector(".sidebar");
- let sidebarBtn = document.querySelector(".sidebarBtn");
- sidebarBtn.onclick = function() {
-   sidebar.classList.toggle("active");
-   if(sidebar.classList.contains("active")){
-   sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
- }else
-   sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
- }
-  </script>
-  {% endblock body %}
-</body>
-</html>
--->
 
 <!DOCTYPE html>
 <html lang="en">

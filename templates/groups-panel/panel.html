@@ -63,6 +63,13 @@
         top: 0;
         right: 0;
     }
+    .span {
+        background-color: #7b7b7b !important;
+        position: relative;
+        top: 0;
+        right: 0;
+        float: right !important;
+    }
 </style>
 
 
@@ -71,7 +78,7 @@
     {% include "dashnav.html" %}
 
     <div class="main mx-auto">
-        <h1 class="applist my-4 text-dark my-2 ">{{slug}} groups</h1>
+        <h1 class="applist my-4 text-dark my-2 text-uppercase ">{{slug}} groups</h1>
         <div class="container mt-4">
             <div class="row">
                 <div>
@@ -84,13 +91,14 @@
                 {% for group in groups %}
                 {% if group.default_for_customer %}
                 <div class='w3-row w3-purple w3-padding w3-round w3-margin grp'>
+                    <div>
+                        <span class="badge badge-success p-2 mt-2 float-right span">Default</span>
+                    </div>
                    <h5>{{group.title}}</h5>
                    <p>{{group.description}}</p>
-                    <h5 class='w3-left w3-margin-right'>
-                        <a style="text-decoration:none;" href="{% url 'group' group.slug %}">
-                            {{group.title}} [Default For Everyone]
-                        </a>
-                    </h5>
+                   <a href="{% url 'groups:group' group.slug %}">
+                    <button class='bs-primary px-3 py-2'>View</button>
+                </a>
                 </div>
                 {% else %}
                 <div class='w3-row w3-border-bottom w3-margin grp p-3'>

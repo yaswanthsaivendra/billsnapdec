@@ -17,8 +17,7 @@ class GroupForm(forms.ModelForm):
 class SubscribeForm(forms.Form):
     username = forms.CharField(
         max_length=100,
-        widget=forms.TextInput(attrs={'placeholder': 'enter username for adding ...', 'class': 'w3-input w3-border w3-round'}),
-        initial='username'
+        widget=forms.TextInput(attrs={'placeholder': 'username', 'class': 'w3-input w3-border w3-round'})
     )
 
 class UpdateUserGroupForm(forms.Form):
