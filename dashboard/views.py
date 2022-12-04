@@ -12,6 +12,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin, PermissionRequiredMix
 from logging.handlers import TimedRotatingFileHandler
 import logging
 from plans.models import *
+from apps.models import applists
 
 logger=logging.getLogger()
 logging.basicConfig(
@@ -201,6 +202,11 @@ def uploadlis(request, slug):
 @login_required
 def dashboard(request, slug):
     return render(request, 'dashboard.html', {'slug' : slug})
+
+@login_required
+def appinfo(request, slug):
+    app = applists.objects.get(slug=slug)
+    return render(request, 'dashappinfo.html', {'slug' : slug, 'app' : app})
 
 
 @login_required

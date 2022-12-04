@@ -65,7 +65,7 @@ def show_group(request, slug):
                     pre_group.members.remove(customer)
                 #create_history(user=customer.user, to_group=group, from_group=customer.group, upgrade=True)
                 group.members.add(customer)
-            return redirect('group', slug)
+            return redirect('groups:group', slug)
 
             """students = Profile.objects.filter(institute_name=form.cleaned_data.get("institution"), is_student=True)
             for student in students:
@@ -100,7 +100,7 @@ def update_user_group(request, slug, groupslug):
     current_group.members.remove(profile)
     new_group.members.add(profile)
 
-    return redirect('groups-panel', current_group.app.slug)
+    return redirect('groups:groups-panel', current_group.app.slug)
     """if form.is_valid():
         new_group = group.objects.create(
             title=form.cleaned_data.get("title"),

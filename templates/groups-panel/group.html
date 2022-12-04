@@ -8,7 +8,7 @@
     </head>
     <nav class='w3-black w3-margin-bottom w3-container w3-padding'>
         <h3 class='w3-left'>{{group}}</h3>
-        <a href={% url 'groups-panel' group.app.slug %}>
+        <a href={% url 'groups:groups-panel' group.app.slug %}>
             <button class='w3-button w3-margin w3-black w3-border w3-right'>Back to Panel</button>
         </a>
     </nav>
@@ -17,7 +17,7 @@
         <button id="button" onclick="showForm();" class=' w3-round w3-button w3-blue'>
             Add Customer to {{group.title}} using username
         </button>
-        <form id="group_form" style="display:none;" enctype='multipart/form-data' method='POST' action="{% url 'group' group.slug %}">
+        <form id="group_form" style="display:none;" enctype='multipart/form-data' method='POST' action="{% url 'groups:group' group.slug %}">
             <h5 class='w3-center'>Add to {{group.title}}</h5>
             {% csrf_token %}
             {{ form|crispy }}
@@ -39,7 +39,7 @@
                 <div class="w3-display-middle w3-padding" >
                   <button class='w3-right w3-button w3-round-large w3-red w3-padding' onclick="document.getElementById('form').style.display='none'" >&times;</button>
                   <div class="w3-margin w3-padding w3-round-large w3-border w3-white" id="content">
-                    <form class='w3-margin w3-padding' enctype='multipart/form-data' method='POST' action="{% url 'update-group' user.slug group.slug %}">
+                    <form class='w3-margin w3-padding' enctype='multipart/form-data' method='POST' action="{% url 'groups:update-group' user.slug group.slug %}">
                         <h4 class='w3-center w3-margin'>Update @{{user.user.username}}'s group</h4>
                         {% csrf_token %}
                         {{ update_form|crispy }}
@@ -55,7 +55,7 @@
         {% for user in existing_users %}
         <div class='w3-container w3-small w3-row w3-padding ' >
             <h3 class='w3-medium w3-left'>@{{user.user.username}}</h3>
-            <button class='w3-right w3-round w3-blue w3-button' onclick="addCustomerApp(this);" value="{{user.user.username}}" url="{% url 'add-member' group.slug %}" >
+            <button class='w3-right w3-round w3-blue w3-button' onclick="addCustomerApp(this);" value="{{user.user.username}}" url="{% url 'groups:add-member' group.slug %}" >
                 Transfer to this group
             </button>
         </div>

@@ -83,3 +83,16 @@ def remove_user(request, slug, userslug):
     profile.apps.remove(app)
 
     return redirect('customerlist', slug=slug)
+
+
+
+@login_required
+def editapp(request, aslug):
+    app = applists.objects.get(slug=aslug)
+    if request.method=='POST':
+        app.appname = request.POST.get('app_name')
+        app.appimg= request.FILES.get('app_im')
+        app.save()
+        logger.info(request.user.username+"_edited an app")
+        return redirect('appinfo', slug=aslug)
+    
