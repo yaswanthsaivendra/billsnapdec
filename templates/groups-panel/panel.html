@@ -54,7 +54,7 @@
 
     .grp {
         background-color: white;
-        border-radius:10px ;
+        border-radius: 10px;
     }
 
     .new-group-btn {
@@ -63,6 +63,7 @@
         top: 0;
         right: 0;
     }
+
     .span {
         background-color: #7b7b7b !important;
         position: relative;
@@ -94,11 +95,11 @@
                     <div>
                         <span class="badge badge-success p-2 mt-2 float-right span">Default</span>
                     </div>
-                   <h5>{{group.title}}</h5>
-                   <p>{{group.description}}</p>
-                   <a href="{% url 'groups:group' group.slug %}">
-                    <button class='bs-primary px-3 py-2'>View</button>
-                </a>
+                    <h5>{{group.title}}</h5>
+                    <p>{{group.description}}</p>
+                    <a href="{% url 'groups:group' group.slug %}">
+                        <button class='bs-primary px-3 py-2'>View</button>
+                    </a>
                 </div>
                 {% else %}
                 <div class='w3-row w3-border-bottom w3-margin grp p-3'>
@@ -125,34 +126,34 @@
 
     <!-- add group model -->
     <div class="modal fade" id="addgrp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Create New Group</h5>
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Create New Group</h5>
+                </div>
+                <form id="group_form" enctype='multipart/form-data' method='POST'
+                    action="{% url 'groups:groups-panel' slug %}">
+                    {% csrf_token %}
+                    <div class="modal-body">
+                        {{ form|crispy }}
+
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="bs-primary bs-secondary px-3 py-2 mx-2"
+                            data-dismiss="modal">Close</button>
+                        <button type="submit" class="bs-primary px-3 py-2">Create</button>
+                    </div>
+
+
+                </form>
+
+
             </div>
-            <form id="group_form"  enctype='multipart/form-data' method='POST'
-            action="{% url 'groups:groups-panel' slug %}">
-                {% csrf_token %}
-                <div class="modal-body">
-                    {{ form|crispy }}
-                   
-
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="bs-primary bs-secondary px-3 py-2 mx-2"
-                        data-dismiss="modal">Close</button>
-                    <button type="submit" class="bs-primary px-3 py-2">Create</button>
-                </div>
-
-
-            </form>
-
-
         </div>
     </div>
-</div>
 
 
 
