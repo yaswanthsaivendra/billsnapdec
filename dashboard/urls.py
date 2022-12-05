@@ -16,4 +16,6 @@ urlpatterns = [
     path('update-profile-plan/<str:slug>', views.update_profile_plan, name='update-profile-plan'),
     path('messaging/', views.messaging, name='messaging'),
     path('pendingapprovals/', views.pendingapproval, name='pending-approvals'),
+    path('transactions/',views.transactions, name='transactions'),
+
 ]

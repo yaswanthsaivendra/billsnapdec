@@ -203,6 +203,12 @@ def uploadlis(request, slug):
 def dashboard(request, slug):
     return render(request, 'dashboard.html', {'slug' : slug})
 
+
+@login_required
+def transactions(request, slug):
+    return render(request, 'dashtransactions.html', {'slug' : slug})
+
+
 @login_required
 def appinfo(request, slug):
     app = applists.objects.get(slug=slug)
