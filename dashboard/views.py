@@ -203,6 +203,10 @@ def uploadlis(request, slug):
 def dashboard(request, slug):
     return render(request, 'dashboard.html', {'slug' : slug})
 
+@login_required
+def estimate(request, slug):
+    return render(request, 'dashestimate.html', {'slug' : slug})
+
 
 @login_required
 def transactions(request, slug):
