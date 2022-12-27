@@ -12,11 +12,13 @@ def groups_panel(request, slug):
     if request.user.is_superuser:
         if request.method == 'GET':
             groups = Group.objects.filter(app__slug=slug)
+            plans = Plan.objects.filter(app__slug = slug)
             form = GroupForm()
             payload = {
                 'groups': groups,
                 'form': form,
-                'slug': slug
+                'slug': slug,
+                'plans' : plans
             }
             return render(request, 'groups-panel/panel.html', payload)
         
@@ -60,9 +62,9 @@ def show_group(request, slug):
             customer = Profile.objects.filter(user__username=form.cleaned_data.get("username"))
             if customer.exists():
                 customer = customer.first()
-                pre_group = customer.group_set.filter(app__appname=group.app.appname).first()
-                if pre_group:
-                    pre_group.members.remove(customer)
+                # pre_group = customer.group_set.filter(app__appname=group.app.appname).first()
+                # if pre_group:
+                #     pre_group.members.remove(customer)
                 #create_history(user=customer.user, to_group=group, from_group=customer.group, upgrade=True)
                 group.members.add(customer)
             return redirect('groups:group', slug)
@@ -84,23 +86,34 @@ def add_customer_to_group(request, slug):
 
     group = Group.objects.get(slug=slug)
     
-    pre_group = user.group_set.filter(app__appname=group.app.appname).first()
-    if pre_group:
-        pre_group.members.remove(user)
+    # pre_group = user.group_set.filter(app__appname=group.app.appname).first()
+    # if pre_group:
+    #     pre_group.members.remove(user)
 
     group.members.add(user)
     return JsonResponse({})
 
-def update_user_group(request, slug, groupslug):
-    profile = Profile.objects.get(slug__iexact=slug)
+def remove_customer_from_group(request, slug):
+    username = request.GET.get('username')
+    user = Profile.objects.get(user__username=username)
 
-    current_group = Group.objects.get(slug=groupslug)
-    new_group = Group.objects.get(id=request.POST.get('update_to'))
+    group = Group.objects.get(slug=slug)
 
-    current_group.members.remove(profile)
-    new_group.members.add(profile)
+    group.members.remove(user)
+    return JsonResponse({})
 
-    return redirect('groups:groups-panel', current_group.app.slug)
+
+
+# def update_user_group(request, slug, groupslug):
+#     profile = Profile.objects.get(slug__iexact=slug)
+
+#     current_group = Group.objects.get(slug=groupslug)
+#     new_group = Group.objects.get(id=request.POST.get('update_to'))
+
+#     current_group.members.remove(profile)
+#     new_group.members.add(profile)
+
+#     return redirect('groups:groups-panel', current_group.app.slug)
     """if form.is_valid():
         new_group = group.objects.create(
             title=form.cleaned_data.get("title"),
@@ -111,3 +124,15 @@ def update_user_group(request, slug, groupslug):
         )
         create_history(user=profile.user, to_group=new_group, from_group=current_group, upgrade=True)"""
         
+
+def show_plan_group(request, slug):
+    if request.user.is_superuser:
+        if request.method == 'GET':
+            plan = Plan.objects.filter(slug=slug).first()
+            users = Profile.objects.filter(plans=plan)
+                    
+            payload = {
+                'plan': plan,
+                'users': users,
+            }
+            return render(request, 'groups-panel/plangroup.html', payload)
