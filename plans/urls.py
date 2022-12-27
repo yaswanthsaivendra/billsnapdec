@@ -8,6 +8,6 @@ urlpatterns = [
     path('upgrade-to/<str:slug>', upgrade_to, name='upgrade-to'),
     path('panel/<str:slug>', plans_panel, name='plans-panel'),
     path('delete-plan/<str:slug>/<str:appslug>/', delete_plan, name='delete-plan'),
-    path('plan/<str:slug>/', show_plan, name='plan'),
-    path('update-plan/<str:slug>/<str:planslug>/', update_user_plan, name='update-plan'),
+    path('plan/<str:slug>/<str:planslug>', show_plan, name='plan'),
+    path('update-plan/<str:profileslug>/<str:planslug>/', update_user_plan, name='update-plan'),
 ]

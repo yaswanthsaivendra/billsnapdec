@@ -64,24 +64,25 @@ def delete_plan(request, slug, appslug):
     plan.delete()
     return redirect('plans-panel', appslug)
 
-def show_plan(request, slug):
+def show_plan(request, slug, planslug):
     if request.user.is_superuser:
         if request.method == 'GET':
-            plan = Plan.objects.filter(slug=slug).first()
+            plan = Plan.objects.filter(slug=planslug).first()
             users = Profile.objects.filter(plans=plan)
+            print(users)
             form = SubscribeForm()
             payload = {
                 'plan': plan,
                 'users': users,
                 'form': form,
-                'update_form': UpdateUserPlanForm(appslug=plan.app.slug),
-                'appslug': plan.app.slug
+                'update_form': UpdateUserPlanForm(appslug=slug),
+                'slug': slug
             }
             return render(request, 'plans-panel/plan.html', payload)
         
         # 'POST' method
         form = SubscribeForm(request.POST)
-        plan = Plan.objects.filter(slug=slug).first()
+        plan = Plan.objects.filter(slug=planslug).first()
         if form.is_valid():
             #if form.cleaned_data.get("username")!='username':
             customer = Profile.objects.filter(user__username=form.cleaned_data.get("username")).filter(apps__in=[plan.app])
@@ -107,8 +108,8 @@ def show_plan(request, slug):
         return redirect('plan', slug)
 
 
-def update_user_plan(request, slug,planslug):
-    profile = Profile.objects.get(slug__iexact=slug)
+def update_user_plan(request, profileslug,planslug):
+    profile = Profile.objects.get(slug__iexact=profileslug)
     current_plan = Plan.objects.get(slug__iexact=planslug)
 
     form = UpdateUserPlanForm(request.POST)
