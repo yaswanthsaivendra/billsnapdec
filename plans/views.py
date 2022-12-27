@@ -53,23 +53,23 @@ def plans_panel(request, slug):
         return redirect('plans-panel', slug)
     return redirect('index')
 
-def delete_plan(request, slug, appslug):
-    plan = Plan.objects.get(slug__iexact=slug)
-    default_plan = Plan.objects.filter(app=appslug).get(default_for_customer=True)
+def delete_plan(request, slug, planslug):
+    plan = Plan.objects.get(slug__iexact=planslug)
+    app = applists.objects.get(slug=slug)
+    default_plan = Plan.objects.filter(app=app).filter(default_for_customer=True).first()
     for user in Profile.objects.filter(plans=plan):
         #create_history(user=user.user, to_plan=plan, from_plan=user.plan, upgrade=True)
         user.plans.add(default_plan)
         user.plan_active = True
         user.save(update_fields=['plans', 'plan_active'])
     plan.delete()
-    return redirect('plans-panel', appslug)
+    return redirect('plans-panel', slug)
 
 def show_plan(request, slug, planslug):
     if request.user.is_superuser:
         if request.method == 'GET':
             plan = Plan.objects.filter(slug=planslug).first()
             users = Profile.objects.filter(plans=plan)
-            print(users)
             form = SubscribeForm()
             payload = {
                 'plan': plan,
