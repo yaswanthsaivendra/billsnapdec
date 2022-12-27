@@ -161,3 +161,7 @@ Traceback (most recent call last):
     raise TemplateSyntaxError(
 django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '!i.is_billing' from '!i.is_billing'
 [2022-12-27T07:40:07] INFO [root.showapps:70] yaswanth_seen the whole applist
+[2022-12-27T08:49:04] WARNING [django.request.log_response:241] Not Found: /favicon.ico/
+[2022-12-27T08:49:09] INFO [root.logout:189] yaswanth_ logged out
+[2022-12-27T08:50:36] WARNING [django.request.log_response:241] Not Found: /favicon.ico/
+[2022-12-27T08:50:43] INFO [root.logout:189] _ logged out

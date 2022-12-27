@@ -25,6 +25,7 @@
             <a class="navbar-brand d-none d-md-block mt-1" href="{% url 'index' %}">
                 <h2 class="h2">BILL SNAP</h2>
             </a>
+            {% if user.is_authenticated %}
             <div class="d-flex ms-auto gap-4 pe-3">
                 <a href="{% url 'accounts:logout' %}">
                     <button class="b-primary b-secondary px-3 py-2">
@@ -32,6 +33,7 @@
                     </button>
                 </a>
             </div>
+            {% endif %}
         </div>
     </nav>
 </header>
