@@ -1343,3 +1343,4 @@ Traceback (most recent call last):
   File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 247, in add_customer_app
     Profile.plans.add(default_plan)
 AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T23:38:48] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\dashboard\views.py changed, reloading.

@@ -49,10 +49,7 @@ def addapp(request):
         plan.default_for_customer=True
         plan.save()
 
-        group.title = plan_name
-        group.description = description
-        group.app = applis
-        group.save()
+        
 
 
 

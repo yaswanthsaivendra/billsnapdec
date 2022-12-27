@@ -59,7 +59,7 @@ def show_group(request, slug):
         group = Group.objects.filter(slug=slug).first()
         if form.is_valid():
             #if form.cleaned_data.get("username")!='username':
-            customer = Profile.objects.filter(user__username=form.cleaned_data.get("username"))
+            customer = Profile.objects.filter(user__username=form.cleaned_data.get("username")).filter(apps__in=[group.app])
             if customer.exists():
                 customer = customer.first()
                 # pre_group = customer.group_set.filter(app__appname=group.app.appname).first()
