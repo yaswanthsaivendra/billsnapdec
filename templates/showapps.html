@@ -69,9 +69,13 @@
     }
     .card{
         border-radius: 10px;
+        border:1px solid black;
     }
     .addbtndiv{
         visibility: hidden !important;
+    }
+    .container{
+        background-color: white;
     }
 </style>
 
@@ -80,10 +84,12 @@
     {% include "dashnav.html" %}
 
     <div class="main mx-auto">
-        <h1 class="applist "><b>APP LIST</b></h1>
+        <h1 class="applist "><b>APP Management Console</b></h1>
         <div class="container">
-            <div class="row">
 
+
+            <div class="row">
+            <h3>Billing Apps:</h3>
                 {% if leni != 0 %}
                 {% for i in showapp %}
                 <div class="col-md-6 col-xl-3">
@@ -129,13 +135,12 @@
     
                                 </div>
                             </div>
-
                         </div>
-                        
                     </div>
                 </div>
-
             </div>
+
+
         </div>
 
 
