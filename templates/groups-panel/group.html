@@ -178,37 +178,48 @@
             <!-- main content -->
             <div class="col-md-7  flex-md-fill m-3">
                 <div class="col right ps-0 pe-4 me-2" id="">
+                    <button class="button button1" data-toggle="modal"
+                    data-target="#addcustomer">Add</button>
+                    <h2 class="ps-1 pt-3 text-uppercase" id="pspt">{{group}} Customers</h2><br>
 
-                    <!-- <h1 class="applist my-4 text-dark my-2 text-uppercase ">{{group}}</h1>
-                    <div class="container mt-4">
-                        <div class="row">
-                            <div>
-                                <button class="bs-primary py-2 px-3 new-group-btn" data-toggle="modal"
-                                    data-target="#addcustomer">Add
-                                    Customers</button>
-
-                            </div>
-
-                            <h3>Customers in {{group.title}}</h3>
-
-                            {% for user in users %}
-
-
-
-                            <div class='w3-row w3-border-bottom w3-margin grp p-3'>
-                                <h5>@{{user.user.username}} </h5>
-                            </div>
-
-
-                            {% endfor %}
-                        </div> -->
-
-
-
-
-
-
-                    </div>
+                    <!-- table -->
+                    <div class="table-responsive my-3">
+                        <table class="table table-bordered" id='table_filter'>
+                          <thead>
+                            <tr>
+                              <th>User Name</th>
+                              <th>Full Name</th>
+                              <th>Email</th>
+                              <th>Status</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {% for user in users%}
+                            <tr>
+                              <td>{{ user.user.username}}</td>
+                              <td>{{ user.full_name}}</td>
+                              <td>{{ user.contact_email}}</td>
+                              <td>{{ user.paid}}</td>
+                            </tr>
+                            {%endfor%}
+                          </tbody>
+                        </table>
+                      </div>
+                      <!-- pagination -->
+                      <div class="demo1">
+                        <div class="demo">
+                          <a href="#">&laquo;</a>
+                          <a href="#" class="active">1</a>
+                          <a href="#">2</a>
+                          <a href="#">3</a>
+                          <a href="#">4</a>
+                          <a href="#">5</a>
+                          <a href="#">6</a>
+                          <a href="#">&raquo;</a>
+            
+                        </div>
+                      </div>
+                    
                 </div>
             </div>
         </div>
@@ -216,32 +227,52 @@
         <!-- add group model -->
         <div class="modal fade" id="addcustomer" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
             aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle"><b>Customers in {{group.app.appname}} not in
-                                {{group.title}}</b></h5>
+                        <h5 class="modal-title" id="exampleModalLongTitle">Add Customers to {{group.title}}</h5>
                     </div>
 
                     <div class="modal-body">
-
-                        {% for user in existing_users %}
-                        <div class='w3-container w3-small w3-row w3-padding '>
-                            <h3 class='w3-medium w3-left'>@{{user.user.username}}</h3>
-                            <button class='w3-right w3-round w3-blue w3-button' onclick="addCustomerApp(this);"
-                                value="{{user.user.username}}" url="{% url 'groups:add-member' group.slug %}">
-                                Add to this group
-                            </button>
-                        </div>
-                        {% endfor %}
+                        
+                        <div class="table-responsive my-3">
+                            <table class="table table-bordered" id='table_filter'>
+                              <thead>
+                                <tr>
+                                  <th>User Name</th>
+                                  <th>Full Name</th>
+                                  
+                                  
+                                  <th>Action</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                {% for user in existing_users %}
+                                <tr>
+                                  <td>{{ user.user.username}}</td>
+                                  <td>{{ user.full_name}}</td>
+                                  <td>
+                                    <button class='bs-primary py-2 px-3' onclick="addCustomerApp(this);"
+                                    value="{{user.user.username}}" url="{% url 'groups:add-member' group.slug %}">
+                                    Add
+                                </button>
+                                  </td>
+                                </tr>
+                                {%endfor%}
+                              </tbody>
+                            </table>
+                          </div>
                         <hr>
                         <form id="group_form" enctype='multipart/form-data' method='POST'
                             action="{% url 'groups:group' group.slug %}">
-                            <h5><b>Add to {{group.title}}</b></h5>
+                            <h5>Add by Username</h5>
                             {% csrf_token %}
                             {{ form|crispy }}
-                            <button style='width:95%;' type='submit'
-                                class='w3-margin w3-round w3-green w3-button'>Add</button>
+                            
+                                <button type='submit'
+                                class='bs-primary py-2 px-3'>Add</button>
+                          
+                           
                         </form>
                     </div>
                     <div class="modal-footer">
