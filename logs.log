@@ -25,3 +25,5 @@
 [2022-12-28T00:27:00] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
 [2022-12-28T00:27:14] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
 [2022-12-28T00:27:49] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:28:14] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:39:26] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.
