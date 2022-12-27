@@ -1334,3 +1334,12 @@ Traceback (most recent call last):
   File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 247, in add_customer_app
     Profile.plans.add(default_plan)
 AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T23:34:48] ERROR [django.request.log_response:241] Internal Server Error: /apps/whatsup/add-customer-app/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
