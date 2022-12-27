@@ -82,12 +82,15 @@
 <body>
 
     {% include "dashnav.html" %}
-
     <div class="main mx-auto">
-        <div class="row">
+        <div class="row bulkuploadcontent">
 
             {% include "dashsidebar.html" %}
+            <div class="col-md-7  flex-md-fill m-3">
+                <div class="col right create-customer ps-0 pe-4 me-2" id="">
 
+
+                    <h3>Students</h3>
                     {% for user in users %}
                     <div class='w3-row w3-border-bottom w3-margin'>
                         <h5 class='w3-left w3-margin-right'>
@@ -96,7 +99,6 @@
                         <button onclick="showUpdateForm();" class=' w3-button w3-right w3-round w3-purple'>Update
                             @{{user.user.username}}'s Plan</button>
                     </div>
-
                     <div id="form" style='display:none;' class="w3-modal">
                         <div class="w3-display-middle w3-padding">
                             <button class='w3-right w3-button w3-round-large w3-red w3-padding'
@@ -113,10 +115,8 @@
                             </div>
                         </div>
                     </div>
-                    
                     {% endfor %}
                 </div>
-                
                 <div class='w3-container w3-padding w3-round w3-half w3-border'>
                     <button id="button" onclick="showForm();" class=' w3-round w3-button w3-blue'>
                         Add Customer to {{plan.title}}
@@ -133,9 +133,7 @@
             </div>
         </div>
 
-
-
-
+    </div>
 </body>
 
 <script>

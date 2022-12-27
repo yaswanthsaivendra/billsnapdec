@@ -94,7 +94,7 @@ def show_plan(request, slug, planslug):
                 customer.plans.add(plan)
                 customer.plan_active = True
                 customer.save(update_fields=['plans', 'plan_active'])
-            return redirect('plan', slug)
+            return redirect('plan', slug, planslug)
 
             """students = Profile.objects.filter(institute_name=form.cleaned_data.get("institution"), is_student=True)
             for student in students:

@@ -27,3 +27,214 @@
 [2022-12-28T00:27:49] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
 [2022-12-28T00:28:14] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
 [2022-12-28T00:39:26] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.
+[2022-12-28T00:43:49] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:43:52] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:44:01] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:44:02] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:44:11] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2022-12-28T00:44:16] WARNING [django.request.log_response:241] Not Found: /apps/whatsup/dashboard/assets/img/ivancik.jpg
+[2022-12-28T00:50:48] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/AFk7twCH0H
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 81, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plan' with arguments '('AFk7twCH0H',)' not found. 1 pattern(s) tried: ['plans/plan/(?P<slug>[^/]+)/(?P<planslug>[^/]+)\\Z']
+[2022-12-28T00:51:42] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/AFk7twCH0H
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 97, in show_plan
+    return redirect('plan', slug)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plan' with arguments '('whatsup',)' not found. 1 pattern(s) tried: ['plans/plan/(?P<slug>[^/]+)/(?P<planslug>[^/]+)\\Z']
+[2022-12-28T00:52:57] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/AFk7twCH0H
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 97, in show_plan
+    return redirect('plan', slug)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plan' with arguments '('whatsup',)' not found. 1 pattern(s) tried: ['plans/plan/(?P<slug>[^/]+)/(?P<planslug>[^/]+)\\Z']
+[2022-12-28T00:56:02] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.
+[2022-12-28T00:56:13] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/AFk7twCH0H
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 97, in show_plan
+    return redirect('planslug', slug)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'planslug' not found. 'planslug' is not a valid view function or pattern name.
+[2022-12-28T00:56:47] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/AFk7twCH0H
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 97, in show_plan
+    return redirect('planslug', slug)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'planslug' not found. 'planslug' is not a valid view function or pattern name.
+[2022-12-28T00:57:15] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.
+[2022-12-28T00:58:18] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T00:58:38] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/AFk7twCH0H
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 81, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'update-plan' with arguments '('yaswanth',)' not found. 1 pattern(s) tried: ['plans/update\\-plan/(?P<profileslug>[^/]+)/(?P<planslug>[^/]+)/\\Z']
+[2022-12-28T00:59:00] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/FaRGKlHDFj
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 81, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'update-plan' with arguments '('yaswanth',)' not found. 1 pattern(s) tried: ['plans/update\\-plan/(?P<profileslug>[^/]+)/(?P<planslug>[^/]+)/\\Z']
+[2022-12-28T01:03:14] ERROR [django.request.log_response:241] Internal Server Error: /plans/delete-plan/AFk7twCH0H/whatsup/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 58, in delete_plan
+    default_plan = Plan.objects.filter(app=appslug).get(default_for_customer=True)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+plans.models.Plan.DoesNotExist: Plan matching query does not exist.
+[2022-12-28T01:03:24] ERROR [django.request.log_response:241] Internal Server Error: /plans/delete-plan/FaRGKlHDFj/whatsup/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 58, in delete_plan
+    default_plan = Plan.objects.filter(app=appslug).get(default_for_customer=True)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+plans.models.Plan.DoesNotExist: Plan matching query does not exist.
+[2022-12-28T01:03:36] ERROR [django.request.log_response:241] Internal Server Error: /plans/delete-plan/FaRGKlHDFj/whatsup/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 58, in delete_plan
+    default_plan = Plan.objects.filter(app=appslug).get(default_for_customer=True)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+plans.models.Plan.DoesNotExist: Plan matching query does not exist.
