@@ -31,7 +31,16 @@
     <link rel="stylesheet" href="{% static 'w3.css' %}" />
 </head>
 <style>
-    .row {
+    .first-sidebar {
+			position: fixed;
+			top: 76px;
+			left: 0;
+		}
+
+		.second {
+			visibility: hidden;
+		}
+    /* .row {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -75,9 +84,10 @@
     .box {
         height: 250px !important;
     }
-    b{
-        color:#7b7b7b;
-    }
+
+    b {
+        color: #7b7b7b;
+    } */
 </style>
 
 
@@ -86,86 +96,171 @@
     {% include "dashnav.html" %}
 
     <div class="main mx-auto">
-        <h1 class="applist my-4 text-dark my-2 text-uppercase ">{{group}}</h1>
-        <div class="container mt-4">
-            <div class="row">
-                <div>
-                    <button class="bs-primary py-2 px-3 new-group-btn" data-toggle="modal"
-                        data-target="#addcustomer">Add
-                        Customers</button>
-
-                </div>
-
-                <h3>Customers in {{group.title}}</h3>
-
-                {% for user in users %}
+        <div class="row">
 
 
+            <!-- sidebar start -->
 
-                <div class='w3-row w3-border-bottom w3-margin grp p-3'>
-                    <h5>@{{user.user.username}}  </h5>
-                </div>
-               
+            <!-- sidebar -->
+            <div class="left first-sidebar d-none d-md-block col-md-4">
+                <div class="menu-frag d-flex flex-column p-3 ps-4 gap-3">
+                    <div>
+                        <i class='bx bx-grid-alt'></i>
 
-                {% endfor %}
-            </div>
-
-
-
-
-
-
-        </div>
-    </div>
-
-    <!-- add group model -->
-    <div class="modal fade" id="addcustomer" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle"><b>Customers in {{group.app.appname}} not in
-                        {{group.title}}</b></h5>
-                </div>
-
-                <div class="modal-body">
-
-                    {% for user in existing_users %}
-                    <div class='w3-container w3-small w3-row w3-padding '>
-                        <h3 class='w3-medium w3-left'>@{{user.user.username}}</h3>
-                        <button class='w3-right w3-round w3-blue w3-button' onclick="addCustomerApp(this);"
-                            value="{{user.user.username}}" url="{% url 'groups:add-member' group.slug %}">
-                            Add to this group
-                        </button>
+                        <a href="dashboard.html">Dashboard</a>
                     </div>
-                    {% endfor %}
-                    <hr>
-                    <form id="group_form" enctype='multipart/form-data' method='POST'
-                        action="{% url 'groups:group' group.slug %}">
-                        <h5><b>Add to {{group.title}}</b></h5>
-                        {% csrf_token %}
-                        {{ form|crispy }}
-                        <button style='width:95%;' type='submit'
-                            class='w3-margin w3-round w3-green w3-button'>Add</button>
-                    </form>
+                    <div>
+                        <i class='bx bx-analyse'></i>
+
+                        <a href="estimate.html">Estimates</a>
+                    </div>
+                    <div>
+                        <i class='bx bx-cog'></i>
+
+                        <a href="settings.html">Settings</a>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="bs-primary bs-secondary px-3 py-2 mx-2"
-                        data-dismiss="modal">Close</button>
+                <hr>
+                <div class="menu-frag mt-3 ps-3">
+                    <h4>Customer</h4>
+                    <div class="customer-frag d-flex flex-column p-3 pt-1 gap-3">
+                        <div>
+                            <i class='bx bx-box'></i>
+
+                            <a href="create.html">Create</a>
+                        </div>
+                        <div>
+                            <i class='bx bx-box'></i>
+                            <a href="customerlist.html" id="active">Customer List</a>
+                        </div>
+                        <div>
+                            <i class='bx bx-log-out'></i>
+                            <a href="bulk.html">Bulk Upload</a>
+                        </div>
+                        <div>
+                            <i class='bx bx-archive-in'></i>
+                            <a href="manage.html">Manage Group</a>
+                        </div>
+                        <div>
+                            <i class='bx bx-bar-chart'></i>
+                            <a href="pending.html">Pending approvals</a>
+                        </div>
+                        <div>
+                            <i class='bx bx-message'></i>
+                            <a href="message.html">Messaging</a>
+                        </div>
+                    </div>
                 </div>
+                <hr>
+                <div class="menu-frag mt-3 ps-3">
+                    <h4>Payments</h4>
+                    <div class="pay-frag d-flex flex-column  p-3 pt-1  gap-3">
+                        <div>
+                            <i class='bx bx-list-ul'></i>
+                            <a href="transcations.html">Transactions </a>
+                        </div>
 
-
-                </form>
-
+                        <div>
+                            <i class='bx bx-coin-stack'></i>
+                            <a href="plans.html">Plans</a>
+                        </div>
+                        <div>
+                            <i class='bx bx-heart'></i>
+                            <a href="request.html">Requests</a>
+                        </div>
+                    </div>
+                </div>
 
             </div>
+            <!-- sidebar finish -->
+            <div class="left second"></div>
+
+            <!-- main content -->
+            <div class="col-md-7  flex-md-fill m-3">
+                <div class="col right ps-0 pe-4 me-2" id="">
+
+                    <!-- <h1 class="applist my-4 text-dark my-2 text-uppercase ">{{group}}</h1>
+                    <div class="container mt-4">
+                        <div class="row">
+                            <div>
+                                <button class="bs-primary py-2 px-3 new-group-btn" data-toggle="modal"
+                                    data-target="#addcustomer">Add
+                                    Customers</button>
+
+                            </div>
+
+                            <h3>Customers in {{group.title}}</h3>
+
+                            {% for user in users %}
+
+
+
+                            <div class='w3-row w3-border-bottom w3-margin grp p-3'>
+                                <h5>@{{user.user.username}} </h5>
+                            </div>
+
+
+                            {% endfor %}
+                        </div> -->
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <!-- add group model -->
+        <div class="modal fade" id="addcustomer" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle"><b>Customers in {{group.app.appname}} not in
+                                {{group.title}}</b></h5>
+                    </div>
+
+                    <div class="modal-body">
+
+                        {% for user in existing_users %}
+                        <div class='w3-container w3-small w3-row w3-padding '>
+                            <h3 class='w3-medium w3-left'>@{{user.user.username}}</h3>
+                            <button class='w3-right w3-round w3-blue w3-button' onclick="addCustomerApp(this);"
+                                value="{{user.user.username}}" url="{% url 'groups:add-member' group.slug %}">
+                                Add to this group
+                            </button>
+                        </div>
+                        {% endfor %}
+                        <hr>
+                        <form id="group_form" enctype='multipart/form-data' method='POST'
+                            action="{% url 'groups:group' group.slug %}">
+                            <h5><b>Add to {{group.title}}</b></h5>
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <button style='width:95%;' type='submit'
+                                class='w3-margin w3-round w3-green w3-button'>Add</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="bs-primary bs-secondary px-3 py-2 mx-2"
+                            data-dismiss="modal">Close</button>
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+
+
     </div>
-
-
-
-
-
 
 </body>
 <script>
