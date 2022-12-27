@@ -118,7 +118,7 @@
                                 </div>
                                 <h5>{{plan.title}}</h5>
                                 <p>{{plan.description}}</p>
-                                <a href="{% url 'plan' plan.slug %}">
+                                <a href="{% url 'plan' slug=slug planslug=plan.slug %}">
                                     <button class='bs-primary px-3 py-2'>View</button>
                                 </a>
                                 <a href="{% url 'delete-plan' plan.slug slug %}">
@@ -142,7 +142,7 @@
 
                                     </div>
                                     <div class="bottom">
-                                        <a href="{% url 'plan' plan.slug %}">
+                                        <a href="{% url 'plan' slug=slug planslug=plan.slug %}">
                                             <button class="bs-primary px-3 py-2">View</button>
                                         </a>
                                         <a href="{% url 'delete-plan' plan.slug slug %}">
