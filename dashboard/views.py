@@ -243,12 +243,16 @@ def add_customer_app(request, slug):
     profile = Profile.objects.get(user__username=username)
     app = applists.objects.get(slug=slug)
     profile.apps.add(app)
+    default_plan = Plan.objects.filter(app=app).filter(default_for_customer=True).first()
+    Profile.plans.add(default_plan)
     return redirect('customerlist',slug=slug)
 
 def addingcustomer(request,slug):
     prof=Profile.objects.get(user=request.user)
     app=applists.objects.get(slug=slug)
     prof.apps.add(app)
+    default_plan = Plan.objects.filter(app=app).filter(default_for_customer=True).first()
+    Profile.plans.add(default_plan)
     return redirect('customerlist',slug=slug)
 
 def update_profile_plan(request, slug):

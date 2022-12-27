@@ -466,3 +466,4 @@ Traceback (most recent call last):
   File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 653, in get
     raise self.model.MultipleObjectsReturned(
 plans.models.Plan.MultipleObjectsReturned: get() returned more than one Plan -- it returned 5!
+[2022-12-27T18:37:00] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\groups\urls.py changed, reloading.

@@ -55,7 +55,7 @@ def plans_panel(request, slug):
 
 def delete_plan(request, slug, appslug):
     plan = Plan.objects.get(slug__iexact=slug)
-    default_plan = Plan.objects.get(default_for_customer=True)
+    default_plan = Plan.objects.filter(app=appslug).get(default_for_customer=True)
     for user in Profile.objects.filter(plans=plan):
         #create_history(user=user.user, to_plan=plan, from_plan=user.plan, upgrade=True)
         user.plans.add(default_plan)
@@ -87,6 +87,8 @@ def show_plan(request, slug):
             customer = Profile.objects.filter(user__username=form.cleaned_data.get("username"))
             if customer.exists():
                 customer = customer.first()
+                pre_plan = customer.plans.filter(app=plan.app).first()
+                customer.plans.remove(pre_plan)
                 #create_history(user=customer.user, to_plan=plan, from_plan=customer.plan, upgrade=True)
                 customer.plans.add(plan)
                 customer.plan_active = True
@@ -111,6 +113,7 @@ def update_user_plan(request, slug,planslug):
 
     form = UpdateUserPlanForm(request.POST)
     new_plan = Plan.objects.get(id=request.POST.get('update_to'))
+    profile.plans.remove(current_plan)
     profile.plans.add(new_plan)
     profile.plan_active = True
     profile.save(update_fields=['plans', 'plan_active'])

@@ -86,17 +86,12 @@
     {% include "dashnav.html" %}
 
     <div class="main mx-auto">
-        <h1 class="applist my-4 text-dark my-2 text-uppercase ">{{group}}</h1>
+        <h1 class="applist my-4 text-dark my-2 text-uppercase ">{{plan.title}} Group</h1>
         <div class="container mt-4">
             <div class="row">
-                <div>
-                    <button class="bs-primary py-2 px-3 new-group-btn" data-toggle="modal"
-                        data-target="#addcustomer">Add
-                        Customers</button>
+               
 
-                </div>
-
-                <h3>Customers in {{group.title}}</h3>
+                <h3>Customers in {{plan.title}} Group</h3>
 
                 {% for user in users %}
 
@@ -104,8 +99,9 @@
 
                 <div class='w3-row w3-border-bottom w3-margin grp p-3'>
                     <h5>@{{user.user.username}}  </h5>
+
                 </div>
-               
+
 
                 {% endfor %}
             </div>
@@ -118,49 +114,7 @@
         </div>
     </div>
 
-    <!-- add group model -->
-    <div class="modal fade" id="addcustomer" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle"><b>Customers in {{group.app.appname}} not in
-                        {{group.title}}</b></h5>
-                </div>
-
-                <div class="modal-body">
-
-                    {% for user in existing_users %}
-                    <div class='w3-container w3-small w3-row w3-padding '>
-                        <h3 class='w3-medium w3-left'>@{{user.user.username}}</h3>
-                        <button class='w3-right w3-round w3-blue w3-button' onclick="addCustomerApp(this);"
-                            value="{{user.user.username}}" url="{% url 'groups:add-member' group.slug %}">
-                            Transfer to this group
-                        </button>
-                    </div>
-                    {% endfor %}
-                    <hr>
-                    <form id="group_form" enctype='multipart/form-data' method='POST'
-                        action="{% url 'groups:group' group.slug %}">
-                        <h5><b>Add to {{group.title}}</b></h5>
-                        {% csrf_token %}
-                        {{ form|crispy }}
-                        <button style='width:95%;' type='submit'
-                            class='w3-margin w3-round w3-green w3-button'>Add</button>
-                    </form>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="bs-primary bs-secondary px-3 py-2 mx-2"
-                        data-dismiss="modal">Close</button>
-                </div>
-
-
-                </form>
-
-
-            </div>
-        </div>
-    </div>
+    
 
 
 
