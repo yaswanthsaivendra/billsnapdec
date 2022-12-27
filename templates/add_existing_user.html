@@ -41,45 +41,87 @@
             {% include "dashsidebar.html" %}
 
             <div class="col-md-7 flex-md-fill">
-                <div class="col right" id="customer-list">
-                    <div class='w3-green w3-round w3-margin-bottom w3-padding w3-large'>Add Existing Users to
-                        {{app.appname}}</div>
 
-                    <div class='w3-half w3-container'>
-                        <h4>Existing Users</h4>
-                        {% for profile in profiles %}
-                        <div class='w3-container w3-row w3-small w3-padding '>
-                            <h3 class='w3-medium w3-left'>@{{profile.user.username}}</h3>
-                            <button class='w3-right w3-blue w3-button' onclick="addCustomerApp(this);"
-                                value="{{profile.user.username}}" url="{% url 'add-customer-app' app.slug %}">
-                                Add
-                            </button>
+                <h2 class="ps-1 pt-3" id="pspt">Add Existing Users to
+                    {{app.appname}}</h2><br>
+
+                <dialog id="myFirstDialog" class="first">
+
+                    <div class="topnav">
+
+                        <div class="search-container">
+
+                            <button id="hide" class="b-primary b-secondary button3 p-2 px-3">x</button>
+                            <h4>Status</h4>
+                            <a href="javascript:void(0)" id="failedList"><button class="b-primary b-secondary"><i
+                                        class="fa fa-external-link" aria-hidden="true"></i> False </button></a>
+                            <a href="javascript:void(0)" id="passedList"><button class="b-primary b-secondary"><i
+                                        class="fa fa-external-link" aria-hidden="true"></i> True </button></a>
+
                         </div>
-                        {% endfor %}
+
                     </div>
+                    <br>
 
-                    <div class='w3-half w3-padding w3-border'>
-                        <input id="search" url="{% url 'add-customer-app' app.slug %}"
-                            placeholder="Enter username to add ....."
-                            class='w3-input w3-border w3-round w3-margin-right' />
-                        <button class='w3-center w3-margin w3-green w3-button' onclick="addCustomerAppSearch(this);">
-                            Add
-                        </button>
-                    </div>
+                </dialog>
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."
+                    title="Type in a name">
 
 
+                <!-- table -->
+                <div class="table-responsive my-3">
+                    <table class="table table-bordered" id='table_filter'>
+                        <thead>
+                            <tr>
+                                <th>User Name</th>
+                                <th>Full Name</th>
+                                <th>Email</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for profile in profiles %}
+                            <tr>
+                                <td>{{ profile.user.username}}</td>
+                                <td>{{ profile.full_name}}</td>
+                                <td>{{ profile.contact_email}}</td>
 
+                                <td>
+                                    <button class="bs-primary px-3 py-2" onclick="addCustomerApp(this);" value="{{profile.user.username}}"
+                                        url="{% url 'add-customer-app' app.slug %}">
+                                        Add
+                                    </button>
+                                </td>
+
+                            </tr>
+                            {%endfor%}
+                        </tbody>
+                    </table>
 
                 </div>
+
+                <!-- pagination -->
+                <div class="demo1">
+                    <div class="demo">
+                        <a href="#">&laquo;</a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">&raquo;</a>
+
+                    </div>
+                </div>
+
+               
             </div>
+          
+
+
         </div>
-
-
     </div>
-    </div>
-    </div>
-    </div>
-    </section>
 
     <script>
         function addCustomerApp(obj) {
@@ -105,6 +147,115 @@
             })
         }
 
+    </script>
+    <script>
+        function myFunction() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("table_filter");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        document.getElementById('failedList').addEventListener('click', function () {
+
+            table = document.getElementById('table_filter');
+
+            tr = table.querySelector('tbody').getElementsByTagName('tr');
+
+            for (var i = 0; i < tr.length; i++) {
+                console.log(tr[i]);
+                if (tr[i].getElementsByTagName('td')[3].innerText == "False") {
+                    tr[i].classList.remove('donotShow_row')
+                    console.log('hihi')
+                } else {
+                    tr[i].classList.add('donotShow_row')
+                }
+            }
+        })
+
+        document.getElementById('passedList').addEventListener('click', function () {
+            table = document.getElementById('table_filter');
+            tr = table.querySelector('tbody').getElementsByTagName('tr');
+            for (var i = 0; i < tr.length; i++) {
+                if (tr[i].getElementsByTagName('td')[3].innerText == "True") {
+                    tr[i].classList.remove('donotShow_row')
+                } else {
+                    tr[i].classList.add('donotShow_row')
+                }
+            }
+        })
+
+
+        // document.getElementById('averageList').addEventListener('click', function () {
+        //   table = document.getElementById('table_filter');
+        //   tr = table.querySelector('tbody').getElementsByTagName('tr');
+        //   for (var i = 0; i < tr.length; i++) {
+        //     if (tr[i].getElementsByTagName('td')[3].innerText.indexOf('Average') > -1) {
+        //       tr[i].classList.remove('donotShow_row')
+        //     } else {
+        //       tr[i].classList.add('donotShow_row')
+        //     }
+        //   }
+        // })
+    </script>
+
+
+    <script type="text/JavaScript">
+      (function() {    
+          var dialog = document.getElementById('myFirstDialog');    
+          document.getElementById('show').onclick = function() {    
+              dialog.show();    
+          };    
+          document.getElementById('hide').onclick = function() {    
+              dialog.close();    
+          };    
+      })();   
+      </script>
+
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+        "use strict";
+        let leftie = document.querySelector('.left')
+        let menuh = document.querySelector('.menu')
+        let closeh = document.querySelector('.close')
+        let right = document.querySelector('.right')
+
+
+        menuh.addEventListener('click', function () {
+            menuh.classList.toggle('d-none')
+            closeh.classList.toggle('d-none')
+            leftie.classList.toggle('d-none')
+            right.classList.toggle('overlay')
+
+        })
+        closeh.addEventListener('click', function () {
+            menuh.classList.toggle('d-none')
+            closeh.classList.toggle('d-none')
+            leftie.classList.toggle('d-none')
+            right.classList.toggle('overlay')
+
+        })
     </script>
 
 </body>

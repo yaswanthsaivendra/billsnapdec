@@ -12,6 +12,47 @@
         background: white;
         color: black;
     }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right:0px;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+    .dropbtn{
+        width:40px;
+        height: 40px;
+        border:none !important;
+        border-radius:50%;
+        background-color: white;
+    }
+    .fa-user{
+     font-size: 23px;
+    }
 </style>
 <header>
     <nav class="navbar navbar-expand-lg fixed-top p-md-0">
@@ -27,11 +68,18 @@
             </a>
             {% if user.is_authenticated %}
             <div class="d-flex ms-auto gap-4 pe-3">
-                <a href="{% url 'accounts:logout' %}">
-                    <button class="b-primary b-secondary px-3 py-2">
-                        Logout
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <i class="fa-solid fa-user text-secondary"></i>
                     </button>
-                </a>
+                    <div class="dropdown-content">
+                        <a href="#">View Profile</a>
+                        <a href="#">View History</a>
+                        <a href="{% url 'accounts:logout' %}">Logout</a>
+                    </div>
+                </div>
+               
+
             </div>
             {% endif %}
         </div>

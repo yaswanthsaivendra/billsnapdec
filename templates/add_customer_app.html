@@ -187,6 +187,7 @@
         font-family: "Inter", sans-serif;
         color: #6b7280;
         font-weight: 400;
+        overflow-y:hidden;
     }
 
     @media only screen and (min-width: 600px) {
@@ -222,13 +223,13 @@
         background: #ffffff;
         border-radius: 0.5em;
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        left: 50%;
+        left: 0;
         max-width: 100%;
         pointer-events: none;
         position: absolute;
         top: 60%;
         transform: translate(-50%, -50%);
-        width: 80em;
+        width: 70em;
 
         text-align: left;
         max-height: 140vh;
@@ -271,7 +272,6 @@
     .details-modal .details-modal-content {
         border-top: 1px solid #e0e0e0;
         padding: 2em;
-        height: 340px;
         pointer-events: all;
         overflow: auto;
     }

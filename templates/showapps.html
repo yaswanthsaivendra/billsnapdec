@@ -75,13 +75,16 @@
 
     .card {
         border-radius: 10px;
-        border:1px solid black;
+        border: 1px solid black;
+        margin-right: 20px;
+        margin-top: 10px;
     }
 
     .addbtndiv {
         visibility: hidden !important;
     }
-    .container{
+
+    .container {
         background-color: white;
     }
 </style>
@@ -91,16 +94,16 @@
     {% include "dashnav.html" %}
 
     <div class="main mx-auto">
-        <h1 class="applist "><b>APP LIST</b></h1>
-        <h2>Billing Apps</h2>
+        <h1 class="applist "><b>App Management Console</b></h1>
+
         <div class="container">
             <div class="row">
-            <h3>Billing Apps:</h3>
+                <h3>Billing Apps:</h3>
                 {% if leni != 0 %}
                 {% for i in showapp %}
                 {% if i.is_billing %}
                 <div class="col-md-6 col-xl-3">
-                    <div class="card m-b-30 py-3">
+                    <div class="card  py-2">
                         <div class="card-body">
                             <div class="top">
                                 <div class="app-img-container">
@@ -147,13 +150,9 @@
                     </div>
                 </div>
             </div>
-        </div>
 
-
-        <h2>Non-billing Apps</h2>
-        <div class="container">
-            <div class="row">
-
+            <div class="row mt-3">
+                <h3>Non-billing Apps:</h3>
                 {% if leni != 0 %}
                 {% for i in showapp %}
                 {% if not i.is_billing %}
@@ -205,8 +204,6 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
 
 
@@ -215,6 +212,13 @@
 
 
     </div>
+
+
+
+
+
+
+
 
     <script type="text/javascript">
         $(function () {

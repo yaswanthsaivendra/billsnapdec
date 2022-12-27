@@ -29,18 +29,9 @@
   <link rel="stylesheet" href="{% static 'assets/styles.css'%}">
 </head>
 <style>
-  .right{
-    display: flex;
-  align-items: center;
-  justify-content:center;
+  body{
+    overflow-y:hidden ;
   }
-  .container{ 
-  display: flex;
-  align-items: center;
-  justify-content:center;
-  max-width: 700px;
-  }
-  
 </style>
 <body>
   {% include "dashnav.html" %}
@@ -51,20 +42,20 @@
       {% include "dashsidebar.html" %}
       <div class="col-md-7  flex-md-fill m-3">
         <div class="col right create-customer ps-0 pe-4 me-2" id="">
-          <div class="container">
+          <div >
             <div class="row box">
               <h3 class="t-primary">Utility Details</h3>
 
-              <form class="form" method="POST" action="{% url 'bulkupload' slug %}" enctype="multipart/form-data">
+              <form class="form w-50" method="POST" action="{% url 'bulkupload' slug %}" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-group my-3">
                   <label for="csvfile" class="form-label"><b>CSV FILE</b></label>
                   <input type="file" class="form-control my-1" name="csvfile" id="csvfile" required />
                 </div>
-                <div class="frag-btns ms-4">
-                  <div class="d-flex flex-row-reverse">
-                    <button class="b-primary m-2 ">Save</button>
-                    <button class="b-primary b-secondary m-2 ">Cancel</button>
+                <div class="frag-btns ">
+                  <div class="d-flex ">
+                    <button class="bs-primary  py-2 px-3 ">Save</button>
+                    <button class="bs-primary bs-secondary py-2 px-3 mx-2">Cancel</button>
                   </div>
                 </div>
               </form>

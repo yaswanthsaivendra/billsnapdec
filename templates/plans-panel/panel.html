@@ -28,7 +28,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static 'assets/styles.css'%}">
-    <link rel="stylesheet" href="{% static 'w3.css' %}" />
 </head>
 <style>
     .row {
@@ -39,22 +38,20 @@
 
     }
 
-    .container {
-        max-width: 800px !important;
 
-    }
 
-    .app-form-container {
-        max-width: 700px;
-    }
+
 
     button {
         float: right;
     }
 
     .grp {
-        background-color: white;
+        background-color: #f2f2f2;
         border-radius: 10px;
+        padding: 20px;
+        margin: 10px 60px; 
+    
     }
 
     .new-group-btn {
@@ -71,96 +68,106 @@
         right: 0;
         float: right !important;
     }
+
+    .card {
+        /* border: 1px solid black !important; */
+        margin: 20px;
+        height: 250px;
+        width: 300px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
+    }
 </style>
 
-
-<body class="w3-padding">
+<body>
 
     {% include "dashnav.html" %}
 
     <div class="main mx-auto">
-        <h1 class="applist my-4 text-dark my-2 text-uppercase">{{slug}} Plans</h1>
-        <div class="container mt-4">
-            <div class="row">
-                <div>
-                    <button class="bs-primary py-2 px-3 new-group-btn" data-toggle="modal" data-target="#addgrp">Add
-                        Plan</button>
-                </div>
+        <div class="row">
 
-                <h3>Default Plans</h3>
+            {% include "dashsidebar.html" %}
 
-                {% for plan in plans %}
-                {% if plan.default_for_customer %}
-                <div class='w3-row  w3-padding w3-round w3-margin grp default'>
+            <div class="col-md-7 flex-md-fill">
+                <div class="col right px-3" id="customer-list">
+
                     <div>
-                        <span class="badge badge-success p-2 mt-2 float-right span">Default</span>
-                    </div>
-                    <h5>{{plan.title}}</h5>
-
-
-
-                    <p>{{plan.description}}</p>
-                    <a href="{% url 'plan' plan.slug %}">
-                        <button class='bs-primary px-3 py-2'>View</button>
-                    </a>
-                </div>
-                {% else %}
-                <div class='w3-row w3-border-bottom w3-margin grp p-3'>
-                    <h5>{{plan.title}}</h5>
-                    <p>{{plan.description}}</p>
-                    <a href="{% url 'plan' plan.slug %}">
-                        <button class='bs-primary px-3 py-2'>View</button>
-                    </a>
-                    <a href="{% url 'delete-plan' plan.slug slug %}">
-                        <button class='bs-primary bs-secondary px-3 py-2'>Delete</button>
-                    </a>
-                </div>
-                {% endif %}
-                {% endfor %}
-            </div>
-
-
-
-
-
-
-        </div>
-    </div>
-
-    <!-- add group model -->
-    <div class="modal fade" id="addgrp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Create New Plan</h5>
-                </div>
-                <form id="group_form" enctype='multipart/form-data' method='POST'
-                    action="{% url 'plans-panel' slug %}">
-                    {% csrf_token %}
-                    <div class="modal-body">
-                        {{ form|crispy }}
-
-
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="bs-primary bs-secondary px-3 py-2 mx-2"
-                            data-dismiss="modal">Close</button>
-                        <button type="submit" class="bs-primary px-3 py-2">Create</button>
+                        <button class="bs-primary py-2 px-3 new-group-btn" data-toggle="modal" data-target="#addgrp">Add
+                            Plan</button>
                     </div>
 
+                    <h3 class="mb-3">Default Plans</h3>
+                    <div class="row">
+                        {% for plan in plans %}
+                        {% if plan.default_for_customer %}
+                        <div class='w3-row w3-padding w3-round  grp default'>
+                            <div>
+                                <span class="badge badge-success p-2 mt-2 float-right span">Default</span>
+                            </div>
+                            <h5>{{plan.title}}</h5>
+                            <p>{{plan.description}}</p>
+                            <a href="{% url 'plan' plan.slug %}">
+                                <button class='bs-primary px-3 py-2'>View</button>
+                            </a>
+                            <a href="{% url 'delete-plan' plan.slug slug %}">
+                                <button class='bs-primary bs-secondary px-3 py-2'>Delete</button>
+                            </a>
+                        </div>
 
-                </form>
+                        {% else %}
 
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card m-b-30 py-3">
+                                <div class="card-body">
+                                    <div class="top">
 
+                                        <h5>{{plan.title}}</h5>
+                                        <p>{{plan.description}}</p>
+                                        <a href="{% url 'plan' plan.slug %}">
+                                            <button class="bs-primary px-3 py-2">View</button>
+                                        </a>
+                                        <a href="{% url 'delete-plan' plan.slug slug %}">
+                                            <button class="bs-primary bs-secondary px-3 py-2">Delete</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+
+        <!-- add group model -->
+        <div class="modal fade" id="addgrp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Create New Plan</h5>
+                    </div>
+                    <form id="group_form" enctype='multipart/form-data' method='POST'
+                        action="{% url 'plans-panel' slug %}">
+                        {% csrf_token %}
+                        <div class="modal-body">
+                            {{ form|crispy }}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="bs-primary bs-secondary px-3 py-2 mx-2"
+                                data-dismiss="modal">Close</button>
+                            <button type="submit" class="bs-primary px-3 py-2">Create</button>
+                        </div>
 
 
+                    </form>
 
 
+                </div>
+            </div>
+        </div>
 
 
 </body>
