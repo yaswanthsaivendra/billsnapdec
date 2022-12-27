@@ -28,7 +28,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static 'assets/styles.css'%}">
-    <link rel="stylesheet" href="{% static 'w3.css' %}" />
 </head>
 <style>
     .row {
@@ -39,22 +38,20 @@
 
     }
 
-    .container {
-        max-width: 800px !important;
 
-    }
 
-    .app-form-container {
-        max-width: 700px;
-    }
+
 
     button {
         float: right;
     }
 
     .grp {
-        background-color: white;
+        background-color: #f2f2f2;
         border-radius: 10px;
+        padding: 20px;
+        margin: 10px 60px; 
+    
     }
 
     .new-group-btn {
@@ -72,132 +69,107 @@
         float: right !important;
     }
 
-    .box {
-        height: 250px !important;
-    }
-    b{
-        color:#7b7b7b;
+    .card {
+        /* border: 1px solid black !important; */
+        margin: 20px;
+        height: 250px;
+        width: 300px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
     }
 </style>
 
+<body>
 
-<body class="w3-padding">
-
-    {% include "dashnav.html" %}
+    <!-- {% include "dashnav.html" %} -->
 
     <div class="main mx-auto">
-        <h1 class="applist my-4 text-dark my-2 text-uppercase ">{{plan.title}}</h1>
-        <div class="container mt-4">
-            <div class="row">
-                <div>
-                    <button class="bs-primary py-2 px-3 new-group-btn" data-toggle="modal"
-                        data-target="#addcustomer">Add
-                        Customers</button>
+        <div class="row">
 
-                </div>
+            <!-- {% include "dashsidebar.html" %} -->
 
-                <h3>Customers in {{plan.title}}</h3>
+            <div class="col-md-7 flex-md-fill">
+                <div class="col right px-3" id="customer-list">
 
-                {% for user in users %}
+                    <div>
+                        <button class="bs-primary py-2 px-3 new-group-btn" data-toggle="modal" data-target="#addgrp">Add
+                            Plan</button>
+                    </div>
 
-
-
-                <div class='w3-row w3-border-bottom w3-margin grp p-3'>
-                    <h5>@{{user.user.username}}  </h5>
-
-
-                    <button onclick="showUpdateForm();" class='bs-primary px-3 py-2'>Update</button>
-
-
-                </div>
-                <!-- update each customer plan -->
-                <div id="form" style='display:none;' class="w3-modal">
-                    <div class="w3-display-middle w3-padding">
-                        <button class='w3-right w3-button w3-round-large w3-red w3-padding'
-                            onclick="document.getElementById('form').style.display='none'">&times;</button>
-                        <div class="w3-margin w3-padding w3-round-large w3-border w3-white box" id="content">
-                            <form class='w3-margin w3-padding' enctype='multipart/form-data' method='POST'
-                                action="{% url 'update-plan' user.slug plan.slug %}">
-                                <h4 class='w3-center w3-margin'>Update @{{user.user.username}}'s plan</h4>
-                                {% csrf_token %}
-                                {{ update_form|crispy }}
-                                <div>
-                                    <button type='submit' class="bs-primary py-2 px-3 my-2"
-                                        style="float:right;">Update</button>
-                                </div>
-
-                            </form>
+                    <h3 class="mb-3">Default Plans</h3>
+                    <div class="row">
+                        {% for plan in plans %}
+                        {% if plan.default_for_customer %}
+                        <div class='w3-row w3-padding w3-round  grp default'>
+                            <div>
+                                <span class="badge badge-success p-2 mt-2 float-right span">Default</span>
+                            </div>
+                            <h5>{{plan.title}}</h5>
+                            <p>{{plan.description}}</p>
+                            <a href="{% url 'plan' plan.slug %}">
+                                <button class='bs-primary px-3 py-2'>View</button>
+                            </a>
+                            <a href="{% url 'delete-plan' plan.slug slug %}">
+                                <button class='bs-primary bs-secondary px-3 py-2'>Delete</button>
+                            </a>
                         </div>
+
+                        {% else %}
+
+                        <div class="col-md-6 col-xl-3">
+                            <div class="card m-b-30 py-3">
+                                <div class="card-body">
+                                    <div class="top">
+
+                                        <h5>{{plan.title}}</h5>
+                                        <p>{{plan.description}}</p>
+                                        <a href="{% url 'plan' plan.slug %}">
+                                            <button class="bs-primary px-3 py-2">View</button>
+                                        </a>
+                                        <a href="{% url 'delete-plan' plan.slug slug %}">
+                                            <button class="bs-primary bs-secondary px-3 py-2">Delete</button>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                        {% endfor %}
                     </div>
                 </div>
-
-                {% endfor %}
             </div>
-
-
-
-
-
-
         </div>
-    </div>
 
-    <!-- add customer model -->
-    <div class="modal fade" id="addcustomer" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Add customer to {{plan.title}}</h5>
+        <!-- add group model -->
+        <div class="modal fade" id="addgrp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Create New Plan</h5>
+                    </div>
+                    <form id="group_form" enctype='multipart/form-data' method='POST'
+                        action="{% url 'plans-panel' slug %}">
+                        {% csrf_token %}
+                        <div class="modal-body">
+                            {{ form|crispy }}
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="bs-primary bs-secondary px-3 py-2 mx-2"
+                                data-dismiss="modal">Close</button>
+                            <button type="submit" class="bs-primary px-3 py-2">Create</button>
+                        </div>
+
+
+                    </form>
+
+
                 </div>
-                <form id="group_form" enctype='multipart/form-data' method='POST'
-                    action="{% url 'plan' plan.slug %}">
-                    {% csrf_token %}
-                    <div class="modal-body">
-                        {{ form|crispy }}
-
-
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="bs-primary bs-secondary px-3 py-2 mx-2"
-                            data-dismiss="modal">Close</button>
-                        <button type="submit" class="bs-primary px-3 py-2">Add</button>
-                    </div>
-
-
-                </form>
-
-
             </div>
         </div>
-    </div>
-    
-
-
-
-
 
 
 </body>
-<script>
-    function showForm() {
-        document.getElementById('group_form').style.display = "block";
-        document.getElementById('button').style.display = "none";
-    }
-    function showUpdateForm() {
-        document.getElementById('form').style.display = "block";
-    }
-    function addCustomerApp(obj) {
-        var url = obj.getAttribute('url') + '?username=' + obj.value;
-        $.ajax({
-            type: 'GET',
-            url: url,
-            success: function (resp) {
-                document.location.reload(true);
-            }
-        })
-    } 
-</script>
 
 </html>

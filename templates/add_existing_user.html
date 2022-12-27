@@ -125,6 +125,7 @@
 
     <script>
         function addCustomerApp(obj) {
+            
             var url = obj.getAttribute('url') + '?username=' + obj.value;
             $.ajax({
                 type: 'GET',
@@ -133,6 +134,7 @@
                     document.location.reload(true);
                 }
             })
+            window.location.reload();
         }
         function addCustomerAppSearch(obj) {
 

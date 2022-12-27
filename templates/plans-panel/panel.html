@@ -47,10 +47,11 @@
     }
 
     .grp {
-        background-color: #f2f2f2;
+        /* background-color: #f2f2f2; */
         border-radius: 10px;
         padding: 20px;
-        margin: 10px 60px; 
+       border:1px solid black;
+       margin:20px;
     
     }
 
@@ -62,7 +63,7 @@
     }
 
     .span {
-        background-color: #7b7b7b !important;
+        background-color: #777777 !important;
         position: relative;
         top: 0;
         right: 0;
@@ -71,12 +72,21 @@
 
     .card {
         /* border: 1px solid black !important; */
-        margin: 20px;
-        height: 250px;
-        width: 300px;
-        background-color: #f2f2f2;
+        
+     
+        /* background-color: #f2f2f2; */
         border-radius: 10px;
+        height:250px;
+        width: 300px;
+        border:1px solid black;
+       
     }
+    .card-body {
+        display:flex;
+        flex-direction: column;
+        justify-content:space-between;
+    }
+     
 </style>
 
 <body>
@@ -97,43 +107,52 @@
                     </div>
 
                     <h3 class="mb-3">Default Plans</h3>
+                  
                     <div class="row">
                         {% for plan in plans %}
                         {% if plan.default_for_customer %}
-                        <div class='w3-row w3-padding w3-round  grp default'>
-                            <div>
-                                <span class="badge badge-success p-2 mt-2 float-right span">Default</span>
+                        <div class="pt-4">
+                            <div class='w3-row w3-padding w3-round  grp default'>
+                                <div>
+                                    <span class="badge badge-success p-2 mt-2 float-right span">Default</span>
+                                </div>
+                                <h5>{{plan.title}}</h5>
+                                <p>{{plan.description}}</p>
+                                <a href="{% url 'plan' plan.slug %}">
+                                    <button class='bs-primary px-3 py-2'>View</button>
+                                </a>
+                                <a href="{% url 'delete-plan' plan.slug slug %}">
+                                    <button class='bs-primary bs-secondary px-3 py-2'>Delete</button>
+                                </a>
                             </div>
-                            <h5>{{plan.title}}</h5>
-                            <p>{{plan.description}}</p>
-                            <a href="{% url 'plan' plan.slug %}">
-                                <button class='bs-primary px-3 py-2'>View</button>
-                            </a>
-                            <a href="{% url 'delete-plan' plan.slug slug %}">
-                                <button class='bs-primary bs-secondary px-3 py-2'>Delete</button>
-                            </a>
                         </div>
+                        
+                       
 
                         {% else %}
 
-                        <div class="col-md-6 col-xl-3">
-                            <div class="card m-b-30 py-3">
+                        <div class="col-xl-3 ">
+                            <div class="card my-5">
                                 <div class="card-body">
                                     <div class="top">
 
                                         <h5>{{plan.title}}</h5>
                                         <p>{{plan.description}}</p>
+                                       
+
+                                    </div>
+                                    <div class="bottom">
                                         <a href="{% url 'plan' plan.slug %}">
                                             <button class="bs-primary px-3 py-2">View</button>
                                         </a>
                                         <a href="{% url 'delete-plan' plan.slug slug %}">
                                             <button class="bs-primary bs-secondary px-3 py-2">Delete</button>
                                         </a>
-
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         {% endif %}
                         {% endfor %}
                     </div>

@@ -467,3 +467,870 @@ Traceback (most recent call last):
     raise self.model.MultipleObjectsReturned(
 plans.models.Plan.MultipleObjectsReturned: get() returned more than one Plan -- it returned 5!
 [2022-12-27T18:37:00] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\groups\urls.py changed, reloading.
+[2022-12-27T18:42:45] INFO [root.logout:189] yaswanth_ logged out
+[2022-12-27T18:43:43] INFO [root.showapps:70] yaswanth_seen the whole applist
+[2022-12-27T18:44:01] INFO [root.showapps:70] yaswanth_seen the whole applist
+[2022-12-27T18:44:10] WARNING [django.request.log_response:241] Not Found: /apps/jin/dashboard/assets/img/ivancik.jpg
+[2022-12-27T18:46:29] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T18:46:43] ERROR [django.request.log_response:241] Internal Server Error: /apps/jin/add-customer-app/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T18:46:45] ERROR [django.request.log_response:241] Internal Server Error: /apps/jin/add-customer-app/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T18:46:47] ERROR [django.request.log_response:241] Internal Server Error: /apps/jin/add-customer-app/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T18:46:47] ERROR [django.request.log_response:241] Internal Server Error: /apps/jin/add-customer-app/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T18:46:49] ERROR [django.request.log_response:241] Internal Server Error: /apps/jin/add-customer-app/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T18:46:49] ERROR [django.request.log_response:241] Internal Server Error: /apps/jin/add-customer-app/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T18:46:50] ERROR [django.request.log_response:241] Internal Server Error: /apps/jin/add-customer-app/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T18:46:50] ERROR [django.request.log_response:241] Internal Server Error: /apps/jin/add-customer-app/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T18:47:30] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T18:49:29] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T18:49:30] ERROR [django.request.log_response:241] Internal Server Error: /apps/jin/add-customer-app/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T18:49:36] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T18:49:37] ERROR [django.request.log_response:241] Internal Server Error: /apps/jin/add-customer-app/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T18:49:40] ERROR [django.request.log_response:241] Internal Server Error: /apps/jin/add-customer-app/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T19:02:26] ERROR [django.request.log_response:241] Internal Server Error: /plans/delete-plan/Di5BfBhdRy/jin/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 58, in delete_plan
+    default_plan = Plan.objects.filter(app=appslug).get(default_for_customer=True)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 653, in get
+    raise self.model.MultipleObjectsReturned(
+plans.models.Plan.MultipleObjectsReturned: get() returned more than one Plan -- it returned 2!
+[2022-12-27T19:03:05] ERROR [django.request.log_response:241] Internal Server Error: /plans/delete-plan/F4bBAtzvvr/jin/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 58, in delete_plan
+    default_plan = Plan.objects.filter(app=appslug).get(default_for_customer=True)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 653, in get
+    raise self.model.MultipleObjectsReturned(
+plans.models.Plan.MultipleObjectsReturned: get() returned more than one Plan -- it returned 2!
+[2022-12-27T19:06:16] INFO [root.showapps:70] yaswanth_seen the whole applist
+[2022-12-27T19:07:04] INFO [root.addapp:59] yaswanth_added an app
+[2022-12-27T19:07:05] INFO [root.showapps:70] yaswanth_seen the whole applist
+[2022-12-27T21:22:29] WARNING [django.request.log_response:241] Not Found: /apps/just/dashboard/assets/img/ivancik.jpg
+[2022-12-27T21:22:31] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-12-27T21:55:41] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/4x1svXoE1n/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 80, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' with arguments '('',)' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/dashboard/\\Z']
+[2022-12-27T21:55:47] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/sjqHFcUaT8/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 80, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' with arguments '('',)' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/dashboard/\\Z']
+[2022-12-27T22:23:45] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T22:30:57] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/4x1svXoE1n/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 80, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' with arguments '('',)' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/dashboard/\\Z']
+[2022-12-27T22:31:04] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/4x1svXoE1n/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 80, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' with arguments '('',)' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/dashboard/\\Z']
+[2022-12-27T22:31:27] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/4x1svXoE1n/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 80, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' with arguments '('',)' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/dashboard/\\Z']
+[2022-12-27T22:34:16] ERROR [django.request.log_response:241] Internal Server Error: /groups/panel/just
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\groups\views.py", line 23, in groups_panel
+    return render(request, 'groups-panel/panel.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete-group' with arguments '('', 'just')' not found. 1 pattern(s) tried: ['groups/delete\\-group/(?P<slug>[^/]+)/(?P<appslug>[^/]+)\\Z']
+[2022-12-27T22:34:18] ERROR [django.request.log_response:241] Internal Server Error: /groups/panel/just
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\groups\views.py", line 23, in groups_panel
+    return render(request, 'groups-panel/panel.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'delete-group' with arguments '('', 'just')' not found. 1 pattern(s) tried: ['groups/delete\\-group/(?P<slug>[^/]+)/(?P<appslug>[^/]+)\\Z']
+[2022-12-27T22:35:16] INFO [root.showapps:70] yaswanth_seen the whole applist
+[2022-12-27T22:36:28] INFO [root.addapp:59] yaswanth_added an app
+[2022-12-27T22:36:28] INFO [root.showapps:70] yaswanth_seen the whole applist
+[2022-12-27T22:36:34] WARNING [django.request.log_response:241] Not Found: /apps/whatsup/dashboard/assets/img/ivancik.jpg
+[2022-12-27T22:47:24] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/AFk7twCH0H/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 80, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' with arguments '('',)' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/dashboard/\\Z']
+[2022-12-27T22:47:52] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/AFk7twCH0H/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 80, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' with arguments '('',)' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/dashboard/\\Z']
+[2022-12-27T22:47:53] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/AFk7twCH0H/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 80, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' with arguments '('',)' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/dashboard/\\Z']
+[2022-12-27T22:48:14] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/AFk7twCH0H/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 80, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' with arguments '('',)' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/dashboard/\\Z']
+[2022-12-27T22:48:15] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/AFk7twCH0H/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 80, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' with arguments '('',)' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/dashboard/\\Z']
+[2022-12-27T22:48:16] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/AFk7twCH0H/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 80, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' with arguments '('',)' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/dashboard/\\Z']
+[2022-12-27T22:48:16] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/AFk7twCH0H/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 80, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' with arguments '('',)' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/dashboard/\\Z']
+[2022-12-27T22:48:16] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/AFk7twCH0H/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 80, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader_tags.py", line 208, in render
+    return template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 177, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'dashboard' with arguments '('',)' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/dashboard/\\Z']
+[2022-12-27T22:48:35] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/AFk7twCH0H/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 80, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plans-panel' with arguments '('',)' not found. 1 pattern(s) tried: ['plans/panel/(?P<slug>[^/]+)\\Z']
+[2022-12-27T22:48:36] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/AFk7twCH0H/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 80, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plans-panel' with arguments '('',)' not found. 1 pattern(s) tried: ['plans/panel/(?P<slug>[^/]+)\\Z']
+[2022-12-27T23:33:56] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T23:33:59] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T23:33:59] ERROR [django.request.log_response:241] Internal Server Error: /apps/whatsup/add-customer-app/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T23:34:30] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T23:34:46] ERROR [django.request.log_response:241] Internal Server Error: /apps/whatsup/add-customer-app/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
