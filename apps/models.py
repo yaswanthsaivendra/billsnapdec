@@ -25,6 +25,7 @@ class applists(models.Model):
     date_published= models.DateTimeField(auto_now_add=True)
     date_modified = models.DateTimeField(auto_now=True)
     slug = models.SlugField(max_length=255, null=True, unique=True, editable=False)
+    is_billing = models.BooleanField(default=True)
 
     def __str__(self):
         return str(self.slug)

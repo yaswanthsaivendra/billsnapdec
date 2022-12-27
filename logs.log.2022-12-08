@@ -1,0 +1,4 @@
+[2022-12-08T10:57:57] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-12-08T10:57:59] INFO [root.showapps:70] yaswanth_seen the whole applist
+[2022-12-08T11:30:18] INFO [root.showapps:70] yaswanth_seen the whole applist
+[2022-12-08T11:30:46] INFO [root.logout:189] yaswanth_ logged out

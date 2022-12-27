@@ -1,0 +1,25 @@
+login page lo logout osthundhi - remove cheyali     done
+login page lo bg image adhe unchali
+flash messages sariga ravali
+register page lo styling sariga ledhu
+logo add cheyali - saketh isthadhu
+anni pages bg silver color theeseyali
+add new user popup - page madhyalo ravali
+existing users table lo undali(customer list lo unnatu).
+
+groups
+two types of groups - plan groups, user groups - frontend two tabs lo undali
+plan groups  - by default create avali, users automatic ga default group lo add avali, one person can only exist in one plan group
+user groups - one person can exist in multiple groups.
+
+plans 
+default plan seperate ga paina ravali
+migilina plans kindha ravali
+
+plans nd groups backend full ga marchali
+
+apps page lo styling marchali
+app ki boolean add cheyali - billing app, non-billing app ani           Done
+
+logout button remove cheysi, akkada profile icon add cheyali (its a dropdown, andhullo logout, view profile , view histroy ani undali).
+

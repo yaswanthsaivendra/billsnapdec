@@ -18,3 +18,46 @@
 [2022-12-27T15:34:41] INFO [root.showapps:70] yaswanth_seen the whole applist
 [2022-12-27T15:34:55] INFO [root.showapps:70] yaswanth_seen the whole applist
 [2022-12-27T15:35:09] INFO [root.showapps:70] yaswanth_seen the whole applist
+[2022-12-27T15:39:17] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\apps\models.py changed, reloading.
+[2022-12-27T15:40:28] ERROR [django.request.log_response:241] Internal Server Error: /apps/all/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.OperationalError: no such column: apps_applists.is_billing
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\yash\billsnap\billsnapdec\apps\views.py", line 68, in showapps
+    leni=len(appli)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 376, in __len__
+    self._fetch_all()
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 1866, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 87, in __iter__
+    results = compiler.execute_sql(
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\sql\compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\backends\utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\backends\sqlite3\base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.OperationalError: no such column: apps_applists.is_billing
