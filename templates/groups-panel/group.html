@@ -135,7 +135,7 @@
                         <h3 class='w3-medium w3-left'>@{{user.user.username}}</h3>
                         <button class='w3-right w3-round w3-blue w3-button' onclick="addCustomerApp(this);"
                             value="{{user.user.username}}" url="{% url 'groups:add-member' group.slug %}">
-                            Transfer to this group
+                            Add to this group
                         </button>
                     </div>
                     {% endfor %}

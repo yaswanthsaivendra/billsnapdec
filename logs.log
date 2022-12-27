@@ -467,3 +467,289 @@ Traceback (most recent call last):
     raise self.model.MultipleObjectsReturned(
 plans.models.Plan.MultipleObjectsReturned: get() returned more than one Plan -- it returned 5!
 [2022-12-27T18:37:00] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\groups\urls.py changed, reloading.
+[2022-12-27T13:22:33] INFO [root.showapps:70] yaswanth_seen the whole applist
+[2022-12-27T13:22:40] WARNING [django.request.log_response:241] Not Found: /apps/darling/dashboard/assets/img/ivancik.jpg
+[2022-12-27T13:22:48] INFO [root.deleteapp:77] yaswanth_deleted an app
+[2022-12-27T13:22:48] INFO [root.showapps:70] yaswanth_seen the whole applist
+[2022-12-27T13:23:34] ERROR [django.request.log_response:241] Internal Server Error: /apps/addapp/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+sqlite3.IntegrityError: NOT NULL constraint failed: apps_applists.date_published
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 42, in addapp
+    applis.save()
+  File "/home/yaswanth/projects/billsnapdec/apps/models.py", line 34, in save
+    super(applists, self).save()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/base.py", line 812, in save
+    self.save_base(
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/base.py", line 863, in save_base
+    updated = self._save_table(
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/base.py", line 976, in _save_table
+    updated = self._do_update(
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/base.py", line 1040, in _do_update
+    return filtered._update(values) > 0
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/query.py", line 1215, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/sql/compiler.py", line 1398, in execute_sql
+    cursor.execute(sql, params)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/backends/utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/backends/sqlite3/base.py", line 357, in execute
+    return Database.Cursor.execute(self, query, params)
+django.db.utils.IntegrityError: NOT NULL constraint failed: apps_applists.date_published
+[2022-12-27T13:32:59] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T13:33:02] ERROR [django.request.log_response:241] Internal Server Error: /apps/instagram/add-customer-app/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T13:33:07] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T13:33:09] ERROR [django.request.log_response:241] Internal Server Error: /apps/instagram/add-customer-app/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T13:33:11] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T13:35:30] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2022-12-27T13:35:32] INFO [root.showapps:70] yaswanth_seen the whole applist
+[2022-12-27T13:36:18] INFO [root.showapps:70] yaswanth_seen the whole applist
+[2022-12-27T13:38:16] INFO [root.addapp:59] yaswanth_added an app
+[2022-12-27T13:38:16] INFO [root.showapps:70] yaswanth_seen the whole applist
+[2022-12-27T13:38:20] WARNING [django.request.log_response:241] Not Found: /apps/new-app/dashboard/assets/img/ivancik.jpg
+[2022-12-27T13:38:30] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T13:38:32] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/add-customer-app/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T13:38:34] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T13:38:36] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T13:39:06] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T13:42:22] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2022-12-27T13:42:28] INFO [root.deleteapp:74] yaswanth_deleted an app
+[2022-12-27T13:42:28] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2022-12-27T13:42:55] INFO [root.addapp:56] yaswanth_added an app
+[2022-12-27T13:42:55] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2022-12-27T13:42:58] WARNING [django.request.log_response:241] Not Found: /apps/new-app/dashboard/assets/img/ivancik.jpg
+[2022-12-27T13:43:39] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T13:43:43] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:03:29] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/add-customer-app/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 247, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T14:03:31] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:03:42] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:03:59] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2022-12-27T14:04:11] WARNING [django.request.log_response:241] Not Found: /apps/new-app/dashboard/assets/img/ivancik.jpg
+[2022-12-27T14:04:19] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:04:27] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:07:03] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2022-12-27T14:07:08] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2022-12-27T14:07:13] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:07:16] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:07:17] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/add-customer-app/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 248, in add_customer_app
+    Profile.plans.add(default_plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'add'
+[2022-12-27T14:07:19] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:12:53] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2022-12-27T14:12:55] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2022-12-27T14:12:58] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2022-12-27T14:13:07] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:13:09] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:13:10] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:13:12] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:13:23] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:13:26] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:13:41] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:13:44] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:13:50] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:14:00] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:14:58] ERROR [django.request.log_response:241] Internal Server Error: /plans/delete-plan/atSjwKXRP8/new-app/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/plans/views.py", line 58, in delete_plan
+    default_plan = Plan.objects.filter(app=appslug).get(default_for_customer=True)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+plans.models.Plan.DoesNotExist: Plan matching query does not exist.
+[2022-12-27T14:16:10] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:16:18] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:16:20] ERROR [django.request.log_response:241] Internal Server Error: /plans/delete-plan/atSjwKXRP8/new-app/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/plans/views.py", line 58, in delete_plan
+    default_plan = Plan.objects.filter(app=appslug).get(default_for_customer=True).first()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+plans.models.Plan.DoesNotExist: Plan matching query does not exist.
+[2022-12-27T14:16:57] ERROR [django.request.log_response:241] Internal Server Error: /plans/delete-plan/atSjwKXRP8/new-app/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/plans/views.py", line 58, in delete_plan
+    default_plan = Plan.objects.filter(app=appslug).get(default_for_customer=True).first()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+plans.models.Plan.DoesNotExist: Plan matching query does not exist.
+[2022-12-27T14:17:36] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:18:07] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2022-12-27T14:18:11] WARNING [django.request.log_response:241] Not Found: /apps/new-app/dashboard/assets/img/ivancik.jpg
+[2022-12-27T14:18:13] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/appinfo/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 219, in appinfo
+    plan = app.plan_set.all().filter(default_for_customer=True)[0]
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/query.py", line 446, in __getitem__
+    return qs._result_cache[0]
+IndexError: list index out of range
+[2022-12-27T14:19:21] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2022-12-27T14:20:16] INFO [root.addapp:56] yaswanth_added an app
+[2022-12-27T14:20:16] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2022-12-27T14:20:23] WARNING [django.request.log_response:241] Not Found: /apps/first-app/dashboard/assets/img/ivancik.jpg
+[2022-12-27T14:20:36] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:20:39] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:20:41] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:23:39] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:23:40] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:23:45] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:23:49] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:23:52] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:23:57] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:24:35] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:26:41] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:26:45] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:27:55] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:27:59] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:28:13] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:28:25] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:30:37] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:30:40] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:30:46] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:32:22] ERROR [django.request.log_response:241] Internal Server Error: /plans/delete-plan/Ne3AXfjTi5/first-app/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/plans/views.py", line 60, in delete_plan
+    if plan.slug is not default_plan.slug:
+AttributeError: 'NoneType' object has no attribute 'slug'
+[2022-12-27T14:33:29] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:33:36] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:33:40] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:33:42] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:33:44] ERROR [django.request.log_response:241] Internal Server Error: /plans/delete-plan/Ne3AXfjTi5/first-app/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/plans/views.py", line 61, in delete_plan
+    if plan.slug is not default_plan.slug:
+AttributeError: 'NoneType' object has no attribute 'slug'
+[2022-12-27T14:34:26] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:34:44] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2022-12-27T14:34:47] WARNING [django.request.log_response:241] Not Found: /apps/first-app/dashboard/assets/img/ivancik.jpg
+[2022-12-27T14:34:50] INFO [root.deleteapp:74] yaswanth_deleted an app
+[2022-12-27T14:34:50] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2022-12-27T14:35:14] INFO [root.addapp:56] yaswanth_added an app
+[2022-12-27T14:35:14] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2022-12-27T14:35:16] WARNING [django.request.log_response:241] Not Found: /apps/first-app/dashboard/assets/img/ivancik.jpg
+[2022-12-27T14:35:25] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:35:28] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T14:36:24] ERROR [django.request.log_response:241] Internal Server Error: /plans/delete-plan/Z2n0TlPRzl/first-app/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/plans/views.py", line 60, in delete_plan
+    if plan.slug is not default_plan.slug:
+AttributeError: 'NoneType' object has no attribute 'slug'
+[2022-12-27T14:36:58] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:37:02] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T14:37:05] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T16:12:17] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T16:12:44] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T16:12:54] INFO [root.logout:189] yaswanth_ logged out
+[2022-12-27T16:13:04] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2022-12-27T16:13:08] WARNING [django.request.log_response:241] Not Found: /apps/first-app/dashboard/assets/img/ivancik.jpg
+[2022-12-27T16:13:23] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T16:13:56] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T16:19:46] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T16:20:04] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T16:20:38] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T16:24:18] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T16:24:23] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T16:24:28] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T16:24:30] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T16:24:35] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/plans/views.py changed, reloading.
+[2022-12-27T16:24:57] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T16:25:56] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T16:26:14] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-27T16:27:03] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-27T16:27:08] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-27T16:28:22] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-27T16:28:29] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-27T16:28:34] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-27T16:30:30] INFO [root.showapps:67] yaswanth_seen the whole applist
