@@ -28,121 +28,973 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="{% static 'assets/styles.css'%}">
+	<style>
+		.menu-frag a:active {
+			color: blue;
+			;
+		}
 
+		.first-sidebar {
+			position: fixed;
+			top: 76px;
+			left: 0;
+		}
+
+		.second {
+			visibility: hidden;
+		}
+
+		body {
+			font-family: Arial;
+		}
+
+		/* Style the tab */
+		.tab {
+			overflow: hidden;
+			border: 1px solid #ccc;
+			background-color: #f1f1f1;
+		}
+
+		/* Style the buttons inside the tab */
+		.tab button {
+			background-color: inherit;
+			float: left;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			transition: 0.3s;
+			font-size: 17px;
+		}
+
+		/* Change background color of buttons on hover */
+		.tab button:hover {
+			background-color: #ddd;
+		}
+
+		/* Create an active/current tablink class */
+		.tab button.active {
+			background-color: #ccc;
+		}
+
+		/* Style the tab content */
+		.tabcontent {
+			display: none;
+			padding: 6px 12px;
+			/*border: 1px solid #ccc;
+	border-top: none;*/
+		}
+	</style>
 </head>
 
-<body class='w3-padding w3-margin p-3'>
+<body>
 	{% include "dashnav.html" %}
 
-	<div class="my-5 mx-3">
-		<div class="control-buttons my-5">
-			<button onclick='showForm(this);' class='bs-primary py-2 px-3'>Edit Plan Details</button>
-			<a href="{% url 'accounts:update-profile' profile.slug appslug %}">
-				<button class='bs-primary py-2 px-3 bs-secondary'>Edit Profile Details</button>
-			</a>
-			<button onclick='showNotificationForm(this);' class='bs-primary py-2 px-3 bs-secondary'>Send
-				Notification</button>
-		</div>
-		<div class="my-5">
-			<h3>Basic Details</h3>
-			<hr>
-			<p>Username : {{profile.user.username}}</p>
-			<p>Full Name : {{profile.full_name}}</p>
-			<p>Status : {{profile.status}}</p>
-			<p>Info Updated at : {{profile.info_updated_at}}</p>
-			<p>SE coins : {{profile.se_coins}}</p>
-			<p>Current Plan : {{plan}}
-				{% if profile.plan_active %}
-				<e class='w3-green w3-padding w3-round'>Active</e>
-				{% else %}
-				<e class='w3-red w3-padding w3-round'>Expired</e>
-				{% endif %}
 
-				{% if profile.paid %}
-				<e class='w3-green w3-padding w3-round'>Paid</e>
-				{% else %}
-				<e class='w3-red w3-padding w3-round'>Not Paid</e>
-				{% endif %}
-			</p>
-		</div>
 
-		<div id="plan-change" style='display:none;' class="w3-modal">
-			<div class="w3-display-middle w3-padding">
-				<button class='w3-right w3-button w3-round-large w3-red w3-padding'
-					onclick="document.getElementById('plan-change').style.display='none'">&times;</button>
-				<div class="w3-margin w3-padding w3-round-large w3-border w3-white" id="content">
-					<h5>Update user's Plan Details</h5>
-					<form enctype='multipart/form-data' method='POST'
-						action="{% url 'accounts:update-profile' profile.slug appslug  %}">
-						{% csrf_token %}
-						{{ form|crispy }}
-						<button type='submit' class='w3-margin w3-round-large w3-green w3-button'>Save</button>
-					</form>
+
+
+
+	<div class="main mx-auto">
+		<div class="row">
+
+			<!-- sidebar -->
+			<div class="left first-sidebar d-none d-md-block col-md-4">
+				<div class="menu-frag d-flex flex-column p-3 ps-4 gap-3">
+					<div>
+						<i class='bx bx-grid-alt'></i>
+
+						<a href="dashboard.html">Dashboard</a>
+					</div>
+					<div>
+						<i class='bx bx-analyse'></i>
+
+						<a href="estimate.html">Estimates</a>
+					</div>
+					<div>
+						<i class='bx bx-cog'></i>
+
+						<a href="settings.html">Settings</a>
+					</div>
 				</div>
-			</div>
-		</div>
+				<hr>
+				<div class="menu-frag mt-3 ps-3">
+					<h4>Customer</h4>
+					<div class="customer-frag d-flex flex-column p-3 pt-1 gap-3">
+						<div>
+							<i class='bx bx-box'></i>
 
-		<div id="notification" style='display:none;' class="w3-modal">
-			<div class="w3-display-middle w3-padding">
-				<button class='w3-right w3-button w3-round-large w3-red w3-padding'
-					onclick="document.getElementById('notification').style.display='none'">&times;</button>
-				<div class="w3-margin w3-padding w3-round-large w3-border w3-white" id="content">
-					<h5>Send Notification</h5>
-					<form enctype='multipart/form-data' method='POST'
-						action="{% url 'accounts:create-notification' appslug %}">
-						{% csrf_token %}
-						{{ notification_form|crispy }}
-						<button type='submit' class='w3-margin w3-round-large w3-green w3-button'>Send</button>
-					</form>
+							<a href="create.html">Create</a>
+						</div>
+						<div>
+							<i class='bx bx-box'></i>
+							<a href="customerlist.html" id="active">Customer List</a>
+						</div>
+						<div>
+							<i class='bx bx-log-out'></i>
+							<a href="bulk.html">Bulk Upload</a>
+						</div>
+						<div>
+							<i class='bx bx-archive-in'></i>
+							<a href="manage.html">Manage Group</a>
+						</div>
+						<div>
+							<i class='bx bx-bar-chart'></i>
+							<a href="pending.html">Pending approvals</a>
+						</div>
+						<div>
+							<i class='bx bx-message'></i>
+							<a href="message.html">Messaging</a>
+						</div>
+					</div>
 				</div>
+				<hr>
+				<div class="menu-frag mt-3 ps-3">
+					<h4>Payments</h4>
+					<div class="pay-frag d-flex flex-column  p-3 pt-1  gap-3">
+						<div>
+							<i class='bx bx-list-ul'></i>
+							<a href="transcations.html">Transactions </a>
+						</div>
+
+						<div>
+							<i class='bx bx-coin-stack'></i>
+							<a href="plans.html">Plans</a>
+						</div>
+						<div>
+							<i class='bx bx-heart'></i>
+							<a href="request.html">Requests</a>
+						</div>
+					</div>
+				</div>
+
 			</div>
-		</div>
-		<div class="my-5">
-			<h3>Utility Details</h3>
-			<hr>
-			<div>
-				<p>Utility State : {{ i.utility_state }}</p>
-				<p>Utility District : {{ i.utility_district }}</p>
-				<p>Utility Country : {{ i.utility_country }}</p>
-				<p>Utility Postal code : {{ i.utility_postalcode }}</p>
-				<p>Utility Address : {{ i.utility_address }}</p>
-			</div>
-		</div>
-		<div class="my-5">
-			<h3>Contact Details</h3>
-			<hr>
-			<div>
-				<p>Contact Person : {{ i.contact_person }}</p>
-				<p>Contact Email :{{ i.contact_email }}</p>
-				<p>Contact Phone no. : {{ i.contact_phnum }}</p>
-				<p>Contact Mobile : {{ i.contact_mobile }} </p>
-				<p>Contact Designation : {{ i.contact_designation }}</p>
-				<p>Contact Landline : {{ i.contact_landline }} </p>
-			</div>
-		</div>
-		<div class="my-5">
-			<h3>Emergency Details</h3>
-			<hr>
-			<div>
-				<p>Emergency Person : {{ i.emergency_person }} </p>
-				<p>Emergency Alt Person : {{ i.emergency_altperson }} </p>
-				<p>Emergency Mobile : {{ i.emergency_mobile }} </p>
-				<p>Emergency Alt Mobile : {{ i.emergency_altmobile }} </p>
-				<p>Emergency Office Address : {{ i.emergency_officeaddress }} </p>
-				<p>Emergency Alt Office Address : {{ i.emergency_altofficeaddress }} </p>
+			<div class="left second"></div>
+
+			<!-- main content -->
+			<div class="col-md-7  flex-md-fill m-3">
+				<div class="col right create-customer ps-0 pe-4 me-2" id="">
+
+
+					<div class="profile">
+						<div class="profile-header">
+							<!-- BEGIN profile-header-cover -->
+
+							<!-- END profile-header-cover -->
+							<!-- BEGIN profile-header-content -->
+							<div class="profile-header-content d-flex">
+								<!-- BEGIN profile-header-img -->
+								<div class="flex-fill flex-start">
+									<div class="profile-header-img">
+										<img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="">
+									</div>
+									<!-- END profile-header-img -->
+									<!-- BEGIN profile-header-info -->
+									<div class="profile-header-info">
+										<h4 class="m-t-10 m-b-5" style="color: black;">{{profile.user.username}} </h4>
+										<!-- <p class="m-b-10" style="color: black;">Edit Profile</p>
+										<p></p> -->
+									</div>
+									<!-- END profile-header-info -->
+								</div>
+								<!-- BEGIN profile-header-tab -->
+								<div class="d-flex align-items-center justify-content-end me-5">
+									<div class="bs-primary py-2 px-3" type="button" data-bs-toggle="modal"
+										data-bs-target="#staticBackdrop">Edit Profile</div>
+									<!-- Edit profile modal-->
+									<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+										data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+										aria-hidden="true">
+										<div class="modal-dialog modal-lg modal-dialog-scrollable">
+											<div class="modal-content">
+												<div class="modal-body">
+													<div class="modal-header border-bottom-0 pt-0">
+														<h5 class="modal-title mb-2" id="staticBackdropLabel">Basic
+															Details</h5>
+														<button type="button" class="btn-close" data-bs-dismiss="modal"
+															aria-label="Close"></button>
+													</div>
+													<form class="mb-4 mt-1">
+														<div class="container-fluid">
+															<div class="row g-3 align-items-center">
+																<div class="col-auto mt-0">
+																	<label for="state"
+																		class="col-form-label">Username:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Full
+																		Name:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state"
+																		class="col-form-label">Status:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Info
+																		updated at:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">SE
+																		coins:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+															</div>
+														</div>
+													</form>
+													<h5 class="modal-title mb-4" id="staticBackdropLabel">Utility
+														Details</h5>
+													<form class="mb-4 mt-1">
+														<div class="container-fluid">
+															<div class="row g-3 align-items-center">
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Utility
+																		State:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Utility
+																		District:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Utility
+																		Country:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Utility
+																		Postal Code:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Utility
+																		Address:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+															</div>
+														</div>
+													</form>
+													<h5 class="modal-title mb-4" id="staticBackdropLabel">Contact
+														Details</h5>
+													<form class="mb-4 mt-1">
+														<div class="container-fluid">
+															<div class="row g-3 align-items-center">
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Contact
+																		Person:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Utility
+																		Email:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Contact
+																		Phone no:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Contact
+																		Mobile:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Contact
+																		Designation:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Contact
+																		Landline:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+															</div>
+														</div>
+													</form>
+													<h5 class="modal-title mb-4" id="staticBackdropLabel">Emergency
+														Details</h5>
+													<form class="mb-4 mt-1">
+														<div class="container-fluid">
+															<div class="row g-3 align-items-center">
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Emergency
+																		Person:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Emergency
+																		Alt Person:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Emergency
+																		Phone no:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Emergency
+																		Alt Phone no:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Emergency
+																		Office Address:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Emergency
+																		Alt Office Address:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate">
+																</div>
+															</div>
+														</div>
+													</form>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="modal-btn btn btn-secondary"
+														data-bs-dismiss="modal">cancel</button>
+													<button type="button"
+														class="modal-btn btn btn-primary">Save</button>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="bs-primary  py-2 px-3 mx-2" type="button" data-bs-toggle="modal"
+										data-bs-target="#staticBackdrop1">Edit plans</div>
+									<!-- Edit plan modal-->
+									<div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static"
+										data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+										aria-hidden="true">
+										<div class="modal-dialog modal-dialog-centered">
+											<div class="modal-content">
+												<div class="modal-header border-0">
+													<button type="button" class="btn-close" data-bs-dismiss="modal"
+														aria-label="Close"></button>
+												</div>
+												<div class="modal-body">
+													<div class="text-center">
+														<h6>Update @ admin's plan</h6>
+													</div>
+													<form>
+														<div class="mb-3 form-check">
+															<label for="Select" class="form-label mb-0">Update
+																to*</label>
+															<select id="Select" class="form-select">
+																<option>Disabled select</option>
+																<option>Disabled select</option>
+																<option>Disabled select</option>
+															</select>
+														</div>
+														<button type="submit"
+															class="ms-4 modal-btn fs-6 btn btn-primary">Update</button>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="bs-primary bs-secondary py-2 px-3 " type="button" data-bs-toggle="modal"
+										data-bs-target="#staticBackdrop2">Notify</div>
+									<!-- Notify modal-->
+									<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static"
+										data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+										aria-hidden="true">
+										<div class="modal-dialog modal-lg">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title" id="staticBackdropLabel">Add Notification
+													</h5>
+													<button type="button" class="btn-close" data-bs-dismiss="modal"
+														aria-label="Close"></button>
+												</div>
+												<div class="modal-body">
+													<form class="row g-3">
+														<div class="col-2">
+															<label for="select" class="col-form-label">Profile</label>
+														</div>
+														<div class="col-auto">
+															<select id="Select" class="form-select">
+																<option>Disabled select</option>
+																<option>Disabled select</option>
+																<option>Disabled select</option>
+															</select>
+														</div>
+														<div class="w-100 m-0"></div>
+														<div class="col-2 m-0">
+															<label for="state" class="col-form-label">Image:</label>
+														</div>
+														<div class="col-auto mt-0">
+															<input class="form-control w-auto" type="file"
+																id="formFile">
+														</div>
+														<div class="w-100 m-0"></div>
+														<div class="col-auto">
+															<input type="checkbox" class="form-check-input"
+																id="exampleCheck1">
+														</div>
+														<div class="col-auto">
+															<label class="form-check-label" for="exampleCheck1">Check me
+																out</label>
+														</div>
+														<div class="w-100 m-0"></div>
+														<div class="col-2">
+															<label for="body" class="col-form-label">Body</label>
+														</div>
+														<div class="col-9">
+															<textarea class="form-control"
+																id="exampleFormControlTextarea1" rows="5"></textarea>
+														</div>
+														<div class="w-100 m-0"></div>
+														<div class="col-2">
+															<label for="url" class="col-form-label">URL</label>
+														</div>
+														<div class="col-7">
+															<input type="url" id="url" class="form-control p-2"
+																aria-describedby="utilitystate">
+														</div>
+														<div class="w-100 m-0"></div>
+														<div class="col-2">
+															<label for="url" class="col-form-label">URL name</label>
+														</div>
+														<div class="col-6">
+															<input type="text" id="url" class="form-control p-2"
+																aria-describedby="utilitystate">
+														</div>
+													</form>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="modal-btn btn btn-primary">Save and add
+														another</button>
+													<button type="button" class="modal-btn btn btn-primary">Save and
+														continue editing</button>
+													<button type="button" class="modal-btn btn btn-secondary"
+														data-bs-dismiss="modal">Close</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- END profile-header-tab -->
+							</div>
+						</div>
+						<!-- END profile-header-content -->
+					</div>
+					<!-- end profile -->
+					<!-- begin profile-content -->
+					<div class="profile-content">
+						<!-- begin tab-content -->
+						<div class="tab-content p-0">
+
+							<!-- begin #profile-about tab -->
+							<div class="tab-pane fade in active show" id="profile-about">
+								<!-- begin table -->
+								<div class="tab">
+									<button class="tablinks" onclick="openCity(event, 'London')"
+										id="defaultOpen">Utility Details</button>
+									<button class="tablinks" onclick="openCity(event, 'Paris')">Personal
+										Details</button>
+									<button class="tablinks" onclick="openCity(event, 'Tokyo')">Plan Details</button>
+									<button class="tablinks" onclick="openCity(event, 'Canada')">History</button>
+								</div>
+							</div>
+							<!-- end #profile-about tab -->
+						</div>
+						<!-- end tab-content -->
+					</div>
+					<!-- end profile-content -->
+					<div id="London" class="tabcontent">
+
+						<!-- begin table -->
+						<div class="table-responsive">
+							<table class="table table-profile">
+								<thead>
+									<td>
+										<h6>Basic Details</h6>
+									</td>
+								</thead>
+								<tbody>
+									<tr class="field">
+										<td class="field">User name :</td>
+										<td>{{profile.user.username}}</td>
+									</tr>
+									<tr>
+										<td class="field">Full name :</td>
+										<td>{{profile.full_name}}</td>
+									</tr>
+									<tr>
+										<td class="field">Status :</td>
+										<td>{{profile.status}}</td>
+									</tr>
+									<tr>
+										<td class="field">Info Updated on :</td>
+										<td><i class="fa fa-mobile fa-lg m-r-5"></i> {{profile.info_updated_at}}</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table table-profile">
+								<thead>
+									<td>
+										<h6>Utility Details</h6>
+									</td>
+								</thead>
+								<tbody>
+									<tr class="field">
+										<td class="field">Utility State :</td>
+										<td>{{ i.utility_state }}</td>
+									</tr>
+									<tr>
+										<td class="field">Utility District :</td>
+										<td>{{ i.utility_district }}</td>
+									</tr>
+									<tr>
+										<td class="field">Utility Country :</td>
+										<td>{{ i.utility_country }}</td>
+									</tr>
+									<tr>
+										<td class="field">Utility Postal Code :</td>
+										<td><i class="fa fa-mobile fa-lg m-r-5"></i> {{ i.utility_postalcode }}</td>
+									</tr>
+									<tr>
+										<td class="field">Utility Address :</td>
+										<td>{{ i.utility_address }}</td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table table-profile">
+								<thead>
+									<td>
+										<h6>Emergency Details</h6>
+									</td>
+								</thead>
+								<tbody>
+									<tr class="field">
+										<td class="field">Emergency Person :</td>
+										<td>{{ i.emergency_person }}</td>
+									</tr>
+									<tr>
+										<td class="field">Emergency alt person :</td>
+										<td>{{ i.emergency_altperson }}</td>
+									</tr>
+									<tr>
+										<td class="field">Emergency phone no :</td>
+										<td>{{ i.emergency_mobile }}</td>
+									</tr>
+									<tr>
+										<td class="field">Emergency alt phone no :</td>
+										<td><i class="fa fa-mobile fa-lg m-r-5"></i> {{ i.emergency_altmobile }}</td>
+									</tr>
+									<tr>
+										<td class="field">Emergency office Address :</td>
+										<td>{{ i.emergency_officeaddress }}</td>
+									</tr>
+									<tr>
+										<td class="field">Emergency alt office Address :</td>
+										<td>{{ i.emergency_altofficeaddress }} </td>
+									</tr>
+								</tbody>
+							</table>
+							<table class="table table-profile">
+								<thead>
+									<td>
+										<h6>Contact Details</h6>
+									</td>
+								</thead>
+								<tbody>
+									<tr class="field">
+										<td class="field">Contact person :</td>
+										<td>{{ i.contact_person }}</td>
+									</tr>
+									<tr>
+										<td class="field">Contact email :</td>
+										<td>{{ i.contact_email }}</td>
+									</tr>
+									<tr>
+										<td class="field">Contact phone no.:</td>
+										<td>{{ i.contact_phnum }}</td>
+									</tr>
+									<tr>
+										<td class="field">Contact mobile :</td>
+										<td><i class="fa fa-mobile fa-lg m-r-5"></i> {{ i.contact_mobile }}</td>
+									</tr>
+									<tr>
+										<td class="field">Contact designation :</td>
+										<td>{{ i.contact_designation }}</td>
+									</tr>
+									<tr>
+										<td class="field">Contact landline :</td>
+										<td>{{ i.contact_landline }}</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div id="Paris" class="tabcontent">
+						<!-- begin table -->
+						<div class="table-responsive">
+							<table class="table table-profile">
+								<tbody>
+									<tr class="">
+										<td class="field">Name</td>
+										<td>{{profile.full_name}}</td>
+									</tr>
+									<tr>
+										<td class="field">Mobile</td>
+										<td><i class="fa fa-mobile fa-lg m-r-5"></i> +1-(847)- 367-8924</td>
+									</tr>
+									<tr>
+										<td class="field">Home</td>
+										<td>Add Number</td>
+									</tr>
+									<tr>
+										<td class="field">Office</td>
+										<td>Add Number</td>
+									</tr>
+									<tr class="">
+										<td class="field">About Me</td>
+										<td>Add Description</td>
+									</tr>
+									<tr>
+										<td class="field">Country/Region</td>
+										<td>Asia
+										</td>
+									</tr>
+									<tr>
+										<td class="field">City</td>
+										<td>Los Angeles</td>
+									</tr>
+									<tr>
+										<td class="field">State</td>
+										<td>Add State</td>
+									</tr>
+									<tr>
+										<td class="field">Website</td>
+										<td>Add Webpage</td>
+									</tr>
+									<tr>
+										<td class="field">Gender</td>
+										<td>Female
+										</td>
+									</tr>
+									<tr>
+										<td class="field">Birthdate</td>
+										<td>05 may 2001
+										</td>
+									</tr>
+									<tr>
+										<td class="field">Language</td>
+										<td>English
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div id="Tokyo" class="tabcontent">
+
+						<!-- begin table -->
+						<div class="table-responsive">
+							<table class="table table-profile">
+								<tbody>
+									<tr>
+										<td class="field">plan</td>
+										<td>{{plan}}
+										</td>
+									</tr>
+									
+									<tr>
+										<td class="field">Paid status</td>
+										{% if profile.paid %}
+										<td>Paid</td>
+										{% else %}
+										<td>Not Paid</td>
+										{% endif %}
+									</tr>
+									<tr>
+										<td class="field">Active status</td>
+										{% if profile.plan_active %}
+										<td>Active</td>
+										{% else %}
+										<td>Expired</td>
+										{% endif %}
+										
+									</tr>
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+
+					<div id="Canada" class="tabcontent">
+
+						<!-- begin table -->
+						<div class="table-responsive">
+							<table class="table table-profile">
+								<tbody>
+									<tr class="field">
+										<td class="field">12:39 PM</td>
+										<td>Learning and development</td>
+										<td class="text-end pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+												height="16" fill="currentColor" class="bi bi-three-dots-vertical"
+												viewBox="0 0 16 16">
+												<path
+													d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+											</svg></td>
+									</tr>
+									<tr>
+										<td class="field">12:39 PM</td>
+										<td>Learning and development</td>
+										<td class="text-end pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+												height="16" fill="currentColor" class="bi bi-three-dots-vertical"
+												viewBox="0 0 16 16">
+												<path
+													d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+											</svg></td>
+									</tr>
+									<tr>
+										<td class="field">12:39 PM</td>
+										<td>Learning and development</td>
+										<td class="text-end pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+												height="16" fill="currentColor" class="bi bi-three-dots-vertical"
+												viewBox="0 0 16 16">
+												<path
+													d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+											</svg></td>
+									</tr>
+									<tr>
+										<td class="field">12:39 PM</td>
+										<td>Learning and development</td>
+										<td class="text-end pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+												height="16" fill="currentColor" class="bi bi-three-dots-vertical"
+												viewBox="0 0 16 16">
+												<path
+													d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+											</svg></td>
+									</tr>
+									<tr>
+										<td class="field">12:39 PM</td>
+										<td>Learning and development</td>
+										<td class="text-end pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+												height="16" fill="currentColor" class="bi bi-three-dots-vertical"
+												viewBox="0 0 16 16">
+												<path
+													d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+											</svg></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<script>
+						function openCity(evt, cityName) {
+							var i, tabcontent, tablinks;
+							tabcontent = document.getElementsByClassName("tabcontent");
+							for (i = 0; i < tabcontent.length; i++) {
+								tabcontent[i].style.display = "none";
+							}
+							tablinks = document.getElementsByClassName("tablinks");
+							for (i = 0; i < tablinks.length; i++) {
+								tablinks[i].className = tablinks[i].className.replace(" active", "");
+							}
+							document.getElementById(cityName).style.display = "block";
+							evt.currentTarget.className += " active";
+						}
+						// Get the element with id="defaultOpen" and click on it
+						document.getElementById("defaultOpen").click();
+					</script>
+
+
+
+
+				</div>
 			</div>
 		</div>
 	</div>
+	</section>
+
+
+
 
 
 	<script>
-		function showForm(obj) {
-			document.getElementById('plan-change').style.display = 'block';
-		}
-		function showNotificationForm(obj) {
-			document.getElementById('notification').style.display = 'block';
+		function openCity(evt, cityName) {
+			var i, tabcontent, tablinks;
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+			document.getElementById(cityName).style.display = "block";
+			evt.currentTarget.className += " active";
 		}
 	</script>
 </body>
+
+<script src="js/create.js"></script>
+<script>
+	function myFunction() {
+
+		toastr.options = {
+			"positionClass": "toast-top-center",
+			"closeButton": true,
+			"debug": false,
+			"newestOnTop": false,
+			"progressBar": true,
+			"preventDuplicates": false,
+			"onclick": null,
+			"showDuration": "300",
+			"hideDuration": "1000",
+			"timeOut": "5000",
+			"extendedTimeOut": "1000",
+			"showEasing": "swing",
+			"hideEasing": "linear",
+			"showMethod": "fadeIn",
+			"hideMethod": "fadeOut"
+
+		}
+		Command: toastr["success"]
+			("Submitted Successfully.....!!!")
+	}
+</script>
+
+<script>
+	"use strict";
+	let leftie = document.querySelector('.left')
+	let menuh = document.querySelector('.menu')
+	let closeh = document.querySelector('.close')
+	let right = document.querySelector('.right')
+
+
+	menuh.addEventListener('click', function () {
+		menuh.classList.toggle('d-none')
+		closeh.classList.toggle('d-none')
+		leftie.classList.toggle('d-none')
+		right.classList.toggle('overlay')
+
+	})
+	closeh.addEventListener('click', function () {
+		menuh.classList.toggle('d-none')
+		closeh.classList.toggle('d-none')
+		leftie.classList.toggle('d-none')
+		right.classList.toggle('overlay')
+
+	})
+</script>
+
 
 </html>
