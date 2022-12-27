@@ -174,7 +174,8 @@
 			<!-- main content -->
 			<div class="col-md-7  flex-md-fill m-3">
 				<div class="col right create-customer ps-0 pe-4 me-2" id="">
-
+					<a href="{% url 'accounts:update-profile' profile.slug appslug %}">edit page</a>
+					
 
 					<div class="profile">
 						<div class="profile-header">
@@ -214,7 +215,7 @@
 														<button type="button" class="btn-close" data-bs-dismiss="modal"
 															aria-label="Close"></button>
 													</div>
-													<form class="mb-4 mt-1">
+													<form class="mb-4 mt-1" method="POST" >
 														<div class="container-fluid">
 															<div class="row g-3 align-items-center">
 																<div class="col-auto mt-0">

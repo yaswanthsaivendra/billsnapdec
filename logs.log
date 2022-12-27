@@ -238,3 +238,15 @@ Traceback (most recent call last):
   File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 650, in get
     raise self.model.DoesNotExist(
 plans.models.Plan.DoesNotExist: Plan matching query does not exist.
+[2022-12-28T01:04:45] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T01:14:34] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T01:14:36] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T01:15:08] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T01:15:19] WARNING [django.request.log_response:241] Not Found: /account/neha/js/create.js
+[2022-12-28T01:17:26] WARNING [django.request.log_response:241] Not Found: /account/neha/js/create.js
+[2022-12-28T01:17:44] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
+[2022-12-28T01:22:37] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
+[2022-12-28T01:22:58] INFO [root.update_profile:284] yaswanth_ updated profile
+[2022-12-28T01:22:58] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
+[2022-12-28T01:23:23] INFO [root.update_profile:284] yaswanth_ updated profile
+[2022-12-28T01:23:23] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
