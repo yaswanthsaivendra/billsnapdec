@@ -3,6 +3,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
 
 <style>
+  #toast-container{
+    margin-top:30px;
+  }
   .toast-success {
 
     background: white;
@@ -44,9 +47,12 @@
 
     #toast-container > div {
       opacity: 1 !important;
-      height: 50px;
+      height: 55px;
+     
     }
-
+    #toast-container.toast-top-center>div{
+      width:600px !important;
+    }
     .toast-success .toast-progress {
       background-color: #85ff9c;
       opacity: 1 !important;
@@ -54,8 +60,17 @@
     }
 
     .toast-close-button {
-      color: black;
+      color:grey;
       opacity: 0.9;
+      top: -14px;
+      font-weight: 100;
+    font-size: 35px;
+    margin-right: 10px;
+    }
+    .toast-message{
+      font-family:inherit;
+      font-size: 16px;
+      
     }
 </style>
 </head>

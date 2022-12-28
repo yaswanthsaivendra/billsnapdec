@@ -88,35 +88,88 @@
             {% include "dashsidebar.html" %}
             <div class="col-md-7  flex-md-fill m-3">
                 <div class="col right create-customer ps-0 pe-4 me-2" id="">
+                    <button class=" button button1" data-toggle="modal" data-target="#addcustomers">Add</button>
+                    <h2 class="ps-1 pt-3 text-uppercase" id="pspt">{{plan.title}} CUSTOMERS</h2><br>
+                   
+                    <!-- existing customers table -->
+                    <div class="table-responsive my-3">
+                        <table class="table table-bordered" id='table_filter'>
+                            <thead>
+                                <tr>
+                                    <th>User Name</th>
+                                    <th>Full Name</th>
+                                    <th>Email</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for user in users %}
+                                <tr>
+                                    <td>{{ user.user.username}}</td>
+                                    <td>{{ user.full_name}}</td>
+                                    <td>{{ user.contact_email}}</td>
 
+                                    <td>
+                                        <button class="bs-primary px-3 py-2"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            Update Plan
+                                        </button>
+                                    </td>
 
-                    <h3>Students</h3>
-                    {% for user in users %}
-                    <div class='w3-row w3-border-bottom w3-margin'>
-                        <h5 class='w3-left w3-margin-right'>
-                            {{user.full_name}} aka @{{user.user.username}}
-                        </h5>
-                        <button onclick="showUpdateForm();" class=' w3-button w3-right w3-round w3-purple'>Update
-                            @{{user.user.username}}'s Plan</button>
+                                </tr>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-dialog-centered">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Update @{{user.user.username}}'s Plan</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <form class='w3-margin w3-padding' enctype='multipart/form-data'
+                                                method='POST'
+                                                action="{% url 'update-plan' profileslug=user.slug planslug=plan.slug %}">
+                                                <div class="modal-body">
+
+                                                    
+                                                    {% csrf_token %}
+                                                    {{ update_form|crispy }}
+                                                   
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="bs-primary bs-secondary py-2 px-3 mx-2"
+                                                    data-bs-dismiss="modal">Close</button>
+                                                    <button type="submit" class="bs-primary py-2 px-3">Update</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                {%endfor%}
+                            </tbody>
+                        </table>
+
                     </div>
-                    <div id="form" style='display:none;' class="w3-modal">
-                        <div class="w3-display-middle w3-padding">
-                            <button class='w3-right w3-button w3-round-large w3-red w3-padding'
-                                onclick="document.getElementById('form').style.display='none'">&times;</button>
-                            <div class="w3-margin w3-padding w3-round-large w3-border w3-white" id="content">
-                                <form class='w3-margin w3-padding' enctype='multipart/form-data' method='POST'
-                                    action="{% url 'update-plan' profileslug=user.slug planslug=plan.slug %}">
-                                    <h4 class='w3-center w3-margin'>Update @{{user.user.username}}'s Plan</h4>
-                                    {% csrf_token %}
-                                    {{ update_form|crispy }}
-                                    <button type='submit' class='w3-margin w3-round-large w3-green w3-button'>Update
-                                        to</button>
-                                </form>
-                            </div>
+
+                    <!-- pagination -->
+                    <div class="demo1">
+                        <div class="demo">
+                            <a href="#">&laquo;</a>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">&raquo;</a>
+
                         </div>
                     </div>
-                    {% endfor %}
                 </div>
+
+
+
+
                 <div class='w3-container w3-padding w3-round w3-half w3-border'>
                     <button id="button" onclick="showForm();" class=' w3-round w3-button w3-blue'>
                         Add Customer to {{plan.title}}
@@ -134,6 +187,25 @@
         </div>
 
     </div>
+    <!-- add customer model -->
+    <div class="modal fade" id="addcustomers" tabindex="-1" aria-labelledby="addcutomersLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add Customers to {{plan.title}} </h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="bs-primary bs-secondary py-2 px-3 mx-2"
+                data-bs-dismiss="modal">Close</button>
+                <button type="button" class="bs-primary py-2 px-3">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
 </body>
 
 <script>
