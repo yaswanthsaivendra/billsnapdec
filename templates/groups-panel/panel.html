@@ -134,7 +134,7 @@
                                         <p>{{group.description}}</p>
                                     </div>
                                   <div class="bottom">
-                                    <a href="{% url 'groups:group' group.slug %}">
+                                    <a href="{% url 'groups:group' slug=slug groupslug=group.slug %}">
                                         <button class='bs-primary px-3 py-2'>View</button>
                                     </a>
                                     <!-- <a href="{% url 'groups:delete-group' group.slug slug %}">
@@ -168,7 +168,7 @@
                                         <p>{{plan.description}}</p>
                                     </div>
                                     <div class="bottom">
-                                        <a href="{% url 'groups:plangroup' plan.slug %}">
+                                        <a href="{% url 'groups:plangroup' slug plan.slug %}">
                                             <button class='bs-primary px-3 py-2'>View</button>
                                         </a>
                                     </div>
@@ -185,7 +185,7 @@
                                         <p>{{plan.description}}</p>
                                     </div>
                                    <div class="bottom">
-                                    <a href="{% url 'groups:plangroup' plan.slug %}">
+                                    <a href="{% url 'groups:plangroup' slug plan.slug %}">
                                         <button class='bs-primary px-3 py-2'>View</button>
                                     </a>
                                    </div>

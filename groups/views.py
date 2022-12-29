@@ -37,10 +37,10 @@ def delete_group(request, slug, appslug):
     group.delete()
     return redirect('groups:groups-panel', appslug)
 
-def show_group(request, slug):
+def show_group(request, slug, groupslug):
     if request.user.is_superuser:
         if request.method == 'GET':
-            group = Group.objects.filter(slug=slug).first()
+            group = Group.objects.filter(slug=groupslug).first()
             users = group.members.all()
             form = SubscribeForm()
             existing_users = Profile.objects.filter(apps=group.app).exclude(group=group)
@@ -49,14 +49,14 @@ def show_group(request, slug):
                 'users': users,
                 'form': form,
                 'update_form': UpdateUserGroupForm(appslug=group.app.slug),
-                'appslug': group.app.slug,
+                'slug': slug,
                 'existing_users': existing_users,
             }
             return render(request, 'groups-panel/group.html', payload)
         
         # 'POST' method
         form = SubscribeForm(request.POST)
-        group = Group.objects.filter(slug=slug).first()
+        group = Group.objects.filter(slug=groupslug).first()
         if form.is_valid():
             #if form.cleaned_data.get("username")!='username':
             customer = Profile.objects.filter(user__username=form.cleaned_data.get("username")).filter(apps__in=[group.app])
@@ -80,11 +80,11 @@ def show_group(request, slug):
         print(forms.error)
         return redirect('group', slug)
 
-def add_customer_to_group(request, slug):
+def add_customer_to_group(request, groupslug):
     username = request.GET.get('username')
     user = Profile.objects.get(user__username=username)
 
-    group = Group.objects.get(slug=slug)
+    group = Group.objects.get(slug=groupslug)
     
     # pre_group = user.group_set.filter(app__appname=group.app.appname).first()
     # if pre_group:
@@ -93,11 +93,11 @@ def add_customer_to_group(request, slug):
     group.members.add(user)
     return JsonResponse({})
 
-def remove_customer_from_group(request, slug):
+def remove_customer_from_group(request, groupslug):
     username = request.GET.get('username')
     user = Profile.objects.get(user__username=username)
 
-    group = Group.objects.get(slug=slug)
+    group = Group.objects.get(slug=groupslug)
 
     group.members.remove(user)
     return JsonResponse({})
@@ -125,14 +125,15 @@ def remove_customer_from_group(request, slug):
         create_history(user=profile.user, to_group=new_group, from_group=current_group, upgrade=True)"""
         
 
-def show_plan_group(request, slug):
+def show_plan_group(request, slug, plangroupslug):
     if request.user.is_superuser:
         if request.method == 'GET':
-            plan = Plan.objects.filter(slug=slug).first()
+            plan = Plan.objects.filter(slug=plangroupslug).first()
             users = Profile.objects.filter(plans=plan)
                     
             payload = {
                 'plan': plan,
                 'users': users,
+                'slug' : slug
             }
             return render(request, 'groups-panel/plangroup.html', payload)

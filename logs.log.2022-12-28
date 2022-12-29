@@ -1,0 +1,1114 @@
+[2022-12-28T00:02:13] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:02:16] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:02:17] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:02:21] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:03:51] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:04:12] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:06:19] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:06:20] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:08:11] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:08:11] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:08:12] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:08:13] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:08:31] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:09:24] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:09:28] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:14:45] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:16:56] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:20:00] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:22:32] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:23:11] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:23:26] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:25:17] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:26:16] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:26:26] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:27:00] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:27:14] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:27:49] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:28:14] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:39:26] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.
+[2022-12-28T00:43:49] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:43:52] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:44:01] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:44:02] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T00:44:11] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2022-12-28T00:44:16] WARNING [django.request.log_response:241] Not Found: /apps/whatsup/dashboard/assets/img/ivancik.jpg
+[2022-12-28T00:50:48] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/AFk7twCH0H
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 81, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plan' with arguments '('AFk7twCH0H',)' not found. 1 pattern(s) tried: ['plans/plan/(?P<slug>[^/]+)/(?P<planslug>[^/]+)\\Z']
+[2022-12-28T00:51:42] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/AFk7twCH0H
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 97, in show_plan
+    return redirect('plan', slug)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plan' with arguments '('whatsup',)' not found. 1 pattern(s) tried: ['plans/plan/(?P<slug>[^/]+)/(?P<planslug>[^/]+)\\Z']
+[2022-12-28T00:52:57] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/AFk7twCH0H
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 97, in show_plan
+    return redirect('plan', slug)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plan' with arguments '('whatsup',)' not found. 1 pattern(s) tried: ['plans/plan/(?P<slug>[^/]+)/(?P<planslug>[^/]+)\\Z']
+[2022-12-28T00:56:02] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.
+[2022-12-28T00:56:13] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/AFk7twCH0H
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 97, in show_plan
+    return redirect('planslug', slug)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'planslug' not found. 'planslug' is not a valid view function or pattern name.
+[2022-12-28T00:56:47] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/AFk7twCH0H
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 97, in show_plan
+    return redirect('planslug', slug)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 48, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 145, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'planslug' not found. 'planslug' is not a valid view function or pattern name.
+[2022-12-28T00:57:15] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.
+[2022-12-28T00:58:18] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T00:58:38] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/AFk7twCH0H
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 81, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'update-plan' with arguments '('yaswanth',)' not found. 1 pattern(s) tried: ['plans/update\\-plan/(?P<profileslug>[^/]+)/(?P<planslug>[^/]+)/\\Z']
+[2022-12-28T00:59:00] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/FaRGKlHDFj
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 81, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'update-plan' with arguments '('yaswanth',)' not found. 1 pattern(s) tried: ['plans/update\\-plan/(?P<profileslug>[^/]+)/(?P<planslug>[^/]+)/\\Z']
+[2022-12-28T01:03:14] ERROR [django.request.log_response:241] Internal Server Error: /plans/delete-plan/AFk7twCH0H/whatsup/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 58, in delete_plan
+    default_plan = Plan.objects.filter(app=appslug).get(default_for_customer=True)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+plans.models.Plan.DoesNotExist: Plan matching query does not exist.
+[2022-12-28T01:03:24] ERROR [django.request.log_response:241] Internal Server Error: /plans/delete-plan/FaRGKlHDFj/whatsup/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 58, in delete_plan
+    default_plan = Plan.objects.filter(app=appslug).get(default_for_customer=True)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+plans.models.Plan.DoesNotExist: Plan matching query does not exist.
+[2022-12-28T01:03:36] ERROR [django.request.log_response:241] Internal Server Error: /plans/delete-plan/FaRGKlHDFj/whatsup/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 58, in delete_plan
+    default_plan = Plan.objects.filter(app=appslug).get(default_for_customer=True)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+plans.models.Plan.DoesNotExist: Plan matching query does not exist.
+[2022-12-28T01:04:45] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T01:14:34] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T01:14:36] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T01:15:08] WARNING [django.request.log_response:241] Not Found: /account/vendrayaswanth/js/create.js
+[2022-12-28T01:15:19] WARNING [django.request.log_response:241] Not Found: /account/neha/js/create.js
+[2022-12-28T01:17:26] WARNING [django.request.log_response:241] Not Found: /account/neha/js/create.js
+[2022-12-28T01:17:44] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
+[2022-12-28T01:22:37] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
+[2022-12-28T01:22:58] INFO [root.update_profile:284] yaswanth_ updated profile
+[2022-12-28T01:22:58] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
+[2022-12-28T01:23:23] INFO [root.update_profile:284] yaswanth_ updated profile
+[2022-12-28T01:23:23] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
+[2022-12-28T01:40:51] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.
+[2022-12-28T01:42:40] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
+[2022-12-28T02:11:20] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
+[2022-12-28T02:11:24] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
+[2022-12-28T02:11:42] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T02:23:01] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/FaRGKlHDFj
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 81, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 162: 'endfor'. Did you forget to register or load this tag?
+[2022-12-28T02:23:02] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/FaRGKlHDFj
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 81, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 162: 'endfor'. Did you forget to register or load this tag?
+[2022-12-28T02:23:05] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/FaRGKlHDFj
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 505, in parse
+    compile_func = self.tags[command]
+KeyError: 'endfor'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 81, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 507, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 568, in invalid_block_tag
+    raise self.error(
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 162: 'endfor'. Did you forget to register or load this tag?
+[2022-12-28T02:23:24] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/FaRGKlHDFj
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 81, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'update-plan' with keyword arguments '{'profileslug': '', 'planslug': 'FaRGKlHDFj'}' not found. 1 pattern(s) tried: ['plans/update\\-plan/(?P<profileslug>[^/]+)/(?P<planslug>[^/]+)/\\Z']
+[2022-12-28T02:23:25] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/FaRGKlHDFj
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 81, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'update-plan' with keyword arguments '{'profileslug': '', 'planslug': 'FaRGKlHDFj'}' not found. 1 pattern(s) tried: ['plans/update\\-plan/(?P<profileslug>[^/]+)/(?P<planslug>[^/]+)/\\Z']
+[2022-12-28T02:23:26] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/whatsup/FaRGKlHDFj
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 81, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'update-plan' with keyword arguments '{'profileslug': '', 'planslug': 'FaRGKlHDFj'}' not found. 1 pattern(s) tried: ['plans/update\\-plan/(?P<profileslug>[^/]+)/(?P<planslug>[^/]+)/\\Z']
+[2022-12-28T02:44:33] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T03:11:40] INFO [root.logout:189] yaswanth_ logged out
+[2022-12-28T03:30:57] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2022-12-28T03:31:02] WARNING [django.request.log_response:241] Not Found: /apps/whatsup/dashboard/assets/img/ivancik.jpg
+[2022-12-28T03:49:24] ERROR [django.request.log_response:241] Internal Server Error: /groups/group/plans.html
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\groups\views.py", line 44, in show_group
+    users = group.members.all()
+AttributeError: 'NoneType' object has no attribute 'members'
+[2022-12-28T03:57:37] ERROR [django.request.log_response:241] Internal Server Error: /groups/group/TZhVlUTTNa
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\groups\views.py", line 55, in show_group
+    return render(request, 'groups-panel/group.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'show-profile' with arguments '('', '')' not found. 1 pattern(s) tried: ['account/(?P<slug>[^/]+)/(?P<appslug>[^/]+)\\Z']
+[2022-12-28T13:41:16] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2022-12-28T13:41:23] WARNING [django.request.log_response:241] Not Found: /apps/whatsup/dashboard/assets/img/ivancik.jpg
+[2022-12-28T13:41:44] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T13:41:47] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T13:42:48] ERROR [django.request.log_response:241] Internal Server Error: /groups/group/bulk.html
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 44, in show_group
+    users = group.members.all()
+AttributeError: 'NoneType' object has no attribute 'members'
+[2022-12-28T13:43:01] ERROR [django.request.log_response:241] Internal Server Error: /groups/group/manage.html
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 44, in show_group
+    users = group.members.all()
+AttributeError: 'NoneType' object has no attribute 'members'
+[2022-12-28T13:43:05] ERROR [django.request.log_response:241] Internal Server Error: /groups/group/pending.html
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 44, in show_group
+    users = group.members.all()
+AttributeError: 'NoneType' object has no attribute 'members'
+[2022-12-28T13:43:13] ERROR [django.request.log_response:241] Internal Server Error: /groups/group/create.html
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 44, in show_group
+    users = group.members.all()
+AttributeError: 'NoneType' object has no attribute 'members'
+[2022-12-28T13:43:18] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T13:49:25] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/urls.py changed, reloading.
+[2022-12-28T13:50:04] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T13:50:10] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T13:50:31] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T13:51:04] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T13:51:06] WARNING [django.request.log_response:241] Not Found: /groups/group/TZhVlUTTNa
+[2022-12-28T13:51:06] WARNING [django.request.log_response:241] Not Found: /groups/group/TZhVlUTTNa
+[2022-12-28T13:51:06] WARNING [django.request.log_response:241] Not Found: /groups/group/TZhVlUTTNa
+[2022-12-28T13:51:07] WARNING [django.request.log_response:241] Not Found: /groups/group/TZhVlUTTNa
+[2022-12-28T13:51:07] WARNING [django.request.log_response:241] Not Found: /groups/group/TZhVlUTTNa
+[2022-12-28T13:51:16] ERROR [django.request.log_response:241] Internal Server Error: /groups/panel/whatsup
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 23, in groups_panel
+    return render(request, 'groups-panel/panel.html', payload)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'group' with arguments '('TZhVlUTTNa',)' not found. 1 pattern(s) tried: ['groups/group/(?P<slug>[^/]+)/(?P<groupslug>[^/]+)\\Z']
+[2022-12-28T13:53:27] ERROR [django.request.log_response:241] Internal Server Error: /groups/panel/whatsup
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 23, in groups_panel
+    return render(request, 'groups-panel/panel.html', payload)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'group' with arguments '('TZhVlUTTNa',)' not found. 1 pattern(s) tried: ['groups/group/(?P<slug>[^/]+)/(?P<groupslug>[^/]+)\\Z']
+[2022-12-28T13:54:41] ERROR [django.request.log_response:241] Internal Server Error: /groups/group/whatsup/TZhVlUTTNa
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 55, in show_group
+    return render(request, 'groups-panel/group.html', payload)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'group' with arguments '('TZhVlUTTNa',)' not found. 1 pattern(s) tried: ['groups/group/(?P<slug>[^/]+)/(?P<groupslug>[^/]+)\\Z']
+[2022-12-28T13:54:57] ERROR [django.request.log_response:241] Internal Server Error: /groups/group/whatsup/TZhVlUTTNa
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 55, in show_group
+    return render(request, 'groups-panel/group.html', payload)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'group' with arguments '('TZhVlUTTNa',)' not found. 1 pattern(s) tried: ['groups/group/(?P<slug>[^/]+)/(?P<groupslug>[^/]+)\\Z']
+[2022-12-28T13:55:59] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T13:56:08] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T13:57:24] ERROR [django.request.log_response:241] Internal Server Error: /groups/group/whatsup/bulk.html
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 44, in show_group
+    users = group.members.all()
+AttributeError: 'NoneType' object has no attribute 'members'
+[2022-12-28T13:57:50] ERROR [django.request.log_response:241] Internal Server Error: /groups/group/whatsup/customerlist.html
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 44, in show_group
+    users = group.members.all()
+AttributeError: 'NoneType' object has no attribute 'members'
+[2022-12-28T13:57:57] ERROR [django.request.log_response:241] Internal Server Error: /groups/group/whatsup/customerlist.html
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 44, in show_group
+    users = group.members.all()
+AttributeError: 'NoneType' object has no attribute 'members'
+[2022-12-28T14:02:52] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T14:05:08] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T14:14:31] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T14:14:34] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T14:14:37] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T14:14:41] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T14:14:50] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/urls.py changed, reloading.
+[2022-12-28T14:14:52] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/urls.py changed, reloading.
+[2022-12-28T14:15:32] ERROR [django.request.log_response:241] Internal Server Error: /groups/remove-member/TZhVlUTTNa
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 98, in remove_customer_from_group
+    user = Profile.objects.get(user__username=username)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+accounts.models.Profile.DoesNotExist: Profile matching query does not exist.
+[2022-12-28T14:21:28] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/urls.py changed, reloading.
+[2022-12-28T14:21:34] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/urls.py changed, reloading.
+[2022-12-28T14:22:33] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T14:22:52] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/urls.py changed, reloading.
+[2022-12-28T14:23:01] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T14:23:03] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T14:23:05] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T14:23:11] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/urls.py changed, reloading.
+[2022-12-28T14:23:18] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T14:23:22] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T14:23:46] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T14:23:49] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T14:23:53] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T14:26:42] ERROR [django.request.log_response:241] Internal Server Error: /groups/panel/whatsup
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 23, in groups_panel
+    return render(request, 'groups-panel/panel.html', payload)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plangroup' with arguments '('AFk7twCH0H',)' not found. 1 pattern(s) tried: ['groups/plangroup/(?P<slug>[^/]+)/(?P<plangroupslug>[^/]+)\\Z']
+[2022-12-28T14:26:43] ERROR [django.request.log_response:241] Internal Server Error: /groups/panel/whatsup
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 23, in groups_panel
+    return render(request, 'groups-panel/panel.html', payload)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plangroup' with arguments '('AFk7twCH0H',)' not found. 1 pattern(s) tried: ['groups/plangroup/(?P<slug>[^/]+)/(?P<plangroupslug>[^/]+)\\Z']
+[2022-12-28T14:26:43] ERROR [django.request.log_response:241] Internal Server Error: /groups/panel/whatsup
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 23, in groups_panel
+    return render(request, 'groups-panel/panel.html', payload)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plangroup' with arguments '('AFk7twCH0H',)' not found. 1 pattern(s) tried: ['groups/plangroup/(?P<slug>[^/]+)/(?P<plangroupslug>[^/]+)\\Z']
+[2022-12-28T14:27:07] ERROR [django.request.log_response:241] Internal Server Error: /groups/panel/whatsup
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 23, in groups_panel
+    return render(request, 'groups-panel/panel.html', payload)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plangroup' with arguments '('FaRGKlHDFj',)' not found. 1 pattern(s) tried: ['groups/plangroup/(?P<slug>[^/]+)/(?P<plangroupslug>[^/]+)\\Z']
+[2022-12-28T14:27:08] ERROR [django.request.log_response:241] Internal Server Error: /groups/panel/whatsup
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 23, in groups_panel
+    return render(request, 'groups-panel/panel.html', payload)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plangroup' with arguments '('FaRGKlHDFj',)' not found. 1 pattern(s) tried: ['groups/plangroup/(?P<slug>[^/]+)/(?P<plangroupslug>[^/]+)\\Z']
+[2022-12-28T14:27:08] ERROR [django.request.log_response:241] Internal Server Error: /groups/panel/whatsup
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 23, in groups_panel
+    return render(request, 'groups-panel/panel.html', payload)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plangroup' with arguments '('FaRGKlHDFj',)' not found. 1 pattern(s) tried: ['groups/plangroup/(?P<slug>[^/]+)/(?P<plangroupslug>[^/]+)\\Z']
+[2022-12-28T14:27:08] ERROR [django.request.log_response:241] Internal Server Error: /groups/panel/whatsup
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/groups/views.py", line 23, in groups_panel
+    return render(request, 'groups-panel/panel.html', payload)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 322, in render
+    return nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'plangroup' with arguments '('FaRGKlHDFj',)' not found. 1 pattern(s) tried: ['groups/plangroup/(?P<slug>[^/]+)/(?P<plangroupslug>[^/]+)\\Z']
+[2022-12-28T14:28:12] ERROR [django.request.log_response:241] Internal Server Error: /apps/slug/customerlist/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 121, in customerlist
+    app=applists.objects.get(slug=slug)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/query.py", line 650, in get
+    raise self.model.DoesNotExist(
+apps.models.applists.DoesNotExist: applists matching query does not exist.
+[2022-12-28T14:30:39] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/groups/views.py changed, reloading.
+[2022-12-28T14:44:09] WARNING [django.request.log_response:241] Not Found: /apps/whatsup/dashboard/assets/img/ivancik.jpg
+[2022-12-28T14:46:25] INFO [root.deleteapp:74] yaswanth_deleted an app
+[2022-12-28T14:46:25] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2022-12-28T14:46:31] WARNING [django.request.log_response:241] Not Found: /apps/just/dashboard/assets/img/ivancik.jpg
+[2022-12-28T14:46:44] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T14:47:07] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T14:47:09] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T14:47:21] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T14:47:29] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T14:47:45] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T14:47:47] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2022-12-28T14:47:54] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
+[2022-12-28T14:50:37] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
+[2022-12-28T14:51:25] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
+[2022-12-28T14:51:36] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
+[2022-12-28T14:51:37] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
+[2022-12-28T14:51:42] WARNING [django.request.log_response:241] Not Found: /account/yaswanth/js/create.js
