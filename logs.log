@@ -1649,3 +1649,12 @@ django.urls.exceptions.NoReverseMatch: 'plans' is not a registered namespace
 [2023-01-17T20:57:20] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.
 [2023-01-17T20:57:26] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.
 [2023-01-17T20:57:30] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\plans\views.py changed, reloading.
+[2023-01-17T22:11:14] WARNING [django.security.csrf.log_response:241] Forbidden (CSRF token missing.): /plans/update-plan/neha/ggfKqwCODY/
+[2023-01-17T22:11:41] WARNING [django.security.csrf.log_response:241] Forbidden (CSRF token missing.): /plans/update-plan/neha/ggfKqwCODY/
+[2023-01-17T22:11:48] WARNING [django.security.csrf.log_response:241] Forbidden (CSRF token missing.): /plans/update-plan/neha/ggfKqwCODY/
+[2023-01-17T22:37:13] INFO [root.deleteapp:74] sony_deleted an app
+[2023-01-17T22:37:13] INFO [root.showapps:67] sony_seen the whole applist
+[2023-01-17T22:37:44] INFO [root.addapp:56] sony_added an app
+[2023-01-17T22:37:44] INFO [root.showapps:67] sony_seen the whole applist
+[2023-01-17T22:37:50] WARNING [django.request.log_response:241] Not Found: /apps/helo/dashboard/assets/img/ivancik.jpg
+[2023-01-17T22:37:58] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
