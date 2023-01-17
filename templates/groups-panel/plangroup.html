@@ -28,7 +28,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static 'assets/styles.css'%}">
-    <link rel="stylesheet" href="{% static 'w3.css' %}" />
 </head>
 <style>
     .row {
@@ -39,22 +38,20 @@
 
     }
 
-    .container {
-        max-width: 800px !important;
 
-    }
 
-    .app-form-container {
-        max-width: 700px;
-    }
+
 
     button {
         float: right;
     }
 
     .grp {
-        background-color: white;
+        background-color: #f2f2f2;
         border-radius: 10px;
+        padding: 20px;
+        margin: 10px 60px;
+
     }
 
     .new-group-btn {
@@ -72,74 +69,83 @@
         float: right !important;
     }
 
-    .box {
-        height: 250px !important;
-    }
-    b{
-        color:#7b7b7b;
+    .card {
+        /* border: 1px solid black !important; */
+        margin: 20px;
+        height: 250px;
+        width: 300px;
+        background-color: #f2f2f2;
+        border-radius: 10px;
     }
 </style>
 
-
-<body class="w3-padding">
+<body>
 
     {% include "dashnav.html" %}
-
     <div class="main mx-auto">
-        <h1 class="applist my-4 text-dark my-2 text-uppercase ">{{plan.title}} Group</h1>
-        <div class="container mt-4">
-            <div class="row">
-               
+        <div class="row bulkuploadcontent">
 
-                <h3>Customers in {{plan.title}} Group</h3>
+            {% include "dashsidebar.html" %}
+            <div class="col-md-7  flex-md-fill m-3">
+                <div class="col right create-customer ps-0 pe-4 me-2" id="">
+                    <h2 class="ps-1 pt-3 text-uppercase" id="pspt">{{plan.title}} CUSTOMERS</h2><br>
+                   
+                    <!-- existing customers table -->
+                    <div class="table-responsive my-3">
+                        <table class="table table-bordered" id='table_filter'>
+                            <thead>
+                                <tr>
+                                    <th>User Name</th>
+                                    <th>Full Name</th>
+                                    <th>Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for user in users %}
+                                <tr>
+                                    <td>{{ user.user.username}}</td>
+                                    <td>{{ user.full_name}}</td>
+                                    <td>{{ user.contact_email}}</td>
 
-                {% for user in users %}
 
+                                </tr>
+                                  
+                                {%endfor%}
+                            </tbody>
+                        </table>
 
+                    </div>
 
-                <div class='w3-row w3-border-bottom w3-margin grp p-3'>
-                    <h5>@{{user.user.username}}  </h5>
+                    <!-- pagination -->
+                    <div class="demo1">
+                        <div class="demo">
+                            <a href="#">&laquo;</a>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">&raquo;</a>
 
+                        </div>
+                    </div>
                 </div>
-
-
-                {% endfor %}
             </div>
-
-
-
-
-
-
         </div>
+
     </div>
-
     
-
-
-
-
-
-
 </body>
+
 <script>
     function showForm() {
-        document.getElementById('group_form').style.display = "block";
+        document.getElementById('plan_form').style.display = "block";
         document.getElementById('button').style.display = "none";
     }
     function showUpdateForm() {
         document.getElementById('form').style.display = "block";
     }
-    function addCustomerApp(obj) {
-        var url = obj.getAttribute('url') + '?username=' + obj.value;
-        $.ajax({
-            type: 'GET',
-            url: url,
-            success: function (resp) {
-                document.location.reload(true);
-            }
-        })
-    } 
 </script>
 
 </html>

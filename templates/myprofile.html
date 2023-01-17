@@ -99,83 +99,16 @@
 		<div class="row">
 
 			<!-- sidebar -->
-			<div class="left first-sidebar d-none d-md-block col-md-4">
-				<div class="menu-frag d-flex flex-column p-3 ps-4 gap-3">
-					<div>
-						<i class='bx bx-grid-alt'></i>
+			{% include "dashsidebar.html" %}
 
-						<a href="dashboard.html">Dashboard</a>
-					</div>
-					<div>
-						<i class='bx bx-analyse'></i>
-
-						<a href="estimate.html">Estimates</a>
-					</div>
-					<div>
-						<i class='bx bx-cog'></i>
-
-						<a href="settings.html">Settings</a>
-					</div>
-				</div>
-				<hr>
-				<div class="menu-frag mt-3 ps-3">
-					<h4>Customer</h4>
-					<div class="customer-frag d-flex flex-column p-3 pt-1 gap-3">
-						<div>
-							<i class='bx bx-box'></i>
-
-							<a href="create.html">Create</a>
-						</div>
-						<div>
-							<i class='bx bx-box'></i>
-							<a href="customerlist.html" id="active">Customer List</a>
-						</div>
-						<div>
-							<i class='bx bx-log-out'></i>
-							<a href="bulk.html">Bulk Upload</a>
-						</div>
-						<div>
-							<i class='bx bx-archive-in'></i>
-							<a href="manage.html">Manage Group</a>
-						</div>
-						<div>
-							<i class='bx bx-bar-chart'></i>
-							<a href="pending.html">Pending approvals</a>
-						</div>
-						<div>
-							<i class='bx bx-message'></i>
-							<a href="message.html">Messaging</a>
-						</div>
-					</div>
-				</div>
-				<hr>
-				<div class="menu-frag mt-3 ps-3">
-					<h4>Payments</h4>
-					<div class="pay-frag d-flex flex-column  p-3 pt-1  gap-3">
-						<div>
-							<i class='bx bx-list-ul'></i>
-							<a href="transcations.html">Transactions </a>
-						</div>
-
-						<div>
-							<i class='bx bx-coin-stack'></i>
-							<a href="plans.html">Plans</a>
-						</div>
-						<div>
-							<i class='bx bx-heart'></i>
-							<a href="request.html">Requests</a>
-						</div>
-					</div>
-				</div>
-
-			</div>
 			<div class="left second"></div>
 
 			<!-- main content -->
 			<div class="col-md-7  flex-md-fill m-3">
+				{% include 'messages.html' %}
+
 				<div class="col right create-customer ps-0 pe-4 me-2" id="">
-					<a href="{% url 'accounts:update-profile' profile.slug appslug %}">edit page</a>
-					
+
 
 					<div class="profile">
 						<div class="profile-header">
@@ -215,18 +148,13 @@
 														<button type="button" class="btn-close" data-bs-dismiss="modal"
 															aria-label="Close"></button>
 													</div>
-													<form class="mb-4 mt-1" method="POST" >
+													<form class="mb-4 mt-1"
+														action="{% url 'accounts:update-profile' slug=slug userslug=userslug %}"
+														method="POST">
+														{% csrf_token %}
+
 														<div class="container-fluid">
 															<div class="row g-3 align-items-center">
-																<div class="col-auto mt-0">
-																	<label for="state"
-																		class="col-form-label">Username:</label>
-																</div>
-																<div class="col mt-0">
-																	<input type="text" id="state"
-																		class="form-control p-2"
-																		aria-describedby="utilitystate">
-																</div>
 																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
 																	<label for="state" class="col-form-label">Full
@@ -235,7 +163,9 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate" name="full_name"
+																		value="{% if profile.full_name %}{{profile.full_name}}{% endif %}"
+																		required>
 																</div>
 																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
@@ -245,36 +175,45 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate" name="status"
+																		value="{% if profile.status %}{{profile.status}}{% endif %}"
+																		required>
 																</div>
 																<div class="w-100 m-0"></div>
-																<div class="col-auto mt-0">
-																	<label for="state" class="col-form-label">Info
-																		updated at:</label>
-																</div>
-																<div class="col mt-0">
-																	<input type="text" id="state"
-																		class="form-control p-2"
-																		aria-describedby="utilitystate">
-																</div>
-																<div class="w-100 m-0"></div>
-																<div class="col-auto mt-0">
-																	<label for="state" class="col-form-label">SE
-																		coins:</label>
-																</div>
-																<div class="col mt-0">
-																	<input type="text" id="state"
-																		class="form-control p-2"
-																		aria-describedby="utilitystate">
-																</div>
 															</div>
 														</div>
-													</form>
-													<h5 class="modal-title mb-4" id="staticBackdropLabel">Utility
-														Details</h5>
-													<form class="mb-4 mt-1">
+
+														<h5 class="modal-title mb-4" id="staticBackdropLabel">Utility
+															Details</h5>
+
 														<div class="container-fluid">
 															<div class="row g-3 align-items-center">
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Utility
+																		Name:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate"
+																		name="utility_name"
+																		value="{% if profile.utility_name %}{{profile.utility_name}}{% endif %}"
+																		required>
+																</div>
+																<div class="w-100 m-0"></div>
+																<div class="col-auto mt-0">
+																	<label for="state" class="col-form-label">Utility
+																		Short Name:</label>
+																</div>
+																<div class="col mt-0">
+																	<input type="text" id="state"
+																		class="form-control p-2"
+																		aria-describedby="utilitystate"
+																		name="utility_short_name"
+																		value="{% if profile.utility_short_name %}{{profile.utility_short_name}}{% endif %}"
+																		required>
+																</div>
+																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
 																	<label for="state" class="col-form-label">Utility
 																		State:</label>
@@ -282,7 +221,10 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="utility_state"
+																		value="{% if profile.utility_state %}{{profile.utility_state}}{% endif %}"
+																		required>
 																</div>
 																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
@@ -292,7 +234,10 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="utility_district"
+																		value="{% if profile.utility_district %}{{profile.utility_district}}{% endif %}"
+																		required>
 																</div>
 																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
@@ -302,7 +247,10 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="utility_country"
+																		value="{% if profile.utility_country %}{{profile.utility_country}}{% endif %}"
+																		required>
 																</div>
 																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
@@ -312,7 +260,10 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="utility_postalcode"
+																		value="{% if profile.utility_postalcode %}{{profile.utility_postalcode}}{% endif %}"
+																		required>
 																</div>
 																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
@@ -322,14 +273,17 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="utility_address"
+																		value="{% if profile.utility_address %}{{profile.utility_address}}{% endif %}"
+																		required>
 																</div>
 															</div>
 														</div>
-													</form>
-													<h5 class="modal-title mb-4" id="staticBackdropLabel">Contact
-														Details</h5>
-													<form class="mb-4 mt-1">
+
+														<h5 class="modal-title mb-4" id="staticBackdropLabel">Contact
+															Details</h5>
+
 														<div class="container-fluid">
 															<div class="row g-3 align-items-center">
 																<div class="col-auto mt-0">
@@ -339,17 +293,23 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="contact_person"
+																		value="{% if profile.contact_person %}{{profile.contact_person}}{% endif %}"
+																		required>
 																</div>
 																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
-																	<label for="state" class="col-form-label">Utility
+																	<label for="state" class="col-form-label">Contact
 																		Email:</label>
 																</div>
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="contact_email"
+																		value="{% if profile.contact_email %}{{profile.contact_email}}{% endif %}"
+																		required>
 																</div>
 																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
@@ -359,7 +319,10 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="contact_phnum"
+																		value="{% if profile.contact_phnum %}{{profile.contact_phnum}}{% endif %}"
+																		required>
 																</div>
 																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
@@ -369,7 +332,10 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="contact_mobile"
+																		value="{% if profile.contact_mobile %}{{profile.contact_mobile}}{% endif %}"
+																		required>
 																</div>
 																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
@@ -379,7 +345,10 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="contact_designation"
+																		value="{% if profile.contact_designation %}{{profile.contact_designation}}{% endif %}"
+																		required>
 																</div>
 																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
@@ -389,14 +358,16 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="contact_landline"
+																		value="{% if profile.contact_landline %}{{profile.contact_landline}}{% endif %}"
+																		required>
 																</div>
 															</div>
 														</div>
-													</form>
-													<h5 class="modal-title mb-4" id="staticBackdropLabel">Emergency
-														Details</h5>
-													<form class="mb-4 mt-1">
+
+														<h5 class="modal-title mb-4" id="staticBackdropLabel">Emergency
+															Details</h5>
 														<div class="container-fluid">
 															<div class="row g-3 align-items-center">
 																<div class="col-auto mt-0">
@@ -406,7 +377,10 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="emergency_person"
+																		value="{% if profile.emergency_person %}{{profile.emergency_person}}{% endif %}"
+																		required>
 																</div>
 																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
@@ -416,7 +390,10 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="emergency_altperson"
+																		value="{% if profile.emergency_altperson %}{{profile.emergency_altperson}}{% endif %}"
+																		required>
 																</div>
 																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
@@ -426,7 +403,10 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="emergency_mobile"
+																		value="{% if profile.emergency_mobile %}{{profile.emergency_mobile}}{% endif %}"
+																		required>
 																</div>
 																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
@@ -436,7 +416,10 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="emergency_altmobile"
+																		value="{% if profile.emergency_altmobile %}{{profile.emergency_altmobile}}{% endif %}"
+																		required>
 																</div>
 																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
@@ -446,7 +429,10 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="emergency_officeaddress"
+																		value="{% if profile.emergency_officeaddress %}{{profile.emergency_officeaddress}}{% endif %}"
+																		required>
 																</div>
 																<div class="w-100 m-0"></div>
 																<div class="col-auto mt-0">
@@ -456,18 +442,21 @@
 																<div class="col mt-0">
 																	<input type="text" id="state"
 																		class="form-control p-2"
-																		aria-describedby="utilitystate">
+																		aria-describedby="utilitystate"
+																		name="emergency_altofficeaddress"
+																		value="{% if profile.emergency_altofficeaddress %}{{profile.emergency_altofficeaddress}}{% endif %}"
+																		required>
 																</div>
 															</div>
 														</div>
-													</form>
-												</div>
+													</div>
 												<div class="modal-footer">
 													<button type="button" class="modal-btn btn btn-secondary"
 														data-bs-dismiss="modal">cancel</button>
-													<button type="button"
-														class="modal-btn btn btn-primary">Save</button>
+													<button class="modal-btn btn btn-primary"
+														type="submit">Save</button>
 												</div>
+													</form>
 											</div>
 										</div>
 									</div>
@@ -485,17 +474,14 @@
 												</div>
 												<div class="modal-body">
 													<div class="text-center">
-														<h6>Update @ admin's plan</h6>
+														<h6>Update user plan</h6>
 													</div>
-													<form>
+													<form
+														action="{% url 'accounts:update-plan' slug=slug userslug=userslug planslug=plan.slug %}"
+														method="post">
+														{% csrf_token %}
 														<div class="mb-3 form-check">
-															<label for="Select" class="form-label mb-0">Update
-																to*</label>
-															<select id="Select" class="form-select">
-																<option>Disabled select</option>
-																<option>Disabled select</option>
-																<option>Disabled select</option>
-															</select>
+															{{updateform|crispy}}
 														</div>
 														<button type="submit"
 															class="ms-4 modal-btn fs-6 btn btn-primary">Update</button>
@@ -520,8 +506,10 @@
 														aria-label="Close"></button>
 												</div>
 												<div class="modal-body">
-													<form class="row g-3">
-														<div class="col-2">
+													<form class="row g-3" action="{% url 'accounts:create-notification' slug=slug %}" method="post" enctype="multipart/form-data">
+														{% csrf_token %}
+														{{ notification_form|crispy }}
+														<!-- <div class="col-2">
 															<label for="select" class="col-form-label">Profile</label>
 														</div>
 														<div class="col-auto">
@@ -571,17 +559,15 @@
 														<div class="col-6">
 															<input type="text" id="url" class="form-control p-2"
 																aria-describedby="utilitystate">
+														</div> -->
+														<div class="modal-footer">
+															<button type="button" class="modal-btn btn btn-secondary"
+																data-bs-dismiss="modal">Close</button>
+																<button type="submit" class="modal-btn btn btn-primary">Save</button>
 														</div>
 													</form>
 												</div>
-												<div class="modal-footer">
-													<button type="button" class="modal-btn btn btn-primary">Save and add
-														another</button>
-													<button type="button" class="modal-btn btn btn-primary">Save and
-														continue editing</button>
-													<button type="button" class="modal-btn btn btn-secondary"
-														data-bs-dismiss="modal">Close</button>
-												</div>
+												
 											</div>
 										</div>
 									</div>
@@ -639,7 +625,7 @@
 									</tr>
 									<tr>
 										<td class="field">Info Updated on :</td>
-										<td><i class="fa fa-mobile fa-lg m-r-5"></i> {{profile.info_updated_at}}</td>
+										<td> {{profile.info_updated_at}}</td>
 									</tr>
 								</tbody>
 							</table>
@@ -652,23 +638,23 @@
 								<tbody>
 									<tr class="field">
 										<td class="field">Utility State :</td>
-										<td>{{ i.utility_state }}</td>
+										<td>{{ profile.utility_state }}</td>
 									</tr>
 									<tr>
 										<td class="field">Utility District :</td>
-										<td>{{ i.utility_district }}</td>
+										<td>{{ profile.utility_district }}</td>
 									</tr>
 									<tr>
 										<td class="field">Utility Country :</td>
-										<td>{{ i.utility_country }}</td>
+										<td>{{ profile.utility_country }}</td>
 									</tr>
 									<tr>
 										<td class="field">Utility Postal Code :</td>
-										<td><i class="fa fa-mobile fa-lg m-r-5"></i> {{ i.utility_postalcode }}</td>
+										<td> {{ profile.utility_postalcode }}</td>
 									</tr>
 									<tr>
 										<td class="field">Utility Address :</td>
-										<td>{{ i.utility_address }}</td>
+										<td>{{ profile.utility_address }}</td>
 									</tr>
 								</tbody>
 							</table>
@@ -681,27 +667,27 @@
 								<tbody>
 									<tr class="field">
 										<td class="field">Emergency Person :</td>
-										<td>{{ i.emergency_person }}</td>
+										<td>{{ profile.emergency_person }}</td>
 									</tr>
 									<tr>
 										<td class="field">Emergency alt person :</td>
-										<td>{{ i.emergency_altperson }}</td>
+										<td>{{ profile.emergency_altperson }}</td>
 									</tr>
 									<tr>
 										<td class="field">Emergency phone no :</td>
-										<td>{{ i.emergency_mobile }}</td>
+										<td><i class="fa fa-mobile fa-lg m-r-5"></i> {{ profile.emergency_mobile }}</td>
 									</tr>
 									<tr>
 										<td class="field">Emergency alt phone no :</td>
-										<td><i class="fa fa-mobile fa-lg m-r-5"></i> {{ i.emergency_altmobile }}</td>
+										<td><i class="fa fa-mobile fa-lg m-r-5"></i> {{ profile.emergency_altmobile }}</td>
 									</tr>
 									<tr>
 										<td class="field">Emergency office Address :</td>
-										<td>{{ i.emergency_officeaddress }}</td>
+										<td>{{ profile.emergency_officeaddress }}</td>
 									</tr>
 									<tr>
 										<td class="field">Emergency alt office Address :</td>
-										<td>{{ i.emergency_altofficeaddress }} </td>
+										<td>{{ profile.emergency_altofficeaddress }} </td>
 									</tr>
 								</tbody>
 							</table>
@@ -714,27 +700,27 @@
 								<tbody>
 									<tr class="field">
 										<td class="field">Contact person :</td>
-										<td>{{ i.contact_person }}</td>
+										<td>{{ profile.contact_person }}</td>
 									</tr>
 									<tr>
 										<td class="field">Contact email :</td>
-										<td>{{ i.contact_email }}</td>
+										<td>{{ profile.contact_email }}</td>
 									</tr>
 									<tr>
 										<td class="field">Contact phone no.:</td>
-										<td>{{ i.contact_phnum }}</td>
+										<td><i class="fa fa-mobile fa-lg m-r-5"></i> {{ profile.contact_phnum }}</td>
 									</tr>
 									<tr>
 										<td class="field">Contact mobile :</td>
-										<td><i class="fa fa-mobile fa-lg m-r-5"></i> {{ i.contact_mobile }}</td>
+										<td><i class="fa fa-mobile fa-lg m-r-5"></i> {{ profile.contact_mobile }}</td>
 									</tr>
 									<tr>
 										<td class="field">Contact designation :</td>
-										<td>{{ i.contact_designation }}</td>
+										<td>{{ profile.contact_designation }}</td>
 									</tr>
 									<tr>
 										<td class="field">Contact landline :</td>
-										<td>{{ i.contact_landline }}</td>
+										<td>{{ profile.contact_landline }}</td>
 									</tr>
 								</tbody>
 							</table>
@@ -814,7 +800,7 @@
 										<td>{{plan}}
 										</td>
 									</tr>
-									
+
 									<tr>
 										<td class="field">Paid status</td>
 										{% if profile.paid %}
@@ -830,9 +816,9 @@
 										{% else %}
 										<td>Expired</td>
 										{% endif %}
-										
+
 									</tr>
-									
+
 								</tbody>
 							</table>
 						</div>

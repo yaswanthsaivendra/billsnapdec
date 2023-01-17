@@ -100,78 +100,13 @@
 
 
             <!-- sidebar start -->
+            {% include "dashsidebar.html" %}
 
             <!-- sidebar -->
-            <div class="left first-sidebar d-none d-md-block col-md-4">
-                <div class="menu-frag d-flex flex-column p-3 ps-4 gap-3">
-                    <div>
-                        <i class='bx bx-grid-alt'></i>
+            
 
-                        <a href="dashboard.html">Dashboard</a>
-                    </div>
-                    <div>
-                        <i class='bx bx-analyse'></i>
-
-                        <a href="estimate.html">Estimates</a>
-                    </div>
-                    <div>
-                        <i class='bx bx-cog'></i>
-
-                        <a href="settings.html">Settings</a>
-                    </div>
-                </div>
-                <hr>
-                <div class="menu-frag mt-3 ps-3">
-                    <h4>Customer</h4>
-                    <div class="customer-frag d-flex flex-column p-3 pt-1 gap-3">
-                        <div>
-                            <i class='bx bx-box'></i>
-
-                            <a href="create.html">Create</a>
-                        </div>
-                        <div>
-                            <i class='bx bx-box'></i>
-                            <a href="customerlist.html" id="active">Customer List</a>
-                        </div>
-                        <div>
-                            <i class='bx bx-log-out'></i>
-                            <a href="bulk.html">Bulk Upload</a>
-                        </div>
-                        <div>
-                            <i class='bx bx-archive-in'></i>
-                            <a href="manage.html">Manage Group</a>
-                        </div>
-                        <div>
-                            <i class='bx bx-bar-chart'></i>
-                            <a href="pending.html">Pending approvals</a>
-                        </div>
-                        <div>
-                            <i class='bx bx-message'></i>
-                            <a href="message.html">Messaging</a>
-                        </div>
-                    </div>
-                </div>
-                <hr>
-                <div class="menu-frag mt-3 ps-3">
-                    <h4>Payments</h4>
-                    <div class="pay-frag d-flex flex-column  p-3 pt-1  gap-3">
-                        <div>
-                            <i class='bx bx-list-ul'></i>
-                            <a href="transcations.html">Transactions </a>
-                        </div>
-
-                        <div>
-                            <i class='bx bx-coin-stack'></i>
-                            <a href="plans.html">Plans</a>
-                        </div>
-                        <div>
-                            <i class='bx bx-heart'></i>
-                            <a href="request.html">Requests</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+                  
+       
             <!-- sidebar finish -->
             <div class="left second"></div>
 
@@ -253,7 +188,7 @@
                                   <td>{{ user.full_name}}</td>
                                   <td>
                                     <button class='bs-primary py-2 px-3' onclick="addCustomerApp(this);"
-                                    value="{{user.user.username}}" url="{% url 'groups:add-member' group.slug %}">
+                                    value="{{user.user.username}}" url="{% url 'groups:add-member' groupslug=group.slug %}">
                                     Add
                                 </button>
                                   </td>
@@ -264,7 +199,7 @@
                           </div>
                         <hr>
                         <form id="group_form" enctype='multipart/form-data' method='POST'
-                            action="{% url 'groups:group' group.slug %}">
+                            action="{% url 'groups:group' slug=slug groupslug=group.slug %}">
                             <h5>Add by Username</h5>
                             {% csrf_token %}
                             {{ form|crispy }}

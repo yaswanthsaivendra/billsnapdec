@@ -269,44 +269,89 @@ from dashboard.forms import *
 from .forms import *
 
 # Create your views here.
-def update_profile(request, slug,appslug):
-    profile = get_object_or_404(Profile, slug=slug)
+def update_profile(request, slug, userslug):
+    profile = get_object_or_404(Profile, slug=userslug)
     if request.method == "POST":
         full_name = request.POST.get('full_name')
-        email = request.POST.get('email')
-        ph_num = request.POST.get('ph_no')
+        status = request.POST.get('status')
+
+        utility_name = request.POST.get('utility_name')
+        utility_short_name = request.POST.get('utility_short_name')
+        utility_state= request.POST.get('utility_state')
+        utility_district = request.POST.get('utility_district')
+        utility_country = request.POST.get('utility_country')
+        utility_postalcode = request.POST.get('utility_postalcode')
+        utility_address = request.POST.get('utility_address')
+        
+        contact_person = request.POST.get('contact_person')
+        contact_email = request.POST.get('contact_email')
+        contact_phnum = request.POST.get('contact_phnum')
+        contact_mobile= request.POST.get('contact_mobile')
+        contact_designation= request.POST.get('contact_designation')
+        contact_landline= request.POST.get('contact_landline')
+
+        emergency_person= request.POST.get('emergency_person')
+        emergency_altperson= request.POST.get('emergency_altperson')
+        emergency_mobile= request.POST.get('emergency_mobile')
+        emergency_altmobile= request.POST.get('emergency_altmobile')
+        emergency_officeaddress= request.POST.get('emergency_officeaddress')
+        emergency_altofficeaddress= request.POST.get('emergency_altofficeaddress')
+
 
         profile.full_name = full_name
-        profile.email = email
-        profile.ph_num = ph_num
+        profile.status = status
+        profile.utility_name = utility_name
+        profile.utility_short_name = utility_short_name
+        profile.utility_state = utility_state
+        profile.utility_district = utility_district
+        profile.utility_country = utility_country
+        profile.utility_postalcode = utility_postalcode
+        profile.utility_address = utility_address
+        profile.contact_person = contact_person
+        profile.contact_email = contact_email
+        profile.contact_phnum = contact_phnum
+        profile.contact_mobile = contact_mobile
+        profile.contact_designation = contact_designation
+        profile.contact_landline = contact_landline
+        profile.emergency_person = emergency_person
+        profile.emergency_altperson = emergency_altperson
+        profile.emergency_mobile = emergency_mobile
+        profile.emergency_altmobile = emergency_altmobile
+        profile.emergency_officeaddress = emergency_officeaddress
+        profile.emergency_altofficeaddress = emergency_altofficeaddress
+
 
         profile.save()
         logger.info(request.user.username+"_ updated profile")
-        return HttpResponseRedirect(reverse('accounts:show-profile', kwargs={'slug':slug ,'appslug':appslug}))
-    else:
-        if request.user == profile.user:
-            return render(request, 'editprofile.html', {'profile': profile,'appslug':appslug})
-        else:
-            return HttpResponse('siggu undali....')
+        messages.success(request, "Profile has been updated")
 
-class UpdateProfile(UpdateView):
-    model = Profile
-    template_name = 'editprofile.html'
-    form_class = ProfileForm
-    success_url = '/'
+        return HttpResponseRedirect(reverse('accounts:show-profile', kwargs={'slug':slug ,'userslug':userslug}))
+
+# class UpdateProfile(UpdateView):
+#     model = Profile
+#     template_name = 'editprofile.html'
+#     form_class = ProfileForm
+#     success_url = '/'
 
 class ShowProfile(DetailView):
     model = Profile
     template_name = 'myprofile.html'
 
+    def get_object(self, *args, **kwargs):
+        return get_object_or_404(Profile,slug = self.kwargs['userslug'])
+
     def get_context_data(self, *args, **kwargs):
         context = super(ShowProfile, self).get_context_data(*args, **kwargs)
-        page_profile = get_object_or_404(Profile, slug=self.kwargs['slug'])
+        page_profile = get_object_or_404(Profile, slug=self.kwargs['userslug'])
         context['profile'] = page_profile
-        context['form'] = UpdateProfilePlanForm(appslug=self.kwargs['appslug'], profile=page_profile)
-        context['plan'] = page_profile.plans.filter(app__slug=self.kwargs['appslug']).first()
+        context['updateform'] = UpdateUserPlanForm(appslug=self.kwargs['slug'])
+        context['plan'] = page_profile.plans.filter(app__slug=self.kwargs['slug']).first()
         context['notification_form'] = NotificationForm()
-        context['appslug'] = self.kwargs['appslug']
+        context['slug'] = self.kwargs['slug']
+        context['userslug'] = self.kwargs['userslug']
+        app = applists.objects.filter(slug=self.kwargs['slug']).first()
+        plans = Plan.objects.filter(app=app)
+        context['plans'] = plans
         if self.request.user==page_profile.user:
             self.template_name = 'myprofile.html'
         elif self.request.user!=page_profile.user or self.request.user.is_anonymous:
@@ -322,6 +367,19 @@ def create_notification(request, slug):
         notification.profile = profile
         notification.url = url
         notification.save(update_fields=['profile', 'url'])
-        return redirect('accounts:show-profile', slug=profile.slug, appslug=slug)
+        return redirect('accounts:show-profile', userslug=profile.slug, slug=slug)
     print(form.errors)
-    return redirect('show_profile', slug=profile.slug, appslug=slug)
+    return redirect('accounts:show-profile', userslug=profile.slug, slug=slug)
+
+def update_plan(request, slug, userslug ,planslug):
+    profile = Profile.objects.get(slug__iexact=userslug)
+    current_plan = Plan.objects.get(slug__iexact=planslug)
+
+    form = UpdateUserPlanForm(request.POST)
+    new_plan = Plan.objects.get(id=request.POST.get('update_to'))
+    profile.plans.remove(current_plan)
+    profile.plans.add(new_plan)
+    profile.plan_active = True
+    profile.save(update_fields=['plans', 'plan_active'])
+    messages.success(request, "Plan has been successfully updated")
+    return redirect('accounts:show-profile', slug=slug, userslug=userslug)
