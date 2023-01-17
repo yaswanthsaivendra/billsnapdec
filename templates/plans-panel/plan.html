@@ -90,7 +90,7 @@
                 <div class="col right create-customer ps-0 pe-4 me-2" id="">
                     <button class=" button button1" data-toggle="modal" data-target="#addcustomers">Add</button>
                     <h2 class="ps-1 pt-3 text-uppercase" id="pspt">{{plan.title}} CUSTOMERS</h2><br>
-                   
+
                     <!-- existing customers table -->
                     <div class="table-responsive my-3">
                         <table class="table table-bordered" id='table_filter'>
@@ -110,13 +110,15 @@
                                     <td>{{ user.contact_email}}</td>
 
                                     <td>
-                                        <button class="bs-primary px-3 py-2"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <button class="bs-primary px-3 py-2" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">
                                             Update Plan
                                         </button>
                                     </td>
 
                                 </tr>
-                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog modal-dialog-centered">
                                         <div class="modal-content">
                                             <div class="modal-header">
@@ -129,15 +131,15 @@
                                                 action="{% url 'update-plan' profileslug=user.slug planslug=plan.slug %}">
                                                 <div class="modal-body">
 
-                                                    
+
                                                     {% csrf_token %}
                                                     {{ update_form|crispy }}
-                                                   
+
 
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="bs-primary bs-secondary py-2 px-3 mx-2"
-                                                    data-bs-dismiss="modal">Close</button>
+                                                        data-bs-dismiss="modal">Close</button>
                                                     <button type="submit" class="bs-primary py-2 px-3">Update</button>
                                                 </div>
                                             </form>
@@ -190,22 +192,74 @@
     <!-- add customer model -->
     <div class="modal fade" id="addcustomers" tabindex="-1" aria-labelledby="addcutomersLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Add Customers to {{plan.title}} </h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Add Customers to {{group.title}}</h5>
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="table-responsive my-3">
+                        <table class="table table-bordered" id='table_filter'>
+                            <thead>
+                                <tr>
+                                    <th>User Name</th>
+                                    <th>Full Name</th>
+
+
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for user in existing_users %}
+                                <tr>
+                                    <td>{{ user.user.username}}</td>
+                                    <td>{{ user.full_name}}</td>
+                                    <td><form class='w3-margin w3-padding' enctype='multipart/form-data'
+                                        method='POST'
+                                        action="{% url 'update-plan' profileslug=user.slug planslug=plan.slug %}">
+                                        <div class="modal-body">
+
+
+                                            {% csrf_token %}
+                                            {{ update_form|crispy }}
+
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="bs-primary bs-secondary py-2 px-3 mx-2"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="bs-primary py-2 px-3">Update</button>
+                                        </div>
+                                    </form>
+
+                                        <!-- <button class='bs-primary py-2 px-3' onclick="addCustomerApp(this);"
+                                            value="{{user.user.username}}"
+                                            url="{% url 'update-plan' profileslug=user.slug planslug=plan.slug %}">
+                                            Add
+                                        </button> -->
+                                    </td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <hr>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="bs-primary bs-secondary px-3 py-2 mx-2"
+                        data-dismiss="modal">Close</button>
+                </div>
+
+
+
+
+
             </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="bs-primary bs-secondary py-2 px-3 mx-2"
-                data-bs-dismiss="modal">Close</button>
-                <button type="button" class="bs-primary py-2 px-3">Update</button>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
+    </div>
 </body>
 
 <script>
@@ -216,6 +270,16 @@
     function showUpdateForm() {
         document.getElementById('form').style.display = "block";
     }
+    function addCustomerApp(obj) {
+        var url = obj.getAttribute('url') + '?username=' + obj.value;
+        $.ajax({
+            type: 'GET',
+            url: url,
+            success: function (resp) {
+                document.location.reload(true);
+            }
+        })
+    } 
 </script>
 
 </html>

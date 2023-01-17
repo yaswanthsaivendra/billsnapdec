@@ -108,25 +108,7 @@
                     <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
                         <div class="row">
                             {% for group in groups %}
-                            {% if group.default_for_customer %}
-                            <div class="col-xl-3 col-sm-6 mb-5">
-                                <div class="card rounded shadow-sm py-3 px-4">
-                                    <div class="top">
-                                        <div>
-                                            <span class="badge badge-success p-2 mt-2 float-right span">Default</span>
-                                        </div>
-                                        <h5>{{group.title}}</h5>
-                                        <p>{{group.description}}</p>
-                                    </div>
-                                   <div class="bottom">
-                                    <a href="{% url 'groups:group' group.slug %}">
-                                        <button class='bs-primary px-3 py-2'>View</button>
-                                    </a>
-                                   </div>
-                                  
-                                </div>
-                            </div>
-                            {% else %}
+                            
                             <div class="col-xl-3 col-sm-6 mb-5">
                                 <div class="card rounded shadow-sm py-4 px-4">
                                     <div class="top">
@@ -137,15 +119,15 @@
                                     <a href="{% url 'groups:group' slug=slug groupslug=group.slug %}">
                                         <button class='bs-primary px-3 py-2'>View</button>
                                     </a>
-                                    <!-- <a href="{% url 'groups:delete-group' group.slug slug %}">
+                                    <a href="{% url 'groups:delete-group' group.slug slug %}">
                                         <button class='bs-primary bs-secondary px-3 py-2'>Delete</button>
-                                    </a> --> 
+                                    </a> 
                                   </div>
                                
                                 </div>
                             </div>
                             
-                            {% endif %}
+                          
                             {% endfor %}
                         </div>
                         
