@@ -71,6 +71,10 @@ def show_plan(request, slug, planslug):
             plan = Plan.objects.filter(slug=planslug).first()
             users = Profile.objects.filter(plans=plan)
             form = SubscribeForm()
+            userprofile = Profile.objects.filter(user=request.user).first()
+            current_plan = userprofile.plans.filter(app = plan.app).first()
+            print(current_plan)
+
             existing_users = Profile.objects.filter(apps=plan.app).exclude(plans=plan)
             payload = {
                 'plan': plan,
@@ -78,7 +82,8 @@ def show_plan(request, slug, planslug):
                 'form': form,
                 'update_form': UpdateUserPlanForm(appslug=slug),
                 'slug': slug,
-                'existing_users' : existing_users
+                'existing_users' : existing_users,
+                'current_plan' : current_plan
             }
             return render(request, 'plans-panel/plan.html', payload)
         
@@ -132,9 +137,10 @@ def update_user_plan(request, profileslug,planslug):
         create_history(user=profile.user, to_plan=new_plan, from_plan=current_plan, upgrade=True)"""
         
 
-def add_to_plan(request, profileslug, planslug, appslug):
-    userprofile = Profile.objects.filter(slug=profileslug).first()
-    app_plans = Plan.objects.filter()
+# def add_to_plan(request, profileslug, planslug, appslug):
+#     userprofile = Profile.objects.filter(slug=profileslug).first()
+#     app_plans = Plan.objects.filter()
+#     upgrade_to_plan = Plan.objects.filter(slug=planslug).first()
     
 
 
