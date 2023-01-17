@@ -145,3 +145,38 @@ accounts.models.Profile.DoesNotExist: Profile matching query does not exist.
 [2023-01-18T00:41:14] WARNING [django.request.log_response:241] Not Found: /apps/helo/dashboard/assets/img/ivancik.jpg
 [2023-01-18T00:41:31] INFO [root.editapp:92] sony_edited an app
 [2023-01-18T00:41:51] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T00:43:10] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/helo/eAyXuhwiGE
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 88, in show_plan
+    return render(request, 'plans-panel/plan.html', payload)
+  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+    return self.render(context)
+  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'update-plan' with keyword arguments '{'profileslug': 'yaswanth', 'planslug': ''}' not found. 1 pattern(s) tried: ['plans/update\\-plan/(?P<profileslug>[^/]+)/(?P<planslug>[^/]+)/\\Z']
