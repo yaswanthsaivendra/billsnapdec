@@ -77,7 +77,16 @@ def deleteapp(request,aslug):
 def remove_user(request, slug, userslug):
     profile = Profile.objects.get(slug=userslug)
     app = applists.objects.get(slug=slug)
+    app_plans = Plan.objects.filter(app=app)
+    for plan in app_plans:
+        if profile.plans.filter(id=plan.id).exists():
+            profile.plans.remove(plan)
+    app_groups = Group.objects.filter(app=app)
+    for group in app_groups:
+        if group.members.filter(id=profile.id).exists():
+            group.members.remove(profile)
     profile.apps.remove(app)
+
 
     return redirect('customerlist', slug=slug)
 
