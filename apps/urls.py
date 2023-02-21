@@ -3,7 +3,8 @@ from . import views
 
 
 urlpatterns = [
-    path('addapp/', views.addapp, name='addapp'),
+    path('addbillingapp/', views.addbillingapp, name='addbillingapp'),
+    path('addnonbillingapp/', views.addnonbillingapp, name='addnonbillingapp'),
     path('editapp/<str:aslug>', views.editapp, name='editapp'),
     path('all/', views.showapps, name='showapps'),
     path('deleteapp/<aslug>',views.deleteapp,name='deleteapp'),

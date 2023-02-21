@@ -19,7 +19,7 @@ logging.basicConfig(
         datefmt='%Y-%m-%dT%H:%M:%S')
 
 @login_required
-def addapp(request):
+def addbillingapp(request):
     applis= applists()
     plan = Plan()
     group = Group()
@@ -49,23 +49,43 @@ def addapp(request):
         plan.default_for_customer=True
         plan.save()
 
-        
-
-
-
-        logger.info(request.user.username+"_added an app")
+        logger.info(request.user.username+"_added an billing app")
         return redirect('showapps')
     else:
-        return render(request, 'applist.html')
+        return render(request, 'addbillingapp.html')
+
+
+
+@login_required
+def addnonbillingapp(request):
+    applis= applists()
+
+    if request.method=='POST':
+        app_name = request.POST.get('app_name')
+        app_im= request.FILES.get('app_im')
+
+
+        auth=request.user
+
+        applis.appname=app_name
+        applis.appimg= app_im
+        applis.author= auth
+        applis.is_billing = False
+        applis.save()
+        logger.info(request.user.username+"_added an non billing app")
+        return redirect('showapps')
+    else:
+        return render(request, 'addnonbillingapp.html')
+
 
 from django.contrib import messages
 @login_required
 def showapps(request):
-    appli=applists.objects.all()
-    leni=len(appli)
+    billingappli=applists.objects.all()
+    leni=len(billingappli)
     mssg="logged in sucessfully"
     logger.info(request.user.username+"_seen the whole applist")
-    return render(request,'showapps.html',{'showapp':appli,'leni':leni,'msg':mssg})
+    return render(request,'showapps.html',{'showapp':billingappli,'leni':leni,'msg':mssg})
 
 @login_required
 def deleteapp(request,aslug):
