@@ -17,6 +17,8 @@
     href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="{% static 'dashboard/styles.css' %}" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+	<!-- <link rel="stylesheet" href="{% static 'assets/styles.css'%}"> -->
    </head>
 <body>
   <header>
@@ -32,8 +34,32 @@
           <h4 class="text-dark">Billsnap</h4>
         </a>
         <div class="d-flex ms-auto gap-4 pe-3">
-          <i class="fa-regular fa-bell"></i>
+          <div class="btn-group dropstart">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="fa-regular fa-bell"></i>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end mt-4">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+          <div class="btn-group dropstart">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
           <i class="fa-regular fa-user"></i>
+
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end mt-4">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Separated link</a></li>
+            </ul>
+          </div>
+
         </div>
       </div>
     </nav>
@@ -77,6 +103,369 @@
           <button class="btn btn-primary ms-3"><a class="text-decoration-none text-white" href="">Get
               Support</a></button>
         </div>
+        
+        </div>
+        <div class="col-md-7  flex-md-fill m-3">
+          {% include 'messages.html' %}
+  
+          <div class="col right create-customer ps-0 pe-4 me-2" id="">
+  
+  
+            <div class="profile">
+              <div class="profile-header">
+                <!-- BEGIN profile-header-cover -->
+  
+                <!-- END profile-header-cover -->
+                <!-- BEGIN profile-header-content -->
+                <div class="profile-header-content d-flex">
+                  <!-- BEGIN profile-header-img -->
+                  <div class="flex-fill flex-start">
+                   
+                    <!-- END profile-header-img -->
+                    <!-- BEGIN profile-header-info -->
+                    <div class="profile-header-info">
+                      <h4 class="m-t-10 m-b-5" style="color: black;">{{profile.user.username}} </h4>
+                      <!-- <p class="m-b-10" style="color: black;">Edit Profile</p>
+                      <p></p> -->
+                    </div>
+                    <!-- END profile-header-info -->
+                  </div>
+                 
+                  </div>
+                  <!-- END profile-header-tab -->
+                </div>
+              </div>
+              <!-- END profile-header-content -->
+            </div>
+            <!-- end profile -->
+            <!-- begin profile-content -->
+            <div class="profile-content">
+              <!-- begin tab-content -->
+              <div class="tab-content p-0">
+  
+                <!-- begin #profile-about tab -->
+                <div class="tab-pane fade in active show" id="profile-about">
+                  <!-- begin table -->
+                  <div class="tab">
+                    <button class="tablinks py-2 px-3 btn btn-light" onclick="openCity(event, 'London')"
+                      id="defaultOpen">Utility Details</button>
+                    <!-- <button class="tablinks" onclick="openCity(event, 'Paris')">Personal
+                      Details</button>
+                    -->
+                  </div>
+                </div>
+                <!-- end #profile-about tab -->
+              </div>
+              <!-- end tab-content -->
+            </div>
+            <!-- end profile-content -->
+            <div id="London" class="tabcontent">
+  
+              <!-- begin table -->
+              <div class="table-responsive">
+                <table class="table table-profile">
+                  <thead>
+                    <td>
+                      <h6>Basic Details</h6>
+                    </td>
+                  </thead>
+                  <tbody>
+                    <tr class="field">
+                      <td class="field">User name :</td>
+                      <td>{{profile.user.username}}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Full name :</td>
+                      <td>{{profile.full_name}}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Status :</td>
+                      <td>{{profile.status}}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Info Updated on :</td>
+                      <td> {{profile.info_updated_at}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table table-profile">
+                  <thead>
+                    <td>
+                      <h6>Utility Details</h6>
+                    </td>
+                  </thead>
+                  <tbody>
+                    <tr class="field">
+                      <td class="field">Utility State :</td>
+                      <td>{{ profile.utility_state }}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Utility District :</td>
+                      <td>{{ profile.utility_district }}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Utility Country :</td>
+                      <td>{{ profile.utility_country }}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Utility Postal Code :</td>
+                      <td> {{ profile.utility_postalcode }}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Utility Address :</td>
+                      <td>{{ profile.utility_address }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table table-profile">
+                  <thead>
+                    <td>
+                      <h6>Emergency Details</h6>
+                    </td>
+                  </thead>
+                  <tbody>
+                    <tr class="field">
+                      <td class="field">Emergency Person :</td>
+                      <td>{{ profile.emergency_person }}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Emergency alt person :</td>
+                      <td>{{ profile.emergency_altperson }}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Emergency phone no :</td>
+                      <td><i class="fa fa-mobile fa-lg m-r-5"></i> {{ profile.emergency_mobile }}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Emergency alt phone no :</td>
+                      <td><i class="fa fa-mobile fa-lg m-r-5"></i> {{ profile.emergency_altmobile }}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Emergency office Address :</td>
+                      <td>{{ profile.emergency_officeaddress }}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Emergency alt office Address :</td>
+                      <td>{{ profile.emergency_altofficeaddress }} </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table class="table table-profile">
+                  <thead>
+                    <td>
+                      <h6>Contact Details</h6>
+                    </td>
+                  </thead>
+                  <tbody>
+                    <tr class="field">
+                      <td class="field">Contact person :</td>
+                      <td>{{ profile.contact_person }}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Contact email :</td>
+                      <td>{{ profile.contact_email }}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Contact phone no.:</td>
+                      <td><i class="fa fa-mobile fa-lg m-r-5"></i> {{ profile.contact_phnum }}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Contact mobile :</td>
+                      <td><i class="fa fa-mobile fa-lg m-r-5"></i> {{ profile.contact_mobile }}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Contact designation :</td>
+                      <td>{{ profile.contact_designation }}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Contact landline :</td>
+                      <td>{{ profile.contact_landline }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+  
+            <div id="Paris" class="tabcontent">
+              <!-- begin table -->
+              <div class="table-responsive">
+                <table class="table table-profile">
+                  <tbody>
+                    <tr class="">
+                      <td class="field">Name</td>
+                      <td>{{profile.full_name}}</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Mobile</td>
+                      <td><i class="fa fa-mobile fa-lg m-r-5"></i> +1-(847)- 367-8924</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Home</td>
+                      <td>Add Number</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Office</td>
+                      <td>Add Number</td>
+                    </tr>
+                    <tr class="">
+                      <td class="field">About Me</td>
+                      <td>Add Description</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Country/Region</td>
+                      <td>Asia
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="field">City</td>
+                      <td>Los Angeles</td>
+                    </tr>
+                    <tr>
+                      <td class="field">State</td>
+                      <td>Add State</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Website</td>
+                      <td>Add Webpage</td>
+                    </tr>
+                    <tr>
+                      <td class="field">Gender</td>
+                      <td>Female
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="field">Birthdate</td>
+                      <td>05 may 2001
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="field">Language</td>
+                      <td>English
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+  
+            <div id="Tokyo" class="tabcontent">
+  
+              <!-- begin table -->
+              <div class="table-responsive">
+                <table class="table table-profile">
+                  <tbody>
+                    <tr>
+                      <td class="field">plan</td>
+                      <td>{{plan}}
+                      </td>
+                    </tr>
+  
+                    <tr>
+                      <td class="field">Paid status</td>
+                      {% if profile.paid %}
+                      <td>Paid</td>
+                      {% else %}
+                      <td>Not Paid</td>
+                      {% endif %}
+                    </tr>
+                    <tr>
+                      <td class="field">Active status</td>
+                      {% if profile.plan_active %}
+                      <td>Active</td>
+                      {% else %}
+                      <td>Expired</td>
+                      {% endif %}
+  
+                    </tr>
+  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+  
+            <div id="Canada" class="tabcontent">
+  
+              <!-- begin table -->
+              <div class="table-responsive">
+                <table class="table table-profile">
+                  <tbody>
+                    <tr class="field">
+                      <td class="field">12:39 PM</td>
+                      <td>Learning and development</td>
+                      <td class="text-end pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                          height="16" fill="currentColor" class="bi bi-three-dots-vertical"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg></td>
+                    </tr>
+                    <tr>
+                      <td class="field">12:39 PM</td>
+                      <td>Learning and development</td>
+                      <td class="text-end pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                          height="16" fill="currentColor" class="bi bi-three-dots-vertical"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg></td>
+                    </tr>
+                    <tr>
+                      <td class="field">12:39 PM</td>
+                      <td>Learning and development</td>
+                      <td class="text-end pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                          height="16" fill="currentColor" class="bi bi-three-dots-vertical"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg></td>
+                    </tr>
+                    <tr>
+                      <td class="field">12:39 PM</td>
+                      <td>Learning and development</td>
+                      <td class="text-end pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                          height="16" fill="currentColor" class="bi bi-three-dots-vertical"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg></td>
+                    </tr>
+                    <tr>
+                      <td class="field">12:39 PM</td>
+                      <td>Learning and development</td>
+                      <td class="text-end pe-3"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                          height="16" fill="currentColor" class="bi bi-three-dots-vertical"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <script>
+              function openCity(evt, cityName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                  tabcontent[i].style.display = "none";
+                }
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                  tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+              }
+              // Get the element with id="defaultOpen" and click on it
+              document.getElementById("defaultOpen").click();
+            </script>
+  
+  
+  
+  
+          </div>
       </div>
+
 </body>
 </html>
