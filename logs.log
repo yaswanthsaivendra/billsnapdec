@@ -191,3 +191,185 @@ Traceback (most recent call last):
   File "C:\Users\NEHA\AppData\Local\Programs\Python\Python310\lib\genericpath.py", line 152, in _check_arg_types
     raise TypeError(f'{funcname}() argument must be str, bytes, or '
 TypeError: join() argument must be str, bytes, or os.PathLike object, not 'dict'
+[2023-02-21T18:55:26] WARNING [django.request.log_response:241] Not Found: /apps/
+[2023-02-21T18:55:31] WARNING [django.request.log_response:241] Not Found: /apps/
+[2023-02-21T18:55:33] WARNING [django.request.log_response:241] Not Found: /apps/
+[2023-02-21T18:55:38] INFO [root.showapps:67] vendra_seen the whole applist
+[2023-02-21T19:02:00] WARNING [django.request.log_response:241] Not Found: /customerdash/
+[2023-02-21T19:09:46] INFO [root.showapps:67] vendra_seen the whole applist
+[2023-02-21T19:10:51] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:15:05] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:15:14] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:15:29] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:15:32] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:15:46] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/urls.py changed, reloading.
+[2023-02-21T19:15:49] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/urls.py changed, reloading.
+[2023-02-21T19:15:52] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/urls.py changed, reloading.
+[2023-02-21T19:15:56] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/urls.py changed, reloading.
+[2023-02-21T19:16:13] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/urls.py changed, reloading.
+[2023-02-21T19:16:17] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/urls.py changed, reloading.
+[2023-02-21T19:16:20] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/urls.py changed, reloading.
+[2023-02-21T19:17:24] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:17:30] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:17:38] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:17:42] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:17:46] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:17:51] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:17:54] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:17:58] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:18:00] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:18:09] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:19:19] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:19:27] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:19:32] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:19:35] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:19:38] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:19:41] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:19:48] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:20:42] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:20:44] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:20:49] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:21:11] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:21:23] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:21:29] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:21:34] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:23:18] ERROR [django.request.log_response:241] Internal Server Error: /apps/all/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 84, in showapps
+    billingappli=applists.objects.all(is_billing=True)
+TypeError: BaseManager.all() got an unexpected keyword argument 'is_billing'
+[2023-02-21T19:23:40] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:23:44] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:23:45] ERROR [django.request.log_response:241] Internal Server Error: /apps/all/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 84, in showapps
+    billingappli=applists.objects.all.filter(is_billing=True)
+AttributeError: 'function' object has no attribute 'filter'
+[2023-02-21T19:24:00] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:24:01] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:24:03] INFO [root.showapps:89] vendra_seen the whole applist
+[2023-02-21T19:24:05] ERROR [django.request.log_response:241] Internal Server Error: /apps/addbillingapp/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 55, in addbillingapp
+    return render(request, 'addbillingapp.html')
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'addapp' not found. 'addapp' is not a valid view function or pattern name.
+[2023-02-21T19:25:10] ERROR [django.request.log_response:241] Internal Server Error: /apps/addbillingapp/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 55, in addbillingapp
+    return render(request, 'addbillingapp.html')
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'addapp' not found. 'addapp' is not a valid view function or pattern name.
+[2023-02-21T19:25:58] ERROR [django.request.log_response:241] Internal Server Error: /apps/addbillingapp/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 55, in addbillingapp
+    return render(request, 'addbillingapp.html')
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'addapp' not found. 'addapp' is not a valid view function or pattern name.
+[2023-02-21T19:29:31] INFO [root.addbillingapp:52] vendra_added an billing app
+[2023-02-21T19:29:31] INFO [root.showapps:89] vendra_seen the whole applist
+[2023-02-21T19:29:41] INFO [root.addnonbillingapp:75] vendra_added an non billing app
+[2023-02-21T19:29:41] INFO [root.showapps:89] vendra_seen the whole applist
+[2023-02-21T19:30:03] INFO [root.addnonbillingapp:75] vendra_added an non billing app
+[2023-02-21T19:30:03] INFO [root.showapps:89] vendra_seen the whole applist
+[2023-02-21T19:31:03] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:31:36] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:31:37] INFO [root.showapps:87] vendra_seen the whole applist
+[2023-02-21T19:31:38] INFO [root.showapps:87] vendra_seen the whole applist
+[2023-02-21T19:31:50] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:31:54] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-02-21T19:31:55] INFO [root.showapps:87] vendra_seen the whole applist
+[2023-02-21T19:32:11] WARNING [django.request.log_response:241] Not Found: /apps/wtf/dashboard/assets/img/ivancik.jpg

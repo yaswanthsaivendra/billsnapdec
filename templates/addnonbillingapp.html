@@ -31,22 +31,25 @@
     <link rel="stylesheet" href="{% static 'w3.css' %}" />
 </head>
 <style>
-    .row{
-        display:flex;
+    .row {
+        display: flex;
         align-items: center;
-        justify-content:center;
+        justify-content: center;
         margin-bottom: 20px !important;
 
     }
-    .container{
-        max-width:800px !important;
-        
+
+    .container {
+        max-width: 800px !important;
+
     }
-    .app-form-container{
-        max-width:700px;
+
+    .app-form-container {
+        max-width: 700px;
     }
-    button{
-        float:right;
+
+    button {
+        float: right;
     }
 </style>
 
@@ -60,50 +63,25 @@
         <div class="container">
             <div class="row">
                 <div class="app-form-container">
-                    <form method="POST" action="{% url 'addapp' %}" enctype="multipart/form-data">
+                    <form method="POST" action="{% url 'addnonbillingapp' %}" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="form-group my-3">
-                            <label for="app name" >App Name</label>
-                            <input type="input" class="form-control my-2" placeholder="enter app name" name="app_name" id="app_name"
-                                required />
+                            <label for="app name">App Name</label>
+                            <input type="input" class="form-control my-2" placeholder="enter app name" name="app_name"
+                                id="app_name" required />
                         </div>
                         <div class="form-group my-3">
                             <label for="app_img" class="form__label">App image</label>
                             <input type="file" class="form-control my-2" name="app_im" id="app_im" required />
                         </div>
-                        <div class="form-group my-3">
-                            <label for="plan_name" class="form__label">Default Plan Name</label>
-                            <input type="input" class="form-control my-2" placeholder="enter Defualt Plan name" name="plan_name"
-                                id="plan_name" required />
+                        <div class="btn-container">
+                            <button type="submit" class="b-primary mt-2">Save</button>
                         </div>
-                        <div class="form-group my-3">
-                            <label for="price" class="form__label">Default Plan Price</label>
-                            <input type="number" class="form-control my-2" placeholder="Enter price" name="price" id="price"
-                                required />
-                        </div>
-                       <div class="form-group my-3">
-                        <label for="description" class="form__label">Default Plan Description</label>
-                        <textarea class="form-control my-2" name="description" id="description" required></textarea>
-                       </div>
-                       <div class="form-group my-3">
-                        <label for="duration" class="form__label">Default Plan duration</label>
-    
-                        <select name="duration" id="duration" class="form-control my-2">
-                            <option value="30">1 Month</option>
-                            <option value="180">6 Months</option>
-                            <option value="364">1 Year</option>
-                        </select>
-                       </div>
-    
-                    
-    <div class="btn-container">
-        <button type="submit" class="b-primary mt-2">Save</button>
-    </div>
-                      
-    
+
+
                     </form>
                 </div>
-                
+
 
             </div>
         </div>
