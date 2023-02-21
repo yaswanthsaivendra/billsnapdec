@@ -28,7 +28,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static 'assets/styles.css'%}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
 </head>
+<style>
+    .bgsecondary {
+        background-color: #dddddd78;
+    }
+    .noti-img{
+        width: 40px;
+        height: 40px;
+        border-radius:100%;
+    }
+</style>
 
 <body>
 
@@ -78,30 +90,8 @@
             <div class="col-md-7 flex-md-fill">
                 <div class="col right" id="customer-list">
                     <h2 class="ps-1 pt-3" id="pspt">Messaging</h2><br>
-                    <button id="show" class="button button1 ">Filter</button>
-                    <dialog id="myFirstDialog" class="first">
-
-                        <div class="topnav">
-
-                            <div class="search-container">
-
-                                <button id="hide" class="b-primary b-secondary button3 p-2 px-3">x</button>
-                                <h4>Status</h4>
-                                <a href="javascript:void(0)" id="failedList"><button class="b-primary b-secondary"><i
-                                            class="fa fa-external-link" aria-hidden="true"></i> False </button></a>
-                                <a href="javascript:void(0)" id="passedList"><button class="b-primary b-secondary"><i
-                                            class="fa fa-external-link" aria-hidden="true"></i> True </button></a>
-
-                            </div>
-
-                        </div>
-                        <br>
-
-                    </dialog>
-                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."
-                        title="Type in a name">
-
-                    <div class="table-responsive my-3">
+                    
+                    <div class="mb-3">
                         <table class="table table-bordered" id='table_filter'>
                             <thead>
                                 <tr>
@@ -119,16 +109,38 @@
                                     <td>{{ i.full_name}}</td>
                                     <td>{{ i.contact_email}}</td>
                                     <td>
-                                        <a class='w3-button w3-small w3-round w3-green' href="{% url 'notify' slug=slug profile_slug=i.slug %}">View</a>
+                                        <a class='w3-button w3-small w3-round w3-red' data-bs-toggle="modal"
+                                        data-bs-target="#view">View</a>
+                                                               <!-- view modal-->
+                        <div class="modal fade" id="view" 
+                        tabindex="-1"  aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">{{i.user}} Notifications</h5>
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="bgsecondary p-3 my-3 rounded text-secondary d-flex align-items-center">
+                                        <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80" alt="" class="noti-img">
+                                        <p class="px-3 py-0 m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos libero fugiat delectus necessitat</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                                     </td>
                                     <td>
                                         <a class='w3-button w3-small w3-round w3-red' data-bs-toggle="modal"
                                             data-bs-target="#staticBackdrop2">
                                             Notify</a>
                                             <!-- Notify modal-->
-                        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false"
-                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
+                        <div class="modal fade" id="staticBackdrop2" 
+                        tabindex="-1"  aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="staticBackdropLabel">Add Notification
@@ -194,9 +206,9 @@
                                                             aria-describedby="utilitystate">
                                                     </div> -->
                                         <div class="modal-footer">
-                                            <button type="button" class="modal-btn btn btn-secondary"
+                                            <button type="button" class="bs-primary bs-secondary mx-3 px-3 py-2"
                                                 data-bs-dismiss="modal">Close</button>
-                                            <button type="submit" class="modal-btn btn btn-primary">Save</button>
+                                            <button type="submit" class="bs-primary px-3 py-2">Save</button>
                                         </div>
                                     </form>
                                 </div>
@@ -215,19 +227,7 @@
                     </div>
 
                     <br>
-                    <div class="demo1">
-                        <div class="demo">
-                            <a href="#">&laquo;</a>
-                            <a href="#" class="active">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
-                            <a href="#">6</a>
-                            <a href="#">&raquo;</a>
-
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -247,5 +247,10 @@
 
 
 </body>
+<script>
+    $(document).ready( function () {
+    $('#table_filter').DataTable();
+} );
+</script>
 
 </html>
