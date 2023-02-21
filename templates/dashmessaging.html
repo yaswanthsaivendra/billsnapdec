@@ -103,11 +103,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {% for i in details %}
+                                {% for i in details.values %}
                                 <tr>
-                                    <td>{{ i.user}}</td>
-                                    <td>{{ i.full_name}}</td>
-                                    <td>{{ i.contact_email}}</td>
+                                    <td>{{ i.detail.user}}</td>
+                                    <td>{{ i.detail.full_name}}</td>
+                                    <td>{{ i.detail.contact_email}}</td>
                                     <td>
                                         <a class='w3-button w3-small w3-round w3-red' data-bs-toggle="modal"
                                         data-bs-target="#view">View</a>
@@ -117,16 +117,18 @@
                         <div class="modal-dialog modal-lg modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="staticBackdropLabel">{{i.user}} Notifications</h5>
+                                    <h5 class="modal-title" id="staticBackdropLabel">{{i.detail.user}} Notifications</h5>
                                     </h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
+                                    {% for notification in i.notifications %}
                                     <div class="bgsecondary p-3 my-3 rounded text-secondary d-flex align-items-center">
-                                        <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80" alt="" class="noti-img">
-                                        <p class="px-3 py-0 m-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos libero fugiat delectus necessitat</p>
+                                        <img src="{{ notification.image.url }}" alt="" class="noti-img">
+                                        <p class="px-3 py-0 m-0">{{ notification.body }}</p>
                                     </div>
+                                    {% endfor %}
                                 </div>
 
                             </div>
@@ -150,7 +152,8 @@
                                 </div>
                                 <div class="modal-body">
                                     <form class="row g-3"
-                                        action="{% url 'notify' slug=slug profile_slug=i.slug %}" method="post"
+                                        action="{% url 'notify' slug=slug profile_slug=i.detail.slug %}" method="post"
+                                         
                                         enctype="multipart/form-data">
                                         {% csrf_token %}
                                         {{ notification_form|crispy }}
