@@ -1,0 +1,109 @@
+[2023-02-21T17:04:32] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2023-02-21T17:04:39] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2023-02-21T17:05:40] ERROR [django.request.log_response:241] Internal Server Error: /account/register/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\views\generic\base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\views\generic\base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "D:\yash\billsnap\billsnapdec\accounts\views.py", line 92, in post
+    email.send(fail_silently=False)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\mail\message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\mail\backends\smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\mail\backends\smtp.py", line 80, in open
+    self.connection = self.connection_class(
+  File "C:\Users\NEHA\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 255, in __init__
+    (code, msg) = self.connect(host, port)
+  File "C:\Users\NEHA\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 343, in connect
+    (code, msg) = self.getreply()
+  File "C:\Users\NEHA\AppData\Local\Programs\Python\Python310\lib\smtplib.py", line 405, in getreply
+    raise SMTPServerDisconnected("Connection unexpectedly closed")
+smtplib.SMTPServerDisconnected: Connection unexpectedly closed
+[2023-02-21T17:07:41] INFO [root.showapps:67] maa_seen the whole applist
+[2023-02-21T17:07:55] WARNING [django.request.log_response:241] Not Found: /apps/helo/dashboard/assets/img/ivancik.jpg
+[2023-02-21T17:07:59] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:24:26] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:24:30] ERROR [django.request.log_response:241] Internal Server Error: /account/helo/js/create.js
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\accounts\views.py", line 375, in update_plan
+    profile = Profile.objects.get(slug__iexact=userslug)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+accounts.models.Profile.DoesNotExist: Profile matching query does not exist.
+[2023-02-21T17:25:11] ERROR [django.request.log_response:241] Internal Server Error: /account/helo/js/create.js
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\accounts\views.py", line 375, in update_plan
+    profile = Profile.objects.get(slug__iexact=userslug)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+accounts.models.Profile.DoesNotExist: Profile matching query does not exist.
+[2023-02-21T17:27:34] INFO [root.showapps:67] kim_seen the whole applist
+[2023-02-21T17:28:41] ERROR [django.request.log_response:241] Internal Server Error: /account/helo/js/create.js
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\billsnapdec\accounts\views.py", line 375, in update_plan
+    profile = Profile.objects.get(slug__iexact=userslug)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 650, in get
+    raise self.model.DoesNotExist(
+accounts.models.Profile.DoesNotExist: Profile matching query does not exist.
+[2023-02-21T18:05:09] ERROR [django.request.log_response:241] Internal Server Error: /apps/helo/bulkupload/
+Traceback (most recent call last):
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "D:\yash\billsnap\billsnapdec\dashboard\views.py", line 172, in bulk_upload
+    df=pd.read_csv(csvfile)
+  File "D:\yash\billsnap\env\lib\site-packages\pandas\util\_decorators.py", line 211, in wrapper
+    return func(*args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\pandas\util\_decorators.py", line 331, in wrapper
+    return func(*args, **kwargs)
+  File "D:\yash\billsnap\env\lib\site-packages\pandas\io\parsers\readers.py", line 950, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "D:\yash\billsnap\env\lib\site-packages\pandas\io\parsers\readers.py", line 605, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "D:\yash\billsnap\env\lib\site-packages\pandas\io\parsers\readers.py", line 1442, in __init__
+    self._engine = self._make_engine(f, self.engine)
+  File "D:\yash\billsnap\env\lib\site-packages\pandas\io\parsers\readers.py", line 1753, in _make_engine
+    return mapping[engine](f, **self.options)
+  File "D:\yash\billsnap\env\lib\site-packages\pandas\io\parsers\c_parser_wrapper.py", line 79, in __init__
+    self._reader = parsers.TextReader(src, **kwds)
+  File "pandas\_libs\parsers.pyx", line 547, in pandas._libs.parsers.TextReader.__cinit__
+  File "pandas\_libs\parsers.pyx", line 664, in pandas._libs.parsers.TextReader._get_header
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0xff in position 0: invalid start byte
+[2023-02-21T18:13:46] INFO [root.showapps:67] maa_seen the whole applist
+[2023-02-21T18:13:50] WARNING [django.request.log_response:241] Not Found: /apps/helo/dashboard/assets/img/ivancik.jpg
+[2023-02-21T18:13:53] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T23:23:37] INFO [root.showapps:67] maa_seen the whole applist
+[2023-02-21T23:23:42] WARNING [django.request.log_response:241] Not Found: /apps/helo/dashboard/assets/img/ivancik.jpg
+[2023-02-21T23:23:46] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T23:32:33] WARNING [django.request.log_response:241] Not Found: /apps/helo
+[2023-02-21T23:32:38] WARNING [django.request.log_response:241] Not Found: /apps
+[2023-02-21T23:32:48] INFO [root.showapps:67] maa_seen the whole applist
+[2023-02-21T23:32:56] WARNING [django.request.log_response:241] Not Found: /apps/helo/dashboard/assets/img/ivancik.jpg
+[2023-02-21T23:45:43] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png

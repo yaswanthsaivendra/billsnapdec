@@ -96,52 +96,7 @@
     </script>
 
 
-<script>
-    function myFunction() {
-      var input, filter, table, tr, td, i, txtValue;
-      input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
-      table = document.getElementById("table_filter");
-      tr = table.getElementsByTagName("tr");
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
-        if (td) {
-          txtValue = td.textContent || td.innerText;
-          if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
-          }
-        }       
-      }
-    }
-    </script>
 
-
-
-<script>
-    "use strict";
-let leftie = document.querySelector('.left')
-let menuh = document.querySelector('.menu')
-let closeh = document.querySelector('.close')
-let right = document.querySelector('.right')
-
-
-menuh.addEventListener('click', function () {
-  menuh.classList.toggle('d-none')
-  closeh.classList.toggle('d-none')
-  leftie.classList.toggle('d-none')
-  right.classList.toggle('overlay')
-
-})
-closeh.addEventListener('click', function () {
-  menuh.classList.toggle('d-none')
-  closeh.classList.toggle('d-none')
-  leftie.classList.toggle('d-none')
-  right.classList.toggle('overlay')
-
-})
-</script>
 
 
 

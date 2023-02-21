@@ -28,6 +28,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static 'assets/styles.css'%}">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
 </head>
 <style>
     .row {
@@ -91,7 +93,7 @@
                     <h2 class="ps-1 pt-3 text-uppercase" id="pspt">{{plan.title}} CUSTOMERS</h2><br>
                    
                     <!-- existing customers table -->
-                    <div class="table-responsive my-3">
+                    <div class=" my-3">
                         <table class="table table-bordered" id='table_filter'>
                             <thead>
                                 <tr>
@@ -116,20 +118,7 @@
 
                     </div>
 
-                    <!-- pagination -->
-                    <div class="demo1">
-                        <div class="demo">
-                            <a href="#">&laquo;</a>
-                            <a href="#" class="active">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#">4</a>
-                            <a href="#">5</a>
-                            <a href="#">6</a>
-                            <a href="#">&raquo;</a>
-
-                        </div>
-                    </div>
+                  
                 </div>
             </div>
         </div>
@@ -137,7 +126,11 @@
     </div>
     
 </body>
-
+<script>
+    $(document).ready( function () {
+    $('#table_filter').DataTable();
+} );
+</script>
 <script>
     function showForm() {
         document.getElementById('plan_form').style.display = "block";

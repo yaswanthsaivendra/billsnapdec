@@ -29,6 +29,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static 'assets/styles.css'%}">
     <link rel="stylesheet" href="{% static 'w3.css' %}" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
 </head>
 
 <body class="w3-padding">
@@ -64,12 +66,8 @@
                     <br>
 
                 </dialog>
-                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."
-                    title="Type in a name">
-
-
                 <!-- table -->
-                <div class="table-responsive my-3">
+                <div class=" my-3">
                     <table class="table table-bordered" id='table_filter'>
                         <thead>
                             <tr>
@@ -261,5 +259,10 @@
     </script>
 
 </body>
+<script>
+    $(document).ready( function () {
+    $('#table_filter').DataTable();
+} );
+</script>
 
 </html>

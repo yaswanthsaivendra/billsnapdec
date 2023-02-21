@@ -27,6 +27,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="{% static 'assets/styles.css'%}">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
+  <style>
+    .first{
+      z-index: 100;
+    }
+  </style>
 </head>
 
 <body>
@@ -40,11 +47,14 @@
 
       <div class="col-md-7 flex-md-fill">
         <div class="col right" id="customer-list">
-          <h2 class="ps-1 pt-3" id="pspt">MY CUSTOMER</h2><br>
-          <button id="show" class="button button1 ">Filter</button>
+          <div class="d-flex align-items-center justify-content-between">
+            <h2 class="ps-1 pt-3" id="pspt">MY CUSTOMER</h2><br>
+            <button id="show" class="button button1 ">Filter</button>
+          </div>
+          
           <dialog id="myFirstDialog" class="first">
 
-            <div class="topnav">
+            <div class="topnav ">
 
               <div class="search-container">
 
@@ -61,11 +71,10 @@
             <br>
 
           </dialog>
-          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."
-            title="Type in a name">
+        
             
-          <div class="table-responsive my-3">
-            <table class="table table-bordered" id='table_filter'>
+          <div class="my-3 w-100">
+            <table class="table table-bordered w-100" id='table_filter'>
               <thead>
                 <tr>
                   <th>User Name</th>
@@ -99,26 +108,18 @@
           </div>
 
           <br>
-          <div class="demo1">
-            <div class="demo">
-              <a href="#">&laquo;</a>
-              <a href="#" class="active">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>
-              <a href="#">6</a>
-              <a href="#">&raquo;</a>
-
-            </div>
-          </div>
         </div>
       </div>
     </div>
 
 
   </div>
-
+ 
+  <script>
+    $(document).ready( function () {
+    $('#table_filter').DataTable();
+} );
+</script>
   <script>
     function myFunction() {
       var input, filter, table, tr, td, i, txtValue;

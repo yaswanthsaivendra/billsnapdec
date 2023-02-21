@@ -29,6 +29,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="{% static 'assets/styles.css'%}">
     <link rel="stylesheet" href="{% static 'w3.css' %}" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" ></script>
 </head>
 <style>
     .first-sidebar {
@@ -117,7 +119,7 @@
                     <h2 class="ps-1 pt-3 text-uppercase" id="pspt">{{group}} Customers</h2><br>
 
                     <!-- table -->
-                    <div class="table-responsive my-3">
+                    <div class="my-3">
                         <table class="table table-bordered" id='table_filter'>
                           <thead>
                             <tr>
@@ -139,20 +141,7 @@
                           </tbody>
                         </table>
                       </div>
-                      <!-- pagination -->
-                      <div class="demo1">
-                        <div class="demo">
-                          <a href="#">&laquo;</a>
-                          <a href="#" class="active">1</a>
-                          <a href="#">2</a>
-                          <a href="#">3</a>
-                          <a href="#">4</a>
-                          <a href="#">5</a>
-                          <a href="#">6</a>
-                          <a href="#">&raquo;</a>
-            
-                        </div>
-                      </div>
+                    
                     
                 </div>
             </div>
@@ -161,7 +150,7 @@
         <!-- add group model -->
         <div class="modal fade" id="addcustomer" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
             aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLongTitle">Add Customers to {{group.title}}</h5>
@@ -170,7 +159,7 @@
                     <div class="modal-body">
                         
                         <div class="table-responsive my-3">
-                            <table class="table table-bordered" id='table_filter'>
+                            <table class="table table-bordered" id='table_filter2'>
                               <thead>
                                 <tr>
                                   <th>User Name</th>
@@ -197,7 +186,7 @@
                             </table>
                           </div>
                         <hr>
-                        <form id="group_form" enctype='multipart/form-data' method='POST'
+                        <!-- <form id="group_form" enctype='multipart/form-data' method='POST'
                             action="{% url 'groups:group' slug=slug groupslug=group.slug %}">
                             <h5>Add by Username</h5>
                             {% csrf_token %}
@@ -206,7 +195,7 @@
                                 <button type='submit'
                                 class='bs-primary py-2 px-3'>Add</button>
                            
-                        </form>
+                        </form> -->
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="bs-primary bs-secondary px-3 py-2 mx-2"
@@ -227,6 +216,16 @@
     </div>
 
 </body>
+<script>
+    $(document).ready( function () {
+    $('#table_filter').DataTable();
+} );
+</script>
+<script>
+    $(document).ready( function () {
+    $('#table_filter2').DataTable();
+} );
+</script>
 <script>
     function showForm() {
         document.getElementById('group_form').style.display = "block";
