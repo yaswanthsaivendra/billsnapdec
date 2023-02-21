@@ -16,6 +16,7 @@ urlpatterns = [
     path('new-customer/', views.addcustomer, name='new-customer'),
     path('update-profile-plan/<str:slug>', views.update_profile_plan, name='update-profile-plan'),
     path('messaging/', views.messaging, name='messaging'),
+    path('notify/<slug:profile_slug>/', views.notification, name='notify'),
     path('pendingapprovals/', views.pendingapproval, name='pending-approvals'),
     path('transactions/',views.transactions, name='transactions'),
 

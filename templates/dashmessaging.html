@@ -35,11 +35,11 @@
     {% include "dashnav.html" %}
 
     <div class="main mx-auto">
-        <div class="row" style="margin-top: 17px !important;">
+        <div class="row">
 
             {% include "dashsidebar.html" %}
 
-            <div class="col-md-7 flex-md-fill">
+            <!-- <div class="col-md-7 flex-md-fill">
                 <div class="col right" id="customer-list">
                     <h3>Contact Us</h3>
 
@@ -73,6 +73,161 @@
 
 
 
+                </div>
+            </div> -->
+            <div class="col-md-7 flex-md-fill">
+                <div class="col right" id="customer-list">
+                    <h2 class="ps-1 pt-3" id="pspt">Messaging</h2><br>
+                    <button id="show" class="button button1 ">Filter</button>
+                    <dialog id="myFirstDialog" class="first">
+
+                        <div class="topnav">
+
+                            <div class="search-container">
+
+                                <button id="hide" class="b-primary b-secondary button3 p-2 px-3">x</button>
+                                <h4>Status</h4>
+                                <a href="javascript:void(0)" id="failedList"><button class="b-primary b-secondary"><i
+                                            class="fa fa-external-link" aria-hidden="true"></i> False </button></a>
+                                <a href="javascript:void(0)" id="passedList"><button class="b-primary b-secondary"><i
+                                            class="fa fa-external-link" aria-hidden="true"></i> True </button></a>
+
+                            </div>
+
+                        </div>
+                        <br>
+
+                    </dialog>
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."
+                        title="Type in a name">
+
+                    <div class="table-responsive my-3">
+                        <table class="table table-bordered" id='table_filter'>
+                            <thead>
+                                <tr>
+                                    <th>User Name</th>
+                                    <th>Full Name</th>
+                                    <th>Email</th>
+                                    <th>Notifications</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for i in details %}
+                                <tr>
+                                    <td>{{ i.user}}</td>
+                                    <td>{{ i.full_name}}</td>
+                                    <td>{{ i.contact_email}}</td>
+                                    <td>
+                                        <a class='w3-button w3-small w3-round w3-green' href="{% url 'notify' slug=slug profile_slug=i.slug %}">View</a>
+                                    </td>
+                                    <td>
+                                        <a class='w3-button w3-small w3-round w3-red' data-bs-toggle="modal"
+                                            data-bs-target="#staticBackdrop2">
+                                            Notify</a>
+                                            <!-- Notify modal-->
+                        <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="staticBackdropLabel">Add Notification
+                                    </h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="row g-3"
+                                        action="{% url 'notify' slug=slug profile_slug=i.slug %}" method="post"
+                                        enctype="multipart/form-data">
+                                        {% csrf_token %}
+                                        {{ notification_form|crispy }}
+                                        <!-- <div class="col-2">
+                                                        <label for="select" class="col-form-label">Profile</label>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <select id="Select" class="form-select">
+                                                            <option>Disabled select</option>
+                                                            <option>Disabled select</option>
+                                                            <option>Disabled select</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="w-100 m-0"></div>
+                                                    <div class="col-2 m-0">
+                                                        <label for="state" class="col-form-label">Image:</label>
+                                                    </div>
+                                                    <div class="col-auto mt-0">
+                                                        <input class="form-control w-auto" type="file"
+                                                            id="formFile">
+                                                    </div>
+                                                    <div class="w-100 m-0"></div>
+                                                    <div class="col-auto">
+                                                        <input type="checkbox" class="form-check-input"
+                                                            id="exampleCheck1">
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <label class="form-check-label" for="exampleCheck1">Check me
+                                                            out</label>
+                                                    </div>
+                                                    <div class="w-100 m-0"></div>
+                                                    <div class="col-2">
+                                                        <label for="body" class="col-form-label">Body</label>
+                                                    </div>
+                                                    <div class="col-9">
+                                                        <textarea class="form-control"
+                                                            id="exampleFormControlTextarea1" rows="5"></textarea>
+                                                    </div>
+                                                    <div class="w-100 m-0"></div>
+                                                    <div class="col-2">
+                                                        <label for="url" class="col-form-label">URL</label>
+                                                    </div>
+                                                    <div class="col-7">
+                                                        <input type="url" id="url" class="form-control p-2"
+                                                            aria-describedby="utilitystate">
+                                                    </div>
+                                                    <div class="w-100 m-0"></div>
+                                                    <div class="col-2">
+                                                        <label for="url" class="col-form-label">URL name</label>
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <input type="text" id="url" class="form-control p-2"
+                                                            aria-describedby="utilitystate">
+                                                    </div> -->
+                                        <div class="modal-footer">
+                                            <button type="button" class="modal-btn btn btn-secondary"
+                                                data-bs-dismiss="modal">Close</button>
+                                            <button type="submit" class="modal-btn btn btn-primary">Save</button>
+                                        </div>
+                                    </form>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                                    </td>
+                                </tr>
+                                {%endfor%}
+                            </tbody>
+                        </table>
+
+                        
+
+                    </div>
+
+                    <br>
+                    <div class="demo1">
+                        <div class="demo">
+                            <a href="#">&laquo;</a>
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">4</a>
+                            <a href="#">5</a>
+                            <a href="#">6</a>
+                            <a href="#">&raquo;</a>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

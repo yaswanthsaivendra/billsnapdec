@@ -1,413 +1,990 @@
-[2023-01-18T00:38:42] INFO [root.showapps:67] sony_seen the whole applist
-[2023-01-18T00:38:44] WARNING [django.request.log_response:241] Not Found: /apps/helo/dashboard/assets/img/ivancik.jpg
-[2023-01-18T00:38:48] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T00:38:49] ERROR [django.request.log_response:241] Internal Server Error: /account/helo/js/create.js
+[2023-02-21T16:44:37] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2023-02-21T16:45:23] ERROR [django.request.log_response:241] Internal Server Error: /account/register/
 Traceback (most recent call last):
-  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
-  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\yash\billsnap\billsnapdec\accounts\views.py", line 375, in update_plan
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/accounts/views.py", line 92, in post
+    email.send(fail_silently=False)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/mail/message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 87, in open
+    self.connection.starttls(
+  File "/usr/lib/python3.10/smtplib.py", line 771, in starttls
+    raise SMTPNotSupportedError(
+smtplib.SMTPNotSupportedError: STARTTLS extension not supported by server.
+[2023-02-21T16:46:27] ERROR [django.request.log_response:241] Internal Server Error: /account/register/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/accounts/views.py", line 92, in post
+    email.send(fail_silently=False)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/mail/message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.10/smtplib.py", line 750, in login
+    raise last_exception
+  File "/usr/lib/python3.10/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.10/smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials p2-20020a17090a748200b002349608e80csm3229289pjk.47 - gsmtp')
+[2023-02-21T16:48:00] INFO [root.logout:189] yaswanth_ logged out
+[2023-02-21T16:48:24] ERROR [django.request.log_response:241] Internal Server Error: /account/register/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/views/generic/base.py", line 103, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/views/generic/base.py", line 142, in dispatch
+    return handler(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/accounts/views.py", line 92, in post
+    email.send(fail_silently=False)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/mail/message.py", line 298, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 124, in send_messages
+    new_conn_created = self.open()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 91, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/lib/python3.10/smtplib.py", line 750, in login
+    raise last_exception
+  File "/usr/lib/python3.10/smtplib.py", line 739, in login
+    (code, resp) = self.auth(
+  File "/usr/lib/python3.10/smtplib.py", line 662, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 Username and Password not accepted. Learn more at\n5.7.8  https://support.google.com/mail/?p=BadCredentials 21-20020a170902c11500b0019928ce257dsm10102984pli.99 - gsmtp')
+[2023-02-21T16:54:34] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp_main/settings.py changed, reloading.
+[2023-02-21T16:56:07] INFO [root.showapps:67] vendra_seen the whole applist
+[2023-02-21T16:56:18] WARNING [django.request.log_response:241] Not Found: /apps/new-app/dashboard/assets/img/ivancik.jpg
+[2023-02-21T16:56:31] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:01:56] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:04:12] INFO [root.showapps:67] vendra_seen the whole applist
+[2023-02-21T17:13:08] WARNING [django.request.log_response:241] Not Found: /apps/new-app/dashboard/assets/img/ivancik.jpg
+[2023-02-21T17:20:14] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:20:23] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:20:25] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:20:27] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:20:29] ERROR [django.request.log_response:241] Internal Server Error: /account/new-app/js/create.js
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/accounts/views.py", line 375, in update_plan
     profile = Profile.objects.get(slug__iexact=userslug)
-  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
     return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 650, in get
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/query.py", line 650, in get
     raise self.model.DoesNotExist(
 accounts.models.Profile.DoesNotExist: Profile matching query does not exist.
-[2023-01-18T00:39:35] INFO [root.update_profile:325] sony_ updated profile
-[2023-01-18T00:39:35] ERROR [django.request.log_response:241] Internal Server Error: /account/helo/js/create.js
+[2023-02-21T17:28:33] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:29:38] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T17:31:25] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T17:31:55] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T17:32:14] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T17:32:22] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T17:32:26] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:33:12] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:37:10] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:37:21] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:37:54] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:38:32] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:39:19] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:40:48] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:40:49] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:41:41] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:41:57] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:42:47] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:42:50] ERROR [django.request.log_response:241] Internal Server Error: /account/new-app/js/create.js
 Traceback (most recent call last):
-  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
-  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\yash\billsnap\billsnapdec\accounts\views.py", line 375, in update_plan
+  File "/home/yaswanth/projects/billsnapdec/accounts/views.py", line 375, in update_plan
     profile = Profile.objects.get(slug__iexact=userslug)
-  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
     return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 650, in get
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/query.py", line 650, in get
     raise self.model.DoesNotExist(
 accounts.models.Profile.DoesNotExist: Profile matching query does not exist.
-[2023-01-18T00:39:58] ERROR [django.request.log_response:241] Internal Server Error: /account/helo/js/create.js
+[2023-02-21T17:44:01] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:44:03] ERROR [django.request.log_response:241] Internal Server Error: /account/new-app/js/create.js
 Traceback (most recent call last):
-  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
-  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\yash\billsnap\billsnapdec\accounts\views.py", line 375, in update_plan
+  File "/home/yaswanth/projects/billsnapdec/accounts/views.py", line 375, in update_plan
     profile = Profile.objects.get(slug__iexact=userslug)
-  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/manager.py", line 85, in manager_method
     return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 650, in get
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/query.py", line 650, in get
     raise self.model.DoesNotExist(
 accounts.models.Profile.DoesNotExist: Profile matching query does not exist.
-[2023-01-18T00:40:11] DEBUG [PIL.TiffImagePlugin.load:842] tag: YResolution (283) - type: rational (5) Tag Location: 22 - Data Location: 146 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
-[2023-01-18T00:40:11] DEBUG [PIL.TiffImagePlugin.load:842] tag: XResolution (282) - type: rational (5) Tag Location: 34 - Data Location: 154 - value: b'\x00\x00\x00H\x00\x00\x00\x01'
-[2023-01-18T00:40:11] DEBUG [PIL.TiffImagePlugin.load:842] tag: ImageWidth (256) - type: long (4) - value: b'\x00\x00\x0b\xb8'
-[2023-01-18T00:40:11] DEBUG [PIL.TiffImagePlugin.load:842] tag: Model (272) - type: string (2) Tag Location: 58 - Data Location: 162 - value: b'AC2001\x00'
-[2023-01-18T00:40:11] DEBUG [PIL.TiffImagePlugin.load:842] tag: ImageLength (257) - type: long (4) - value: b'\x00\x00\x0f\xa0'
-[2023-01-18T00:40:11] DEBUG [PIL.TiffImagePlugin.load:842] tag: Make (271) - type: string (2) Tag Location: 82 - Data Location: 169 - value: b'OnePlus\x00'
-[2023-01-18T00:40:11] DEBUG [PIL.TiffImagePlugin.load:842] tag: YCbCrPositioning (531) - type: short (3) - value: b'\x00\x01'
-[2023-01-18T00:40:11] DEBUG [PIL.TiffImagePlugin.load:842] tag: ExifIFD (34665) - type: long (4) - value: b'\x00\x00\x00\xc5'
-[2023-01-18T00:40:11] DEBUG [PIL.TiffImagePlugin.load:842] tag: ResolutionUnit (296) - type: short (3) - value: b'\x00\x02'
-[2023-01-18T00:40:11] DEBUG [PIL.TiffImagePlugin.load:842] tag: Orientation (274) - type: short (3) - value: b'\x00\x00'
-[2023-01-18T00:40:11] DEBUG [PIL.TiffImagePlugin.load:842] tag: DateTime (306) - type: string (2) Tag Location: 142 - Data Location: 177 - value: b'2023:01:14 08:35:06\x00'
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing BlpImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing BmpImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing BufrStubImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing CurImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing DcxImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing DdsImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing EpsImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing FitsImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing FitsStubImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing FliImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing FpxImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:372] Image: failed to import FpxImagePlugin: No module named 'olefile'
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing FtexImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing GbrImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing GifImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing GribStubImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing Hdf5StubImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing IcnsImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing IcoImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing ImImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing ImtImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing IptcImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing JpegImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing Jpeg2KImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing McIdasImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing MicImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:372] Image: failed to import MicImagePlugin: No module named 'olefile'
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing MpegImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing MpoImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing MspImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing PalmImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing PcdImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing PcxImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing PdfImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing PixarImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing PngImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing PpmImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing PsdImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing SgiImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing SpiderImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing SunImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing TgaImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing TiffImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing WebPImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing WmfImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing XbmImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing XpmImagePlugin
-[2023-01-18T00:40:11] DEBUG [PIL.Image.init:369] Importing XVThumbImagePlugin
-[2023-01-18T00:40:11] ERROR [django.request.log_response:241] Internal Server Error: /account/helo/sony
+[2023-02-21T17:45:19] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/accounts/urls.py changed, reloading.
+[2023-02-21T17:45:23] WARNING [django.request.log_response:241] Not Found: /account/new-app/yaswanth/js/create.js
+[2023-02-21T17:46:52] WARNING [django.request.log_response:241] Not Found: /account/new-app/yaswanth/js/create.js
+[2023-02-21T17:47:49] WARNING [django.request.http_method_not_allowed:145] Method Not Allowed (POST): /account/create-notification/new-app/
+[2023-02-21T17:47:49] WARNING [django.request.log_response:241] Method Not Allowed: /account/create-notification/new-app/
+[2023-02-21T17:47:58] WARNING [django.request.log_response:241] Not Found: /account/create-notification/new-app/
+[2023-02-21T17:48:24] WARNING [django.request.log_response:241] Not Found: /account/new-app/yaswanth/js/create.js
+[2023-02-21T17:48:32] WARNING [django.request.http_method_not_allowed:145] Method Not Allowed (POST): /account/create-notification/new-app/
+[2023-02-21T17:48:32] WARNING [django.request.log_response:241] Method Not Allowed: /account/create-notification/new-app/
+[2023-02-21T17:48:48] WARNING [django.request.log_response:241] Not Found: /account/new-app/yaswanth/js/create.js
+[2023-02-21T17:49:04] WARNING [django.request.http_method_not_allowed:145] Method Not Allowed (POST): /account/create-notification/new-app/
+[2023-02-21T17:49:04] WARNING [django.request.log_response:241] Method Not Allowed: /account/create-notification/new-app/
+[2023-02-21T17:53:50] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:53:53] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:55:37] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:56:33] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:58:13] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T17:58:20] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T17:58:32] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T17:58:49] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T17:59:13] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:59:22] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T17:59:42] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T17:59:45] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:00:35] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:00:38] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T18:00:40] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T18:03:11] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:03:19] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:03:22] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:03:26] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:03:31] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:03:36] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:03:40] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:03:41] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:03:47] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:04:00] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:04:06] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:05:09] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:05:11] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:06:15] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T18:06:17] WARNING [django.request.log_response:241] Not Found: /account/new-app/yaswanth/js/create.js
+[2023-02-21T18:08:05] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/urls.py changed, reloading.
+[2023-02-21T18:08:15] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/urls.py changed, reloading.
+[2023-02-21T18:08:18] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/urls.py changed, reloading.
+[2023-02-21T18:08:28] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:09:03] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:09:18] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:09:27] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:09:38] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:10:35] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:10:39] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:10:41] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:10:44] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:10:46] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:10:48] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:11:32] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:12:32] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:12:34] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:12:51] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:12:56] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:13:02] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:13:08] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:13:11] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:13:13] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:15:36] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
 Traceback (most recent call last):
-  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
-  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
-    response = response.render()
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\response.py", line 114, in render
-    self.content = self.rendered_content
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\response.py", line 92, in rendered_content
-    return template.render(context, self._request)
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
-    return self.template.render(context)
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
-    return self._render(context)
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
-    return self.nodelist.render(context)
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
-    return SafeString("".join([node.render_annotated(context) for node in self]))
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
-    return SafeString("".join([node.render_annotated(context) for node in self]))
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
-    return self.render(context)
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
-    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
-  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
-    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
-  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
-    raise NoReverseMatch(msg)
-django.urls.exceptions.NoReverseMatch: Reverse for 'update-plan' with keyword arguments '{'slug': 'helo', 'userslug': 'sony', 'planslug': ''}' not found. 1 pattern(s) tried: ['account/(?P<slug>[^/]+)/(?P<userslug>[^/]+)/(?P<planslug>[^/]+)\\Z']
-[2023-01-18T00:41:08] ERROR [django.request.log_response:241] Internal Server Error: /account/helo/js/create.js
-Traceback (most recent call last):
-  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\yash\billsnap\billsnapdec\accounts\views.py", line 375, in update_plan
-    profile = Profile.objects.get(slug__iexact=userslug)
-  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
-    return getattr(self.get_queryset(), name)(*args, **kwargs)
-  File "D:\yash\billsnap\env\lib\site-packages\django\db\models\query.py", line 650, in get
-    raise self.model.DoesNotExist(
-accounts.models.Profile.DoesNotExist: Profile matching query does not exist.
-[2023-01-18T00:41:14] WARNING [django.request.log_response:241] Not Found: /apps/helo/dashboard/assets/img/ivancik.jpg
-[2023-01-18T00:41:31] INFO [root.editapp:92] sony_edited an app
-[2023-01-18T00:41:51] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T00:43:10] ERROR [django.request.log_response:241] Internal Server Error: /plans/plan/helo/eAyXuhwiGE
-Traceback (most recent call last):
-  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
-    response = get_response(request)
-  File "D:\yash\billsnap\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
-    response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "D:\yash\billsnap\billsnapdec\plans\views.py", line 88, in show_plan
-    return render(request, 'plans-panel/plan.html', payload)
-  File "D:\yash\billsnap\env\lib\site-packages\django\shortcuts.py", line 24, in render
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
     content = loader.render_to_string(template_name, context, request, using=using)
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\loader.py", line 62, in render_to_string
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
     return template.render(context, request)
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\backends\django.py", line 62, in render
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
     return self.template.render(context)
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 175, in render
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
     return self._render(context)
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 167, in _render
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
     return self.nodelist.render(context)
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in render
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
     return SafeString("".join([node.render_annotated(context) for node in self]))
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 1005, in <listcomp>
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
     return SafeString("".join([node.render_annotated(context) for node in self]))
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
     return self.render(context)
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 238, in render
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
     nodelist.append(node.render_annotated(context))
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\base.py", line 966, in render_annotated
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
     return self.render(context)
-  File "D:\yash\billsnap\env\lib\site-packages\django\template\defaulttags.py", line 472, in render
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
     url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
-  File "D:\yash\billsnap\env\lib\site-packages\django\urls\base.py", line 88, in reverse
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
     return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
-  File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
     raise NoReverseMatch(msg)
-django.urls.exceptions.NoReverseMatch: Reverse for 'update-plan' with keyword arguments '{'profileslug': 'yaswanth', 'planslug': ''}' not found. 1 pattern(s) tried: ['plans/update\\-plan/(?P<profileslug>[^/]+)/(?P<planslug>[^/]+)/\\Z']
-[2023-01-18T08:40:33] DEBUG [asyncio.__init__:54] Using selector: EpollSelector
-[2023-01-18T08:40:41] WARNING [django.request.log_response:241] Not Found: /favicon.ico/
-[2023-01-18T08:41:00] INFO [root.showapps:67] yaswanth_seen the whole applist
-[2023-01-18T08:41:08] WARNING [django.request.log_response:241] Not Found: /apps/helo/dashboard/assets/img/ivancik.jpg
-[2023-01-18T08:43:23] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T08:43:34] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T08:44:59] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T08:45:58] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T08:51:25] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:51:32] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:51:41] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:51:48] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:51:54] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:51:59] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:52:01] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:52:11] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:52:16] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:52:21] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:52:27] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:52:55] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T08:52:59] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notification' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notification/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:16:56] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
 Traceback (most recent call last):
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 81, in remove_user
-    Profile.plans.remove(plans)
-AttributeError: 'ManyToManyDescriptor' object has no attribute 'remove'
-[2023-01-18T08:56:45] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:56:51] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:56:54] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:56:57] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:57:02] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:57:13] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:57:21] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:57:49] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:57:59] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:58:02] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:58:04] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T08:58:07] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notification' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notification/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:16:56] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
 Traceback (most recent call last):
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 82, in remove_user
-    if Profile.plans.filter(id=plan.id).exists():
-AttributeError: 'ManyToManyDescriptor' object has no attribute 'filter'
-[2023-01-18T08:58:07] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notification' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notification/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:16:57] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
 Traceback (most recent call last):
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 82, in remove_user
-    if Profile.plans.filter(id=plan.id).exists():
-AttributeError: 'ManyToManyDescriptor' object has no attribute 'filter'
-[2023-01-18T08:58:08] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notification' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notification/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:16:57] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
 Traceback (most recent call last):
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 82, in remove_user
-    if Profile.plans.filter(id=plan.id).exists():
-AttributeError: 'ManyToManyDescriptor' object has no attribute 'filter'
-[2023-01-18T08:59:52] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:00:02] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:00:04] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:00:09] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:00:12] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notification' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notification/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:16:57] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
 Traceback (most recent call last):
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 81, in remove_user
-    Profile.plans.remove(user_plans)
-AttributeError: 'ManyToManyDescriptor' object has no attribute 'remove'
-[2023-01-18T09:00:12] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notification' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notification/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:16:58] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
 Traceback (most recent call last):
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 81, in remove_user
-    Profile.plans.remove(user_plans)
-AttributeError: 'ManyToManyDescriptor' object has no attribute 'remove'
-[2023-01-18T09:01:17] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:01:19] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notification' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notification/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:23:28] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
 Traceback (most recent call last):
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 81, in remove_user
-    Profile.plans_set.remove(user_plans)
-AttributeError: type object 'Profile' has no attribute 'plans_set'
-[2023-01-18T09:01:26] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:03:01] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:03:04] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:03:07] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:03:10] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:03:23] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notification' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notification/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:23:52] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/urls.py changed, reloading.
+[2023-02-21T18:23:57] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/urls.py changed, reloading.
+[2023-02-21T18:24:42] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
 Traceback (most recent call last):
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 82, in remove_user
-    Profile.plans.remove(plan)
-AttributeError: 'ManyToManyDescriptor' object has no attribute 'remove'
-[2023-01-18T09:03:29] WARNING [django.request.log_response:241] Not Found: /apps/remove-customer/helo/
-[2023-01-18T09:03:32] WARNING [django.request.log_response:241] Not Found: /apps/
-[2023-01-18T09:03:38] INFO [root.showapps:67] yaswanth_seen the whole applist
-[2023-01-18T09:03:41] WARNING [django.request.log_response:241] Not Found: /apps/helo/dashboard/assets/img/ivancik.jpg
-[2023-01-18T09:03:43] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:03:45] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notify' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notify/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:24:43] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
 Traceback (most recent call last):
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 82, in remove_user
-    Profile.plans.remove(plan)
-AttributeError: 'ManyToManyDescriptor' object has no attribute 'remove'
-[2023-01-18T09:05:45] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:05:49] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:05:53] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:05:55] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:05:58] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
-Traceback (most recent call last):
-  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
-    return int(value)
-TypeError: int() argument must be a string, a bytes-like object or a real number, not 'QuerySet'
-
-The above exception was the direct cause of the following exception:
-
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notify' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notify/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:24:43] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
 Traceback (most recent call last):
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
     response = get_response(request)
   File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
     response = wrapped_callback(request, *callback_args, **callback_kwargs)
-  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 81, in remove_user
-    profile.plans.remove(user_plans)
-  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 1090, in remove
-    self._remove_items(self.source_field_name, self.target_field_name, *objs)
-  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 1382, in _remove_items
-    self.through._default_manager.using(db).filter(filters).delete()
-  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/query.py", line 1420, in filter
-    return self._filter_or_exclude(False, args, kwargs)
-  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/query.py", line 1438, in _filter_or_exclude
-    clone._filter_or_exclude_inplace(negate, args, kwargs)
-  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/query.py", line 1445, in _filter_or_exclude_inplace
-    self._query.add_q(Q(*args, **kwargs))
-  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
-    clause, _ = self._add_q(q_object, self.used_aliases)
-  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
-    child_clause, needed_inner = self.build_filter(
-  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1388, in build_filter
-    return self._add_q(
-  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
-    child_clause, needed_inner = self.build_filter(
-  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
-    condition = self.build_lookup(lookups, col, value)
-  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
-    lookup = lookup_class(lhs, rhs)
-  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
-    self.rhs = self.get_prep_lookup()
-  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 91, in get_prep_lookup
-    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
-  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 91, in <listcomp>
-    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
-  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
-    raise e.__class__(
-TypeError: Field 'id' expected a number but got <QuerySet [<Plan: [def plan] Plan at [Rs.34] for [30 days] in [helo]>, <Plan: [new plan] Plan at [Rs.32] for [30 days] in [helo]>]>.
-[2023-01-18T09:06:11] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:06:17] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:06:23] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:06:25] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:06:30] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:06:47] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:06:54] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:07:00] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:07:04] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:07:06] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:07:09] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:07:23] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:07:26] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:07:28] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:07:38] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:07:40] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:08:06] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:08:15] INFO [root.showapps:67] yaswanth_seen the whole applist
-[2023-01-18T09:08:19] WARNING [django.request.log_response:241] Not Found: /apps/helo/dashboard/assets/img/ivancik.jpg
-[2023-01-18T09:08:23] INFO [root.deleteapp:74] yaswanth_deleted an app
-[2023-01-18T09:08:23] INFO [root.showapps:67] yaswanth_seen the whole applist
-[2023-01-18T09:08:48] INFO [root.addapp:56] yaswanth_added an app
-[2023-01-18T09:08:48] INFO [root.showapps:67] yaswanth_seen the whole applist
-[2023-01-18T09:08:52] WARNING [django.request.log_response:241] Not Found: /apps/new-app/dashboard/assets/img/ivancik.jpg
-[2023-01-18T09:09:01] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:09:07] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:09:09] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:09:11] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:09:13] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:09:15] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:09:19] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:09:27] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:09:29] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:09:47] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:09:54] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:09:57] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:10:05] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:10:14] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:10:17] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:10:26] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:11:21] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:11:23] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:11:26] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:11:32] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:11:40] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:11:48] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:11:50] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:11:54] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:11:59] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:12:04] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:12:09] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:12:15] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
-[2023-01-18T09:12:42] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
-[2023-01-18T09:12:44] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notify' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notify/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:24:43] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notify' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notify/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:24:44] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notify' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notify/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:24:44] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notify' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notify/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:24:44] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notify' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notify/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:24:44] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notify' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notify/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:24:45] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notify' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notify/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:30:23] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/messaging/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/contrib/auth/decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 233, in messaging
+    return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 238, in render
+    nodelist.append(node.render_annotated(context))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 472, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/urls/resolvers.py", line 828, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'create-notify' with keyword arguments '{'slug': 'new-app', 'profile_slug': 'yaswanth'}' not found. 1 pattern(s) tried: ['apps/(?P<slug>[^/]+)/create\\-notify/(?P<profile_slug>[0-9]+)/\\Z']
+[2023-02-21T18:37:06] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/urls.py changed, reloading.
+[2023-02-21T18:37:07] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T18:37:23] DEBUG [PIL.PngImagePlugin.call:201] STREAM b'IHDR' 16 13
+[2023-02-21T18:37:23] DEBUG [PIL.PngImagePlugin.call:201] STREAM b'sBIT' 41 4
+[2023-02-21T18:37:23] DEBUG [PIL.PngImagePlugin._open:738] b'sBIT' 41 4 (unknown)
+[2023-02-21T18:37:23] DEBUG [PIL.PngImagePlugin.call:201] STREAM b'tEXt' 57 25
+[2023-02-21T18:37:23] DEBUG [PIL.PngImagePlugin.call:201] STREAM b'tEXt' 94 45
+[2023-02-21T18:37:23] DEBUG [PIL.PngImagePlugin.call:201] STREAM b'IDAT' 151 8192
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing BlpImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing BmpImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing BufrStubImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing CurImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing DcxImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing DdsImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing EpsImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing FitsImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing FitsStubImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing FliImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing FpxImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:372] Image: failed to import FpxImagePlugin: No module named 'olefile'
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing FtexImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing GbrImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing GifImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing GribStubImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing Hdf5StubImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing IcnsImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing IcoImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing ImImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing ImtImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing IptcImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing JpegImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing Jpeg2KImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing McIdasImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing MicImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:372] Image: failed to import MicImagePlugin: No module named 'olefile'
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing MpegImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing MpoImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing MspImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing PalmImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing PcdImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing PcxImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing PdfImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing PixarImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing PngImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing PpmImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing PsdImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing SgiImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing SpiderImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing SunImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing TgaImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing TiffImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing WebPImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing WmfImagePlugin
+[2023-02-21T18:37:23] DEBUG [PIL.Image.init:369] Importing XbmImagePlugin
+[2023-02-21T18:37:24] DEBUG [PIL.Image.init:369] Importing XpmImagePlugin
+[2023-02-21T18:37:24] DEBUG [PIL.Image.init:369] Importing XVThumbImagePlugin
+[2023-02-21T18:37:24] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T18:37:47] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:37:53] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/urls.py changed, reloading.
+[2023-02-21T18:38:07] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:38:20] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:40:20] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:40:31] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:40:57] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:41:01] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:41:09] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:41:13] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:41:25] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:41:27] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:42:24] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:42:26] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:42:29] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:42:32] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:42:35] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:42:42] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:42:45] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:42:49] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/views.py changed, reloading.
+[2023-02-21T18:43:08] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/urls.py changed, reloading.
+[2023-02-21T18:43:10] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/dashboard/urls.py changed, reloading.
+[2023-02-21T18:43:49] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-02-21T18:43:51] ERROR [django.request.log_response:241] Internal Server Error: /apps/new-app/notify/yaswanth/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/dashboard/views.py", line 254, in notification
+    return render('', {'user_notifications':user_notifications})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/base.py", line 17, in get_template
+    for origin in self.get_template_sources(template_name):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/cached.py", line 70, in get_template_sources
+    yield from loader.get_template_sources(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/filesystem.py", line 35, in get_template_sources
+    name = safe_join(template_dir, template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/utils/_os.py", line 17, in safe_join
+    final_path = abspath(join(base, *paths))
+  File "/usr/lib/python3.10/posixpath.py", line 90, in join
+    genericpath._check_arg_types('join', a, *p)
+  File "/usr/lib/python3.10/genericpath.py", line 152, in _check_arg_types
+    raise TypeError(f'{funcname}() argument must be str, bytes, or '
+TypeError: join() argument must be str, bytes, or os.PathLike object, not 'dict'
