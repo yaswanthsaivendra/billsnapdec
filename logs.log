@@ -1,1 +1,2 @@
 [2023-02-22T00:10:48] WARNING [django.request.log_response:241] Not Found: /course/creators-panel/neha
+[2023-02-22T00:21:22] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\accounts\urls.py changed, reloading.

@@ -180,3 +180,234 @@ Traceback (most recent call last):
   File "D:\yash\billsnap\env\lib\site-packages\django\urls\resolvers.py", line 828, in _reverse_with_prefix
     raise NoReverseMatch(msg)
 django.urls.exceptions.NoReverseMatch: Reverse for 'update-plan' with keyword arguments '{'profileslug': 'yaswanth', 'planslug': ''}' not found. 1 pattern(s) tried: ['plans/update\\-plan/(?P<profileslug>[^/]+)/(?P<planslug>[^/]+)/\\Z']
+[2023-01-18T08:40:33] DEBUG [asyncio.__init__:54] Using selector: EpollSelector
+[2023-01-18T08:40:41] WARNING [django.request.log_response:241] Not Found: /favicon.ico/
+[2023-01-18T08:41:00] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2023-01-18T08:41:08] WARNING [django.request.log_response:241] Not Found: /apps/helo/dashboard/assets/img/ivancik.jpg
+[2023-01-18T08:43:23] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T08:43:34] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T08:44:59] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T08:45:58] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T08:51:25] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:51:32] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:51:41] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:51:48] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:51:54] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:51:59] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:52:01] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:52:11] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:52:16] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:52:21] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:52:27] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:52:55] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T08:52:59] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 81, in remove_user
+    Profile.plans.remove(plans)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'remove'
+[2023-01-18T08:56:45] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:56:51] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:56:54] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:56:57] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:57:02] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:57:13] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:57:21] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:57:49] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:57:59] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:58:02] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:58:04] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T08:58:07] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 82, in remove_user
+    if Profile.plans.filter(id=plan.id).exists():
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'filter'
+[2023-01-18T08:58:07] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 82, in remove_user
+    if Profile.plans.filter(id=plan.id).exists():
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'filter'
+[2023-01-18T08:58:08] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 82, in remove_user
+    if Profile.plans.filter(id=plan.id).exists():
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'filter'
+[2023-01-18T08:59:52] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:00:02] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:00:04] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:00:09] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:00:12] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 81, in remove_user
+    Profile.plans.remove(user_plans)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'remove'
+[2023-01-18T09:00:12] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 81, in remove_user
+    Profile.plans.remove(user_plans)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'remove'
+[2023-01-18T09:01:17] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:01:19] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 81, in remove_user
+    Profile.plans_set.remove(user_plans)
+AttributeError: type object 'Profile' has no attribute 'plans_set'
+[2023-01-18T09:01:26] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:03:01] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:03:04] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:03:07] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:03:10] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:03:23] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 82, in remove_user
+    Profile.plans.remove(plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'remove'
+[2023-01-18T09:03:29] WARNING [django.request.log_response:241] Not Found: /apps/remove-customer/helo/
+[2023-01-18T09:03:32] WARNING [django.request.log_response:241] Not Found: /apps/
+[2023-01-18T09:03:38] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2023-01-18T09:03:41] WARNING [django.request.log_response:241] Not Found: /apps/helo/dashboard/assets/img/ivancik.jpg
+[2023-01-18T09:03:43] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:03:45] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 82, in remove_user
+    Profile.plans.remove(plan)
+AttributeError: 'ManyToManyDescriptor' object has no attribute 'remove'
+[2023-01-18T09:05:45] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:05:49] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:05:53] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:05:55] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:05:58] ERROR [django.request.log_response:241] Internal Server Error: /apps/remove-customer/helo/yashiee
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2018, in get_prep_value
+    return int(value)
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'QuerySet'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/apps/views.py", line 81, in remove_user
+    profile.plans.remove(user_plans)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 1090, in remove
+    self._remove_items(self.source_field_name, self.target_field_name, *objs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/fields/related_descriptors.py", line 1382, in _remove_items
+    self.through._default_manager.using(db).filter(filters).delete()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/query.py", line 1420, in filter
+    return self._filter_or_exclude(False, args, kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/query.py", line 1438, in _filter_or_exclude
+    clone._filter_or_exclude_inplace(negate, args, kwargs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/query.py", line 1445, in _filter_or_exclude_inplace
+    self._query.add_q(Q(*args, **kwargs))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1532, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1388, in build_filter
+    return self._add_q(
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1562, in _add_q
+    child_clause, needed_inner = self.build_filter(
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1478, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/sql/query.py", line 1303, in build_lookup
+    lookup = lookup_class(lhs, rhs)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/lookups.py", line 27, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 91, in get_prep_lookup
+    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/fields/related_lookups.py", line 91, in <listcomp>
+    self.rhs = [target_field.get_prep_value(v) for v in self.rhs]
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/db/models/fields/__init__.py", line 2020, in get_prep_value
+    raise e.__class__(
+TypeError: Field 'id' expected a number but got <QuerySet [<Plan: [def plan] Plan at [Rs.34] for [30 days] in [helo]>, <Plan: [new plan] Plan at [Rs.32] for [30 days] in [helo]>]>.
+[2023-01-18T09:06:11] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:06:17] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:06:23] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:06:25] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:06:30] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:06:47] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:06:54] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:07:00] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:07:04] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:07:06] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:07:09] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:07:23] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:07:26] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:07:28] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:07:38] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:07:40] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:08:06] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:08:15] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2023-01-18T09:08:19] WARNING [django.request.log_response:241] Not Found: /apps/helo/dashboard/assets/img/ivancik.jpg
+[2023-01-18T09:08:23] INFO [root.deleteapp:74] yaswanth_deleted an app
+[2023-01-18T09:08:23] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2023-01-18T09:08:48] INFO [root.addapp:56] yaswanth_added an app
+[2023-01-18T09:08:48] INFO [root.showapps:67] yaswanth_seen the whole applist
+[2023-01-18T09:08:52] WARNING [django.request.log_response:241] Not Found: /apps/new-app/dashboard/assets/img/ivancik.jpg
+[2023-01-18T09:09:01] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:09:07] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:09:09] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:09:11] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:09:13] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:09:15] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:09:19] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:09:27] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:09:29] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:09:47] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:09:54] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:09:57] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:10:05] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:10:14] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:10:17] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:10:26] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:11:21] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:11:23] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:11:26] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:11:32] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:11:40] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:11:48] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:11:50] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:11:54] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:11:59] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:12:04] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:12:09] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:12:15] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/apps/views.py changed, reloading.
+[2023-01-18T09:12:42] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png
+[2023-01-18T09:12:44] WARNING [django.request.log_response:241] Not Found: /css/searchicon.png

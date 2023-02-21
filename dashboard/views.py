@@ -13,6 +13,8 @@ from logging.handlers import TimedRotatingFileHandler
 import logging
 from plans.models import *
 from apps.models import applists
+from accounts.forms import NotificationForm
+from accounts.models import Notification
 
 logger=logging.getLogger()
 logging.basicConfig(
@@ -220,9 +222,39 @@ def appinfo(request, slug):
     return render(request, 'dashappinfo.html', {'slug' : slug, 'app' : app,'plan':plan})
 
 
+
+
+
 @login_required
 def messaging(request, slug):
-    return render(request, 'dashmessaging.html', {'slug' : slug})
+    if request.method == 'GET':
+        notification_form = NotificationForm()
+        app=applists.objects.get(slug=slug)
+        details = Profile.objects.filter(apps=app)
+        return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+    
+
+
+def notification(request, slug, profile_slug):
+    if request.method == 'POST':
+        profile = Profile.objects.get(slug=profile_slug)
+        form = NotificationForm(request.POST, request.FILES)
+        if form.is_valid():
+            url = 'https://url.com/some-url/'
+            notification = form.save(commit=False)
+            notification.profile = profile
+            notification.url = url
+            notification.save(update_fields=['profile', 'url'])
+            return redirect('messaging', slug=slug)
+        print(form.errors)
+        return redirect('messaging', slug=slug)
+    if request.method == 'GET':
+        profile = Profile.objects.get(slug=profile_slug)
+        user_notifications = Notification.objects.filter(profile=profile)
+        return render('', {'user_notifications':user_notifications})
+
+
+
 
 @login_required
 def pendingapproval(request, slug):
