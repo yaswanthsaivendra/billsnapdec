@@ -9,7 +9,7 @@
   .toast-success {
 
     background: white;
-    border-left: 6px solid #3dcd58;
+    /* border-left: 6px solid #3dcd58; */
 
     }
     .toast-info {
@@ -77,21 +77,21 @@
 <body>
     <script>
         function myFunction(hh){
-      toastr.options = {
-        "positionClass" : "toast-top-center",
-                "closeButton" : true,
-                "debug" : false,
-                "newestOnTop" : false,
-                "preventDuplicates" : false,
-                "onclick" : null,
-                "showDuration" : "300000",
-                "hideDuration" : "1000000",
-                "timeOut" : "5000000",
-                "extendedTimeOut" : "100000",
-                "showEasing" : "swing",
-                "hideEasing" : "linear",
-                "showMethod" : "fadeIn",
-                "hideMethod" : "fadeOut"
+          toastr.options = {
+  "closeButton": true,
+  "debug": true,
+  "newestOnTop": false,
+  "progressBar": true,
+  "positionClass": "toast-top-center",
+  "preventDuplicates": true,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
 }
 Command: toastr["success"](hh)
 }
