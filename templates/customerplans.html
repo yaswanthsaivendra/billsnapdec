@@ -85,12 +85,13 @@
                 <div class="col right create-customer ps-0 pe-4 me-2" id="">
                     <div class="row mt-5">
                         <h4>Your Plans</h4>
-                        <div class="d-flex align-items">
+                        <div class="d-flex align-items my-3">
                             {% for plan in plans %}
                             <div class="plan-card border rounded bgsecondary p-3 mb-5 px-5 mx-3">
                                 <h5>{{ plan.title }}</h5>
-                                <p>{{ plan.price }}</p>
-                                <p>{{ plan.app }}</p>
+                                
+                                <p>Price:  {{ plan.price }}</p>
+                                <p>App Name: {{ plan.app }}</p>
                                 <p class="text-secondary">{{ plan.description }}</p>
                             </div>
                             {% endfor %}
