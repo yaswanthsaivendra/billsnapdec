@@ -231,7 +231,15 @@ def messaging(request, slug):
         notification_form = NotificationForm()
         app=applists.objects.get(slug=slug)
         details = Profile.objects.filter(apps=app)
-        return render(request, 'dashmessaging.html',{'details':details, 'slug':slug, 'notification_form':notification_form})
+        user_details = {}
+        for detail in details:
+            notifications = Notification.objects.filter(profile=detail)
+            user_details[detail.user] = {
+                "detail" : detail,
+                "notifications" : notifications
+            }
+            user_details.update()
+        return render(request, 'dashmessaging.html',{'details':user_details, 'slug':slug, 'notification_form':notification_form})
     
 
 
@@ -248,11 +256,6 @@ def notification(request, slug, profile_slug):
             return redirect('messaging', slug=slug)
         print(form.errors)
         return redirect('messaging', slug=slug)
-    if request.method == 'GET':
-        profile = Profile.objects.get(slug=profile_slug)
-        user_notifications = Notification.objects.filter(profile=profile)
-        return render('', {'user_notifications':user_notifications})
-
 
 
 
