@@ -111,13 +111,22 @@
                                       Logout
                                     </span>
                                     </a>
+                                    {% if user.profile.admin %}
                                     <a href="{% url 'showapps' %}" style="text-decoration: none;color:white;">
                                       <span style="display: flex; padding-top: 10px; padding-left:15px; padding-bottom: 15px;" class="profile-hover mx-2">
                                           <!-- <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/000000/external-dashboard-blogger-vitaliy-gorbachev-lineal-vitaly-gorbachev.png" height="30px" /> -->
                                           View apps
                                       </span>
                                   </a>
-                        {% endif %}
+                                  {% else %}
+                                    <a href="{% url 'custdash' %}" style="text-decoration: none;color:white;">
+                                      <span style="display: flex; padding-top: 10px; padding-left:15px; padding-bottom: 15px;" class="profile-hover mx-2">
+                                          <!-- <img src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-vitaly-gorbachev/60/000000/external-dashboard-blogger-vitaliy-gorbachev-lineal-vitaly-gorbachev.png" height="30px" /> -->
+                                          View Dashboard
+                                      </span>
+                                  </a>
+                                  {% endif %}
+                          {% endif %}
 
             <!-- <div class="navbar-btn d-none d-lg-inline-block">
               <a class="menu-bar" href="#side-menu-left"><i class="lni lni-menu"></i></a>
