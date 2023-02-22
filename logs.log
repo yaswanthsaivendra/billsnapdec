@@ -3993,3 +3993,371 @@ django.template.exceptions.TemplateDoesNotExist: customerdashsiebar.html
 [2023-02-22T15:25:04] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\billapp\views.py changed, reloading.
 [2023-02-22T15:26:06] INFO [root.showapps:87] maa_seen the whole applist
 [2023-02-22T15:26:10] WARNING [django.request.log_response:241] Not Found: /apps/1/helo/dashboard/assets/img/ivancik.jpg
+[2023-02-22T10:03:23] ERROR [django.request.log_response:241] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/billapp/views.py", line 9, in index
+    return render(request, 'index.html')
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 968, in do_if
+    nodelist = parser.parse(("endif",))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 961, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 194, in parse
+    retval = self.expression()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 205, in expression
+    left = t.nud(self)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 148, in nud
+    raise parser.error_class("Unexpected end of expression in if tag.")
+django.template.exceptions.TemplateSyntaxError: Unexpected end of expression in if tag.
+[2023-02-22T10:03:44] ERROR [django.request.log_response:241] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/billapp/views.py", line 9, in index
+    return render(request, 'index.html')
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 968, in do_if
+    nodelist = parser.parse(("endif",))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 961, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 194, in parse
+    retval = self.expression()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 205, in expression
+    left = t.nud(self)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 148, in nud
+    raise parser.error_class("Unexpected end of expression in if tag.")
+django.template.exceptions.TemplateSyntaxError: Unexpected end of expression in if tag.
+[2023-02-22T10:03:45] ERROR [django.request.log_response:241] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/billapp/views.py", line 9, in index
+    return render(request, 'index.html')
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 968, in do_if
+    nodelist = parser.parse(("endif",))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 961, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 194, in parse
+    retval = self.expression()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 205, in expression
+    left = t.nud(self)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 148, in nud
+    raise parser.error_class("Unexpected end of expression in if tag.")
+django.template.exceptions.TemplateSyntaxError: Unexpected end of expression in if tag.
+[2023-02-22T10:03:45] ERROR [django.request.log_response:241] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/billapp/views.py", line 9, in index
+    return render(request, 'index.html')
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 968, in do_if
+    nodelist = parser.parse(("endif",))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 961, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 194, in parse
+    retval = self.expression()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 205, in expression
+    left = t.nud(self)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 148, in nud
+    raise parser.error_class("Unexpected end of expression in if tag.")
+django.template.exceptions.TemplateSyntaxError: Unexpected end of expression in if tag.
+[2023-02-22T10:03:45] ERROR [django.request.log_response:241] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/billapp/views.py", line 9, in index
+    return render(request, 'index.html')
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 968, in do_if
+    nodelist = parser.parse(("endif",))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 961, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 194, in parse
+    retval = self.expression()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 205, in expression
+    left = t.nud(self)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 148, in nud
+    raise parser.error_class("Unexpected end of expression in if tag.")
+django.template.exceptions.TemplateSyntaxError: Unexpected end of expression in if tag.
+[2023-02-22T10:03:55] ERROR [django.request.log_response:241] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/billapp/views.py", line 9, in index
+    return render(request, 'index.html')
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 968, in do_if
+    nodelist = parser.parse(("endif",))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 961, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 194, in parse
+    retval = self.expression()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 205, in expression
+    left = t.nud(self)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 148, in nud
+    raise parser.error_class("Unexpected end of expression in if tag.")
+django.template.exceptions.TemplateSyntaxError: Unexpected end of expression in if tag.
+[2023-02-22T10:03:56] ERROR [django.request.log_response:241] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/billapp/views.py", line 9, in index
+    return render(request, 'index.html')
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 968, in do_if
+    nodelist = parser.parse(("endif",))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 961, in do_if
+    condition = TemplateIfParser(parser, bits).parse()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 194, in parse
+    retval = self.expression()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 205, in expression
+    left = t.nud(self)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/smartif.py", line 148, in nud
+    raise parser.error_class("Unexpected end of expression in if tag.")
+django.template.exceptions.TemplateSyntaxError: Unexpected end of expression in if tag.
+[2023-02-22T10:04:04] ERROR [django.request.log_response:241] Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/billapp/views.py", line 9, in index
+    return render(request, 'index.html')
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 175, in get_template
+    template, origin = self.find_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 157, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loaders/base.py", line 28, in get_template
+    return Template(
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 200, in compile_nodelist
+    return parser.parse()
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 513, in parse
+    raise self.error(token, e)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 511, in parse
+    compiled_result = compile_func(self, token)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/defaulttags.py", line 968, in do_if
+    nodelist = parser.parse(("endif",))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 518, in parse
+    self.unclosed_block_tag(parse_until)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 581, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 102: 'if'. Looking for one of: endif.
