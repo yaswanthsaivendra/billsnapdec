@@ -94,7 +94,7 @@ def deleteapp(request,aslug):
     logger.info(request.user.username+"_deleted an app")
     return redirect('showapps')
 
-def remove_user(request, slug, userslug):
+def remove_user(request, slug, userslug, billing_slug):
     profile = Profile.objects.get(slug=userslug)
     app = applists.objects.get(slug=slug)
     app_plans = Plan.objects.filter(app=app)
@@ -108,16 +108,16 @@ def remove_user(request, slug, userslug):
     profile.apps.remove(app)
 
 
-    return redirect('customerlist', slug=slug)
+    return redirect('customerlist', billing_slug=billing_slug, slug=slug)
 
 
 
 @login_required
-def editapp(request, aslug):
+def editapp(request, aslug, billing_slug):
     app = applists.objects.get(slug=aslug)
     if request.method=='POST':
         app.appimg= request.FILES.get('app_im')
         app.save()
         logger.info(request.user.username+"_edited an app")
-        return redirect('appinfo', slug=aslug)
+        return redirect('appinfo', billing_slug=billing_slug, slug=aslug)
     

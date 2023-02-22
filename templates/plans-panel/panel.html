@@ -118,7 +118,7 @@
                                 </div>
                                 <h5>{{plan.title}}</h5>
                                 <p>{{plan.description}}</p>
-                                <a href="{% url 'plan' slug=slug planslug=plan.slug %}">
+                                <a href="{% url 'plan' billing_slug=billing_slug slug=slug planslug=plan.slug %}">
                                     <button class='bs-primary px-3 py-2'>View</button>
                                 </a>
                             </div>
@@ -139,10 +139,10 @@
 
                                     </div>
                                     <div class="bottom">
-                                        <a href="{% url 'plan' slug=slug planslug=plan.slug %}">
+                                        <a href="{% url 'plan' billing_slug=billing_slug slug=slug planslug=plan.slug %}">
                                             <button class="bs-primary px-3 py-2">View</button>
                                         </a>
-                                        <a href="{% url 'delete-plan' slug=slug planslug=plan.slug %}">
+                                        <a href="{% url 'delete-plan' billing_slug=billing_slug slug=slug planslug=plan.slug %}">
                                             <button class="bs-primary bs-secondary px-3 py-2">Delete</button>
                                         </a>
                                     </div>
@@ -166,7 +166,7 @@
                         <h5 class="modal-title" id="exampleModalLongTitle">Create New Plan</h5>
                     </div>
                     <form id="group_form" enctype='multipart/form-data' method='POST'
-                        action="{% url 'plans-panel' slug %}">
+                        action="{% url 'plans-panel' billing_slug slug %}">
                         {% csrf_token %}
                         <div class="modal-body">
                             {{ form|crispy }}

@@ -46,7 +46,7 @@
             <div class="row box">
               <h3 class="t-primary">Utility Details</h3>
 
-              <form class="form w-50" method="POST" action="{% url 'bulkupload' slug %}" enctype="multipart/form-data">
+              <form class="form w-50" method="POST" action="{% url 'bulkupload' billing_slug slug %}" enctype="multipart/form-data">
                 {% csrf_token %}
                 <div class="form-group my-3">
                   <label for="csvfile" class="form-label"><b>CSV FILE</b></label>

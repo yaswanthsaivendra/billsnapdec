@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.shortcuts import render,redirect
 from django.http import HttpResponseRedirect
 from django.urls import reverse
+from accounts.models import Profile
 
 def index(request):
     return render(request, 'index.html')
@@ -14,7 +15,8 @@ def dashboard(request):
 
 
 def dashcustomer(request):
-    return render(request,'customerdash.html')
+    user_profile = Profile.objects.filter(user=request.user).first()
+    return render(request,'customerdash.html', {'profile':user_profile})
 
 def sending(request):
     l=[]

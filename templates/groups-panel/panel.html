@@ -116,10 +116,10 @@
                                         <p>{{group.description}}</p>
                                     </div>
                                   <div class="bottom">
-                                    <a href="{% url 'groups:group' slug=slug groupslug=group.slug %}">
+                                    <a href="{% url 'groups:group' billing_slug=billing_slug slug=slug groupslug=group.slug %}">
                                         <button class='bs-primary px-3 py-2'>View</button>
                                     </a>
-                                    <a href="{% url 'groups:delete-group' group.slug slug %}">
+                                    <a href="{% url 'groups:delete-group' billing_slug group.slug slug %}">
                                         <button class='bs-primary bs-secondary px-3 py-2'>Delete</button>
                                     </a> 
                                   </div>
@@ -150,7 +150,7 @@
                                         <p>{{plan.description}}</p>
                                     </div>
                                     <div class="bottom">
-                                        <a href="{% url 'groups:plangroup' slug plan.slug %}">
+                                        <a href="{% url 'groups:plangroup' billing_slug slug plan.slug %}">
                                             <button class='bs-primary px-3 py-2'>View</button>
                                         </a>
                                     </div>
@@ -194,7 +194,7 @@
                         <h5 class="modal-title" id="exampleModalLongTitle">Create New Group</h5>
                     </div>
                     <form id="group_form" enctype='multipart/form-data' method='POST'
-                        action="{% url 'groups:groups-panel' slug %}">
+                        action="{% url 'groups:groups-panel' billing_slug slug %}">
                         {% csrf_token %}
                         <div class="modal-body">
                             {{ form|crispy }}

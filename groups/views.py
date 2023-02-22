@@ -8,7 +8,7 @@ from .forms import *
 # Create your views here.
 
 
-def groups_panel(request, slug):
+def groups_panel(request, slug, billing_slug):
     if request.user.is_superuser:
         if request.method == 'GET':
             groups = Group.objects.filter(app__slug=slug)
@@ -18,26 +18,27 @@ def groups_panel(request, slug):
                 'groups': groups,
                 'form': form,
                 'slug': slug,
-                'plans' : plans
+                'plans' : plans,
+                'billing_slug':billing_slug
             }
-            return render(request, 'groups-panel/panel.html', payload)
+            return render(request, 'groups-panel/panel.html',payload)
         
         form = GroupForm(request.POST)
         if form.is_valid():
             group = form.save(commit=False)
             group.app = applists.objects.get(slug=slug)
             group.save()
-            return redirect('groups:groups-panel', slug)
+            return redirect('groups:groups-panel', billing_slug, slug)
         print(form.errors)
-        return redirect('groups-panel', slug)
+        return redirect('groups-panel', billing_slug, slug)
     return redirect('index')
 
-def delete_group(request, slug, appslug):
+def delete_group(request, slug, appslug, billing_slug):
     group = Group.objects.get(slug__iexact=slug)
     group.delete()
-    return redirect('groups:groups-panel', appslug)
+    return redirect('groups:groups-panel', billing_slug, appslug)
 
-def show_group(request, slug, groupslug):
+def show_group(request, slug, groupslug, billing_slug):
     if request.user.is_superuser:
         if request.method == 'GET':
             group = Group.objects.filter(slug=groupslug).first()
@@ -51,6 +52,7 @@ def show_group(request, slug, groupslug):
                 'update_form': UpdateUserGroupForm(appslug=group.app.slug),
                 'slug': slug,
                 'existing_users': existing_users,
+                'billing_slug' : billing_slug
             }
             return render(request, 'groups-panel/group.html', payload)
         
@@ -67,7 +69,7 @@ def show_group(request, slug, groupslug):
                 #     pre_group.members.remove(customer)
                 #create_history(user=customer.user, to_group=group, from_group=customer.group, upgrade=True)
                 group.members.add(customer)
-            return redirect('groups:group', slug)
+            return redirect('groups:group', billing_slug, slug)
 
             """students = Profile.objects.filter(institute_name=form.cleaned_data.get("institution"), is_student=True)
             for student in students:
@@ -78,9 +80,9 @@ def show_group(request, slug, groupslug):
                 student.save(update_fields=['group'])
             return redirect('group', slug)"""
         print(forms.error)
-        return redirect('group', slug)
+        return redirect('group', billing_slug, slug)
 
-def add_customer_to_group(request, groupslug):
+def add_customer_to_group(request, groupslug, billing_slug):
     username = request.GET.get('username')
     user = Profile.objects.get(user__username=username)
 
@@ -93,7 +95,7 @@ def add_customer_to_group(request, groupslug):
     group.members.add(user)
     return JsonResponse({})
 
-def remove_customer_from_group(request, groupslug):
+def remove_customer_from_group(request, groupslug, billing_slug):
     username = request.GET.get('username')
     user = Profile.objects.get(user__username=username)
 
@@ -125,7 +127,7 @@ def remove_customer_from_group(request, groupslug):
         create_history(user=profile.user, to_group=new_group, from_group=current_group, upgrade=True)"""
         
 
-def show_plan_group(request, slug, plangroupslug):
+def show_plan_group(request, slug, plangroupslug, billing_slug):
     if request.user.is_superuser:
         if request.method == 'GET':
             plan = Plan.objects.filter(slug=plangroupslug).first()
@@ -134,6 +136,7 @@ def show_plan_group(request, slug, plangroupslug):
             payload = {
                 'plan': plan,
                 'users': users,
-                'slug' : slug
+                'slug' : slug,
+                'billing_slug' : billing_slug
             }
             return render(request, 'groups-panel/plangroup.html', payload)

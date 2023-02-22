@@ -5,7 +5,7 @@ from datetime import date
 from .forms import *
 
 
-def subscribe(request, slug):
+def subscribe(request, slug, billing_slug):
     if not request.user.is_authenticated:
         return redirect('login')
     plan = Plan.objects.get(slug=slug)
@@ -17,7 +17,7 @@ def subscribe(request, slug):
     create_history(user=request.user, to_plan=plan)
     return redirect('index')
 
-def upgrade_to(request, slug):
+def upgrade_to(request, slug, billing_slug):
     if not request.user.is_authenticated:
         return redirect('login')
     current_plan = Profile.objects.get(user=request.user).plan
@@ -28,10 +28,10 @@ def upgrade_to(request, slug):
     profile.plan_active = True
     profile.save(update_fields=['plans', 'plan_active'])
 
-    return redirect('accountsettings', slug=request.user.username)
+    return redirect('accountsettings', billing_slug=billing_slug, slug=request.user.username)
 
 
-def plans_panel(request, slug):
+def plans_panel(request, slug, billing_slug):
     if request.user.is_superuser:
         if request.method == 'GET':
             plans = Plan.objects.filter(app__slug=slug)
@@ -39,7 +39,8 @@ def plans_panel(request, slug):
             payload = {
                 'plans': plans,
                 'form': form,
-                'slug': slug
+                'slug': slug,
+                'billing_slug':billing_slug
             }
             return render(request, 'plans-panel/panel.html', payload)
         
@@ -48,12 +49,12 @@ def plans_panel(request, slug):
             plan = form.save(commit=False)
             plan.app = applists.objects.get(slug=slug)
             plan.save()
-            return redirect('plans-panel', slug)
+            return redirect('plans-panel', billing_slug, slug)
         print(form.errors)
-        return redirect('plans-panel', slug)
+        return redirect('plans-panel', billing_slug, slug)
     return redirect('index')
 
-def delete_plan(request, slug, planslug):
+def delete_plan(request, slug, planslug, billing_slug):
     plan = Plan.objects.get(slug__iexact=planslug)
     app = applists.objects.get(slug=slug)
     default_plan = Plan.objects.filter(app=app).filter(default_for_customer=True).first()
@@ -63,9 +64,9 @@ def delete_plan(request, slug, planslug):
         user.plan_active = True
         user.save(update_fields=['plans', 'plan_active'])
     plan.delete()
-    return redirect('plans-panel', slug)
+    return redirect('plans-panel', billing_slug, slug)
 
-def show_plan(request, slug, planslug):
+def show_plan(request, slug, billing_slug, planslug):
     if request.user.is_superuser:
         if request.method == 'GET':
             plan = Plan.objects.filter(slug=planslug).first()
@@ -83,7 +84,8 @@ def show_plan(request, slug, planslug):
                 'update_form': UpdateUserPlanForm(appslug=slug),
                 'slug': slug,
                 'existing_users' : existing_users,
-                'current_plan' : current_plan
+                'current_plan' : current_plan,
+                'billing_slug' : billing_slug
             }
             return render(request, 'plans-panel/plan.html', payload)
         
@@ -101,7 +103,7 @@ def show_plan(request, slug, planslug):
                 customer.plans.add(plan)
                 customer.plan_active = True
                 customer.save(update_fields=['plans', 'plan_active'])
-            return redirect('plan', slug, planslug)
+            return redirect('plan', billing_slug, slug, planslug)
 
             """students = Profile.objects.filter(institute_name=form.cleaned_data.get("institution"), is_student=True)
             for student in students:
@@ -112,10 +114,10 @@ def show_plan(request, slug, planslug):
                 student.save(update_fields=['plan'])
             return redirect('plan', slug)"""
         print(forms.error)
-        return redirect('plan', slug)
+        return redirect('plan', billing_slug, slug)
 
 
-def update_user_plan(request, profileslug,planslug):
+def update_user_plan(request, billing_slug, profileslug,planslug):
     profile = Profile.objects.get(slug__iexact=profileslug)
     current_plan = Plan.objects.get(slug__iexact=planslug)
 
@@ -125,7 +127,7 @@ def update_user_plan(request, profileslug,planslug):
     profile.plans.add(new_plan)
     profile.plan_active = True
     profile.save(update_fields=['plans', 'plan_active'])
-    return redirect('plans-panel', current_plan.app.slug)
+    return redirect('plans-panel', billing_slug, current_plan.app.slug)
     """if form.is_valid():
         new_plan = Plan.objects.create(
             title=form.cleaned_data.get("title"),
