@@ -3994,3 +3994,7 @@ django.template.exceptions.TemplateDoesNotExist: customerdashsiebar.html
 [2023-02-22T15:26:06] INFO [root.showapps:87] maa_seen the whole applist
 [2023-02-22T15:26:10] WARNING [django.request.log_response:241] Not Found: /apps/1/helo/dashboard/assets/img/ivancik.jpg
 [2023-02-22T15:29:27] WARNING [django.request.log_response:241] Not Found: /custdash/plans
+[2023-02-22T15:38:49] WARNING [django.request.log_response:241] Not Found: /custdash/fda
+[2023-02-22T15:49:15] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2023-02-22T15:50:53] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2023-02-22T15:50:55] WARNING [django.request.log_response:241] Not Found: /favicon.ico

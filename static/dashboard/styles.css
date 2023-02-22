@@ -144,3 +144,8 @@ th {
   /* min-height:100px ; */
   width: 300px;
 }
+.noti-card img{
+  border-radius:100%;
+  width: 50px;
+  height: 50px;
+}
