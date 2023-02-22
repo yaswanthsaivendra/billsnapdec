@@ -3861,3 +3861,135 @@ django.template.exceptions.TemplateSyntaxError: Invalid filter: 'crispy'
 [2023-02-22T14:40:54] DEBUG [PIL.Image.init:369] Importing XpmImagePlugin
 [2023-02-22T14:40:54] DEBUG [PIL.Image.init:369] Importing XVThumbImagePlugin
 >>>>>>> 46fa6d020cb8ad48f464cea58d88393865cb107e
+[2023-02-22T09:39:48] ERROR [django.request.log_response:241] Internal Server Error: /custdash/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader_tags.py", line 197, in render
+    template = context.template.engine.select_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 212, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: customerdashsiebar.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/billapp/views.py", line 19, in dashcustomer
+    return render(request,'customerdash.html', {'profile':user_profile})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 64, in render
+    reraise(exc, self.backend)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 85, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: customerdashsiebar.html
+[2023-02-22T09:39:49] ERROR [django.request.log_response:241] Internal Server Error: /custdash/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader_tags.py", line 197, in render
+    template = context.template.engine.select_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 212, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: customerdashsiebar.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/billapp/views.py", line 19, in dashcustomer
+    return render(request,'customerdash.html', {'profile':user_profile})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 64, in render
+    reraise(exc, self.backend)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 85, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: customerdashsiebar.html
+[2023-02-22T09:39:49] ERROR [django.request.log_response:241] Internal Server Error: /custdash/
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 62, in render
+    return self.template.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 175, in render
+    return self._render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 1005, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/base.py", line 966, in render_annotated
+    return self.render(context)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader_tags.py", line 197, in render
+    template = context.template.engine.select_template(template_name)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/engine.py", line 212, in select_template
+    raise TemplateDoesNotExist(", ".join(not_found))
+django.template.exceptions.TemplateDoesNotExist: customerdashsiebar.html
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/yaswanth/projects/billsnapdec/billapp/views.py", line 19, in dashcustomer
+    return render(request,'customerdash.html', {'profile':user_profile})
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 64, in render
+    reraise(exc, self.backend)
+  File "/home/yaswanth/projects/billsnapdec/env/lib/python3.10/site-packages/django/template/backends/django.py", line 85, in reraise
+    raise new from exc
+django.template.exceptions.TemplateDoesNotExist: customerdashsiebar.html
+[2023-02-22T09:42:00] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/urls.py changed, reloading.
+[2023-02-22T09:42:29] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/urls.py changed, reloading.
+[2023-02-22T09:42:32] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/urls.py changed, reloading.
+[2023-02-22T09:42:35] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/urls.py changed, reloading.
+[2023-02-22T09:42:41] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/urls.py changed, reloading.
+[2023-02-22T09:42:44] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/urls.py changed, reloading.
+[2023-02-22T09:43:13] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/views.py changed, reloading.
+[2023-02-22T09:43:19] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/views.py changed, reloading.
+[2023-02-22T09:43:23] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/views.py changed, reloading.
+[2023-02-22T09:43:27] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/views.py changed, reloading.
+[2023-02-22T09:43:30] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/views.py changed, reloading.
+[2023-02-22T09:43:33] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/views.py changed, reloading.
+[2023-02-22T09:43:41] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/views.py changed, reloading.
+[2023-02-22T09:43:55] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/views.py changed, reloading.
+[2023-02-22T09:45:10] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/views.py changed, reloading.
+[2023-02-22T09:45:14] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/views.py changed, reloading.
+[2023-02-22T09:45:34] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/views.py changed, reloading.
+[2023-02-22T09:45:40] INFO [django.utils.autoreload.trigger_reload:266] /home/yaswanth/projects/billsnapdec/billapp/views.py changed, reloading.
