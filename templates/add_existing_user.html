@@ -86,7 +86,7 @@
 
                                 <td>
                                     <button class="bs-primary px-3 py-2" onclick="addCustomerApp(this);" value="{{profile.user.username}}"
-                                        url="{% url 'add-customer-app' app.slug %}">
+                                        url="{% url 'add-customer-app' billing_slug app.slug %}">
                                         Add
                                     </button>
                                 </td>

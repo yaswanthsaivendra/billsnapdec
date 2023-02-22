@@ -20,7 +20,7 @@ logging.basicConfig(
         datefmt='%Y-%m-%dT%H:%M:%S')
 
 
-def app_registration(request, appslug):
+def app_registration(request, appslug, billing_slug):
     username = request.POST['username']
     email = request.POST['email']
     password = request.POST['password']
@@ -44,7 +44,7 @@ def app_registration(request, appslug):
             profile.apps.add(applists.objects.get(slug=appslug))
             messages.success(
                 request, 'Account successfully created! Check your Email for Account Activation')
-            return redirect('addcustomer', appslug)
+            return redirect('addcustomer', slug=appslug, billing_slug=billing_slug)
 
         messages.warning(request, "This Email already exists!")
         return render(request, 'register.html', context)
@@ -147,7 +147,7 @@ class LoginView(View):
                                 return redirect("showapps")
                             else:
                                 messages.success(request,"loggedin succesfully")
-                                return redirect("index")
+                                return redirect("custdash")
 
                         messages.error(
                             request, "Account is not active,please check your email"
@@ -269,7 +269,7 @@ from dashboard.forms import *
 from .forms import *
 
 # Create your views here.
-def update_profile(request, slug, userslug):
+def update_profile(request, slug, userslug, billing_slug):
     profile = get_object_or_404(Profile, slug=userslug)
     if request.method == "POST":
         full_name = request.POST.get('full_name')
@@ -325,7 +325,7 @@ def update_profile(request, slug, userslug):
         logger.info(request.user.username+"_ updated profile")
         messages.success(request, "Profile has been updated")
 
-        return HttpResponseRedirect(reverse('accounts:show-profile', kwargs={'slug':slug ,'userslug':userslug}))
+        return HttpResponseRedirect(reverse('accounts:show-profile', kwargs={'slug':slug ,'userslug':userslug, 'billing_slug':billing_slug}))
 
 # class UpdateProfile(UpdateView):
 #     model = Profile
@@ -343,35 +343,39 @@ class ShowProfile(DetailView):
     def get_context_data(self, *args, **kwargs):
         context = super(ShowProfile, self).get_context_data(*args, **kwargs)
         page_profile = get_object_or_404(Profile, slug=self.kwargs['userslug'])
+        print(page_profile)
         context['profile'] = page_profile
         context['updateform'] = UpdateUserPlanForm(appslug=self.kwargs['slug'])
         context['plan'] = page_profile.plans.filter(app__slug=self.kwargs['slug']).first()
+        print(context['plan'])
         context['notification_form'] = NotificationForm()
         context['slug'] = self.kwargs['slug']
         context['userslug'] = self.kwargs['userslug']
         app = applists.objects.filter(slug=self.kwargs['slug']).first()
         plans = Plan.objects.filter(app=app)
         context['plans'] = plans
+        context['billing_slug'] = self.kwargs['billing_slug']
         if self.request.user==page_profile.user:
             self.template_name = 'myprofile.html'
         elif self.request.user!=page_profile.user or self.request.user.is_anonymous:
             self.template_name = 'myprofile.html'
         return context
 
-def create_notification(request, slug):
-    profile = Profile.objects.get(user=request.user)
-    form = NotificationForm(request.POST, request.FILES)
-    if form.is_valid():
-        url = 'https://url.com/some-url/'
-        notification = form.save(commit=False)
-        notification.profile = profile
-        notification.url = url
-        notification.save(update_fields=['profile', 'url'])
-        return redirect('accounts:show-profile', userslug=profile.slug, slug=slug)
-    print(form.errors)
-    return redirect('accounts:show-profile', userslug=profile.slug, slug=slug)
+def create_notification(request, slug, billing_slug):
+    if request.method=='POST':
+        profile = Profile.objects.get(user=request.user)
+        form = NotificationForm(request.POST, request.FILES)
+        if form.is_valid():
+            url = 'https://url.com/some-url/'
+            notification = form.save(commit=False)
+            notification.profile = profile
+            notification.url = url
+            notification.save(update_fields=['profile', 'url'])
+            return redirect('accounts:show-profile', userslug=profile.slug, slug=slug, billing_slug=billing_slug)
+        print(form.errors)
+        return redirect('accounts:show-profile', userslug=profile.slug, slug=slug, billing_slug=billing_slug)
 
-def update_plan(request, slug, userslug ,planslug):
+def update_plan(request, slug, userslug ,planslug, billing_slug):
     profile = Profile.objects.get(slug__iexact=userslug)
     current_plan = Plan.objects.get(slug__iexact=planslug)
 
@@ -382,4 +386,4 @@ def update_plan(request, slug, userslug ,planslug):
     profile.plan_active = True
     profile.save(update_fields=['plans', 'plan_active'])
     messages.success(request, "Plan has been successfully updated")
-    return redirect('accounts:show-profile', slug=slug, userslug=userslug)
+    return redirect('accounts:show-profile', slug=slug, userslug=userslug, billing_slug=billing_slug)

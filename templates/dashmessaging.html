@@ -152,7 +152,7 @@
                                 </div>
                                 <div class="modal-body">
                                     <form class="row g-3"
-                                        action="{% url 'notify' slug=slug profile_slug=i.detail.slug %}" method="post"
+                                        action="{% url 'notify' slug=slug profile_slug=i.detail.slug billing_slug=billing_slug %}" method="post"
                                          
                                         enctype="multipart/form-data">
                                         {% csrf_token %}

@@ -19,17 +19,17 @@
     <div>
       <i class='bx bx-grid-alt'></i>
 
-      <a href="{% url 'dashboard' slug %} " id="active">Dashboard</a>
+      <a href="{% url 'dashboard' billing_slug slug %} " id="active">Dashboard</a>
     </div>
     <div>
       <i class='bx bx-analyse'></i>
 
-      <a href="{% url 'estimates' slug %}">Estimates</a>
+      <a href="{% url 'estimates' billing_slug slug %}">Estimates</a>
     </div>
     <div>
       <i class='bx bx-cog'></i>
 
-      <a href="{% url 'appinfo' slug %}">App Info</a>
+      <a href="{% url 'appinfo' billing_slug slug %}">App Info</a>
     </div>
   </div>
   <hr>
@@ -38,42 +38,45 @@
     <div class="customer-frag d-flex flex-column p-3 pt-1 gap-3">
       <div>
         <i class='bx bx-box'></i>
-        <a href="{% url 'addcustomer' slug %}">Create</a>
+        <a href="{% url 'addcustomer' billing_slug slug %}">Create</a>
       </div>
       <div>
         <i class='bx bx-box'></i>
-        <a href="{% url 'customerlist' slug %}">Customer List</a>
+        <a href="{% url 'customerlist' billing_slug slug %}">Customer List</a>
       </div>
       <div>
         <i class='bx bx-log-out'></i>
-        <a href="{% url 'bulkupload' slug %}">Bulk Upload</a>
+        <a href="{% url 'bulkupload' billing_slug slug %}">Bulk Upload</a>
       </div>
       <div>
         <i class='bx bx-archive-in'></i>
-        <a href="{% url 'groups:groups-panel' slug %}">Manage Group</a>
+        <a href="{% url 'groups:groups-panel' billing_slug  slug %}">Manage Group</a>
       </div>
       <div>
         <i class='bx bx-bar-chart'></i>
-        <a href="{% url 'pending-approvals' slug %}">Pending approvals</a>
+        <a href="{% url 'pending-approvals' billing_slug slug %}">Pending approvals</a>
       </div>
       <div>
         <i class='bx bx-message'></i>
-        <a href="{% url 'messaging' slug %}">Messaging</a>
+        <a href="{% url 'messaging' billing_slug slug %}">Messaging</a>
       </div>
     </div>
   </div>
   <hr>
+
+  {% if billing_slug %}
+  
   <div class="menu-frag mt-3 ps-3">
     <h4>Payments</h4>
     <div class="pay-frag d-flex flex-column  p-3 pt-1  gap-3">
       <div>
         <i class='bx bx-list-ul'></i>
-        <a href="{% url 'transactions' slug %}">Transactions </a>
+        <a href="{% url 'transactions' billing_slug slug  %}">Transactions </a>
       </div>
 
       <div>
         <i class='bx bx-coin-stack'></i>
-        <a href="{% url 'plans-panel' slug %}">Plans</a>
+        <a href="{% url 'plans-panel' billing_slug slug  %}">Plans</a>
       </div>
       <div>
         <i class='bx bx-heart'></i>
@@ -81,6 +84,8 @@
       </div>
     </div>
   </div>
+  {% endif %}
+
 
 </div>
 <div class="left second">

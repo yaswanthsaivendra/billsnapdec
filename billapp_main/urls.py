@@ -7,8 +7,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('billapp.urls')),
     path('account/', include('accounts.urls')),
-    path('groups/', include('groups.urls')),
-    path('plans/', include('plans.urls')),
+    path('<int:billing_slug>/groups/', include('groups.urls')),
+    path('<int:billing_slug>/plans/', include('plans.urls')),
 ]
 
 if settings.DEBUG:

@@ -107,7 +107,7 @@
                         <div class="card-body">
                             <div class="top">
                                 <div class="app-img-container">
-                                    <a href="{% url 'dashboard' i.slug %}"><img src="{{i.appimg.url}}" alt=""
+                                    <a href="{% url 'dashboard' 1 i.slug %}"><img src="{{i.appimg.url}}" alt=""
                                             class="img-fluid app-img"></a>
                                 </div>
                                 <div>
@@ -118,7 +118,7 @@
 
                             <div class="bottom">
                                 <ul class="social-links list-inline mb-0">
-                                    <a href="{% url 'dashboard' i.slug %}"><button
+                                    <a href="{% url 'dashboard' 1 i.slug %}"><button
                                             class="b-primary px-5 py-2">View</button></a>
 
                                 </ul>
@@ -161,7 +161,7 @@
                         <div class="card-body">
                             <div class="top">
                                 <div class="app-img-container">
-                                    <a href="{% url 'dashboard' i.slug %}"><img src="{{i.appimg.url}}" alt=""
+                                    <a href="{% url 'dashboard' 0 i.slug %}"><img src="{{i.appimg.url}}" alt=""
                                             class="img-fluid app-img"></a>
                                 </div>
                                 <div>
@@ -172,7 +172,7 @@
 
                             <div class="bottom">
                                 <ul class="social-links list-inline mb-0">
-                                    <a href="{% url 'dashboard' i.slug %}"><button
+                                    <a href="{% url 'dashboard' 0 i.slug %}"><button
                                             class="b-primary px-5 py-2">View</button></a>
 
                                 </ul>

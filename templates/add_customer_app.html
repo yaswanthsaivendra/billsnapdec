@@ -384,7 +384,7 @@
                                             <details>
                                                 <summary>
                                                     <div class="button exist">
-                                                        <a href="{% url 'add-existing-user' app.slug %}">Existing
+                                                        <a href="{% url 'add-existing-user' billing_slug app.slug %}">Existing
                                                             User</a>
                                                     </div>
                                                 </summary>
@@ -426,7 +426,7 @@
 
 
 
-                                                        <form action="{% url 'accounts:register-app' app.slug %}"
+                                                        <form action="{% url 'accounts:register-app' app.slug billing_slug %}"
                                                             method="POST" class="needs-validation">
                                                             {% csrf_token %}
                                                             {% if username %}

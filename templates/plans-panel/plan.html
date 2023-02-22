@@ -131,7 +131,7 @@
                                             </div>
                                             <form class='w3-margin w3-padding' enctype='multipart/form-data'
                                                 method='POST'
-                                                action="{% url 'update-plan' profileslug=user.slug planslug=plan.slug %}">
+                                                action="{% url 'update-plan' billing_slug=billing_slug profileslug=user.slug planslug=plan.slug %}">
                                                 <div class="modal-body">
 
 
@@ -171,7 +171,7 @@
                         Add Customer to {{plan.title}}
                     </button>
                     <form id="plan_form" style="display:none;" enctype='multipart/form-data' method='POST'
-                        action="{% url 'plan' slug=slug planslug=plan.slug %}">
+                        action="{% url 'plan' billing_slug=billing_slug slug=slug planslug=plan.slug %}">
                         <h5 class='w3-center'>Add to {{plan.title}}</h5>
                         {% csrf_token %}
                         {{ form|crispy }}
@@ -209,7 +209,7 @@
                                     <td>{{ user.full_name}}</td>
                                     <td>
                                         <form id="plan_form" enctype='multipart/form-data' method='POST'
-                                        action="{% url 'plan' slug=slug planslug=plan.slug %}">
+                                        action="{% url 'plan' billing_slug=billing_slug slug=slug planslug=plan.slug %}">
                                         
                                         {% csrf_token %}
                                         <!-- {{ form|crispy }} -->
@@ -230,7 +230,7 @@
                     </div>
                     <hr>
                     <!-- <form id="plan_form" enctype='multipart/form-data' method='POST'
-                                                action="{% url 'plan' slug=slug planslug=plan.slug %}">
+                                                action="{% url 'plan' billing_slug=billing_slug slug=slug planslug=plan.slug %}">
                                                 <h5>Add by Username</h5>
                                                 {% csrf_token %}
                                                 {{ form|crispy }}

@@ -119,10 +119,10 @@ def addcustomer(request):
     return render(request, 'addcustomer.html', {'form' :form})
 
 @login_required
-def customerlist(request,slug):
+def customerlist(request,slug, billing_slug):
     app=applists.objects.get(slug=slug)
     details = Profile.objects.filter(apps=app)
-    return render(request, 'customerlist.html', {'details':details, 'slug':slug})
+    return render(request, 'customerlist.html', {'details':details, 'slug':slug, 'billing_slug' : billing_slug})
     
 @login_required
 def deletecust(request,utility_name):
@@ -168,7 +168,7 @@ def updaterecord(request,id):
 
 import pandas as pd
 @login_required
-def bulk_upload(request,slug):
+def bulk_upload(request,slug, billing_slug):
     if request.method=='POST':
         csvfile=request.FILES.get('csvfile')
         df=pd.read_csv(csvfile)
@@ -191,42 +191,45 @@ def bulk_upload(request,slug):
             return redirect('uploadlist')
         else:
             status=0
-            return render(request, 'bulkupload.html',{'stat':status, 'slug':slug})
+            return render(request, 'bulkupload.html',{'stat':status, 'slug':slug, 'billing_slug':billing_slug})
     else:
         stat=0
-        return render(request, 'bulkupload.html',{'stat':stat, 'slug' : slug})
+        return render(request, 'bulkupload.html',{'stat':stat, 'slug' : slug, 'billing_slug':billing_slug})
 @login_required
-def uploadlis(request, slug):
+def uploadlis(request, slug, billing_slug):
     cols=[f.name for f in csvs._meta.get_fields()]
     dets=csvs.objects.all()
-    return render(request,'uploadlist.html',{'details':dets,'columns':cols})
+    return render(request,'uploadlist.html',{'details':dets,'columns':cols, 'slug':slug, 'billing_slug':billing_slug})
 
 @login_required
-def dashboard(request, slug):
-    return render(request, 'dashboard.html', {'slug' : slug})
+def dashboard(request, slug, billing_slug):
+    return render(request, 'dashboard.html', {'slug' : slug, 'billing_slug':billing_slug})
 
 @login_required
-def estimate(request, slug):
-    return render(request, 'dashestimate.html', {'slug' : slug})
-
-
-@login_required
-def transactions(request, slug):
-    return render(request, 'dashtransactions.html', {'slug' : slug})
+def estimate(request, slug, billing_slug):
+    return render(request, 'dashestimate.html', {'slug' : slug, 'billing_slug':billing_slug})
 
 
 @login_required
-def appinfo(request, slug):
+def transactions(request, slug, billing_slug):
+    return render(request, 'dashtransactions.html', {'slug' : slug,'billing_slug':billing_slug})
+
+
+@login_required
+def appinfo(request, slug, billing_slug):
     app = applists.objects.get(slug=slug)
-    plan = app.plan_set.all().filter(default_for_customer=True)[0]
-    return render(request, 'dashappinfo.html', {'slug' : slug, 'app' : app,'plan':plan})
+    if billing_slug:
+        plan = app.plan_set.all().filter(default_for_customer=True)[0]
+    else:
+        plan = {}
+    return render(request, 'dashappinfo.html', {'slug' : slug, 'app' : app,'plan':plan, 'billing_slug':billing_slug})
 
 
 
 
 
 @login_required
-def messaging(request, slug):
+def messaging(request, slug, billing_slug):
     if request.method == 'GET':
         notification_form = NotificationForm()
         app=applists.objects.get(slug=slug)
@@ -239,11 +242,11 @@ def messaging(request, slug):
                 "notifications" : notifications
             }
             user_details.update()
-        return render(request, 'dashmessaging.html',{'details':user_details, 'slug':slug, 'notification_form':notification_form})
+        return render(request, 'dashmessaging.html',{'details':user_details, 'slug':slug, 'notification_form':notification_form, 'billing_slug':billing_slug})
     
 
 
-def notification(request, slug, profile_slug):
+def notification(request, slug, profile_slug, billing_slug):
     if request.method == 'POST':
         profile = Profile.objects.get(slug=profile_slug)
         form = NotificationForm(request.POST, request.FILES)
@@ -253,27 +256,27 @@ def notification(request, slug, profile_slug):
             notification.profile = profile
             notification.url = url
             notification.save(update_fields=['profile', 'url'])
-            return redirect('messaging', slug=slug)
+            return redirect('messaging', slug=slug, billing_slug=billing_slug )
         print(form.errors)
-        return redirect('messaging', slug=slug)
+        return redirect('messaging', slug=slug, billing_slug=billing_slug)
 
 
 
 @login_required
-def pendingapproval(request, slug):
-    return render(request, 'dashpendingapproval.html', {'slug' : slug})
+def pendingapproval(request, slug, billing_slug):
+    return render(request, 'dashpendingapproval.html', {'slug' : slug, 'billing_slug':billing_slug})
 
 
-def add_customer_form(request, slug):
+def add_customer_form(request, slug, billing_slug):
     app = applists.objects.get(slug=slug)
-    return render(request, 'add_customer_app.html', {'app': app, 'slug':slug})
+    return render(request, 'add_customer_app.html', {'app': app, 'slug':slug, 'billing_slug':billing_slug})
 
-def add_existing_user(request, slug):
+def add_existing_user(request, slug, billing_slug):
     profiles = Profile.objects.filter(admin=False).exclude(apps__slug=slug)
     app = applists.objects.get(slug=slug)
-    return render(request, 'add_existing_user.html', {'profiles': profiles, 'app': app, 'slug':slug})
+    return render(request, 'add_existing_user.html', {'profiles': profiles, 'app': app, 'slug':slug, 'billing_slug':billing_slug})
 
-def add_customer_app(request, slug):
+def add_customer_app(request, slug, billing_slug):
     username = request.GET.get('username')
     profile = Profile.objects.get(user__username=username)
     app = applists.objects.get(slug=slug)
@@ -281,17 +284,17 @@ def add_customer_app(request, slug):
     default_plan = Plan.objects.filter(app=app).filter(default_for_customer=True).first()
     print(default_plan)
     profile.plans.add(default_plan)
-    return redirect('customerlist',slug=slug)
+    return redirect('customerlist', kwargs= {"slug":slug, "billing_slug":billing_slug})
 
-def addingcustomer(request,slug):
+def addingcustomer(request,slug, billing_slug):
     prof=Profile.objects.get(user=request.user)
     app=applists.objects.get(slug=slug)
     prof.apps.add(app)
     default_plan = Plan.objects.filter(app=app).filter(default_for_customer=True).first()
     profile.plans.add(default_plan)
-    return redirect('customerlist',slug=slug)
+    return redirect('customerlist',kwargs= {"slug":slug, "billing_slug":billing_slug})
 
-def update_profile_plan(request, slug):
+def update_profile_plan(request, slug, billing_slug):
     profile = Profile.objects.get(slug__iexact=slug)
 
     new_plan = Plan.objects.get(id=request.POST.get('update_to'))
@@ -308,4 +311,4 @@ def update_profile_plan(request, slug):
     profile.paid = new_paid_status
     print(new_active_status, new_plan, new_paid_status)
     profile.save(update_fields=['plan', 'plan_active', 'paid'])
-    return redirect('show_profile', profile.slug, new_plan.app.slug)
+    return redirect('show_profile', profile.slug, new_plan.app.slug, billing_slug)

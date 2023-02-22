@@ -94,10 +94,10 @@
                   <td>{{ i.paid}}</td>
                   <td>
                     <a class='w3-button w3-small w3-round w3-green'
-                      href="{% url 'accounts:show-profile' slug=slug userslug=i.user %}">Show Profile</a>
+                      href="{% url 'accounts:show-profile' slug=slug userslug=i.user billing_slug=billing_slug %}">Show Profile</a>
                   </td>
                   <td>
-                    <a class='w3-button w3-small w3-round w3-red' href="{% url 'remove-customer' slug i.user %}">Remove
+                    <a class='w3-button w3-small w3-round w3-red' href="{% url 'remove-customer' slug i.user billing_slug %}">Remove
                       User</a>
                   </td>
                 </tr>

@@ -148,7 +148,7 @@
 															aria-label="Close"></button>
 													</div>
 													<form class="mb-4 mt-1"
-														action="{% url 'accounts:update-profile' slug=slug userslug=userslug %}"
+														action="{% url 'accounts:update-profile' billing_slug=billing_slug slug=slug userslug=userslug %}"
 														method="POST">
 														{% csrf_token %}
 
@@ -476,7 +476,7 @@
 														<h6>Update user plan</h6>
 													</div>
 													<form
-														action="{% url 'accounts:update-plan' slug=slug userslug=userslug planslug=plan.slug %}"
+														action="{% url 'accounts:update-plan' billing_slug=billing_slug slug=slug userslug=userslug planslug=plan.slug %}"
 														method="post">
 														{% csrf_token %}
 														<div class="mb-3 form-check">
@@ -505,7 +505,7 @@
 														aria-label="Close"></button>
 												</div>
 												<div class="modal-body">
-													<form class="row g-3" action="{% url 'accounts:create-notification' slug=slug %}" method="post" enctype="multipart/form-data">
+													<form class="row g-3" action="{% url 'accounts:create-notification' billing_slug=billing_slug slug=slug %}" method="post" enctype="multipart/form-data">
 														{% csrf_token %}
 														{{ notification_form|crispy }}
 														<!-- <div class="col-2">
