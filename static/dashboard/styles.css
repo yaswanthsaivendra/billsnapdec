@@ -140,3 +140,7 @@ th {
     padding-left: 0;
   }
 }
+.plan-card {
+  /* min-height:100px ; */
+  width: 300px;
+}
