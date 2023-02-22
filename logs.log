@@ -417,3 +417,54 @@ django.template.exceptions.TemplateSyntaxError: Invalid filter: 'crispy'
 [2023-02-22T13:42:20] INFO [root.showapps:87] maa_seen the whole applist
 [2023-02-22T13:42:41] WARNING [django.request.log_response:241] Not Found: /apps/helo/dashboard/assets/img/ivancik.jpg
 [2023-02-22T13:58:04] INFO [django.utils.autoreload.trigger_reload:266] D:\yash\billsnap\billsnapdec\dashboard\views.py changed, reloading.
+[2023-02-22T14:34:21] WARNING [django.request.log_response:241] Not Found: /favicon.ico
+[2023-02-22T14:34:23] INFO [root.showapps:87] maa_seen the whole applist
+[2023-02-22T14:34:27] WARNING [django.request.log_response:241] Not Found: /apps/helo/dashboard/assets/img/ivancik.jpg
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing BlpImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing BmpImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing BufrStubImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing CurImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing DcxImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing DdsImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing EpsImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing FitsImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing FitsStubImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing FliImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing FpxImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:372] Image: failed to import FpxImagePlugin: No module named 'olefile'
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing FtexImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing GbrImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing GifImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing GribStubImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing Hdf5StubImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing IcnsImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing IcoImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing ImImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing ImtImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing IptcImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing JpegImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing Jpeg2KImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing McIdasImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing MicImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:372] Image: failed to import MicImagePlugin: No module named 'olefile'
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing MpegImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing MpoImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing MspImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing PalmImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing PcdImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing PcxImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing PdfImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing PixarImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing PngImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing PpmImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing PsdImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing SgiImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing SpiderImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing SunImagePlugin
+[2023-02-22T14:40:53] DEBUG [PIL.Image.init:369] Importing TgaImagePlugin
+[2023-02-22T14:40:54] DEBUG [PIL.Image.init:369] Importing TiffImagePlugin
+[2023-02-22T14:40:54] DEBUG [PIL.Image.init:369] Importing WebPImagePlugin
+[2023-02-22T14:40:54] DEBUG [PIL.Image.init:369] Importing WmfImagePlugin
+[2023-02-22T14:40:54] DEBUG [PIL.Image.init:369] Importing XbmImagePlugin
+[2023-02-22T14:40:54] DEBUG [PIL.Image.init:369] Importing XpmImagePlugin
+[2023-02-22T14:40:54] DEBUG [PIL.Image.init:369] Importing XVThumbImagePlugin
