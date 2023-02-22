@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from django.urls import reverse
 from accounts.models import Profile
 from plans.models import Plan
+from accounts.models import Notification
 
 def index(request):
     return render(request, 'index.html')
@@ -22,8 +23,12 @@ def dashcustomer(request):
 def customer_plans(request):
     user_profile = Profile.objects.filter(user=request.user).first()
     plans = user_profile.plans.all()
-    print(plans)
     return render(request,'customerplans.html', {'plans':plans})
+
+def customer_notifications(request):
+    user_profile = Profile.objects.filter(user=request.user).first()
+    user_notifications = Notification.objects.filter(profile=user_profile)
+    return render(request,'customernotifications.html', {'notifications':user_notifications})
 
 def sending(request):
     l=[]
